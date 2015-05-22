@@ -1,0 +1,171 @@
+/* =============
+    摄影师头像css
+   =============
+*/
+img-circle {
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px
+    }
+}
+
+#stories .story {
+    margin-bottom: 80px
+}
+
+#stories .story .sepLine {
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#eee), to(#fff));
+    margin: 6px 0px
+}
+
+#stories .story .img-head {
+    background-color: #444
+}
+
+@media (max-width: 768px) {
+    #stories .story .img-head {
+        width: 100px
+    }
+}
+
+#stories .story .img-head:hover {
+    opacity: 0.85
+}
+
+@media (max-width: 980px) {
+    #stories .story .name-block {
+        height: 70px
+    }
+}
+
+#stories .story .mentee {
+    font-size: 1.3em;
+    line-height: 2.8em
+}
+
+@media (max-width: 1200px) {
+    #stories .story .mentee {
+        font-size: 1.1em;
+        line-height: 2.5em
+    }
+}
+
+@media (max-width: 980px) {
+    #stories .story .mentee {
+        font-size: 1.1em;
+        line-height: 2.4em
+    }
+}
+
+@media (max-width: 768px) {
+    #stories .story .mentee {
+        text-align: center;
+        padding-left: 0px;
+        height: auto;
+        font-size: 1.1em;
+        line-height: 2.5em
+    }
+}
+
+#experts .expert-block .img-head {
+    background-color: #444
+}
+
+@media (max-width: 768px) {
+    #experts .expert-block .img-head {
+        width: 100px
+    }
+}
+
+#experts .expert-block .img-head:hover {
+    opacity: 0.85
+}
+
+#experts .expert-block .info-block {
+    padding-left: 5px;
+    text-align: left
+}
+
+#experts .expert-block .info-block .mentor {
+    text-align: left;
+    font-size: 1.3em;
+    margin: 3px 0
+}
+
+@media (max-width: 768px) {
+    #experts .expert-block .info-block .mentor {
+        text-align: center
+    }
+}
+
+#experts .expert-block .info-block .rating {
+    text-align: left;
+    margin: 0;
+    width: auto
+}
+
+#experts .expert-block .info-block .skills {
+    text-align: left;
+    margin: 3px 0
+}
+
+@media (max-width: 768px) {
+    #experts .expert-block .info-block .skills {
+        text-align: center
+    }
+}
+
+@media (max-width: 1200px) {
+    #experts .expert-block .info-block {
+        height: 145px
+    }
+}
+
+@media (max-width: 980px) {
+    #experts .expert-block .info-block {
+        height: 170px
+    }
+}
+
+@media (max-width: 768px) {
+    #experts .expert-block .info-block {
+        text-align: center;
+        padding-left: 0px;
+        height: auto
+    }
+}
+
+#experts .expert-block .review {
+    min-height: 90px;
+    text-align: left
+}
+
+@media (max-width: 1200px) {
+    #experts .expert-block .review {
+        height: 120px
+    }
+}
+
+@media (max-width: 980px) {
+    #experts .expert-block .review {
+        height: 170px
+    }
+}
+
+@media (max-width: 768px) {
+    #experts .expert-block .review {
+        text-align: center;
+        height: auto
+    }
+}

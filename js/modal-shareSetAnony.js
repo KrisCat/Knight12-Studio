@@ -1,0 +1,5253 @@
+(function(){
+var p=P('P.ui'),
+__xhtml='<div class="card bgc4"><div class="card-wrap bdc6 bds0 bdwa bgc99 js-wrap"></div></div>';
+p._$$LBase=C();
+var __pro=p._$$LBase._$extend(p._$$UIBase);
+U.cls._$augment(p._$$LBase,P.ut._$$Single,true);
+__pro._$initialize=function(_param){
+_param=_param||{};
+this.__initialize(_param);
+};
+__pro.__initialize=function(_param){
+this.__con=this.__getXNode();
+this.__body=E._$parseElement(__xhtml);
+E._$getElementsByClassName(this.__body,'js-wrap')[0].appendChild(this.__con);
+if(_param.pnode)
+this._$appendTo(_param.pnode);
+};
+__pro.__getXNode=F;
+__pro._$show=function(){
+E._$addClassName(this.__pnode,'js-selected');
+return p._$$UIBase.prototype._$show.call(this);
+};
+__pro._$toggle=function(){
+this._$visible()?this._$hide():this._$show();
+};
+__pro._$hide=function(){
+E._$delClassName(this.__pnode,'js-selected');
+return p._$$UIBase.prototype._$hide.call(this);
+};
+})();
+
+(function(){
+var p=P('P.ui'),__pro;
+p._$$EImage=C();
+__pro=p._$$EImage.prototype;
+U.cls._$augment(p._$$EImage,P.ut._$$Reuse,true);
+__pro._$initialize=function(_param){
+_param=_param||{};
+this.__eimg=E._$getElement(_param.eimg);
+this.__alt=_param.alt||this.__eimg.src;
+this.__delay=_param.delay==0?0:_param.delay||100;
+this.__onLoad=_param.onload;
+this.__onError=_param.onerror;
+this.__onLoading=_param.onloading;
+this.__img=new Image();
+this.__img.onload=this.__onImageLoad._$bind(this);
+this.__img.onerror=this.__onImageError._$bind(this);
+};
+__pro._$reset=function(_opt){
+_opt=_opt||{};
+this.__src=_opt.src;
+if(this.__src){
+this.__onLoading&&this.__onLoading();
+this.__img.src=this.__src;
+var _function=this.__setAlt._$bind(this);
+if(this.__delay)
+this.__timer=window.setTimeout(_function,this.__delay);
+else
+_function();
+}
+return this;
+};
+__pro.__onImageLoad=function(){
+if(this.__src!=this.__img.src)
+return;
+this.__timer&&window.clearTimeout(this.__timer);
+this.__eimg.src=this.__src;
+this.__onLoad&&this.__onLoad(this.__img);
+};
+__pro.__onImageError=function(){
+this.__timer&&window.clearTimeout(this.__timer);
+this.__onError&&this.__onError(this.__img);
+};
+__pro.__setAlt=function(){
+if(this.__eimg.src!=this.__src&&this.__eimg.src!=this.__alt)
+this.__eimg.src=this.__alt;
+};
+})();
+
+(function(){
+var p=P('P.ui'),
+__xhtml='<div class="tween"><b class="fc3 fs3 fw1">+1</b></div>',
+__pnode;
+var __tween={
+linear:function(t,b,c,d){
+return c*t/d+b;
+}
+};
+var __move=function(_method){
+var _style=__pnode.style,t=0,c=30,d=50,_n,_tag=-1;
+_method!=='float'&&(_style.top=0)&&(_tag=1);
+_n=parseInt(_style.top,10)||0;
+_style.display='';
+clearTimeout(__move._t);
+function _run(){
+if(t<d){
+var _m=Math.ceil(__tween.linear(++t,_n,_tag*c,d));
+_style.top=_m+'px';
+__move._t=setTimeout(_run,1);
+}else{
+setTimeout(function(){
+_style.display='none';
+},1000);
+}
+}
+_run();
+};
+p._$$Tween=C();
+var __pro=p._$$Tween._$extend(p._$$UIBase);
+U.cls._$augment(p._$$Tween,P.ut._$$Reuse,true);
+__pro._$reset=function(_options){
+_options=_options||{};
+__pnode=this.__body;
+if(_options.method!=='float'){
+this._$appendTo(_options.parent);
+}else{
+var _tmp=E._$getElement(_options.parent)
+,_cov=E._$getElementsByClassName(document,'m-xboxModule')[0]
+,_tmpx=E._$offsetX(_tmp)
+,_tmpy=(!!_cov)?document.documentElement.scrollTop+E._$offsetY(_tmp):E._$offsetY(_tmp)
+,_w=_tmp.offsetWidth
+,_h=_tmp.offsetHeight;
+__pnode.style.cssText+=';position:absolute;z-index:9999;left:'+(_tmpx+Math.ceil(_w/2))+'px;top:'+_tmpy+'px;';
+if(!this.__hasInsert){
+this._$appendTo(document.body);
+this.__hasInsert=true;
+}
+}
+__move(_options.method);
+};
+__pro.__getXNode=function(){
+var _nd=E._$parseElement(__xhtml);
+return _nd;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__ud=UD,
+__proEditor,
+__rtag='rr-tag',
+__atag='aa-tag',
+__xhtml='<div>\
+     <div class="hnt thide js-hint '+__rtag+'"><span class="nbw-act login js-act '+__rtag+'" style="display:none"><a href="javascript:void(0);" needlogin="true">点击登录</a><span class="lsep gt">|</span><span class="fc05">昵称：</span><input class="txt bdc6 bds0 bdwa"/></span><span>回复：<span class="js-name '+__rtag+'"></span></span></div>\
+     <div class="js-editor '+__rtag+'"></div>\
+       </div>';
+p._$$ReplyEditor=C();
+__proEditor=p._$$ReplyEditor._$extend(p._$$UIBase);
+U.cls._$augment(p._$$ReplyEditor,P.ut._$$Single,true);
+__proEditor.__initialize=function(_param){
+_param=_param||{};
+this.__eopt={
+fixed:true,
+noface:true,
+before:true,
+singleton:true,
+maxlength:_param.maxlength||1000,
+vurl:_param.vurl,
+'class':'w-rep-editor',
+onbeforedestroy:this._$recycle._$bind(this),
+eopt:{
+style:'body{font-family:arial;}',
+url:'http://photo.163.com/photo/src/crossdomain.html',
+onclick:_param.onclick
+}
+};
+};
+__proEditor._$reset=function(_opt){
+_opt=_opt||{};
+this._$appendTo(_opt.pnode);
+this.__ename.innerText=this.__eopt.replyTo=_opt.replyTo||'网易相册网友';
+this.__eopt.iclass=_opt.iclass;
+this.__eopt.onok=_opt.onok;
+this.__onAfterShow=_opt.onaftershow;
+this.__reditor=P(N.ui)._$$SimpleEditor._$allocate(this.__eeditor,this.__eopt);
+this.__onAfterShow&&this.__onAfterShow();
+this.__ehint.style.display='';
+this.__onAfterHide=_opt.onafterhide;
+this.__isAnonymous=__ud.visitId=='0';
+if(this.__isAnonymous){
+this.__eact.style.display='';
+U.dom._$initAnchor(this.__eact.getElementsByTagName('a')[0]);
+this.__enickName=this.__eact.getElementsByTagName('input')[0];
+}
+return this;
+};
+__proEditor._$recycle=function(){
+this.__ehint.style.display='none';
+this.__onAfterHide&&this.__onAfterHide();
+};
+__proEditor._$onDestroy=function(){
+this.__reditor&&this.__reditor._$destroy();
+};
+__proEditor._$getNickName=function(){
+return this.__enickName&&this.__enickName.value||'';
+};
+__proEditor._$getEditor=function(){
+return this.__reditor;
+};
+__proEditor.__getXNode=function(){
+var _nd=E._$parseElement(__xhtml),_ntmp=E._$getElementsByClassName(_nd,__rtag);
+this.__ehint=_ntmp[0];
+this.__eact=_ntmp[1]
+this.__ename=_ntmp[2];
+this.__eeditor=_ntmp[3];
+return _nd;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__proCmt,
+__allowComment=true,
+__pageSize=40,
+__interval=2000,
+__btag='b-tag',
+__xhtml='<div class="j-wtr">\
+      <h3 class="j-wtl fs1 fw1 js-title fc1 icn0 icn0-30 cmt-title '+__btag+'"></h3>\
+     </div>\
+     <div class="j-main">\
+      <div class="acmt '+__btag+'" style="display:none;"><img class="bdc21 bds0 bdwa qimg '+__btag+'"/><a href="javascript:void(0);" class="noul '+__btag+'"> 取消引用</a></div>\
+      <div class="nbw-act js-act '+__btag+'" style="display:none"><a href="javascript:void(0);" needlogin="true">点击登录</a><span class="lsep gt">|</span><span class="fc05">昵称：</span><input class="txt bdc6 bds0 bdwa"/></div>\
+      <div class="j-wed clearfix">\
+       <div class="cmt-avt '+__btag+'"><a target="_blank"><img class="bdwa bds0 bdc4 '+__btag+'" /></a><a target="_blank" class="thide '+__btag+'"></a></div>\
+              <div class="cmt-edt js-editor fc2 fs1 '+__btag+'"></div>\
+      </div>\
+             <div class="js-cnt '+__btag+'"></div>\
+      <a href="javascript:void(0)" class="noul npg npg-on hand fw1 fc0 js-next '+__btag+'" style="display:none;" hidefocus="true"></a>\
+            </div>\
+            <div class="j-wbr cmt-more">\
+      <div class="j-wbl"></div>\
+     </div>';
+p._$$BComment=C();
+__proCmt=p._$$BComment._$extend(p._$$UIBase);
+__proCmt.__initialize=function(_param){
+_param=_param||{};
+this.__param=_param;
+this.__ud=_param.ud;
+this.__cache=_param.cache;
+this.__title=_param.title;
+this.__pnode=_param.pnode;
+this.__pageSize=_param.pageSize||__pageSize;
+this.__needntLoad=_param.needntload||false;
+this.__autoLoad=!!_param.autoLoad||false;
+this.__autoLoadNode=_param.autoLoadNode||'';
+this.__onAfterCommentAdd=_param.onaftercommentadd;
+this.__lazyOn=U.obj._$isUndefined(_param.lazy)?true:!!_param.lazy||false;
+this.__lazyOpt=_param.lazy||{};
+this.__showneweibo=this.__param.showneweibo||false;
+this.__neweibocheck=this.__param.neweibocheck||false;
+this.__noUserCard=this.__param.noUserCard||false;
+this._$appendTo(_param.pnode);
+if(this.__autoLoad){
+if(this.__autoLoadNode){
+this.__enext.parentNode&&this.__enext.parentNode.replaceChild(this.__autoLoadNode,this.__enext);
+this.__enext=null;
+this.__enext=this.__autoLoadNode;
+}
+this.__loadNextFun=this._$isNeedToLoadNext._$bind(this);
+this.__autoLoadTimer=null;
+V._$addEvent(window,'scroll',this.__loadNextFun);
+}else{
+this.__loadNextFun=this.__onNextPage._$bind(this);
+V._$addEvent(this.__enext,'click',this.__loadNextFun);
+}
+V._$addEvent(this.__eciteCancel,'click',this.__onCancelCitePicture._$bind(this));
+E._$addClassName(this.__body,_param['class']||'');
+};
+__proCmt._$isNeedToLoadNext=function(){
+var _h=this.__enext.offsetWidth
+,_y
+,_scrollH
+,_windowH;
+if(!_h||this.__requestNextStatu){
+return;
+}
+_y=E._$offsetY(this.__enext);
+_scrollH=U.dom._$scrollTop();
+_windowH=U.dom._$clientHeight()+_scrollH;
+if(_y>=_scrollH&&_y<=_windowH){
+this.__requestNextStatu=true;
+this.__onNextPage();
+}
+};
+__proCmt._$reset=function(_opt){
+_opt=_opt||{};
+this.__pageIndex=0;
+this.__itms&&p._$$CmtItem._$recycle(this.__itms);
+this.__itms=[];
+this.__oid=_opt.oid;
+if(!_opt.force&&!!this.__needntLoad){
+this.__onCommentFirstLoad();
+}else if(!!this.__oid||window.location.pageName==='home_about'){
+this.__cache._$getComments(this.__oid,this.__pageSize,this.__pageIndex++*this.__pageSize,true,this.__onCommentFirstLoad._$bind(this),_opt.force);
+}
+return this;
+};
+__proCmt.__getEditor=function(_param){
+var _param=_param||this.__param;
+this.__editorOpt={
+fixed:true,
+noface:true,
+maxlength:_param.maxlength||1000,
+singleton:false,
+vurl:this.__vurl,
+'class':'w-ceditor w-pub-editor w-efix',
+onok:this.__onAddComment._$bind(this),
+showneweibo:this.__showneweibo||false,
+neweibocheck:this.__neweibocheck||false,
+eopt:{
+nofocus:true,
+style:'body{font-family:arial;}',
+url:location.r+'/photo/src/crossdomain.html',
+onclick:_param.onclick
+}
+};
+this.__meditor=P(N.ui)._$$SimpleEditor._$allocate(this.__eeditor,this.__editorOpt);
+return this.__meditor;
+};
+__proCmt._$getEditor=function(){
+return this.__meditor;
+};
+__proCmt.__onCommentFirstLoad=function(_list,_pcount,_acount){
+this.__lazyModule&&this.__lazyModule._$pauseLoad();
+this.__itms&&p._$$CmtItem._$recycle(this.__itms);
+this.__pcount=_pcount||0;
+this.__acount=_acount||0;
+this.__setTitle();
+this.__onCommentsLoad(_list);
+};
+__proCmt.__setTitle=function(){
+if(this.__acount==0)
+this.__etitle.innerText=this.__param.first||'发表第一条评论';
+else
+if(this.__acount>0)
+this.__etitle.innerHTML=this.__title?this.__title+'（'+this.__acount+'条）':'';
+};
+__proCmt.__onCommentsLoad=function(_list){
+var _total=Math.ceil(this.__pcount/this.__pageSize);
+if(_total>this.__pageIndex){
+this.__enext.style.display='';
+if(!this.__autoLoad){
+E._$replaceClassName(this.__enext,'npg-off','npg-on');
+this.__enext.innerText='查看更多评论('+this.__pageIndex+'/'+_total+')';
+}
+}else{
+this.__enext.style.display='none';
+}
+this.__requestNextStatu=false;
+var _itms=p._$$CmtItem._$allocate(_list,this.__ecnt,{
+onpunish:this.__onPunish._$bind(this),
+ontop:this.__onTop._$bind(this),
+onadd:this.__onAddCommentReply._$bind(this),
+ondeletecomment:this.__onDeleteComment._$bind(this),
+ondeletecommentreply:this.__onDeleteCommentReply._$bind(this),
+onfrbcomment:this.__onFrbcomment._$bind(this),
+vurl:this.__vurl,
+lazy:this.__lazyOn,
+noUserCard:this.__noUserCard,
+onlyDelete:this.__onlyDelete
+});
+this.__itms=this.__itms.concat(_itms);
+this.__lazyOn&&this.__enableImageLazyLoad();
+};
+__proCmt.__enableImageLazyLoad=function(){
+if(this.__lazyModule){
+this.__lazyModule._$reset();
+}
+else{
+this.__lazyModule=np.w._$$ImageLazyLoad._$getInstance({
+delay:this.__lazyOpt.delay||200,
+threshold:this.__lazyOpt.threshold||200,
+container:this.__pnode,
+attribute:'data-lazyload-src'
+});
+}
+};
+__proCmt.__onNextPage=function(){
+if(!this.__autoLoad){
+E._$replaceClassName(this.__enext,'npg-on','npg-off');
+this.__enext.innerText='LOADING';
+}
+this.__cache._$getComments(this.__oid,this.__pageSize,this.__pageIndex++*this.__pageSize,false,this.__onCommentsLoad._$bind(this),function(){
+this.__requestNextStatu=false;
+}._$bind(this));
+};
+__proCmt.__onAddComment=function(_data){
+var _cnt=_data&&_data.content,
+_send2weibo=(_data&&_data.send2weibo)||false;
+if(__allowComment){
+if(_cnt){
+this.__editorOpt.neweibocheck=_send2weibo;
+__allowComment=false;
+this.__timer=setTimeout(this.__onDisableComment._$bind(this),__interval);
+this.__addComment(this.__eeditor,U.obj._$extend(_data,{
+oid:this.__oid
+,visitName:this.__ud.visitName
+,visitNickName:this.__ud.visitNickName
+,visitAvatar:this.__ud.visitAvatar
+,runame:this.__ud.hostName
+,rnname:this.__ud.profile&&this.__ud.profile.nickName||''
+,rsharegrade:this.__ud.visitShareGrade||0
+,rwhitelist:this.__ud.visitIsVip||0
+,send2NeWeibo:_send2weibo
+,cb:this.__onAddCommentCB._$bind(this)
+,cberr:this.__onAddCommentCBError._$bind(this)
+,noUserCard:this.__noUserCard
+,onlyDelete:this.__onlyDelete
+}));
+}
+return;
+}
+this.__editor._$disable(false);
+alert('发表评论太快，请休息一下～');
+};
+__proCmt.__onDisableComment=function(){
+__allowComment=true;
+this.__timer&&clearTimeout(this.__timer);
+};
+__proCmt.__addComment=F;
+__proCmt.__onAddCommentCB=function(_data){
+var _arg=arguments;
+if(_arg.length==2&&_arg[1]){
+this.__meditor._$disable(false);
+this.__meditor._$focus();
+this.__meditor._$refreshValidCode();
+return;
+}
+if(!_data){
+this.__meditor._$disable(false);
+alert('发表评论失败，请稍候再试！');
+return;
+}
+this.__eciteImg.src&&this.__onCancelCitePicture();
+p._$$ReplyEditor._$getInstance()._$onDestroy();
+this.__meditor._$resetOption(this.__editorOpt);
+this.__onAfterCommentAdd&&this.__onAfterCommentAdd();
+this.__pageIndex=this.__pageIndex||this.__pageIndex+1;
+this.__cache._$getComments(this.__oid,this.__pageIndex*this.__pageSize,0,true,this.__onCommentFirstLoad._$bind(this));
+};
+__proCmt.__onAddCommentCBError=function(_cmt){
+if(_cmt&&_cmt.errCode!=0){
+this.__meditor._$disable(false);
+P.ui._$$Posting._$getInstance()._$hide();
+alert("发表评论太快，请休息一下～");
+}
+};
+__proCmt.__onAddCommentReply=function(_node,_data,_itm){
+if(!_data||!_itm)
+return;
+this.__addComment(_node,U.obj._$extend({
+oid:this.__oid
+,visitName:this.__ud.visitName
+,visitNickName:this.__ud.visitNickName
+,visitAvatar:this.__ud.visitAvatar
+,runame:this.__ud.hostName
+,rnname:this.__ud.profile&&this.__ud.profile.nickName||''
+,rsharegrade:this.__ud.visitShareGrade||0
+,rwhitelist:this.__ud.visitIsVip||0
+,cb:this.__onAddCommentReplyCB._$bind(this,_itm)
+,cberr:this.__onAddCommentCBError._$bind(this)
+,isReply:true
+},_data));
+};
+__proCmt.__onAddCommentReplyCB=function(_itm,_data){
+var _arg=arguments;
+this.__reditor=P.ui._$$ReplyEditor._$getInstance()._$getEditor();
+if(_arg.length==3&&_arg[2]){
+this.__reditor._$disable(false);
+this.__reditor._$focus();
+this.__reditor._$refreshValidCode();
+return;
+}
+if(!_data){
+this.__reditor._$disable(false);
+alert('回复失败，请稍候再试！');
+return;
+}
+this.__reditor._$destroy();
+this.__cache._$getComments(this.__oid,this.__pageIndex*this.__pageSize,0,true,this.__onCommentFirstLoad._$bind(this));
+U.dom._$scrollTo(this.__pnode);
+};
+__proCmt._$onCitePicture=function(_id,_url){
+try{
+this.__eciteCon.style.display='';
+setTimeout(function(){
+this.__eciteImg.src=_url||location.fa160;
+}._$bind(this),0);
+}catch(e){
+}
+this.__cache._$reset({cite:_url,pictureid:_id});
+};
+__proCmt.__onCancelCitePicture=function(_event){
+V._$stopBubble(_event);
+this.__eciteCon.style.display='none';
+this.__cache._$reset({cite:''});
+};
+__proCmt.__onDeleteComment=F;
+__proCmt.__onDeleteCommentReply=F;
+__proCmt.__onPunish=F;
+__proCmt.__onTop=F;
+__proCmt.__onFrbcomment=F;
+__proCmt._$destroy=function(){
+delete this.__oid;
+delete this.__pageIndex;
+this.__itms=p._$$CmtItem._$recycle(this.__itms);
+this.__itms=[];
+};
+__proCmt.__getXNode=function(){
+var _nd=E._$parseElement(__xhtml),_ntmp=E._$getElementsByClassName(_nd,__btag);
+this.__etitle=_ntmp[0];
+this.__eciteCon=_ntmp[1];
+this.__eciteImg=_ntmp[2];
+this.__eciteCancel=_ntmp[3];
+this.__eact=_ntmp[4];
+this.__eavtCon=_ntmp[5];
+this.__eavt=_ntmp[6];
+this.__eauthor=_ntmp[7];
+this.__eeditor=_ntmp[8];
+this.__ecnt=_ntmp[9];
+this.__enext=_ntmp[10];
+return _nd;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__proCItem,
+__tag='c-tag',
+__xhtml='<div class="nbw-cmt bdwb bds2 bdc21 clearfix">\
+                        <div class="nbw-fce nbw-f50 l bdwa bdc21 bds0">\
+                            <a hidefocus="true" class="'+__tag+'"><img class="cwd js-img '+__tag+'" /></a>\
+                        </div>\
+                        <div class="thde">\
+          <span class="r fc1 js-time '+__tag+'"></span>\
+                            <a class="tt js-title '+__tag+'"></a>\
+                            <div class="cnt fc98 js-cnt pre '+__tag+'"></div>\
+                            <div class="op fc03 nbw-act fc2 js-act '+__tag+'"><a class="fc2 sep js-reply hand '+__tag+'">回复</a></div>\
+       <div class="js-editor '+__tag+'"></div>\
+                            <div class="js-reps '+__tag+'"></div>\
+                        </div>\
+                    </div>';
+p._$$BCmtItem=C();
+__proCItem=p._$$BCmtItem._$extend(p._$$UIBase);
+__proCItem.__initialize=function(_param){
+this.__onAdd=_param.onadd;
+this.__lazyOn=_param.lazy;
+this.__noUserCard=_param.noUserCard;
+this.__ud=this.__ud||window.UD||np.c._$UD||{};
+V._$addEvent(this.__ereply,'click',this.__onClickReply._$bind(this));
+};
+__proCItem._$reset=function(_data,_opt){
+_opt=_opt||{};
+this._$appendTo(_opt.pnode,_opt.unshift);
+this.__id=_data.id;
+this.__prntid=_data.prntid;
+if(_data.rgroupname){
+var _link=location.p+"/group/"+_data.rgroupId+'/',_groupName=U.str._$truncate(_data.rgroupname||'',18);
+this.__etime.innerHTML='<span class="fc10 cmtgroup" >来自<a target="_blank" hidefocus="false" href='+_link+'>'+_groupName+'</a>小镇</span>'+U._$format(_data.t,'yyyy-MM-dd HH:mm');
+}else{
+this.__etime.innerText=U._$format(_data.t,'yyyy-MM-dd HH:mm');
+}
+this.__etitle.innerText=_data.rnname||_data.runame||'网易相册网友';
+if(_data.runame){
+if(this.__lazyOn){
+this.__eimg.setAttribute('data-lazyload-src',U.fun._$getAvaImg(_data.runame,0));
+}else{
+this.__eimg.src=U.fun._$getAvaImg(_data.runame,0);
+}
+this.__eimg.alt=this.__eimg.title=_data.rnname;
+if(!!_data.domainName){
+this.__etitle.href=this.__eanchor.href=U.fun._$getUserHomeUrl(_data.runame,_data.domainName);
+}else{
+this.__etitle.href=this.__eanchor.href=location.r+'/'+_data.runame+'/home/';
+}
+}else{
+if(this.__lazyOn){
+this.__eimg.setAttribute('data-lazyload-src',location.du60);
+}else{
+this.__eimg.src=location.du60;
+}
+this.__eimg.alt=this.__eimg.title='网易相册网友';
+this.__etitle.className='text fc2 noul';
+this.__eanchor.className='text';
+}
+if(_data.runame&&!this.__noUserCard){
+this.__etitle.setAttribute('usercard',"name="+_data.runame);
+this.__eimg.setAttribute('usercard',"name="+_data.runame);
+this.__rankNode=U.dom._$showRank({
+rank:_data.rsharegrade||0
+,showRank:0
+,isVip:_data.rwhitelist||0
+,style:'margin-left:10px;vertical-align: baseline;'
+});
+this.__rankNode&&this.__etitle.parentNode.insertBefore(this.__rankNode,this.__etitle.nextSibling);
+}
+this.__ecnt.innerHTML=(_data.refpicurl?'<div class="cite"><a href="#'+_data.picid+'"><img '+(this.__lazy?'data-lazyload-src="':'src="')+_data.refpicurl+'"/></a></div>':'')+(_data.con||'');
+this.__runame=_data.runame;
+this.__rnname=_data.rnname;
+this.__rav=_data.rav;
+this.__dataex=_data.dataex||'';
+this.__rtype=_data.rtype;
+this.__itms&&p._$$RpyItem._$recycle(this.__itms);
+this.__itms=p._$$RpyItem._$allocate(_data.subComments,this.__ereps,{
+onadd:this.__onAddReply._$bind(this),
+onpunish:this.__onPunish._$bind(this),
+ontop:this.__onTop._$bind(this),
+ondelete:this.__onDeleteCommentReplyAlpha._$bind(this),
+vurl:this.__vurl,
+lazy:this.__lazyOn,
+noUserCard:this.__noUserCard,
+onlyDelete:this.__onlyDelete
+});
+this.__data=_data;
+return this;
+};
+__proCItem._$destroy=function(){
+this.__rankNode&&this.__rankNode.parentNode&&this.__rankNode.parentNode.removeChild(this.__rankNode);
+E._$delClassName(this.__etitle,'text fc2 noul');
+this.__etitle.removeAttribute('href');
+this.__eanchor.removeAttribute('href');
+this.__editor&&this.__editor._$recycle();
+this.__itms&&p._$$RpyItem._$recycle(this.__itms);
+delete this.__editor;
+};
+__proCItem.__onClickReply=function(_event){
+V._$stopBubble(_event);
+this.__editor=
+this.__editor||P.ui._$$ReplyEditor._$getInstance({vurl:this.__vurl});
+this.__editor._$reset({
+iclass:this,
+pnode:this.__eeditor,
+replyTo:this.__rnname,
+onok:this.__onReply._$bind(this),
+onafterhide:function(){this.__eact.style.display='';}._$bind(this),
+onaftershow:function(){this.__eact.style.display='none';}._$bind(this)
+});
+};
+__proCItem._$addCommentReply=function(_data){
+if(!_data)
+return;
+var _itm=p._$$RpyItem._$getInstance({vurl:this.__vurl})._$reset(_data,{
+pnode:this.__ereps,
+onadd:this.__onAddReply._$bind(this),
+ondelete:this.__onDeleteCommentReplyAlpha._$bind(this),
+lazy:this.__lazyOn,
+noUserCard:this.__noUserCard,
+onlyDelete:this.__onlyDelete
+});
+this.__itms.push(_itm);
+};
+__proCItem.__onReply=function(_data){
+var _cnt=this.__content=_data&&_data.content;
+_cnt&&this.__onAdd(this.__eeditor,{
+rtype:this.__rtype
+,content:_cnt
+,code:_data.code
+,dataex:this.__dataex
+,parentId:this.__id
+,id:this.__id
+,runame:this.__runame
+,rnname:this.__rnname
+,rsharegrade:this.__ud.visitShareGrade||0
+,rwhitelist:this.__ud.visitIsVip||0
+,noUserCard:this.__noUserCard
+,onlyDelete:this.__onlyDelete
+},this);
+};
+__proCItem.__onAddReply=function(_node,_data){
+this.__onAdd&&this.__onAdd(_node,_data,this);
+};
+__proCItem.__onDeleteCommentReplyAlpha=F;
+__proCItem.__onPunish=F;
+__proCItem.__onTop=F;
+__proCItem.__getXNode=function(){
+var _nd=E._$parseElement(__xhtml),_ntmp=E._$getElementsByClassName(_nd,__tag);
+this.__eanchor=_ntmp[0];
+this.__eimg=_ntmp[1];
+this.__etime=_ntmp[2];
+this.__etitle=_ntmp[3];
+this.__ecnt=_ntmp[4];
+this.__eact=_ntmp[5];
+this.__ereply=_ntmp[6];
+this.__eeditor=_ntmp[7];
+this.__ereps=_ntmp[8];
+return _nd;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__stag='s-tag',
+__xhtml='<div class="nbw-cmt bdwt bds2 bdc21 clearfix">\
+                            <div class="nbw-fce nbw-f40 l bdwa bdc21 bds0">\
+                                <a hidefocus="true" class="'+__stag+'"><img class="cwd js-img '+__stag+'" /></a>\
+                            </div>\
+                            <div class="thde">\
+                                <span class="r fc1 js-time '+__stag+'"></span>\
+                                <div class="tt fc1"><a class="usernm sep js-from '+__stag+'"></a><span class="rpl fc07 sep">回复</span><a class="replytonm sep js-to '+__stag+'"></a></div>\
+                                <div class="cnt fc98 js-cnt pre '+__stag+'"></div>\
+                                <div class="op fc03 nbw-act fc2 js-act '+__stag+'"><a class="fc2 sep js-reply hand '+__stag+'">回复</a></div>\
+        <div class="js-editor '+__stag+'"></div>\
+                            </div>\
+                        </div>';
+p._$$BRpyItem=C();
+var __proRItem=p._$$BRpyItem._$extend(p._$$UIBase);
+__proRItem._$reset=function(_data,_opt){
+_opt=_opt||{};
+this.__ud=this.__ud||window.UD||np.c._$UD||{};
+this._$appendTo(_opt.pnode);
+this.__lazyOn=_opt.lazy;
+this.__onAdd=_opt.onadd;
+this.__id=_data.id;
+this.__prntid=_data.prntid;
+this.__noUserCard=_opt.noUserCard;
+if(_data.rgroupname){
+var _link=location.p+"/group/"+_data.rgroupId+'/',
+_groupName=U.str._$truncate(_data.rgroupname||'',18);
+this.__etime.innerHTML='<span class="fc10 cmtgroup" >来自<a target="_blank" hidefocus="false" href='+_link+'>'+_groupName+'</a>小镇</span>'+U._$format(_data.t,'yyyy-MM-dd HH:mm');
+}
+else this.__etime.innerText=U._$format(_data.t,'yyyy-MM-dd HH:mm');
+this.__efrom.innerText=_data.rnname||_data.runame||'网易相册网友';
+if(_data.runame){
+if(this.__lazyOn)
+this.__eimg.setAttribute('data-lazyload-src',U.fun._$getAvaImg(_data.runame,0));
+else
+this.__eimg.src=U.fun._$getAvaImg(_data.runame,0);
+this.__eimg.alt=this.__eimg.title=_data.rnname;
+if(!!_data.domainName){
+this.__eanchor.href=this.__efrom.href=U.fun._$getUserHomeUrl(_data.runame,_data.domainName);
+}else{
+this.__eanchor.href=this.__efrom.href=location.r+'/'+_data.runame+'/home/';
+}
+}
+else{
+if(this.__lazyOn)
+this.__eimg.setAttribute('data-lazyload-src',location.du60);
+else
+this.__eimg.src=location.du60;
+this.__eimg.alt=this.__eimg.title='网易相册网友';
+E._$addClassName(this.__efrom,'text fc2 noul');
+E._$addClassName(this.__eanchor,'text');
+}
+this.__ecnt.innerHTML=_data.con;
+this.__runame=_data.runame;
+this.__rnname=_data.rnname;
+this.__rav=_data.rav;
+this.__dataex=_data.dataex||'';
+this.__rtype=_data.rtype;
+this.__eto.innerText=_data.rpynname||_data.rpyuname||'网易相册网友';
+if(_data.rpyuname){
+if(!!_data.replyDomainName){
+this.__eto.href=U.fun._$getUserHomeUrl(_data.rpyuname,_data.replyDomainName);
+}
+else{
+this.__eto.href=location.r+'/'+_data.rpyuname+'/home/';
+}
+}else{
+E._$addClassName(this.__eto,'text fc2 noul');
+}
+if(!this.__noUserCard){
+if(_data.rpyuname){
+this.__eto.setAttribute('usercard',"name="+_data.rpyuname);
+}
+if(_data.runame){
+this.__eimg.setAttribute('usercard',"name="+_data.runame);
+this.__efrom.setAttribute('usercard',"name="+_data.runame);
+this.__rankNode=U.dom._$showRank({
+rank:_data.rsharegrade||0
+,showRank:0
+,isVip:_data.rwhitelist||0
+,style:'margin-left:-5px;margin-right:10px;vertical-align:baseline;'
+});
+this.__rankNode&&this.__efrom.parentNode.insertBefore(this.__rankNode,this.__efrom.nextSibling);
+}
+}
+this.__data=_data;
+return this;
+};
+__proRItem._$destroy=function(){
+this.__rankNode&&this.__rankNode.parentNode&&this.__rankNode.parentNode.removeChild(this.__rankNode);
+E._$delClassName(this.__eto,'text fc2 noul');
+E._$delClassName(this.__efrom,'text fc2 noul');
+this.__eanchor.removeAttribute('href');
+this.__efrom.removeAttribute('href');
+this.__eto.removeAttribute('href');
+this.__editor&&this.__editor._$recycle();
+delete this.__editor;
+};
+__proRItem.__onClickReply=function(_event){
+V._$stopBubble(_event);
+this.__editor=
+this.__editor||P.ui._$$ReplyEditor._$getInstance({vurl:this.__vurl});
+this.__editor._$reset({
+iclass:this,
+pnode:this.__eeditor,
+replyTo:this.__rnname,
+onok:this.__onReply._$bind(this),
+onafterhide:function(){this.__eact.style.display='';}._$bind(this),
+onaftershow:function(){this.__eact.style.display='none';}._$bind(this)
+});
+};
+__proRItem.__onReply=function(_data){
+_data=_data||{};
+var _cnt=_data.content;
+_cnt&&this.__onAdd(E._$getElementsByClassName(this.__eeditor,'zbtn')[0],{
+rtype:this.__rtype
+,content:_data.content
+,code:_data.code
+,dataex:this.__dataex
+,parentId:this.__prntid
+,id:this.__id
+,runame:this.__runame
+,rnname:this.__rnname
+,rsharegrade:this.__ud.visitShareGrade||0
+,rwhitelist:this.__ud.visitIsVip||0
+,noUserCard:this.__noUserCard
+,onlyDelete:this.__onlyDelete
+});
+};
+__proRItem.__getXNode=function(){
+var _nd=E._$parseElement(__xhtml),_ntmp=E._$getElementsByClassName(_nd,__stag);
+this.__eanchor=_ntmp[0];
+this.__eimg=_ntmp[1];
+this.__etime=_ntmp[2];
+this.__efrom=_ntmp[3];
+this.__eto=_ntmp[4];
+this.__ecnt=_ntmp[5];
+this.__eact=_ntmp[6];
+this.__ereply=_ntmp[7];
+this.__eeditor=_ntmp[8];
+V._$addEvent(_ntmp[7],'click',this.__onClickReply._$bind(this));
+return _nd;
+};
+})();
+
+(function(){
+var p=P('P.ui'),
+__tag='f-tag',
+__hint=['提示：相片将被放入个人帐号下“我的收藏”中。','提示：本页相片将被放入个人帐号下“我的收藏”中。'],
+__xhtml='<div class="fav">\
+     <p class="fc2 '+__tag+'"></p>\
+     <form class="'+__tag+'">\
+                  <table>\
+                      <tr><th class="fc5">收藏夹：</th><td><select style="width:180px;" class="bdc6 bds0 bdwa '+__tag+'" ></select><a href="javascript:void(0);" class="ndir '+__tag+'" ><span class="fs1 fw1">+</span> 新建收藏夹</span></a>\</td></tr>\
+                      <tr class="'+__tag+'"><th class="fc5" valign="top">收藏语：</th><td><textarea class="bdc6 bds0 bdwa '+__tag+'" maxlength="30"></textarea></td></tr>\
+      </table>\
+      <div class="cbox hide"><input type="checkbox" id="f_lay_cb" class="'+__tag+'" checked="false"/><label for="f_lay_cb" class="autol fc5"> 同时发送一条收藏动态</label></div>\
+                     <div class="act"><span style="display:none;"><input class="'+__tag+'"   type="checkbox"/> <span class="neweibo">网易微博</span></span><input class="btn btn3 fc5 '+__tag+'" type="button" value="确定"/>　<input class="btn btn3 fc5 '+__tag+'" type="button" value="取消"/></div>\
+              </form>\
+    </div>';
+p._$$FavoritesModule=C();
+var __pro=p._$$FavoritesModule._$extend(p._$$WBase,true);
+__pro.__initialize=function(_param){
+this.__uid=_param.uid;
+this._$setTitle("收藏相片");
+V._$addEvent(this.__ecc,'click',this.__onClickClose._$bind(this));
+V._$addEvent(this.__eok,'click',this.__onClickSubmit._$bind(this));
+V._$addEvent(this.__eadd,'click',this.__onFolderModuleAdd._$bind(this));
+this.__scache=new P.ut._$$ShareCache();
+this.__scache._$batEvent({
+onlovephotofolderlistget:this.__cbLovePhotoFolderListGet._$bind(this),
+onlovephotouseritemadd:this.__cbLovePhotoUserItemAdd._$bind(this),
+onfavritelovephotouseritemlistadd:this.__cbLovePhotoUserItemListFavriteAdd._$bind(this)
+});
+U.dom._$setMaxLength(this.__edes);
+};
+__pro._$reset=function(_opt){
+this.__scache._$getLovePhotoFolderList(this.__uid);
+_opt=_opt||O;
+this.__onEnableOK();
+this.__eform.reset();
+this.__sid=_opt.data.sid;
+this.__picId=_opt.data.id;
+this.__onAdd=_opt.onadd||F;
+this.__folderId=_opt.data.fid;
+this.__photoId=_opt.data.photoId;
+this.__photoIds=_opt.data.pids||[];
+this.__edesCon.className=_opt.data.hint?'hide':'';
+this.__ehint.innerText=__hint[this.__hint=_opt.data.hint||0];
+this.__authorId=_opt.data.authid||0;
+if(this.__efolder.options)
+this.__efolder.selectedIndex=0;
+if(this.__hint==0)
+this.__eweibo.parentNode.style.display='';
+return this;
+};
+__pro.__onFolderFull=function(){
+var _folderId=this.__efolder.options[this.__efolder.selectedIndex].value;
+U.arr._$forEach(this.__data,function(_uitem){
+if(_uitem.id==_folderId)
+{
+if(_uitem.count>=1000)
+{alert("一个收藏夹最多存放1000张相片。请选择其他收藏夹或创建新收藏夹。");
+return;}
+}
+});
+}
+__pro.__onClickSubmit=function(){
+this.__onDisableOK();
+var _folderId=this.__efolder.options[this.__efolder.selectedIndex].value,
+_event=this.__eactivity.checked?true:false;
+if(this.__hint)
+this.__scache._$favriteLovePhotoUserItemList(this.__photoIds,_folderId,_event);
+else
+{
+var _send2NeWeibo=false;
+if(this.__eweibo.checked)
+_send2NeWeibo=true;
+this.__scache._$addLovePhotoUserItem(_folderId,this.__photoId,this.__sid,this.__picId,this.__authorId,this.__edes.value,_send2NeWeibo,_event);
+}
+};
+__pro.__cbLovePhotoUserItemAdd=function(_folder){
+if(_folder.errorType==2){
+this.__onEnableOK();
+return;
+}
+this.__onClickClose();
+this.__onAdd&&this.__onAdd(!!this.__edes.value,_folder.errorType,_folder.favCount);
+};
+__pro.__onFolderModuleAdd=function(){
+this.__onFavoriteHide();
+p._$$CFavorites._$getInstance({
+level:2,
+uid:this.__uid,
+classname:'lay-cfav'
+})._$reset({
+oncancel:this.__onFolderCancel._$bind(this),
+onadd:this.__onFolderAdd._$bind(this)
+})._$show()._$focus();
+};
+__pro.__onFolderCancel=function(){
+this._$show();
+if(B._$ISOLDIE){
+document.lbody.style.width=document.body.clientWidth-1+'px';
+document.lbody.style.height=document.documentElement.clientHeight-1+'px';
+}
+};
+__pro.__cbLovePhotoFolderListGet=function(_data){
+var _len=_data&&U.arr._$isArray(_data)&&_data.length||0;
+this.__data=_data;
+E._$delClassName(this.__efolder,'fc2');
+if(_len){
+for(var i=0;i<_len;i++){
+var _option=new Option(_data[i].title,_data[i].id);
+this.__efolder.options[i]=_option;
+}
+if(_len==1){
+V._$clearEvent(this.__efolder);
+V._$addEvent(this.__efolder,'click',this.__onFolderFull._$bind(this));
+}else{
+V._$clearEvent(this.__efolder);
+V._$addEvent(this.__efolder,'change',this.__onFolderFull._$bind(this),true);
+}
+}
+else{
+this.__onDisableOK();
+var _option=new Option('请先创建收藏夹');
+this.__efolder.options[0]=_option;
+E._$addClassName(this.__efolder,'fc2');
+}
+};
+__pro.__onFolderAdd=function(_folderList,_folder){
+this.__eok.disabled&&this.__onEnableOK();
+this.__folder=_folder;
+this.__cbLovePhotoFolderListGet(_folderList);
+};
+__pro.__cbLovePhotoUserItemListFavriteAdd=function(){
+this.__onClickClose();
+this.__onAdd&&this.__onAdd();
+};
+__pro.__onFavoriteHide=function(){
+if(this.__body){
+E._$hideCover();
+this.__body.style.display='none';
+}
+};
+__pro.__onEnableOK=function(){
+this.__eok.disabled=false;
+E._$delClassName(this.__eok,'btn3-disabled');
+};
+__pro.__onDisableOK=function(){
+this.__eok.disabled=true;
+E._$addClassName(this.__eok,'btn3-disabled');
+};
+__pro.__getContent=function(){
+var _nd=E._$parseElement(__xhtml),_tmp=E._$getElementsByClassName(_nd,__tag);
+this.__ehint=_tmp[0];
+this.__eform=_tmp[1];
+this.__efolder=_tmp[2];
+this.__eadd=_tmp[3];
+this.__edesCon=_tmp[4]
+this.__edes=_tmp[5];
+this.__eactivity=_tmp[6];
+this.__eweibo=_tmp[7];
+this.__eok=_tmp[8];
+this.__ecc=_tmp[9];
+return _nd;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__pro,
+__tag='cf-tag',
+__xhtml='<div class="fav">\
+     <form class="'+__tag+'">\
+                  <table>\
+                      <tr><th class="fc5">收藏夹名：</th><td><input class="txt w-txt '+__tag+'" maxlength="15"/></td></tr>\
+      </table>\
+                     <div class="act"><input class="ui-btn ui-btn-sub0 '+__tag+'" type="button" value="确定"/>　<input class="ui-btn ui-btn-ccl0 '+__tag+'" type="button" value="取消"/></div>\
+              </form>\
+    </div>';
+p._$$BFavorites=C();
+__pro=p._$$BFavorites._$extend(p._$$WBase,true);
+__pro.__initialize=function(_param){
+_param=_param||O;
+this.__uid=_param.uid;
+this.__level=_param.level||0;
+V._$addEvent(this.__eok,'click',this.__onClickSubmit._$bind(this));
+V._$addEvent(this.__ecc,'click',this.__onClickClose._$bind(this));
+V._$addEvent(this.__eform,'submit',V._$stop);
+this.__scache=new P.ut._$$ShareCache();
+};
+__pro._$reset=function(_options){
+this.__onEnableOK();
+};
+__pro.__onKeyUp=function(_event){
+V._$stop(_event);
+if(_event.keyCode==13)
+this.__onClickSubmit(_event);
+};
+__pro.__onClickSubmit=function(){
+if(U._$isEmpty(this.__ename.value)){
+alert('收藏夹名不能为空');
+this.__invalid=true;
+return;
+}
+this.__invalid=false;
+this.__onDisableOK();
+};
+__pro._$focus=function(){
+U.dom._$textFocus(this.__ename);
+};
+__pro.__onEnableOK=function(){
+this.__eok.disabled=false;
+E._$delClassName(this.__eok,'btn3-disabled');
+};
+__pro.__onDisableOK=function(){
+this.__eok.disabled=true;
+};
+__pro.__getContent=function(){
+var _nd=E._$parseElement(__xhtml),_tmp=E._$getElementsByClassName(_nd,__tag);
+this.__eform=_tmp[0];
+this.__ename=_tmp[1];
+this.__eok=_tmp[2];
+this.__ecc=_tmp[3];
+return _nd;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__pro,
+__supro;
+p._$$CFavorites=C();
+__pro=p._$$CFavorites._$extend(p._$$BFavorites,true);
+__supro=p._$$BFavorites.prototype;
+__pro.__initialize=function(_param){
+__supro.__initialize.call(this,_param);
+this._$setTitle("创建收藏夹");
+this.__scache._$addEvent('onlovephotofolderadd',this.__cbClickSubmit._$bind(this));
+};
+__pro._$reset=function(_options){
+__supro._$reset.call(this,_options);
+_options=_options||O;
+this.__onCancel=_options.oncancel||F;
+this.__onAdd=_options.onadd||F;
+this.__eform.reset();
+return this;
+};
+__pro.__onClickSubmit=function(){
+__supro.__onClickSubmit.call(this);
+!this.__invalid&&this.__scache._$addLovePhotoFolder(this.__uid,U._$trim(this.__ename.value));
+};
+__pro.__cbClickSubmit=function(_folderList,_folder){
+if(_folder.errorType==2){
+this.__onEnableOK();
+return;
+}
+this.__onClickClose();
+if(B._$ISOLDIE){
+document.lbody.style.width=document.body.clientWidth-1+'px';
+document.lbody.style.height=document.documentElement.clientHeight-1+'px';
+}
+this.__onAdd&&this.__onAdd(_folderList,_folder);
+};
+__pro._$hide=function(){
+if(this.__level==0)
+__supro._$hide.call(this);
+else
+if(this.__body){
+E._$hideCover();
+document.lbody.removeChild(this.__body);
+this.__body.style.display='none';
+}
+return this;
+};
+})();
+(function(){
+var p=P('P.ui'),
+__tag='cf-tag',
+__pro,
+__supro;
+p._$$UFavorites=C();
+__pro=p._$$UFavorites._$extend(p._$$BFavorites,true);
+__supro=p._$$BFavorites.prototype;
+__pro.__initialize=function(_param){
+__supro.__initialize.call(this,_param);
+this._$setTitle("修改收藏夹");
+this.__scache._$addEvent('onupdatelovephotofolder',this.__cbClickSubmit._$bind(this));
+};
+__pro._$reset=function(_options){
+__supro._$reset.call(this,_options);
+_options=_options||O;
+this.__eform.reset();
+this.__fid=_options.data.id;
+this.__onUpdate=_options.onupdate||F;
+this.__ename.value=_options.data.title;
+return this;
+};
+__pro.__onClickSubmit=function(){
+__supro.__onClickSubmit.call(this);
+!this.__invalid&&this.__scache._$updateLovePhotoFolder(this.__uid,this.__fid,U._$trim(this.__ename.value));
+};
+__pro.__cbClickSubmit=function(_folder){
+this.__onClickClose();
+this.__onUpdate&&this.__onUpdate(_folder);
+};
+})();
+(function(){
+var p=P('P.ut'),
+__cite='',
+__pid=0,
+__ud=UD,
+__proCache;
+p._$$ShareCommentCache=C();
+__proCache=p._$$ShareCommentCache._$extend(P(N.ut)._$$Cache);
+__proCache._$initialize=function(_param){
+this._$super(_param);
+_param=_param||{};
+this.__id=_param.id;
+this.__postModule=P.ui._$$Posting._$getInstance();
+};
+__proCache._$reset=function(_opt){
+_opt=_opt||{};
+if(_opt.cite!=undefined){
+__cite=_opt.cite;
+__pid=_opt.pictureid;
+}
+};
+__proCache.__createIndex=function(_sid){
+var _list=this.__getDataInCache('comment_'+_sid+'_list');
+if(U.arr._$isArray(_list)){
+U.arr._$forEach(_list,function(_c){
+_c.map=U.arr._$toObject(_c.subComments,'id',function(_cmt,_index){_cmt.index=_index;});
+});
+this.__setDataInCache('comment_'+_sid+'_pmap',U.arr._$toObject(_list,'id',function(_cmt,_index){_cmt.index=_index;}));
+}
+};
+__proCache.__addCommentInCache=function(_sid,_cmt,_isReply){
+var _list=this.__getDataInCache('comment_'+_sid+'_list'),
+_pcount=this.__getDataInCache('comment_'+_sid+'_pcount'),
+_acount=this.__getDataInCache('comment_'+_sid+'_acount');
+if(U.arr._$isArray(_list)&&U.obj._$isObject(_cmt)){
+this.__setDataInCache('comment_'+_sid+'_acount',_acount+1);
+if(!_cmt.prntid){
+_list.unshift(_cmt);
+this.__setDataInCache('comment_'+_sid+'_pcount',_pcount+1);
+}
+else{
+var _map=this.__getDataInCache('comment_'+_sid+'_pmap'),_pcmt;
+if(U.obj._$isObject(_map)){
+_pcmt=_map[_cmt.prntid];
+_pcmt.subComments=_pcmt.subComments||[];
+_isReply?_pcmt.subComments.push(_cmt):_pcmt.subComments.unshift(_cmt);
+_list.splice(_pcmt.index,1);
+_list.unshift(_pcmt);
+}
+}
+this.__createIndex(_sid);
+}
+};
+__proCache.__deleteCommentInCache=function(_sid,_cmt){
+var _list=this.__getDataInCache('comment_'+_sid+'_list'),
+_map=this.__getDataInCache('comment_'+_sid+'_pmap'),
+_pcount=this.__getDataInCache('comment_'+_sid+'_pcount'),
+_acount=this.__getDataInCache('comment_'+_sid+'_acount'),
+_pcmt,
+_subs,
+_parent;
+if(_sid!=undefined&&U.arr._$isArray(_list)&&U.obj._$isObject(_map)){
+if(_cmt.prntid==0){
+this.__setDataInCache('comment_'+_sid+'_pcount',_pcount-1);
+_pcmt=_map[_cmt.id];
+_subs=_pcmt.subComments;
+if(_subs)
+_acount-=_subs.length;
+_list.splice(_pcmt.index,1);
+}
+else{
+_parent=_map[_cmt.prntid];
+_parent.subComments.splice(_parent.map[_cmt.id].index,1);
+}
+this.__setDataInCache('comment_'+_sid+'_acount',_acount-1);
+this.__createIndex(_sid);
+}
+};
+__proCache._$addComment=function(_node,_data){
+this.__changWEiboStatu=(this.__send2NeWeiboStatu==!!_data.send2NeWeibo)?false:true;
+this.__send2NeWeiboStatu=!!_data.send2NeWeibo;
+J._$postDataByDWR(location.sdwr,'PicSetCommentBean','addPicSetComment',
+_data.oid,_data.visitName,_data.visitNickName,_data.visitAvatar,_data.parentId||0,_data.content,__pid||0,__cite,_data.id||0,_data.runame,_data.rnname,0,_data.send2NeWeibo||false,false,
+this.__addComment._$bind(this,_node,_data.oid,_data.cb,_data.isReply));
+if(_data.isReply){
+}else if(this.__changWEiboStatu){
+J._$postDataByDWR(location.bdwrnohost,'MiniBlogConnectBean','setMiniBlogComment',false,this.__send2NeWeiboStatu,this.__connectMiniBlogCB._$bind(this));
+}
+};
+__proCache.__connectMiniBlogCB=function(_flag){
+};
+__proCache._$addCommentAnony=function(_node,_data){
+_node&&
+this.__postModule._$reset({
+msg:'正在发表评论...',
+pnode:_node
+})._$show();
+J._$postDataByDWR(location.sdwr,'PicSetCommentBean','addPicSetCommAnonymous',
+_data.oid,_data.visitName,_data.visitNickName,_data.visitAvatar,_data.parentId||0,_data.content,__pid||0,__cite,_data.id||0,_data.runame,_data.rnname,_data.code,false,
+this.__addComment._$bind(this,_node,_data.oid,_data.cb,_data.isReply));
+};
+__proCache.__addComment=function(_node,_sid,_cb,_isReply,_cmt){
+try{
+_node&&this.__postModule._$hide();
+var _etype=_cmt&&_cmt.errorType;
+if(_etype){
+switch(_etype){
+case 3:
+alert('你并不在摄影展区的评论许可名单内。');
+break;
+case 2:
+alert('评论失败，评论中含有不恰当的词汇。');
+break;
+case 1:
+alert('评论失败，验证码错误。');
+break;
+default:
+alert('评论失败，请稍候再试。');
+}
+_cb(null,true);
+return;
+}
+if(_cmt){
+_cmt.rsharegrade=__ud.visitShareGrade;
+_cmt.rwhitelist=__ud.visitIsVip;
+this.__addCommentInCache(_sid,_cmt,_isReply);
+}
+_cb(_cmt||null);
+}
+catch(e){}
+};
+__proCache._$deleteComment=function(_node,_cmt,_sid,_cb){
+this.__postModule._$reset({msg:'正在删除评论...',pnode:_node})._$show();
+J._$postDataByDWR(location.sdwr,'PicSetCommentBean','deletePicSetComment',_cmt.id,_sid,this.__deleteComment._$bind(this,_cmt,_sid,_cb));
+};
+__proCache.__deleteComment=function(_cmt,_sid,_cb,_suc){
+this.__postModule._$hide();
+!!_suc&&this.__deleteCommentInCache(_sid,_cmt);
+_cb&&_cb(!!_suc,_cmt);
+};
+__proCache._$getCommentsInCache=function(_sid,_limit,_offset){
+if(_sid==undefined||_offset==undefined||_limit==undefined)
+return null;
+var _list=this.__getDataInCache('comment_'+_sid+'_list');
+if(U.arr._$isArray(_list)){
+var _arr=_list.slice(_offset,_offset+_limit);
+for(var i=0,_l=_arr.length;i<_l;i++)
+if(_arr[i]==undefined)
+return null;
+var _obj={list:_arr,pcount:this.__getDataInCache('comment_'+_sid+'_pcount'),acount:this.__getDataInCache('comment_'+_sid+'_acount')};
+}
+return _obj;
+};
+__proCache._$getComments=function(_sid,_limit,_offset,_flag,_cb,_force){
+var _obj=this._$getCommentsInCache(_sid,_limit,_offset);
+if(_obj!=undefined&&!_force){
+_cb(_obj.list,_obj.pcount,_obj.acount);
+return;
+}
+this.__getComments._$addCB(_cb);
+J._$postDataByDWR(location.sdwr,'PicSetCommentBean','getAllPicSetComms',_sid,_limit,_offset,_flag,this.__getComments._$bind(this,_sid,_limit,_offset,_flag));
+};
+__proCache.__getComments=function(_sid,_limit,_offset,_flag,_data){
+if(U.obj._$isObject(_data)){
+var _list=_data.commlist||null,_pcount=_data.pcommcount,_acount=_data.allcommcount;
+if(_flag){
+this.__setDataInCache('comment_'+_sid+'_pcount',_pcount);
+this.__setDataInCache('comment_'+_sid+'_list',new Array(_pcount));
+this.__setDataInCache('comment_'+_sid+'_acount',_acount);
+}
+if(U.arr._$isArray(_list)){
+var _cs=this.__getDataInCache('comment_'+_sid+'_list');
+if(U.arr._$isArray(_cs)){
+U.arr._$forEach(_list,function(_c,_index){
+_cs.splice(_offset+_index,1,_c);
+});
+this.__setDataInCache('comment_'+_sid+'_list',_cs);
+this.__createIndex(_sid);
+}
+}
+}
+this.__getComments._$fireCB(_list,_pcount,_acount);
+};
+U.obj._$extend(__proCache.__getComments,P.ut._$$Callback);
+__proCache._$punishUser=function(_node,_uname,_sid,_cb){
+this.__postModule._$reset({msg:'正在删除评论...',pnode:_node})._$show();
+J._$postDataByDWR(location.sdwr,'PicSetCommentBean','punishUser',_uname,function(_suc){
+this.__postModule._$hide();
+if(!_suc){
+E._$alert('信息提示','操作失败，请稍候再试！');
+return;
+}
+else{
+this.__delDataInCache('comment_'+_sid+'_list');
+_cb();
+}
+}._$bind(this));
+};
+__proCache._$frb5days=function(_node,_uname,_hid,_cb){
+var _days=5;
+J._$postDataByDWR(location.sdwr,'ShareCommentBean','forbidUserComment',_uname,_days,function(_suc){
+P.ui._$$Posting._$getInstance()._$hide();
+if(!_suc){
+E._$alert('信息提示','操作失败，请稍候再试！');
+return;
+}
+else if(_suc==-1){
+E._$alert('信息提示','该用户已被禁言！');
+_cb();
+}
+else{
+E._$alert('信息提示','操作成功！');
+_cb();
+}
+}._$bind(this));
+};
+})();
+
+(function(){
+var p=P('P.ui'),
+__proCmt,
+__suproCmt,
+__xhtml='',
+__hint='需要登录后发表评论，请先';
+p._$$Comment=C();
+__proCmt=p._$$Comment._$extend(p._$$BComment);
+__suproCmt=p._$$BComment.prototype;
+U.cls._$augment(p._$$Comment,P.ut._$$Single,true);
+__proCmt.__initialize=function(_param){
+__suproCmt.__initialize.call(this,_param);
+this.__isNoGroupUser=_param.isNoGroupUser||0;
+this.__eavtCon.style.display='none';
+_param=_param||O;
+this.__vurl=_param.vurl;
+if(this.__vurl){
+this.__eact.style.display='';
+U.dom._$initAnchor(this.__eact.getElementsByTagName('a')[0]);
+this.__enickName=this.__eact.getElementsByTagName('input')[0];
+this.__editor=this.__getEditor();
+E._$delClassName(this.__editor._$getBody(),'w-efix');
+}
+else{
+E._$addClassName(this.__eeditor,'anony-hint bdwa bds0 bdc4 bgc0');
+if(this.__isNoGroupUser==1)
+this.__eeditor.innerHTML=(_param.hint||__hint);
+else this.__eeditor.innerHTML=(_param.hint||__hint)+'<a href="javascript:void(0);" needlogin="true">登录<span class="gt"> &rsaquo;&rsaquo; </span></a>';
+U.dom._$initAnchor(this.__eeditor);
+}
+};
+__proCmt.__addComment=function(_node,_data){
+_data.visitNickName=this.__enickName.value||P.ui._$$ReplyEditor._$getInstance()._$getNickName();
+this.__cache._$addCommentAnony(_node,_data);
+};
+})();
+(function(){
+var p=P('P.ui'),
+__proCItem,
+__suproCItem;
+p._$$CmtItem=C();
+__proCItem=p._$$CmtItem._$extend(p._$$BCmtItem);
+__suproCItem=p._$$BCmtItem.prototype;
+U.cls._$augment(p._$$CmtItem,P.ut._$$Reuse,true);
+__proCItem.__initialize=function(_param){
+_param=_param||O;
+this.__vurl=_param.vurl;
+this.__eact.style.display=this.__vurl?'':'none';
+__suproCItem.__initialize.call(this,_param);
+};
+})();
+(function(){
+var p=P('P.ui'),
+__proRItem;
+p._$$RpyItem=C();
+__proRItem=p._$$RpyItem._$extend(p._$$BRpyItem);
+U.cls._$augment(p._$$RpyItem,P.ut._$$Reuse,true);
+__proRItem.__initialize=function(_param){
+_param=_param||O;
+this.__vurl=_param.vurl;
+this.__eact.style.display=this.__vurl?'':'none';
+};
+})();
+
+(function(){
+var p=P('p.w')
+,__proCache;
+p._$$PHOTODwrApiCache=C();
+U.cls._$augment(p._$$PHOTODwrApiCache,P.ut._$$Single,true);
+__proCache=p._$$PHOTODwrApiCache.prototype;
+__proCache._$getPhotoExif=function(_obj){
+J._$loadDataByDWR(
+location.pdwr
+,'PhotoBean'
+,'getPhotoExif'
+,_obj.photoId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getPhotosExif=function(_obj){
+J._$loadDataByDWR(
+location.pdwr
+,'PhotoBean'
+,'getPhotosExif'
+,_obj.photoIds
+,_obj.userId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+})();
+(function(){
+var p=P('p.w')
+,__proCache;
+p._$$DwrApiCache=C();
+U.cls._$augment(p._$$DwrApiCache,P.ut._$$Single,true);
+__proCache=p._$$DwrApiCache.prototype;
+__proCache._$updateUserEquipByUserId=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'SubscriptionBean'
+,'updateUserEquipByUserId'
+,_obj.request
+,_obj.hostUserId
+,_obj.userEquip
+,_obj.about
+,_obj.homePage
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getPhotoTheme=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'PhotoBlogBean'
+,'getPhotoTheme'
+,_obj.hostUserId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$uploadPhotoFhome=function(_obj){
+if(!_obj||!_obj.data){
+return;
+}
+if(!U.arr._$isArray(_obj.data)){
+_obj.data=[_obj.data];
+}
+J._$postDataByDWR(
+location.pdwr
+,'PhotoBean'
+,'copy'
+,_obj.data
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$updateThemeFhome=function(_obj){
+_obj=_obj||O;
+_obj._data=_obj._data||O;
+J._$postDataByDWR(location.sdwr
+,'PhotoBlogBean'
+,'addPhotoTheme'
+,_obj.imgurl
+,_obj.imgStorageType||0
+,_obj.cssContent
+,_obj.fontColor||''
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$updateHomeBG=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'SubscriptionBean'
+,'updateUserEquipByUserId'
+,_obj.request
+,_obj.hostUserId
+,_obj.userEquip
+,_obj.about
+,_obj.homePage
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getThirdPartyAccount=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'ThirdPartyOpenAccountBean'
+,'getThirdPartyOpenAccountByUserId'
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getThirdPartyAccountWithOutCheck=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'ThirdPartyOpenAccountBean'
+,'getThirdPartyOpenAccountWithOutCheckByUserId'
+,_obj.userId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getThirdPartyAccountBySourceType=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'ThirdPartyOpenAccountBean'
+,'getThirdPartyOpenAccountByUserIdAndType'
+,_obj.userId
+,_obj.sourceTyps
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$cancelBindDwr=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'ThirdPartyOpenAccountBean'
+,'cancleThirdPartyOpenAccountByUserIdAndSourceType'
+,_obj.sourceType||0
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$updateOpenInfo=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'ThirdPartyOpenAccountBean'
+,'batchUpdateThirdPartyOpenAccountFeedInfo'
+,_obj.feedInfo||{}
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$getShareFolderList=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'ShareFolderBean'
+,'getShareFolderList'
+,_obj.userId||0
+,_obj.limit
+,_obj.offset
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$addShareFolder=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'ShareFolderBean'
+,'addShareFolder'
+,_obj.forderName||''
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$getShareFolderListBySetIds=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'ShareFolderBean'
+,'getShareFolderListBySetIds'
+,_obj.setIds||[]
+,_obj.userId||0
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$updateShareFoldersBySetId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'ShareFolderBean'
+,'updateShareFoldersBySetId'
+,_obj.setId||0
+,_obj.addFolderIds||[]
+,_obj.delFolderIds||[]
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$createSharePic=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'createSharePic'
+,_obj.name
+,_obj.desc||''
+,_obj.photoIds
+,_obj.provinceCode
+,_obj.cityCode||0
+,_obj.cameraBrand||-1
+,_obj.cameraType||-1
+,_obj.cameraLens||-1
+,_obj.diycameras||''
+,_obj.thirdParts||[]
+,_obj.creativeCommons||'unset'
+,false
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$updateSharePic=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'updateSharePic'
+,_obj.sid
+,_obj.name
+,_obj.desc||''
+,_obj.photoIds
+,_obj.provinceCode
+,_obj.cityCode||0
+,_obj.cameraBrand||-1
+,_obj.cameraType||-1
+,_obj.cameraLens||-1
+,_obj.diycameras||''
+,_obj.creativeCommons||'unset'
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$createPicSet=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'create'
+,_obj.name
+,_obj.desc||''
+,_obj.photoIds
+,_obj.photoDescs
+,_obj.cvid
+,_obj.littleCoverDocId
+,_obj.provinceCode
+,_obj.cityCode||0
+,_obj.cameraBrand||-1
+,_obj.cameraType||-1
+,_obj.cameraLens||-1
+,_obj.dirNamePath
+,_obj.idPath
+,_obj.dirType
+,_obj.customName||''
+,_obj.ext||''
+,_obj.from||''
+,_obj.diycameras||''
+,_obj.thirdParts||[]
+,_obj.creativeCommons||'unset'
+,_obj.userDefinedUrl||null
+,_obj.imgStorageType||0
+,_obj.garbageId||0
+,false
+,_obj.success||F
+,_obj.failer||F
+)
+};
+__proCache._$updateMeta=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'updateMeta'
+,_obj.sid
+,_obj.name
+,_obj.desc||''
+,_obj.photoIds
+,_obj.photoDescs
+,_obj.cvid
+,_obj.littleCoverDocId||0
+,_obj.provinceCode
+,_obj.cityCode||0
+,_obj.cameraBrand||-1
+,_obj.cameraType||-1
+,_obj.cameraLens||-1
+,_obj.dirNamePath
+,_obj.idPath
+,_obj.dirType
+,_obj.ext||''
+,_obj.diycameras||''
+,_obj.creativeCommons||'unset'
+,_obj.userDefinedUrl||null
+,_obj.imgStorageType||0
+,_obj.garbageId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getPictureSetByID=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'getPictureSetByPicSetId'
+,_obj.setid
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$completeURL=function(_data){
+if(_data.s==undefined)
+return _data;
+var _tmp0=U.reg._$getRegex('REG_URL_COMPLETE'),_tmp1='http://img$1.'+(_data.s==3?'ph.126.net/':'bimg.126.net/');
+if(_data.curl)
+_data.curl=_data.curl.replace(_tmp0,_tmp1);
+if(_data.murl)
+_data.murl=_data.murl.replace(_tmp0,_tmp1);
+if(_data.ourl)
+_data.ourl=_data.ourl.replace(_tmp0,_tmp1);
+if(_data.qurl)
+_data.qurl=_data.qurl.replace(_tmp0,_tmp1);
+if(_data.surl)
+_data.surl=_data.surl.replace(_tmp0,_tmp1);
+if(_data.turl)
+_data.turl=_data.turl.replace(_tmp0,_tmp1);
+if(_data.lurl)
+_data.lurl=_data.lurl.replace(_tmp0,_tmp1);
+if(_data.cvsurl)
+_data.cvsurl=_data.cvsurl.replace(_tmp0,_tmp1);
+if(_data.cvlurl)
+_data.cvlurl=_data.cvlurl.replace(_tmp0,_tmp1);
+if(_data.av)
+_data.av=_data.av.replace(_tmp0,_tmp1);
+U.obj._$delete(_data,'s');
+return _data;
+};
+__proCache._$getPhotoBlogUserInfo=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'PhotoBlogBean'
+,'getPhotoBlogUserInfo'
+,false
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getMorePictureSets=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'PictureSetBean',
+'getPictureSets75Cover'
+,_obj.currentSetId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getPictureSetsWithCover=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'PictureSetBean',
+'getPictureSetsWithCover'
+,_obj.offset
+,_obj.limit
+,_obj.isFor240
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getPictureSetListWithCover=function(_obj){
+J._$postDataByDWR(
+location.sdwr,
+'PictureSetBean',
+'getPictureSetListWithCover'
+,_obj.userId||0
+,_obj.offset
+,_obj.limit
+,_obj.isFor240
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toLikeWithSetByVisitId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PicSetInteractionBean'
+,'procLikeAction'
+,_obj.setId
+,_obj.picId
+,_obj.visitId||np.c._$UD.visitId
+,0
+,1
+,_obj.hostId||np.c._$UD.hostId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toUnLikeWithSetByVisitId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PicSetInteractionBean'
+,'procCancleLikeAction'
+,_obj.setId
+,_obj.picId
+,_obj.visitId||np.c._$UD.visitId
+,1
+,_obj.hostId||np.c._$UD.hostId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getIsFollowed=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'UserFollowerBean'
+,'isUserFollowed'
+,_obj.hostId||np.c._$UD.hostId
+,_obj.visitId||np.c._$UD.visitId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toFollowUser=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'UserFollowerBean'
+,'addUserFollowing'
+,_obj.userId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toUnFollowUser=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'UserFollowerBean'
+,'deleteUserFollowing'
+,_obj.userId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getNewRecommendCameristList=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'RecommCameristBean'
+,'getNewRecommendCameristList'
+,_obj.typesArray||[]
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toPraiseWithSetByVisitId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PicSetInteractionBean'
+,'clickPraise'
+,_obj.hostId||np.c._$UD.hostId
+,_obj.visitId||np.c._$UD.visitId
+,_obj.success||F
+,_obj.failer||F
+);
+}
+__proCache._$getPicSetInteractionInfo=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'PicSetInteractionBean'
+,'getPicSetInteractionInfo'
+,_obj.setId
+,_obj.picIds
+,_obj.hostId||np.c._$UD.hostId
+,_obj.visitId||np.c._$UD.visitId||0
+,np.c._$ISLOGIN?0:U._$randNumberString(6)
+,1
+,3
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$addPicSetComment=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PicSetCommentBean'
+,'addPicSetComment'
+,_obj.setId
+,_obj.visitUserName||''
+,_obj.visitNickName||''
+,_obj.reviewerAvatar
+,_obj.parentId
+,_obj.content
+,_obj.refPicId
+,_obj.refPicUrl
+,_obj.replyCommId
+,_obj.replyToUserName
+,_obj.replyToNickName
+,_obj.refGroupId
+,_obj.send2NeWeibo||false
+,false
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getAllPicSetComms4960Pic=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'PicSetCommentBean'
+,'getAllPicSetComms4960Pic'
+,_obj.setId
+,_obj.refPicId||0
+,_obj.limit
+,_obj.offset||0
+,_obj.getCountFlag
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getGroupByGroupId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'GroupBean'
+,'getGroupById'
+,_obj.groupId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getGroupVOByGroupId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'GroupBean'
+,'getGroupVOById'
+,_obj.groupId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getGroupUserRoleByUserId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'GroupUserBean'
+,'getGroupUserRoleByUserId'
+,_obj.groupId
+,_obj.userId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getGroupJoinUserByUserId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'GroupUserBean'
+,'getGroupJoinUserByUserId'
+,_obj.userId
+,_obj.offset||0
+,_obj.limit||5
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toFollowGroup=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'GroupUserBean'
+,'addFollower'
+,_obj.groupId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toQuitGroup=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'GroupUserBean'
+,'quitGroup'
+,_obj.groupId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getSinglePicCountByUserId=function(_obj){
+J._$loadDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'getSharePictureSetCountByUserId'
+,_obj.userId||np.c._$UD.visitId||0
+,'SharePic'
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getSetsPicListByUserId=function(_obj){
+_obj=_obj||{};
+if(_obj.postType>0){
+_obj.postType=1;
+}else{
+_obj.postType=0;
+}
+J._$loadDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'getSharePicListByUserId'
+,_obj.userId||0
+,_obj.postType||1
+,_obj.imgSize
+,_obj.limit||5
+,_obj.offset||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getSingleSetPicListFhuodongBySetId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'getSharePicsByUserIdWithHuodongInfo'
+,_obj.hgroupid
+,_obj.userId||0
+,_obj.imgSize||[]
+,_obj.limit||5
+,_obj.offset||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getSetPicListFhuodongBySetId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'getPicturesByPicSetIdWithHuodonginfo'
+,_obj.sid
+,_obj.hdid
+,_obj.userId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$pushToHuodongByHdId=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'addNewHuodongPictures'
+,_obj.hdid
+,_obj.ids
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getAllHuoDongByDwr=function(_obj){
+J._$postDataByDWR(location.hdwr
+,'HuoDongBean'
+,'getHuodongListForPage'
+,_obj.isGetCount
+,_obj.limit||5
+,_obj.offset||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$addNewHuodong=function(_obj){
+if(_obj&&_obj.hdId>0){
+this._$modHuodong(_obj);
+return;
+}
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'addNewHD'
+,_obj.hdTitle
+,_obj.hdType
+,_obj.userType
+,_obj.groupId
+,_obj.photo
+,_obj.startTime
+,_obj.endTime
+,_obj.desc
+,_obj.otherInfo
+,_obj.pushCount
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$deleteHuoDong=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'deleteHuoDong'
+,_obj.hdId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$modHuodong=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'modifyHD'
+,_obj.hdId
+,_obj.hdTitle
+,_obj.photo
+,_obj.startTime
+,_obj.endTime
+,_obj.desc
+,_obj.otherInfo
+,_obj.pushCount
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$joinOrQuitHuoDong=function(_obj){
+_obj.isJoin=_obj.isJoin>0?1:-1;
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'joinOrQuitHuoDong'
+,_obj.userId||0
+,_obj.hdId
+,_obj.isJoin
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$updateHuoDongInfo=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'updateReview'
+,_obj.summary||''
+,_obj.hdId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getHuoDongListBySortType=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'getHuoDongListBySortType'
+,_obj.sortType||0
+,_obj.requireParm||{'desc':'true'
+,'needwork':false
+,'sponsor':true
+}
+,_obj.hdTypes||['OffLineHD','OnlineHD']
+,_obj.limit||5
+,_obj.offset||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getHuoDongListByGroupId=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'getGroupHuoDongListByGroupId'
+,_obj.groupId||0
+,_obj.requireParm||{'desc':'true'}
+,_obj.limit||5
+,_obj.offset||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getHuodongUserListByHdId=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'getHuodongUserListByHdId'
+,_obj.hdId
+,_obj.offset||0
+,_obj.limit||5
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$addPictures2OfflineHD=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'addNewCustomPictures2OfflineHD'
+,_obj.hdId
+,_obj.photo
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getHdWorkList=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'getWorkerList'
+,_obj.type
+,_obj.sortMethod
+,_obj.hdId||0
+,_obj.userId||0
+,_obj.limit||5
+,_obj.offset||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$onHdVote=function(_obj){
+J._$postDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'voteHDPicSet'
+,_obj.hdId||0
+,_obj.sid
+,_obj.pid
+,_obj.ownerId
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toSetTopHDwork=function(_obj){
+J._$loadDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'topWorkers'
+,_obj.hdId||0
+,_obj.ids
+,_obj.usernames
+,_obj.setType||1
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$toWithdrawFromHD=function(_obj){
+J._$loadDataByDWR(
+location.hdwr
+,'HuoDongBean'
+,'withdrawWorkers'
+,_obj.hdId||0
+,_obj.ids
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$getSetPicListFGroupBySetId=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'getPicturesByPicSetIdWithPushInfo'
+,_obj.sid
+,_obj.hgroupId
+,_obj.userId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$updateSharePicSet=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'updateSharePic'
+,_obj.sid||0
+,_obj.picTitle||''
+,_obj.picMemo||''
+,_obj.photoId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+__proCache._$createSharePicFsingle=function(_obj){
+J._$postDataByDWR(
+location.sdwr
+,'PictureSetBean'
+,'createSharePic'
+,_obj.picTitle||''
+,_obj.picMemo||''
+,_obj.photoId||0
+,_obj.success||F
+,_obj.failer||F
+);
+};
+})();
+;(function(){
+var p=P('p.w')
+,$=E._$getElement
+,__maxWidth=960
+,_loading='http://r.ph.126.net/share/images/ico_loading/ico_loading_gray.gif'
+,__uispace='ui-'+U._$randNumberString()
+,__pro;
+p._$$ShareSetLightBox=C();
+U.cls._$augment(p._$$ShareSetLightBox,P.ut._$$Single,true);
+__pro=p._$$ShareSetLightBox._$extend(P(N.ut)._$$Event);
+__pro._$initialize=function(_op){
+_op=_op||{};
+this._$super();
+this.__op=_op||O;
+this.__ud=np.c._$UD||window.UD;
+this.__picset=window.PS;
+this._$parent=this.__op.parent||this;
+this.__dataCacheModule=P('P.m')._$$ShareSetDataCache&&P('P.m')._$$ShareSetDataCache._$getInstance();
+this.__isOldIe=B._$ISOLDIE;
+this.__init();
+};
+__pro.__getLayerNode=function(){
+return'<div class="m-cover">\
+      <iframe class="cover-iframe z-tag" id="J-xbox-iframe" src="javascript:\'\';" frameborder="no" border="0" allowtransparency="true" width="100%" height="100%"></iframe>\
+      <div class="cover-bg z-tag"></div>\
+    </div>';
+};
+__pro.__getBodyNode=function(){
+return'<div class="m-xboxModule f-trans">\
+      <div class="content-wraper f-trans">\
+       <div class="xbox-picarea">\
+        <div class="xb-imgP">\
+         <div class="xb-imgP2">\
+          <p class="xbox-img f-trans" style="overflow:hiden;"><img class="xb-img z-tag" style="filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity: 0;" src="http://r.ph.126.net/image/sniff.png" /></p>\
+          <p class="xbox-topbtn f-trans">\
+           <a href="#" onclick="return false;" class="w-btnDeepSkyBlue f-ml5 f-hide z-tag" data-operation="J-go-love" data-pictureid="" data-needlogin="true">喜欢</a>\
+           <a href="#" onclick="return false;" class="w-btnWhiteSmoke f-ml5 f-hide z-tag" data-operation="J-cancel-love" data-pictureid="" data-needlogin="true">取消喜欢</a>\
+           <a href="#" onclick="return false;" class="w-btnWhiteSmoke f-ml5 z-tag" data-operation="J-go-push" data-pictureid="" data-needlogin="true">推送</a>\
+          </p>\
+          <div class="picinfo-area"  style="display:none;">\
+           <span class="picinfo-bg z-tag"></span>\
+           <div class="picinfo-container">\
+            <p class="pic-desc z-tag"></p>\
+            <p class="pic-camerainfo z-tag"></p>\
+            <p class="pic-author z-tag">\
+             <span class="author-name z-tag">&#169; <a href="#" title="" class="z-tag"></a></span>\
+             <span class="author-rank">\
+              <span class="f-ml5 f-lineBlock z-tag">(<a hidefocus="true" target="_blank" href="http://fankui.163.com/ft/result.fb?rid=4024&amp;type=0&amp;wd=%B5%C8%BC%B6&amp;pid=3" class="z-tag" title="拍客级别">${hostProfile.shareGrade!0}级</a>)</span>\
+              <a hidefocus="true" target="_blank" href="http://fankui.163.com/ft/result.fb?rid=4024&amp;type=0&amp;wd=%B5%C8%BC%B6&amp;pid=3" class="f-ml5 z-tag" title="拍客级别">${hostProfile.shareGrade!0}级</a>\
+             </span>\
+            </p>\
+           </div>\
+          </div>\
+         </div>\
+        </div>\
+        <div class="pic-pageBtnArea f-trans">\
+         <a class="w-circle w-circle-l z-tag f-trans" hideFocus="true" title="上一张" href="#" onclick="return false;"><b class="inner">&lt;</b></a>\
+         <a class="w-circle w-circle-r z-tag f-trans" href="#" onclick="return false;"hideFocus="true"  title="上一张" ><b class="inner">&gt;</b></a>\
+         <a class="w-closWin z-tag f-trans" hideFocus="true" title="退出幻灯模式" href="#" onclick="return false;">关闭</a>\
+        </div>\
+       </div>\
+      </div>\
+     </div>';
+};
+__pro.__getCorver=function(){
+var _ntmp;
+this.__corver=E._$getNodeTemplate(E._$addNodeTemplate(this.__getLayerNode()));
+_ntmp=E._$getElementsByClassName(this.__corver,'z-tag');
+this.__corverIframe=_ntmp[0];
+this.__corverBg=_ntmp[1];
+};
+__pro.__getBody=function(){
+var _ntmp;
+this.__content=E._$getNodeTemplate(E._$addNodeTemplate(this.__getBodyNode()));
+_ntmp=E._$getElementsByClassName(this.__content,'z-tag');
+this.__like=_ntmp[1];
+this.__cancelLike=_ntmp[2];
+this.__push=_ntmp[3];
+this.__topbtnsContainer=this.__like.parentNode;
+this.__eimg=_ntmp[0];
+this.__eimgContainer=this.__eimg.parentNode;
+this.__authorBG=_ntmp[4];
+this.__desc=_ntmp[5];
+this.__camerainfo=_ntmp[6];
+this.__authorName=_ntmp[9];
+this.__authorRank=_ntmp[11];
+this.__authorRank2=_ntmp[12];
+this.__previous=_ntmp[13];
+this.__next=_ntmp[14];
+this.__closeBtn=_ntmp[15];
+this.__tmpImg=new Image();
+this.__contentWraper=this.__closeBtn.parentNode.parentNode;
+this.__authorName.href=U.fun._$getUserHomeUrl(this.__ud.hostName,this.__ud.hostUserDomainName);
+this.__authorName.title=U._$escape(this.__ud.hostNickName)+'的小屋';
+this.__authorName.innerHTML=U._$escape(this.__ud.hostNickName);
+this.__authorRank.parentNode.style.display='none';
+U.dom._$showRank({
+node:this.__authorRank2
+,rank:this.__ud.hostShareGrade
+,isVip:this.__ud.hostIsVip
+})
+if(!!window.isGroupsUser){
+E._$replaceClassName(this.__push,'w-btnWhiteSmokeDisabled','w-btnWhiteSmoke');
+this.__push.style.display='';
+}else{
+E._$replaceClassName(this.__push,'w-btnWhiteSmoke','w-btnWhiteSmokeDisabled');
+this.__push.style.display='none';
+}
+};
+__pro.__dumpStyle=function(){
+if(this.__hashPushStyle){
+return;
+}
+E._$parseStyle('.'+__uispace+' .m-cover .cover-iframe{display:block;position:fixed;_position:absolute;z-index:99;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background:url(http://r.ph.126.net/image/sniff.png);}'
++'.'+__uispace+' .m-cover .cover-bg{display:block;position:fixed;_position:absolute;z-index:99;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background-color:#191919;}'
++'.'+__uispace+' .m-xbox{display:block;position:fixed;_position:absolute;z-index:99;}'
++'.'+__uispace+' .m-xboxModule{z-index:99;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity: 0;}'
++'.'+__uispace+' .m-xboxModule .xbox-img{background: url('+_loading+') no-repeat 50% 50% scroll;}'
++'.'+__uispace+' .m-xboxModule .w-closWin{display:block;position:fixed;_position:absolute;z-index:99;right:20px;top:15px;width:30px;height:30px;background: url(http://r.ph.126.net/share/images/ico/ico_x.png) no-repeat 0 0 scroll;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://r.ph.126.net/share/images/ico/ico_x.png",sizingMethod="crop");}'
++'.'+__uispace+' .m-xboxModule .w-closWin:hover{background:url(http://r.ph.126.net/share/images/ico/ico_x_hover.png) no-repeat 0 0 scroll;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://r.ph.126.net/share/images/ico/ico_x_hover.png",sizingMethod="crop");}'
+);
+if(!this.__isOldIe){
+this.__corverIframe.style.display='none';
+}else{
+var _body=document.documentElement||document.body;
+this.__corverBg.style.width=this.__corverIframe.style.width=_body.scrollWidth+'px';
+this.__corverBg.style.height=this.__corverIframe.style.height=_body.scrollHeight+'px';
+this.__corverBg.display='block';
+this.__corverIframe.style.display='none';
+}
+this.__hashPushStyle=true;
+};
+__pro.__init=function(){
+this.__body=document.cloneElement('div',__uispace);
+if(this.__op.hasLayer){
+this.__getCorver();
+this.__body.appendChild(this.__corver);
+}
+this.__getBody();
+this.__body.appendChild(this.__content);
+this.__bindEvents();
+};
+__pro._$reset=function(_op){
+this.__op=_op||O;
+this.__clsNameSpace=this.__op.classStyle||'';
+!this.__showStatu&&this.__show();
+};
+__pro.__initClassName=function(_tag){
+!!_tag&&this.__dumpStyle();
+if(!!_tag){
+this.__clsNameSpace&&E._$addClassName(this.__body,this.__clsNameSpace);
+}else if(this.__clsNameSpace){
+E._$delClassName(this.__body,this.__clsNameSpace);
+}
+if(!this.__hasIndocBody){
+document.body.appendChild(this.__body);
+this.__hasIndocBody=true;
+}
+};
+__pro.__getMaxHeight=function(){
+var _num=U.dom._$clientHeight()-60;
+this.__maxHeight=_num>0?_num:0;
+this.__showStatu&&this._$dispatchEvent('onWindowResize');
+return;
+};
+__pro.__hackIeScroll=function(){
+setTimeout(function(){
+this.__contentWraper.style.marginTop=0;
+this.__contentWraper.style.height=U.dom._$clientHeight()+'px';
+}._$bind(this),10);
+};
+__pro.__showBody=function(_tag){
+var _display='none'
+,_overflow='';
+if(!!_tag){
+this.__historyTop=U.dom._$scrollTop();
+_display='block';
+_overflow='hidden';
+}else{
+_overflow='';
+}
+document.body.style.overflow=document.documentElement.style.overflow=_overflow;
+if(!_tag){
+setTimeout(function(){
+window.scrollTo(0,this.__historyTop||0);
+}._$bind(this),0);
+}
+};
+__pro.__show=function(){
+this.__showBody(true);
+this.__getMaxHeight();
+this.__initClassName(true);
+this.__showStatu=true;
+if(this.__isOldIe){
+this.__content.style.top=0;
+U.dom._$scrollTo();
+}
+this.__content.style.cssText+=';filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity: 1;';
+V._$addEvent(document,'DOMMouseScroll',this.__mousewheelAction);
+document.onmousewheel=this.__onMousewheelAction._$bind(this);
+this.__setLoading(false);
+};
+__pro._$hide=function(){
+V._$delEvent(document,'DOMMouseScroll',this.__mousewheelAction);
+document.onmousewheel=null;
+this.__showBody(false);
+this.__showStatu&&E._$removeElementByEC(this.__body);
+this.__initClassName();
+this.__hasIndocBody=this.__showStatu=false;
+this.__content.style.cssText+=';filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity: 0;';
+this.__setLoading(false);
+};
+__pro.__setLikeNum=function(_pictureId,_data){
+this.__like.innerHTML='喜欢('+(this.__dataCacheModule._$dataVO.picListVO['pictureId'
++this.__currentPictureId].likeCount>0?this.__dataCacheModule._$dataVO.picListVO['pictureId'+this.__currentPictureId].likeCount:0)+')';
+this.__cancelLike.innerHTML='取消喜欢('+(this.__dataCacheModule._$dataVO.picListVO['pictureId'
++this.__currentPictureId].likeCount>0?this.__dataCacheModule._$dataVO.picListVO['pictureId'+this.__currentPictureId].likeCount:0)+')';
+};
+__pro.__likeEventCB=function(_pictureId,_data){
+this.__setLikeNum();
+E._$addClassName(this.__like,'f-hide');
+E._$delClassName(this.__cancelLike,'f-hide');
+};
+__pro.__cancelLikeEventCB=function(_pictureId,_data){
+this.__setLikeNum();
+E._$delClassName(this.__like,'f-hide');
+E._$addClassName(this.__cancelLike,'f-hide');
+};
+__pro.__bindEvents=function(){
+this.__maxEvent=this.__getMaxHeight._$bind(this);
+if(this.__isOldIe){
+this.__hackIe=this.__hackIeScroll._$bind(this);
+}
+this.__mousewheelAction=this.__onMousewheelAction._$bind(this);
+this.__isOldIe&&V._$addEvent(window,'scroll',this.__hackIe);
+V._$addEvent(window,'resize',this.__maxEvent);
+V._$addEvent(document,'keyup',this.__onKeyboardAction._$bind(this));
+V._$addEvent(this.__eimg.parentNode,'mousemove',this.__onImageHover._$bind(this));
+V._$addEvent(this.__closeBtn,'click',this._$hide._$bind(this));
+this.__like.clickCB=this.__likeEventCB._$bind(this);
+this.__cancelLike.clickCB=this.__cancelLikeEventCB._$bind(this);
+V._$addEvent(this.__eimg,'click',this.__onImageClick._$bind(this));
+V._$addEvent(this.__previous,'click',this.__getHref._$bind(this,-1));
+V._$addEvent(this.__next,'click',this.__getHref._$bind(this,1));
+this.__tmpImg.onload=this.__tmpImageLoad._$bind(this);
+this._$addEvent('onWindowResize',this.__resetImageSize._$bind(this));
+this._$addEvent('onDataIsReady',this.__onDataIsReady._$bind(this));
+this._$addEvent('onParentDataIsLoading',this.__onParentDataIsLoading._$bind(this));
+};
+__pro.__onbeforeshowSetPosition=function(){
+this.__layer.__body.style.cssText+=';top:0;left:0;';
+};
+__pro.__resetImageSize=function(){
+var _h
+,_w;
+if(this.__eimg.src==_loading||this.__eimg.src==location.fa240||this.__eimg.src!=this.__tmpImg.src){
+return;
+}
+if(this.__realHeight>=this.__maxHeight){
+_h=this.__maxHeight;
+}else{
+_h=this.__realHeight;
+}
+_w=Math.floor(this.__realWidth*_h/this.__realHeight);
+if(930-_w<this.__topbtnsContainer.offsetWidth){
+this.__topbtnsContainer.style.cssText+=';display:block;margin-top:15px;margin-left:0;';
+}else{
+this.__topbtnsContainer.style.cssText+='display:inline-block;*display:inline;*zoom:1;;margin-top:0;margin-left:30px;';
+}
+this.__eimg.style.cssText+=';width:auto;height:'+_h+'px;';
+this.__setOpacity(true,function(){
+this.__eimgContainer.style.cssText+=';height:'+_h+'px;background-image:none;';
+}._$bind(this),null,_h);
+};
+__pro.__setOpacity=function(_tag,_beforeCB,_afterCB,_h){
+clearTimeout(this.__opacityTimer);
+var _step=1/50
+,_fun=function(){
+this.__imgOpacity=this.__imgOpacity+(!!_tag?(+_step):(-_step));
+if(_tag){
+this.__imgOpacity=this.__imgOpacity>=1?1:this.__imgOpacity;
+}else{
+this.__imgOpacity=this.__imgOpacity<=0?0:this.__imgOpacity;
+}
+if((_tag&&this.__imgOpacity<1)||(!_tag&&this.__imgOpacity>0)){
+this.__opacityTimer=setTimeout(_fun,1);
+}else{
+clearTimeout(this.__opacityTimer);
+_afterCB&&_afterCB();
+}
+this.__eimg.style.cssText+=';filter:alpha(opacity='
++this.__imgOpacity*100+');-moz-opacity:'
++this.__imgOpacity+';-khtml-opacity:'
++this.__imgOpacity+';opacity: '
++this.__imgOpacity+';'
++'width:auto;height:'+_h+'px;';
+this.__topbtnsContainer.style.cssText+=';filter:alpha(opacity='
++this.__imgOpacity*100+');-moz-opacity:'
++this.__imgOpacity+';-khtml-opacity:'
++this.__imgOpacity+';opacity: '
++this.__imgOpacity+';';
+}._$bind(this)
+_beforeCB&&_beforeCB()
+_fun();
+};
+__pro.__imageLoad=function(){
+this._$dispatchEvent('onbeforeshow');
+};
+__pro.__tmpImageLoad=function(){
+if(this.__tmpImgLoaded){
+return;
+}
+var _src=this.__tmpImg.src;
+this.__realHeight=this.__tmpImg.height;
+this.__realWidth=this.__tmpImg.width;
+this.__loading=false;
+if(this.__tmpImg.src!=_loading||this.__tmpImg.src!=location.fa240){
+this.__eimg.src=_src;
+this.__resetImageSize();
+}
+this.__tmpImgLoaded=true;
+};
+__pro.__imageLoadError=function(){
+this.__tmpImg.src=location.fa240;
+}
+__pro.__onParentDataIsLoading=function(){
+this.__eimg.src=_loading;
+this.__onParentloading=true;
+};
+__pro.__onDataIsReady=function(_data,_count,_index){
+this.__onParentloading=false;
+_count&&(this.__listCount=_count||1);
+_index>=0&&(this.__listSeqIndex=_index||0);
+if(this.__listSeqIndex==this.__listCount-1){
+_data.statu='end';
+this.__isEnd=1;
+}
+if(this.__listSeqIndex==0){
+_data.statu='first';
+this.__isEnd=-1
+}
+this.__isEnd=0;
+this.__loading=true;
+this.__setTitle();
+this.__like.setAttribute('data-pictureid',_data.pictureId);
+this.__push.setAttribute('data-pictureid',_data.pictureId);
+this.__cancelLike.setAttribute('data-pictureid',_data.pictureId);
+this.__desc.innerHTML=U._$escape(U.str._$truncate(_data.picDesc,20,false));
+this.__camerainfo.innerHTML=this.__dataCacheModule._$domsVO['picwraper'+_data.pictureId].camerainfo.innerHTML||'';
+this.__currentPictureId=_data.pictureId;
+if(np.c._$UD.editable||window.UD.editable){
+this.__like.innerHTML='喜欢('
++(this.__dataCacheModule._$dataVO.picListVO['pictureId'+_data.pictureId].likeCount>0
+?this.__dataCacheModule._$dataVO.picListVO['pictureId'+_data.pictureId].likeCount:0)+')';
+E._$replaceClassName(this.__like,'w-btnDeepSkyBlue f-hide','w-btnDeepSkyBlueDisabled');
+this.__like.removeAttribute('data-operation');
+}else{
+this.__setLikeNum();
+if(this.__dataCacheModule._$dataVO.picListVO['pictureId'+_data.pictureId].liked){
+E._$addClassName(this.__like,'f-hide');
+E._$delClassName(this.__cancelLike,'f-hide');
+}else{
+E._$delClassName(this.__like,'f-hide');
+E._$addClassName(this.__cancelLike,'f-hide');
+}
+}
+this.__tmpImgLoaded=false;
+this.__tmpImg.src=_data.url||location.fa240;
+if(this.__tmpImg.complete&&!this.__tmpImgLoaded){
+this.__tmpImageLoad()
+}
+};
+__pro.__onImageOut=function(_event){
+this.__previous.style.visibility='hidden';
+this.__next.style.visibility='hidden';
+};
+__pro.__onImageHover=function(_event){
+if(this.__loading||this.__onParentloading){
+return;
+}
+var _l=V._$pointerX(_event)
+,__X=E._$offsetX(this.__body)
+,__Y=parseInt(this.__body.offsetWidth/2);
+if((_l-__X)<__Y){
+this.__setTitle();
+}else{
+this.__setTitle();
+}
+V._$stop(_event);
+};
+__pro.__onMousewheelAction=function(_event){
+var _isFF=false
+,_wheelDelta;
+_event=_event||window.event;
+if(!!_event.detail){
+_isFF=true;
+}
+_wheelDelta=(_event.wheelDelta||_event.detail);
+if(_isFF){
+if(_wheelDelta>0){
+if(this.__isEnd==1){
+return;
+}
+this.__getHref(1);
+}else{
+if(this.__isEnd==-1){
+return;
+}
+this.__getHref(-1);
+}
+}else{
+if(_wheelDelta>0){
+if(this.__isEnd==-1){
+return;
+}
+this.__getHref(-1);
+}else{
+if(this.__isEnd==1){
+return;
+}
+this.__getHref(1);
+}
+}
+};
+__pro.__onKeyboardAction=function(_event){
+var _activeElement=_event.currentTarget
+?_event.currentTarget.activeElement
+:document.activeElement,
+_tagName=_activeElement&&_activeElement.tagName.toLowerCase();
+if(_tagName=='input'||_tagName=='textarea'||_tagName=='select'||!_activeElement){
+return;
+}
+if(_event&&_event.keyCode==37){
+this.__getHref(-1);
+}else if(_event&&_event.keyCode==39){
+this.__getHref(1);
+}else if(_event&&_event.keyCode==27){
+this.__showStatu&&this._$hide();
+}
+};
+__pro.__setLoading=function(_tag){
+if(!!_tag){
+this.__eimgContainer.style.cssText+=';background-image:none;';
+this.__topbtnsContainer.style.cssText+=';filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity: 1;';
+this.__eimg.style.cssText+=';filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity: 1;';
+this.__imgOpacity=1;
+}else{
+this.__eimgContainer.style.cssText+=';background-image:url('+_loading+');';
+this.__topbtnsContainer.style.cssText+=';filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity: 0;';
+this.__eimg.style.cssText+=';filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity: 0;';
+this.__imgOpacity=0;
+}
+};
+__pro.__setTitle=function(){
+if(this.__listCount>1){
+if(this.__listSeqIndex!=0&&this.__listSeqIndex!=this.__listCount-1){
+this.__next.style.visibility='visible';
+this.__previous.style.visibility='visible';
+this.__next.title='下一张';
+this.__previous.title='上一张';
+}else if(this.__isEnd==-1||this.__listSeqIndex==0){
+this.__previous.style.visibility='hidden';
+this.__next.style.visibility='visible';
+this.__previous.title='已到达第一张';
+this.__next.title='下一张';
+}else if(this.__isEnd==1||this.__listSeqIndex==this.__listCount-1){
+this.__next.style.visibility='hidden';
+this.__previous.style.visibility='visible';
+this.__next.title='已到达最后一张';
+this.__previous.title='上一张';
+}
+}else{
+this.__next.style.visibility='hidden';
+this.__previous.style.visibility='hidden';
+this.__next.title='下一张';
+this.__previous.title='上一张';
+}
+};
+__pro.__onImageClick=function(_event){
+if(this.__onParentloading){
+return;
+}
+var _l=V._$pointerX(_event)
+,__X=E._$offsetX(this.__body)
+,__Y=parseInt(this.__body.offsetWidth/2);
+if((_l-__X)<__Y){
+this.__getHref(-1);
+}else{
+this.__getHref(1);
+}
+V._$stop(_event);
+};
+__pro.__getHref=function(_tag){
+if(this.__listCount-1==this.__listSeqIndex&&_tag==1){
+this.__isEnd=_tag;
+}
+if(this.__listSeqIndex==0&&_tag==-1){
+this.__isEnd=_tag;
+}
+if(this.__isEnd==_tag){
+this.__setTitle();
+return;
+}
+this.__eimg.onabort;
+this.__setLoading(false);
+this._$parent._$dispatchEvent('onGet960Img',_tag);
+};
+})();
+;(function(){
+var p=P('p.m')
+,$=E._$getElement
+,__pro;
+p._$$SHAREWeibo=C();
+U.cls._$augment(p._$$SHAREWeibo,P.ut._$$Single,true);
+__pro=p._$$SHAREWeibo.prototype;
+__pro._$initialize=function(_op){
+var that=this;
+_op=_op||O;
+this.__sourceName=!!_op.source?'网易摄影':'网易相册';
+this.__sinaId=!!_op.source?3948597768:3784306895;
+this.__title=this.__common='';
+this.__events=this._$bindEvent._$bind(this);
+this.__method="get";
+this.__form=document.cloneElement("form");
+this.__form.target="_blank";
+this.__form.enctype="application/x-www-form-urlencoded";
+this.__form.style.display="none";
+document.body.appendChild(this.__form);
+};
+__pro._$reset=function(_bol,_ob){
+var that=this;
+V._$delEvent(document,'click',this.__events);
+if(_bol){
+V._$addEvent(document,'click',this.__events);
+}
+if(_ob){
+this.__title=_ob.name;
+this.__common=_ob.desc;
+this.__shareRefImg=_ob.img;
+this.__info=_ob.info||"";
+this.__sinaSearchPic=_ob.hasOwnProperty('searchPic')?!!_ob.searchPic:false;
+this.__afterCallback=_ob.afterCallback||F;
+this.__needLink=_ob.hasOwnProperty('needLink')?!!_ob.needLink:true;
+this.__link=_ob.link||window.location.href;
+}else{
+this.__shareRefImg=this.__title=this.__common='';
+}
+};
+__pro._$bindEvent=function(_e){
+var _node=V._$getElement(_e),
+_weiboName;
+if(!_node||_node.nodeType!=1){
+return;
+}
+_weiboName=_node.getAttribute('data-weiboname')||'';
+if(!_weiboName){
+_node=_node.parentNode;
+if(!_node||_node.nodeType!=1){
+return;
+}
+_weiboName=_node.getAttribute('data-weiboname')||'';
+}
+this.__method=_node.getAttribute('data-method')=="post"?"post":"get";
+if(_weiboName!==''){
+this._$onShareWeibo(_weiboName);
+}
+};
+__pro._$joinParams=function(_url,_obj){
+if(!_url){
+return'';
+}
+var _s=[],
+_url=_url||'';
+if(this.__method=="post"){
+this.__form.innerHTML="";
+this.__form.action=_url;
+this.__form.method=this.__method;
+for(var i in _obj){
+if(_obj.hasOwnProperty(i)){
+var _input=document.cloneElement("textarea");
+_input.name=i;
+_input.value=_obj[i].toString()||'';
+this.__form.appendChild(_input);
+}
+}
+this.__form.submit();
+}else{
+for(var i in _obj){
+if(_obj.hasOwnProperty(i)){
+_obj[i]!=null&&_s.push(i.toString()+'='+encodeURIComponent(_obj[i].toString()||''));
+}
+}
+_url=/\?$/.test(_url)?_url:(_url+"?");
+window.open(_url+_s.join('&'));
+}
+return;
+};
+__pro._$onShareWeibo=function(_weibo){
+var __link=this.__link,
+__title='',
+__common='',
+__imgs='';
+__title=this.__needLink?('“'+this.__title+'”'+' - '+__title):this.__title;
+__common=this.__common;
+switch(_weibo){
+case"lofter_article":
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg[0];
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url="http://www.lofter.com/sharephoto/?";
+var __p={
+from:"pp"
+,content:'<p><b>'+this.__title+'</b></p><p>'+(this.__info||"&nbsp;&nbsp;")+'</p><p>&nbsp;&nbsp;</p>'
+,source:''
+,sourceurl:this.__link
+,image:__imgs
+,tag:""
+};
+break;
+case"lofter":
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg[0];
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url="http://www.lofter.com/sharephoto/?";
+var __p={
+from:"pp"
+,content:'<p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;</p>'
+,source:''
+,sourceurl:this.__link
+,image:__imgs
+,tag:""
+};
+break;
+case'weibo163':
+this.__weiboId=0;
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg.join(',');
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url='http://t.163.com/article/user/checkLogin.do?',
+__p={
+link:__link,
+source:this.__sourceName,
+info:__title+' '+__common+' '+__link,
+images:__imgs,
+togImg:'true'
+};
+break;
+case'weiboSina':
+this.__weiboId=1;
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg[0];
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url='http://service.weibo.com/share/share.php?',
+__p={
+type:'3'
+,appkey:this.__sinaId
+,searchPic:this.__sinaSearchPic
+,title:__title+' '+__common
+,pic:__imgs
+,url:__link
+,ralateUid:1882854902
+};
+break;
+case'weiboQQ':
+this.__weiboId=2;
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg.join('|');
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url='http://v.t.qq.com/share/share.php?',
+__p={
+url:__link,
+appkey:801097868,
+desc:__common,
+summary:__common||'　',
+title:__title+__common,
+site:this.__sourceName,
+pic:__imgs
+};
+break;
+case'weiboQzone':
+this.__weiboId=3;
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg[0];
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',
+__p={
+url:__link,
+desc:'　',
+summary:__common||'　',
+title:__title,
+site:this.__sourceName,
+pics:__imgs
+};
+break;
+case'weiboDouban':
+this.__weiboId=5;
+var __url='http://www.douban.com/recommend/?',
+__p={
+'url':__link,
+'title':__title+' '+__common+' '+__link,
+'comment':__common
+};
+break;
+case'weiboRenren':
+this.__weiboId=4;
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg[0];
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url='http://share.renren.com/share/buttonshare/post/1004?',
+__p={
+title:__title,
+content:__common,
+pic:__imgs,
+url:__link
+};
+break;
+case'weiboKaixin':
+this.__weiboId=6;
+if(this.__shareRefImg&&U.arr._$isArray(this.__shareRefImg)){
+__imgs=this.__shareRefImg[0];
+}else{
+this.__shareRefImg&&(__imgs=this.__shareRefImg);
+}
+var __url='http://www.kaixin001.com/repaste/share.php?';
+__p={
+rtitle:__title+' '+__common+' '+__link
+,rurl:__link
+};
+break;
+default:
+return;
+break;
+};
+this.__afterCallback&&this.__afterCallback(this.__weiboId);
+this._$joinParams(__url,__p);
+__link&&delete __link;
+__url&&delete __url;
+p&&delete p;
+__imgs&&delete __imgs;
+};
+})();
+(function(){
+var m=P('P.w')
+,__pro
+,__templat='<div class="m-picexif">\
+         <h5 class="picexif-title z-tag">EXIF</h5>\
+         <ul class="picexif-container z-tag">\
+             <li class="picexif-item">品牌：<span class="z-tag"></span></li>\
+          <li class="picexif-item">型号：<span class="z-tag"></span></li>\
+          <li class="picexif-item">焦距：<span class="z-tag"></span></li>\
+          <li class="picexif-item">光圈：<span class="z-tag"></span></li>\
+          <li class="picexif-item">快门速度：<span class="z-tag"></span></li>\
+          <li class="picexif-item">ISO：<span class="z-tag"></span></li>\
+          <li class="picexif-item">曝光补偿：<span class="z-tag"></span></li>\
+          <li class="picexif-item">拍摄时间：<span class="z-tag"></span></li>\
+          <li class="picexif-item">镜头：<span class="z-tag"></span></li>\
+         </ul>\
+         <p class="picexif-none z-tag">此图片没有拍摄信息，可能并非相片格式，或在相片处理过程中删除了相应信息。</p>\
+         <span class="picexif-titlebg"></span>\
+         <span class="picexif-bg"></span>\
+        </div>'
+,$=E._$getElement;
+m._$$SHOWphotoExif=C();
+U.cls._$augment(m._$$SHOWphotoExif,P.ut._$$Single,true);
+__pro=m._$$SHOWphotoExif._$extend(P(N.ut)._$$Event);
+__pro._$initialize=function(_op){
+_op=_op||O;
+this._$super();
+this.__templat=_op.templat||__templat;
+this.__fireTarget=_op.fireTarget||null;
+this.__pauseTime=_op.pauseTime||3000;
+this.__op=_op;
+this.__Photodwr=P('p.w')._$$PHOTODwrApiCache._$getInstance();
+this.__initPhotoId=0;
+this.__exifData={};
+this.__getXNode();
+this.__bindEvents();
+};
+__pro.__bindEvents=function(){
+V._$addEvent(this.__closeBtn,'click',this._$hide._$bind(this));
+V._$addEvent(this.__body,'mouseover',this.__cancelTimer._$bind(this));
+V._$addEvent(this.__body,'mouseout',this.__readyHide._$bind(this));
+};
+__pro.__cancelTimer=function(){
+this.__timer&&window.clearTimeout(this.__timer);
+this.__timer=null;
+};
+__pro.__readyHide=function(){
+this.__timer&&window.clearTimeout(this.__timer);
+this.__timer=setTimeout(this._$hide._$bind(this),this.__pauseTime);
+};
+__pro.__getXNode=function(){
+var _body=E._$parseElement(this.__templat)
+,_tmp=E._$getElementsByClassName(_body,'z-tag');
+this.__closeBtn=_tmp[0];
+this.__dataItems=_tmp[1]
+this.__brand=_tmp[2];
+this.__model=_tmp[3];
+this.__focalDistance=_tmp[4];
+this.__aperture=_tmp[5];
+this.__shutterSpeed=_tmp[6];
+this.__ISO=_tmp[7];
+this.__EV=_tmp[8];
+this.__eDate=_tmp[9];
+this.__eLens=_tmp[10];
+this.__noData=_tmp[11];
+this.__body=_body;
+};
+__pro.__setData=function(_photoid,_data){
+_data=this.__exifData['exif'+_photoid]=_data||'nothing';
+this.__fillData(_data);
+};
+__pro.__fillData=function(_data){
+if(_data==='nothing'){
+this.__dataItems.style.display='none';
+this.__noData.style.display='';
+}else{
+this.__noData.style.display='none';
+this.__brand.innerText=_data.make||'无数据';
+this.__model.innerText=_data.model||'无数据';
+this.__focalDistance.innerText=_data.focalLength||'无数据';
+this.__aperture.innerText=_data.apertureValue||'无数据';
+this.__shutterSpeed.innerText=_data.exposureTime||'无数据';
+this.__ISO.innerText=_data.isoSpeedRatings||'无数据';
+this.__EV.innerText=_data.exposureBiasValue||'无数据';
+this.__eDate.innerText=_data.dateTime||(_data.dateTime4Long&&U._$format(_data.dateTime4Long,'yyyy/MM/dd HH:mm:ss'))||'无数据';
+this.__eLens.innerText=_data.lens||'无数据';
+this.__dataItems.style.display='';
+}
+this._$show();
+};
+__pro.__getDataByDwr=function(_photoid){
+this.__Photodwr._$getPhotoExif({
+photoId:_photoid
+,success:this.__setData._$bind(this,_photoid)
+,failer:this.__setData._$bind(this,_photoid,0)
+});
+};
+__pro._$show=function(){
+this.__fireTarget&&this.__fireTarget.parentNode.appendChild(this.__body);
+this.__showStatu=true;
+this.__readyHide();
+};
+__pro._$hide=function(){
+this.__showStatu&&this.__body.parentNode&&this.__body.parentNode.removeChild(this.__body);
+this.__showStatu=false;
+this.__cancelTimer();
+};
+__pro._$reset=function(_op){
+var _data
+,_photoid;
+if(!_op){
+return;
+}
+if(!!_op.fireTarget&&_op.fireTarget!=this.__fireTarget){
+this.__showStatu&&this._$hide();
+}else if(!!_op.fireTarget&&_op.fireTarget==this.__fireTarget){
+!this.__showStatu&&this._$show();
+return;
+}
+_photoid=!_op.photoid?this.__initPhotoId++:_op.photoid;
+this.__fireTarget=_op.fireTarget||this.__fireTarget||null;
+if(!!_op.data){
+this.__exifData['exif'+_photoid]=_op.data;
+}else if(!_op.photoid){
+return;
+}
+_data=this.__exifData['exif'+_photoid];
+if(_data){
+this.__setData(_photoid,_data);
+}else{
+this.__getDataByDwr(_op.photoid);
+}
+};
+})();
+(function($){
+var p=P('np.m'),
+_xhtml='\
+   <div class="push  clearfix">\
+      <ul class="t"></ul>\
+      <div class="pushbtn"><input class="btn btn3 fc5 t" type="button" value="确定"/>　<input class="btn btn3 fc5 t" type="button" value="取消"/></div>\
+    </div>',
+__uispace='ui-'+U._$randNumberString(),
+__proModule,
+__proWindow,
+__proItem,
+__groupsVO={},
+__proCache;
+P(N.ui)._$pushStyle('\
+     #<uispace> {width:300px;}\
+     #<uispace> .push .cur{background:none repeat scroll 0 0 #cbe4ff;}\
+                    #<uispace> .push li{line-height:20px;padding:5px 10px;width:200px;}\
+     #<uispace> .push li a.fc10:hover{color:#999;cursor:default;}\
+                    #<uispace> .push li img{width:20px;height:20px;margin-right:10PX;}\
+                    #<uispace> .push .pushbtn{text-align:center;padding-top:20px;}\
+     #<uispace> .push .pushul{overflow-y:auto;height:370px;}\
+    ',__uispace);
+p._$ShareWorksPushModule=C();
+U.cls._$augment(p._$ShareWorksPushModule,P.ut._$$Single,true);
+__proModule=p._$ShareWorksPushModule._$extend(np.w._$$Module,true);
+__proModule._$initialize=function(_options){
+_options=_options||O;
+this.__pictureId=_options.pictureId||0;
+this.__userId=_options.userId||0;
+this.__ownerId=_options.ownerId||0;
+this.__pushSuccesscallback=_options.callback||F;
+this.__initCache();
+};
+__proModule._$reset=function(_options){
+_options.pictureId&&(this.__pictureId=_options.pictureId||0);
+_options.userId&&(this.__userId=_options.userId||0);
+_options.ownerId&&(this.__ownerId=_options.ownerId||0);
+_options.callback&&(this.__pushSuccesscallback=_options.callback||F);
+this.__pushAction();
+};
+__proModule.__initCache=function(){
+this.__cache=new(p._$$PushCache)({
+ongrouppushlistget:this.__cbPushListGet._$bind(this),
+picturetogroupspush:this.__cbPushPictureToGroups._$bind(this)
+});
+};
+__proModule.__pushAction=function(){
+this.__cache._$getGroupListByUserId(this.__userId,this.__pictureId);
+};
+__proModule.__cbPushListGet=function(_data){
+if(_data==null||_data.length==0){
+E._$alert("信息提示","摄影小镇是志趣相投的拍客的聚集地，只有小镇成员才能将自己或别人的作品推送到画廊。");
+return;
+}else{
+P('np.m')._$$PushGalleryWindow._$show({
+title:'推送到小镇画廊',
+userId:this.__userId,
+pictureId:this.__pictureId,
+list:_data,
+onpush:this.__pushPictureToGroup._$bind(this)
+});
+}
+};
+__proModule.__pushPictureToGroup=function(_groupIds){
+this.__tmpGroupIds=_groupIds;
+this.__cache._$pushPictureToGroups(this.__ownerId,this.__userId,this.__pictureId,_groupIds);
+};
+__proModule.__cbPushPictureToGroups=function(_result){
+if(_result&&_result.length>=1){
+if(_result.length==1){
+switch(_result[0]){
+case'hasPushED':
+E._$alert("信息提示","单图已被推送到小镇，不能重复推送");
+break;
+case'Success':
+E._$showHint("推送成功",true);
+break;
+case'ExceedLimit':
+E._$alert("信息提示","每天推送单图超过限制");
+break;
+case'NotGroupMember':
+E._$alert("信息提示","您还不是本小镇成员");
+break;
+case'Failed':
+E._$alert("信息提示","推送失败请稍后再试");
+break;
+}
+}else if(this.__tmpGroupIds&&this.__tmpGroupIds.length){
+var _tmpName=[];
+for(var _k=0,_l=_result.length;_k<_l;_k++){
+if(_result[_k]!='Success'){
+_tmpName.push(__groupsVO['gp'+this.__tmpGroupIds[_k]]+'小镇');
+}
+}
+if(_tmpName.length){
+_tmpName=_tmpName.join('，');
+E._$alert("信息提示",_tmpName+'推送失败');
+}else{
+E._$showHint("推送成功",true);
+}
+}
+}
+this.__tmpGroupIds=[];
+};
+p._$$PushGalleryWindow=C();
+__proWindow=p._$$PushGalleryWindow._$extend(np.l._$$Window,true);
+__proWindow._$initialize=function(_parent,_options){
+_options=_options||O;
+_options.onshow=this.__onShowResetWidth._$bind(this);
+this._$super(_parent,_options);
+};
+__proWindow.__getSpace=function(){
+return __uispace;
+};
+__proWindow.__getXhtml=function(){
+return _xhtml;
+};
+__proWindow._$resetOption=function(_options){
+this.__options=_options||O;
+this.__body.className=_options.style||'';
+this._$addEvent('onpush',_options.onpush||F);
+var _list=_options.list||[];
+this.__setData(_list);
+};
+__proWindow.__intXnode=function(){
+var _ntmp=E._$getElementsByClassName(this.__body,'t'),_i=0;
+this.__elist=_ntmp[_i++];
+this.__eok=_ntmp[_i++];
+this.__ecancel=_ntmp[_i++];
+V._$addEvent(this.__eok,'click',this.__onOK._$bind(this));
+V._$addEvent(this.__ecancel,'click',this.__onClickClose._$bind(this));
+};
+__proWindow.__setData=function(_list){
+var _defaultSeled=false;
+if(_list&&_list.length==1){
+_defaultSeled=true;
+}
+if(_list&&_list.length>12){
+E._$addClassName(this.__elist,"pushul");
+}
+this.__chkGroupIds=[];
+this.__titms&&p._$$GroupPushItem._$recycle(this.__titms);
+var _tmpSuperGroups=[]
+,_tmpAdminGroups=[]
+,_tmpUserGroups=[]
+,_tmpOtherGroups=[];
+if(_list&&_list.length){
+for(var _k=0,_l=_list.length;_k<_l;_k++){
+__groupsVO['gp'+_list[_k].groupId]=_list[_k].name;
+if(_list[_k].userRole==4){
+_tmpSuperGroups.push(_list[_k]);
+}else if(_list[_k].userRole==3){
+_tmpAdminGroups.push(_list[_k]);
+}else if(_list[_k].userRole==2){
+_tmpUserGroups.push(_list[_k]);
+}else{
+_tmpOtherGroups.push(_list[_k]);
+}
+}
+_list=_tmpSuperGroups.concat(_tmpAdminGroups).concat(_tmpUserGroups).concat(_tmpOtherGroups);
+}
+this.__titms=p._$$GroupPushItem._$allocate(_list,this.__elist,{
+groupId:this.__groupId,
+defaultSeled:_defaultSeled||false,
+onselect:this.__onItemSelect._$bind(this)
+});
+if(!_list)return;
+var _len=_list.length,_pcount=0;
+U.arr._$forEach(_list,function(_itm){
+if(_itm.isPush==true)
+_pcount++;
+});
+this.__allPush=(_len==_pcount)?1:0;
+};
+__proWindow.__onShowResetWidth=function(){
+(!!this.__layer.__body&&!!this.__layer.__container)&&(this.__layer.__body.style.width=this.__layer.__container.offsetWidth+2+'px');
+};
+__proWindow.__onItemSelect=function(_id,_checked){
+if(_checked){
+this.__chkGroupIds.push(_id);
+}else{
+if(this.__chkGroupIds&&this.__chkGroupIds.length){
+for(var _k=0,_l=this.__chkGroupIds.length;_k<_l;_k++){
+if(this.__chkGroupIds[_k]==_id){
+this.__chkGroupIds.splice(_k,1);
+}
+}
+}
+}
+};
+__proWindow.__onOK=function(_event){
+V._$stop(_event);
+if(this.__chkGroupIds==0){
+if(this.__allPush==1){
+E._$alert("信息提示","请选择推送的组");
+this.__layer._$close();
+return;
+}else{
+E._$alert("信息提示","请选择推送的组");
+return;
+}
+}
+this.__layer._$close();
+this._$dispatchEvent('onpush',this.__chkGroupIds);
+};
+__proWindow.__onClickClose=function(){
+this.__layer._$close();
+};
+__proWindow.__onDisableOK=function(){
+this.__eok.disabled=true;
+E._$addClassName(this.__eok,'btn3-disabled');
+};
+p._$$GroupPushItem=C();
+var __groupItem='<li class="ltag clearfix"><img class="group tag l" onerror="this.src=\''+location.gp75+'\'"/><a href="#" onclick="return false;"  hideFocus="true" class="tag"></a></li>';
+__proItem=p._$$GroupPushItem._$extend(P(N.ut)._$$Item,true);
+__proItem._$initialize=function(_options){
+this._$super(_options);
+this.__intXnode();
+};
+__proItem.__intXnode=function(){
+this.__body=E._$parseElement(__groupItem);
+var _ntmp=E._$getElementsByClassName(this.__body,'tag');
+this.__eimg=_ntmp[0];
+this.__ename=_ntmp[1];
+};
+__proItem._$reset=function(_options){
+this._$addEvent('onselect',_options.onselect||F);
+this.__defaultSeled=_options.defaultSeled||false;
+};
+__proItem._$setData=function(_data){
+if(!!_data.isPush){
+E._$addClassName(this.__body,"js-disabled");
+E._$addClassName(this.__ename,"fc10 noul");
+this.__ename.title="已经推送到这个小镇";
+V._$clearEvent(this.__body);
+}else{
+var _func=this.__onItemSelect._$bind(this);
+V._$addEvent(this.__body,'click',_func);
+}
+V._$addEvent(this.__eimg,'error',U.dom._$onImgError._$bind2(U.dom,location.fa240));
+this.__eimg.src=_data.imageUrl||location.gp75;
+this.__eimg.title=_data.name||'';
+this.__ename.innerHTML=_data.name||'';
+this.__groupId=_data.groupId;
+this.__body.setAttribute('data-gid',this.__groupId);
+if(this.__defaultSeled==true&&!_data.isPush){
+this.__onItemSelect();
+}
+};
+__proItem.__onItemSelect=function(){
+var _checked=this.__checked?false:true;
+this.__checked=_checked;
+if(_checked==true){
+E._$addClassName(this.__body,"cur");
+}else{
+E._$delClassName(this.__body,"cur");
+}
+this._$dispatchEvent('onselect',this.__groupId,_checked);
+};
+__proItem._$destroy=function(){
+p._$$GroupPushItem._$supro._$destroy.call(this);
+E._$delClassName(this.__body,"js-disabled");
+E._$delClassName(this.__ename,"fc10 noul");
+E._$delClassName(this.__body,"cur");
+V._$clearEvent(this.__body);
+this.__ename.title="";
+};
+p._$$PushCache=C();
+__proCache=p._$$PushCache._$extend(P(N.ut)._$$Cache,true);
+__proCache._$getGroupListByUserId=function(_userId,_pictureId){
+var _callback=this._$dispatchEvent._$bind(this,'ongrouppushlistget');
+J._$postDataByDWRWithSync(location.sdwr,'GroupGalleryBean','getGroupPushListByUserId',
+_userId,_pictureId,_callback);
+};
+__proCache._$pushPictureToGroups=function(_ownerId,_userId,_pictureId,_groupIds){
+var _callback=this._$dispatchEvent._$bind(this,'picturetogroupspush');
+J._$postDataByDWRWithSync(location.sdwr,'GroupGalleryBean','pushPictureToGroup',
+_ownerId||0,_userId,_pictureId,_groupIds,_callback);
+};
+})(E._$getElement);
+(function(){
+var p=P('p.w')
+,$=E._$getElement
+,__cmtArea='<div class="m-floatcmtArea">\
+         <p class="editor-wraper">\
+          <textarea class="i-textarea z-tag" placeHolder="Ctrl + Enter　可以快捷发表评论"></textarea>\
+          <a href="#" onclick="return false;" class="w-btnDeepSkyBlue f-ml5 z-tag">发表</a>\
+          <a href="#" onclick="return false;" class="w-btnWhiteSmoke f-ml5 z-tag">取消</a>\
+         </p>\
+         <ul class="editor-container z-tag"></ul>\
+         <span class="w-borderarrow-t z-tag"></span>\
+        </div>'
+,__cmtItem='<li>\
+        <dl class="w-lineBox">\
+         <dt  class="l-box l-box-title z-tag"><a href="#" class="z-tag"></a>： </dt>\
+         <dd class="l-box l-box-con z-tag"></dd>\
+        </dl>\
+       </li>'
+,__pro
+,__proCmtItem;
+p._$$SHARETextArea=C();
+U.cls._$augment(p._$$SHARETextArea,P.ut._$$Single,true);
+__pro=p._$$SHARETextArea._$extend(P(N.ut)._$$Event);
+__pro._$initialize=function(_op){
+_op=_op||{};
+this._$super();
+this.__op=_op||O;
+this.__ud=np.c._$UD||window.UD;
+this.__dwrApi=P('p.w')._$$DwrApiCache._$getInstance();
+this.__dataCacheModule=P('P.m')._$$ShareSetDataCache&&P('P.m')._$$ShareSetDataCache._$getInstance();
+this.__items=null;
+this.__getXNode();
+this.__bindEvents();
+};
+__pro.__getXNode=function(){
+var _nd=E._$getNodeTemplate(E._$addNodeTemplate(__cmtArea))
+,_tmp=E._$getElementsByClassName(_nd,'z-tag');
+this.__cmtTextArea=_tmp[0];
+this.__sendBtn=_tmp[1];
+this.__cancelBtn=_tmp[2];
+this.__cmtItemContainer=_tmp[3];
+return this.__body=_nd;
+};
+__pro.__bindEvents=function(){
+V._$addEvent(this.__sendBtn,'click',this.__sendData._$bind(this));
+V._$addEvent(this.__cancelBtn,'click',this._$hide._$bind(this));
+V._$addEvent(this.__cmtTextArea,'keydown',this.__onkeyPressSubmit._$bind(this));
+this._$addEvent('onDataLoad',this.__op.onDataLoad||F);
+this._$addEvent('onAddCmtItem',this.__op.onAddCmtItem||F);
+this._$addEvent('onGloableCmtReset',this.__op.onGloableCmtReset||F);
+};
+__pro.__onkeyPressSubmit=function(_event){
+if(_event&&_event.ctrlKey&&(_event.keyCode===13||_event.keyCode===10)&&!this.__posting){
+this.__sendData();
+}
+};
+__pro._$reset=function(_op){
+this.__op=_op||O;
+if(!this.__op.pid||!this.__op.setid){
+return;
+}
+this.__getData();
+};
+__pro.__initTextArea=function(){
+this.__cmtTextArea.disabled=false;
+this.__posting=false;
+this.__cmtTextArea.value='';
+var _tmp=this.__dataCacheModule._$domsVO['picwraper'+this.__op.pid];
+if(_tmp&&_tmp.rightWidth){
+this.__maxWidth=_tmp.rightWidth;
+}else{
+this.__maxWidth=0;
+}
+};
+__pro.__show=function(){
+this.__initTextArea();
+$(this.__op.container).appendChild(this.__body);
+this.__showStatu=true;
+};
+__pro._$hide=function(){
+this.__showStatu&&$(this.__op.container).removeChild(this.__body);
+this.__showStatu=false;
+this.__sendBtn.blur();
+this.__cancelBtn.blur();
+};
+__pro.__getData=function(){
+this.__dwrApi._$getAllPicSetComms4960Pic({
+setId:this.__op.setid
+,refPicId:this.__op.pid
+,limit:this.__dataCacheModule._$getSingPicCmtCount(this.__op.pid)||5
+,offset:0
+,getCountFlag:true
+,success:this.__setDataItems._$bind(this)
+,failer:this.__setDataItems._$bind(this,[])
+});
+};
+__pro.__setDataItems=function(_data){
+var _tmpData=[];
+this.__items&&p._$$CMTitem._$recycle(this.__items);
+if(_data&&_data.commlist&&_data.commlist.length){
+U.arr._$forEach(_data.commlist,function(_el,_i){
+if(_el.subComments&&_el.subComments.length){
+_tmpData=_tmpData.concat(_el.subComments.reverse());
+delete _el.subComments;
+}
+_tmpData=_tmpData.concat(_el);
+});
+this.__items=p._$$CMTitem._$allocate(_tmpData,this.__cmtItemContainer,{
+parent:this
+,batchInsert:true
+})
+this.__cmtCount=_data.commlist.length||_data.commlist||0;
+}else{
+this.__items=[];
+this.__cmtCount=0;
+}
+this.__cmtCount!==this.__dataCacheModule._$getSingPicCmtCount&&this.__dataCacheModule._$rectifySingPicCmtCount(this.__op.pid,this.__cmtCount);
+this._$dispatchEvent('onDataLoad',this.__cmtCount);
+this.__show();
+};
+__pro.__addDataItem=function(_data){
+this.__initTextArea();
+if(!_data){
+return;
+}
+var _etype=_data&&_data.errorType;
+if(_etype){
+switch(_etype){
+case 3:
+alert('你并不在摄影展区的评论许可名单内。');
+break;
+case 2:
+alert('评论失败，评论中含有不恰当的词汇。');
+break;
+case 1:
+alert('评论失败，验证码错误。');
+break;
+default:
+alert('评论失败，请稍候再试。');
+}
+return;
+}
+this.__items=this.__items.concat(p._$$CMTitem._$allocate([_data],this.__cmtItemContainer,{parent:this,insertBefore:true,batchInsert:true}));
+};
+__pro.__sendDataIsOK=function(_tag){
+if(_tag<=0){
+alert('发送失败');
+return;
+}
+this._$dispatchEvent('onGloableCmtReset');
+this.__dataCacheModule._$updateSingPicCmtCount(this.__op.pid,true);
+};
+__pro.__sendData=function(){
+var _content=this.__cmtTextArea.value||this.__cmtTextArea.innerHTML
+,_str=U.str._$trim(_content)
+,_data=null;
+if(np.c._$UD.visitShareGrade==-1||np.c._$UD.visitShareGrade==-3){
+E._$alert('信息提示','你并不在摄影展区的评论许可名单内');
+return;
+}
+if(_str===''||this.__posting){
+return;
+}
+if(_str.length>1000){
+alert('评论内容请限制在1000字以内');
+return;
+}
+_data={
+rnname:np.c._$UD.visitNickName
+,runame:np.c._$UD.visitName
+,domainName:np.c._$UD.visitUserDomainName
+,con:_content
+};
+this.__cmtTextArea.disabled=true;
+this.__posting=true;
+this.__dwrApi._$addPicSetComment({
+setId:this.__op.setid
+,visitUserName:np.c._$UD.visitName
+,visitNickName:np.c._$UD.visitNickName
+,reviewerAvatar:np.c._$UD.visitAvatar
+,parentId:0
+,content:U._$escape(_content)
+,refPicId:this.__op.pid
+,refPicUrl:this.__op.pidSurl||''
+,replyCommId:0
+,replyToUserName:np.c._$UD.hostName
+,replyToNickName:np.c._$UD.hostNickName
+,refGroupId:0
+,success:this.__sendDataIsOK._$bind(this,1)
+,failer:this.__sendDataIsOK._$bind(this,0)
+});
+this.__addDataItem(_data);
+};
+p._$$CMTitem=C();
+__proCmtItem=p._$$CMTitem._$extend(P.ui._$$UIBase);
+U.cls._$augment(p._$$CMTitem,P.ut._$$Reuse,true);
+__proCmtItem.__initialize=function(){
+};
+__proCmtItem.__getXNode=function(){
+var _nd=E._$getNodeTemplate(E._$addNodeTemplate(__cmtItem))
+,_tmp=E._$getElementsByClassName(_nd,'z-tag');
+this.__cmtNick=_tmp[1];
+this.__CmtCon=_tmp[2];
+return _nd;
+};
+__proCmtItem._$reset=function(_data,_op){
+_op=_op||{};
+_data=_data||{};
+_data.con=_data.con||'';
+this.__data=_data;
+this._$parent=_op.parent||this;
+if(!!_data.domainName){
+this.__cmtNick.href=U.fun._$getUserHomeUrl(_data.runame,_data.domainName);
+}else{
+this.__cmtNick.href=location.r+'/'+_data.runame+'/home/';
+}
+this.__cmtNick.innerText=_data.rnname||_data.runame||'网易相册网友';
+if(/[\<\>\'\"]/i.test(_data.con)){
+this.__CmtCon.innerHTML=U._$escape(_data.con);
+}else{
+this.__CmtCon.innerHTML=_data.con;
+}
+};
+__proCmtItem._$destroy=function(_data){
+this.__data=null;
+this.__CmtCon.style.width='auto';
+this.__cmtNick.innerText=this.__CmtCon.innerHTML='';
+};
+})();
+(function(){
+var m=P('P.m')
+,$=E._$getElement
+,__moreTemplate=E._$addHtmlTemplate('{var _initNum = 0}\
+         {list picsetlist as x}\
+         {if x.id !== window.SID && _initNum < 4}\
+         <a href="${U.fun._$getUserDynamicUrl( np.c._$UD.hostName,np.c._$UD.hostUserDomainName || "",false)}/pp/${x.id}.html" title="${U._$escape(x.name)}">\
+         <img width="100" alt="${U._$escape(x.name)}" src="http://imgsize.ph.126.net?imgurl=${x.cvurl}_140x140x1.jpg" onerror="this.src=\'${location.fa240}\'"/></a>\
+         {var _initNum = _initNum + 1}\
+         {/if}\
+         {/list}')
+,__templat=E._$addHtmlTemplate('<div class="m-picexif">\
+         <h5 class="picexif-title z-tag">EXIF</h5>\
+         {if !!_data}\
+         <ul class="picexif-container z-tag">\
+             <li class="picexif-item">品牌：<b>${_data.make || "无数据"}</b></li>\
+          <li class="picexif-item">型号：<b>${_data.model || "无数据"}</b></li>\
+          <li class="picexif-item">焦距：<b>${_data.focalLength || "无数据"}</b></li>\
+          <li class="picexif-item">光圈：<b>${_data.apertureValue || "无数据"}</b></li>\
+          <li class="picexif-item">快门速度：<b>${_data.exposureTime || "无数据"}</b></li>\
+          <li class="picexif-item">ISO：<b>${_data.isoSpeedRatings || "无数据"}</b></li>\
+          <li class="picexif-item">曝光补偿：<b>${_data.exposureBiasValue || "无数据"}</b></li>\
+          <li class="picexif-item">拍摄时间：<b>${_data.dateTime || (_data.dateTime4Long && U._$format(_data.dateTime4Long,"yyyy/MM/dd HH:mm:ss")) || "无数据"}</b></li>\
+          <li class="picexif-item">镜头：<b>${_data.lens || "无数据"}</b></li>\
+         </ul>\
+         {else}\
+         <p class="picexif-none z-tag">这张相片没有EXIF信息，它可能被作者抹掉，也可能是胶片作品，详情请咨询作者。</p>\
+         {/if}\
+         <span class="picexif-titlebg"></span>\
+         <span class="picexif-bg"></span>\
+        </div>')
+,__weiBoTemplate=E._$addHtmlTemplate('\
+     <div class="m-singleWeibo" data-photoid="" data-seq="">\
+      <div class="lay-weibo">\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到腾讯微博"  data-weiboname = "weiboQQ"><span class="weibo-ico"><b class="w-x100-qqweibo"></b></span></b><b class="weibo-txt">腾讯微博</b></a>\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到新浪微博" data-weiboname = "weiboSina"><span class="weibo-ico"><b class="w-x100-sinaweibo"></b></span><b class="weibo-txt">新浪微博</b></a>\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到网易微博" data-weiboname = "weibo163"><span class="weibo-ico"><b class="w-x100-wy163"></b></span><b class="weibo-txt">网易微博</b></a>\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到人人网" data-weiboname = "weiboRenren"><span class="weibo-ico"><b class="w-x100-renren"></b></span><b class="weibo-txt">人人网</b></a>\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到QQ空间" data-weiboname = "weiboQzone"><span class="weibo-ico"><b class="w-x100-qqzone"></b></span><b class="weibo-txt">QQ空间</b></a>\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到开心网" data-weiboname = "weiboKaixin"><span class="weibo-ico"><b class="w-x100-kaixin"></b></span><b class="weibo-txt">开心网</b></a>\
+       <a href="#" onclick="return false" hideFocus="true" title="分享到豆瓣" data-weiboname = "weiboDouban"><span class="weibo-ico"><b class="w-x100-douban"></b></span><b class="weibo-txt">豆瓣</b></a>\
+      </div>\
+      <span class="btnArea-weibo"  title="分享该作品">\
+       <span class="lay-bg"></span>\
+       <b class="btn-weibo">分享</b>\
+      </span>\
+      <span class="lay-bg"></span>\
+     </div>')
+,__lofterTemplate=E._$addHtmlTemplate('<span class="i-share i-share-lofter" title="转发到lofter" data-method="post" data-weiboname="lofter"><s class="lofter-bg"></s><b class="lofter-txt"></b></span>')
+,__pro;
+m._$$ShareSetDataCache=C();
+U.cls._$augment(m._$$ShareSetDataCache,P.ut._$$Single,true);
+__pro=m._$$ShareSetDataCache._$extend(P(N.ut)._$$Event);
+__pro._$initialize=function(){
+this._$super();
+this.__ud=np.c._$UD||window.UD;
+if(/(\d+\.html)/.test(self.location.href)&&RegExp.$1){
+this.__baseUrl=RegExp.leftContext+RegExp.$1;
+}else{
+this.__baseUrl=self.location.href;
+}
+this.__weiboModule=P('p.m')._$$SHAREWeibo&&P('p.m')._$$SHAREWeibo._$getInstance({source:true});
+this.__shareDwrApi=P('p.w')._$$DwrApiCache._$getInstance();
+this.__PhotoDwrApi=P('p.w')._$$PHOTODwrApiCache._$getInstance();
+this.__picsetData=window.PS||null;
+this._$domsVO={};
+this._$pictureIdList=window.pictureList;
+this._$photoIdsList=window.photoidsList;
+this._$dataVO={
+picListVO:window.picListVO
+,setInfoVO:window.setCountInfo
+};
+this.__getNode();
+this.__bindEvents();
+};
+__pro.__bindEvents=function(){
+this._$addEvent('onUpdateSingPicInfo',this.__updateSingPicInfo._$bind(this));
+this._$addEvent('onToGetSingExifInfo',this._$getsingleExif._$bind(this));
+this.__resetTopWeibo();
+this.__getPicSetInteractionInfo();
+this.__getMoreSets();
+this._$getBatchExif();
+};
+__pro.__resetTopWeibo=function(){
+if(this.__picsetData&&this.__weiboModule){
+this.__weiboModule._$reset(true,{
+name:U._$unescape(this.__picsetData.name),
+desc:'分享摄影作品',
+img:window.weiboPicListUrlVO||'',
+title:this.__picsetData.name||"",
+info:this.__picsetData.desc||"",
+tag:this.__picsetData.dir1name||"",
+afterCallback:function(_index){
+new Image().src="http://photo.163.com/statistic/log?pictureSet&type="+_index+"&t="+new Date().getTime();
+}
+});
+}
+};
+__pro.__resetSingleWeibo=function(_pictureId){
+var _tmp=this._$domsVO['picwraper'+_pictureId]
+,_seq=this._$pictureIdList.length>1?(' ['+_tmp.seq+'/'+this._$pictureIdList.length+']'):''
+,_url=this.__baseUrl+'#'+_tmp.pictureId
+,_name=U._$unescape(this.__picsetData.name)+_seq+' | 网易摄影 ';
+if(this.__picsetData&&this.__weiboModule){
+this.__weiboModule._$reset(true,{
+name:_name
+,desc:''
+,link:_url
+,needLink:false
+,info:(this._$dataVO.picListVO["pictureId"+_pictureId].picDesc)||""
+,tag:this.__picsetData.dir1name||""
+,img:_tmp.imgUrl||''
+,afterCallback:function(_index){
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-default');
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-hover');
+_tmp.onpicExifBtn.style.visibility='hidden';
+_tmp.exifInfoModule.style.visibility='hidden';
+_tmp.weiboArea.style.cssText+=';zoom:normal;';
+new Image().src="http://photo.163.com/statistic/log?pictureSet&type="+_index+"&t="+new Date().getTime();
+}
+});
+}
+};
+__pro.__getMatchIdData=function(_data){
+var _pictureId,_photoId;
+if(_data.pictureId&&_data.photoId){
+return _data;
+}else if(_data.pictureId){
+_photoId=this._$dataVO.picListVO['pictureId'+_data.pictureId].photoId
+return{pictureId:_data.pictureId,photoId:_photoId};
+}else if(_data.photoId){
+for(var _i=0,_l=this._$photoIdsList.length;_i<_l;_i++){
+if(this._$photoIdsList[_i]===_data.photoId){
+_pictureId=this._$pictureIdList[_i];
+break;
+}
+}
+return{pictureId:_pictureId,photoId:_data.photoId};
+}else{
+return{pictureId:_pictureId,photoId:_photoId};;
+}
+};
+__pro.__getNode=function(){
+U.arr._$forEach(window.pictureList,function(_pid,_i){
+var _tmp=E._$getElementsByClassName('J-picwraper'+_pid,'z-tag'),that=this;
+this._$domsVO['picwraper'+_pid]={
+rootNode:$('J-picwraper'+_pid)
+,img:_tmp[0]
+,imgUrl:_tmp[0].getAttribute('data-lazyload-src')
+,imgParentNode:_tmp[0].parentNode
+,onpicExifBtn:_tmp[1]
+,picActArea:_tmp[2]
+,description:_tmp[4]
+,camerainfo:_tmp[3]
+,like:_tmp[5]
+,cancelLike:_tmp[6].parentNode
+,cancelLikeOut:_tmp[6]
+,cancelLikeOver:_tmp[7]
+,cmt:_tmp[8]
+,push:(_tmp[9]&&_tmp[9])||null
+,loadExif:false
+,photoId:window.photoidsList[_i]
+,pictureId:_pid
+,seq:_i+1
+};
+this.__setSingleWeibo(_pid);
+}._$bind(this));
+var _nodes=E._$getElementsByClassName('J-host-Countinfo','num')
+this._$domsVO['bottomSetCount']=_nodes[0];
+this._$domsVO['bottomFollowed']=_nodes[1];
+this._$domsVO['bottomLoved']=_nodes[2];
+this._$domsVO['ecmtCon']=$('J-pageCmtArea');
+this._$domsVO['topViewcount']=$('J-picset-viewcount');
+this._$domsVO['topCmts']=$('J-picset-cmtcount');
+this._$domsVO['topLikecount']=$('J-picset-likecount');
+this._$domsVO['showMoreSetsContainer']=$('J-getMoreSet');
+};
+__pro.__getPicSetInteractionInfo=function(){
+this.__shareDwrApi._$getPicSetInteractionInfo({
+setId:window.SID
+,picIds:window.pictureList
+,success:this.__getPicSetInfoCallBack._$bind(this)
+,failer:this.__getPicSetInfoCallBack._$bind(this,0)
+});
+};
+__pro.__getPicSetInfoCallBack=function(_data){
+if(!_data){
+return;
+}
+this._$dataVO.setInfoVO.currentPicSetLovedCount=_data.setLikeCount||0;
+this._$dataVO.setInfoVO.setViewCount=_data.setViewCount||0;
+this._$dataVO.setInfoVO.setCommentCount=_data.setCommentCount||0;
+if(_data&&_data.picLikeVO&&_data.picLikeVO.length){
+U.arr._$forEach(_data.picLikeVO,function(_VO){
+this._$dataVO.picListVO['pictureId'+_VO.picId].commCount=_VO.commCount||0;
+this._$dataVO.picListVO['pictureId'+_VO.picId].favCount=_VO.favCount||0;
+this._$dataVO.picListVO['pictureId'+_VO.picId].likeCount=_VO.likeCount||0;
+this._$dataVO.picListVO['pictureId'+_VO.picId].liked=_VO.liked||false;
+this._$setSingPicItem(_VO.picId);
+}._$bind(this));
+}
+this._$setTopCount();
+};
+__pro._$setTopCount=function(){
+this._$domsVO['topViewcount'].innerHTML=this._$dataVO.setInfoVO.setViewCount>0?this._$dataVO.setInfoVO.setViewCount:0;
+this._$domsVO['topCmts'].innerHTML=this._$dataVO.setInfoVO.setCommentCount>0?this._$dataVO.setInfoVO.setCommentCount:0;
+this._$domsVO['topLikecount'].innerHTML=this._$dataVO.setInfoVO.currentPicSetLovedCount>0?this._$dataVO.setInfoVO.currentPicSetLovedCount:0;
+};
+__pro._$setSingPicItem=function(_pictureIds){
+if(!U.arr._$isArray(_pictureIds)){
+if((_pictureIds=parseInt(_pictureIds,10))<=0){
+return;
+}
+_pictureIds=[_pictureIds];
+}
+U.arr._$forEach(_pictureIds,function(_pictureId){
+var _tmp=this._$domsVO['picwraper'+_pictureId];
+if(!_tmp){
+return;
+}
+if(np.c._$UD.editable||window.UD.editable){
+_tmp.like.innerHTML='喜欢('+(this._$dataVO.picListVO['pictureId'+_pictureId].likeCount>0?this._$dataVO.picListVO['pictureId'+_pictureId].likeCount:0)+')';
+E._$replaceClassName(_tmp.like,'w-btnDimGray f-hide','w-btnDimGrayDisabled');
+_tmp.like.removeAttribute('data-operation');
+}else{
+_tmp.like.innerHTML='喜欢('+(this._$dataVO.picListVO['pictureId'+_pictureId].likeCount>0?this._$dataVO.picListVO['pictureId'+_pictureId].likeCount:0)+')';
+_tmp.cancelLikeOut.innerHTML='已喜欢('+(this._$dataVO.picListVO['pictureId'+_pictureId].likeCount>0?this._$dataVO.picListVO['pictureId'+_pictureId].likeCount:0)+')';
+_tmp.cancelLikeOver.innerHTML='取消喜欢('+(this._$dataVO.picListVO['pictureId'+_pictureId].likeCount>0?this._$dataVO.picListVO['pictureId'+_pictureId].likeCount:0)+')';
+if(this._$dataVO.picListVO['pictureId'+_pictureId].liked){
+E._$addClassName(_tmp.like,'f-hide');
+E._$delClassName(_tmp.cancelLike,'f-hide');
+}else{
+E._$addClassName(_tmp.cancelLike,'f-hide');
+E._$delClassName(_tmp.like,'f-hide');
+}
+}
+}._$bind(this));
+};
+__pro.__updateSingPicInfo=function(_data){
+};
+__pro._$updateSingPicDesc=function(_obj){
+var _tmp=this._$dataVO.picListVO['pictureId'+_obj.pictureId||'00xx'];
+_tmp&&(_tmp.picDesc=_obj.desc);
+};
+__pro._$getSingPicDesc=function(_pictureId){
+return this._$dataVO.picListVO['pictureId'+_pictureId].picDesc;
+};
+__pro._$updatePicSetDesc=function(_desc){
+this._$dataVO.setInfoVO.picSetDesc=_desc;
+};
+__pro._$getPicSetDesc=function(){
+return this._$dataVO.setInfoVO.picSetDesc;
+};
+__pro._$updatePicSetTitle=function(_desc){
+this._$dataVO.setInfoVO.picSetTitle=_desc;
+};
+__pro._$getPicSetTitle=function(){
+return this._$dataVO.setInfoVO.picSetTitle;
+};
+__pro._$updateSingPicCmtCount=function(_pictureId,_success){
+var _tmp=this._$dataVO.picListVO['pictureId'+_pictureId||'00xx']
+,_tmp2=this._$domsVO['picwraper'+_pictureId];;
+if(_success){
+_tmp&&(++_tmp.commCount)&&(++this._$dataVO.setInfoVO.setCommentCount);
+this._$domsVO['topCmts'].innerHTML=this._$dataVO.setInfoVO.setCommentCount>0?this._$dataVO.setInfoVO.setCommentCount:0;
+}
+};
+__pro._$rectifySingPicCmtCount=function(_pictureId,_num){
+var _tmp=this._$dataVO.picListVO['pictureId'+_pictureId||'00xx']
+,_tmp2=this._$domsVO['picwraper'+_pictureId];;
+if(_num){
+_tmp&&(_tmp.commCount=_num);
+}
+};
+__pro._$getSingPicCmtCount=function(_pictureId){
+return this._$dataVO.picListVO['pictureId'+_pictureId].commCount;
+};
+__pro._$updateSingPicLike=function(_data){
+var _tmp=this._$dataVO.picListVO['pictureId'+_data.pictureId||'00xx']
+,_tmp2;
+_tmp.likeCount++;
+this._$dataVO.setInfoVO.allLovedCount++;
+this._$dataVO.setInfoVO.currentPicSetLovedCount++;
+_tmp.liked=true;
+this._$domsVO['bottomLoved'].innerHTML=this._$dataVO.setInfoVO.allLovedCount;
+this._$domsVO['topLikecount'].innerHTML=this._$dataVO.setInfoVO.currentPicSetLovedCount;
+_tmp2=this._$domsVO['picwraper'+_data.pictureId];
+if(!_tmp2){
+return;
+}
+_tmp2.like.innerHTML='喜欢('+(_tmp.likeCount>0?_tmp.likeCount:0)+')';
+_tmp2.cancelLikeOut.innerHTML='已喜欢('+(_tmp.likeCount>0?_tmp.likeCount:0)+')';
+_tmp2.cancelLikeOver.innerHTML='取消喜欢('+(_tmp.likeCount>0?_tmp.likeCount:0)+')';
+E._$addClassName(_tmp2.like,'f-hide');
+E._$delClassName(_tmp2.cancelLike,'f-hide');
+};
+__pro._$cancelSingPicLike=function(_data){
+var _tmp=this._$dataVO.picListVO['pictureId'+_data.pictureId||'00xx']
+,_tmp2;
+_tmp.likeCount--;
+this._$dataVO.setInfoVO.allLovedCount--;
+this._$dataVO.setInfoVO.currentPicSetLovedCount--;
+_tmp.liked=false;
+this._$domsVO['bottomLoved'].innerHTML=this._$dataVO.setInfoVO.allLovedCount;
+this._$domsVO['topLikecount'].innerHTML=this._$dataVO.setInfoVO.currentPicSetLovedCount;
+_tmp2=this._$domsVO['picwraper'+_data.pictureId];
+if(!_tmp2){
+return;
+}
+_tmp2.like.innerHTML='喜欢('+(_tmp.likeCount>0?_tmp.likeCount:0)+')';
+_tmp2.cancelLikeOut.innerHTML='已喜欢('+(_tmp.likeCount>0?_tmp.likeCount:0)+')';
+_tmp2.cancelLikeOver.innerHTML='取消喜欢('+(_tmp.likeCount>0?_tmp.likeCount:0)+')';
+E._$addClassName(_tmp2.cancelLike,'f-hide');
+E._$delClassName(_tmp2.like,'f-hide');
+};
+__pro._$getBatchExif=function(){
+this.__PhotoDwrApi._$getPhotosExif({
+photoIds:this._$photoIdsList
+,userId:this.__ud.hostId||0
+,success:this.__collectBatchExif._$bind(this)
+,failer:this.__collectBatchExif._$bind(this,0)
+});
+};
+__pro.__collectBatchExif=function(_exifDatas){
+U.arr._$forEach(this._$photoIdsList,function(_photoid){
+var _picid
+,_tag=-1;
+_picid=this.__getMatchIdData({photoId:_photoid}).pictureId;
+for(var _i=0,_l=_exifDatas.length;_i<_l;_i++){
+if(_exifDatas[_i].photoId===_photoid){
+_tag=_i;
+}
+}
+if(_tag>=0){
+if(_exifDatas[_tag]){
+for(var _key in _exifDatas[_tag]){
+if(_exifDatas[_tag].hasOwnProperty(_key)&&U.str._$isString(_exifDatas[_tag][_key])){
+_exifDatas[_tag][_key]=_exifDatas[_tag][_key].replace(/\&(amp\;)?nbsp\;/ig,' ');
+}
+}
+}
+this._$dataVO.picListVO['pictureId'+_picid].exif=_exifDatas[_tag]||null;
+this.__setSingleExif(_picid,_exifDatas[_tag]);
+}else{
+this._$dataVO.picListVO['pictureId'+_picid].exif=null;
+this.__setSingleExif(_picid,null);
+}
+}._$bind(this));
+};
+__pro._$getsingleExif=function(_data){
+var _picData=this.__getMatchIdData(_data)
+,_pictureId=_picData.pictureId||'';
+if(!_pictureId){
+return;
+}
+if(this._$domsVO['picwraper'+_pictureId].loadExif){
+return this._$dataVO.picListVO['pictureId'+_pictureId].exif;
+}
+this.__PhotoDwrApi._$getPhotoExif({
+photoId:_data.photoId
+,success:this.__collectExif._$bind(this,_picData)
+,failer:this.__collectExif._$bind(this,_picData,0)
+});
+};
+__pro.__collectExif=function(_picData,_exifData){
+var _pictureId=this.__getMatchIdData(_picData).pictureId
+,_picExif;
+if(!_pictureId){
+return;
+}
+this._$dataVO.picListVO['pictureId'+_pictureId].exif=_exifData||null;
+this.__setSingleExif(_pictureId,_exifData);
+};
+__pro.__setSingleExif=function(_pictureId,_exifData){
+var _tmp=this._$domsVO['picwraper'+_pictureId];
+if(_tmp.loadExif){
+return;
+}else if(!_exifData){
+_tmp.camerainfo.style.display='none';
+_tmp.camerainfo.innerHTML='';
+}else if((!!_exifData.make&&_exifData.make!='')||(!!_exifData.model&&_exifData.model!='')||(!!_exifData.lens&&_exifData.lens!='')){
+_tmp.camerainfo.innerHTML='器材：'+(_exifData.make||'')+(!!_exifData.model&&_exifData.model!=''?'-':'')+(_exifData.model||'')+(!!_exifData.lens&&_exifData.lens!=''?'，':'')+(_exifData.lens||'');
+}else{
+_tmp.camerainfo.style.display='none';
+}
+_tmp.loadExif=true;
+_tmp.exifInfoModule=E._$parseElement(E._$getHtmlTemplate(__templat,{_data:_exifData}));
+_tmp.imgParentNode.appendChild(_tmp.exifInfoModule);
+!_tmp.isBindExifEvent&&this.__bindEvent(_pictureId);
+};
+__pro.__setSingleExif=function(_pictureId,_exifData){
+var _tmp=this._$domsVO['picwraper'+_pictureId];
+if(_tmp.loadExif){
+return;
+}else if(!_exifData){
+_tmp.camerainfo.style.display='none';
+_tmp.camerainfo.innerHTML='';
+}else if((!!_exifData.make&&_exifData.make!='')||(!!_exifData.model&&_exifData.model!='')||(!!_exifData.lens&&_exifData.lens!='')){
+_tmp.camerainfo.innerHTML='器材：'+(_exifData.make||'')+(!!_exifData.model&&_exifData.model!=''?'-':'')+(_exifData.model||'')+(!!_exifData.lens&&_exifData.lens!=''?'，':'')+(_exifData.lens||'');
+}else{
+_tmp.camerainfo.style.display='none';
+}
+_tmp.loadExif=true;
+_tmp.exifInfoModule=E._$parseElement(E._$getHtmlTemplate(__templat,{_data:_exifData}));
+_tmp.imgParentNode.appendChild(_tmp.exifInfoModule);
+!_tmp.isBindExifEvent&&this.__bindEvent(_pictureId);
+};
+__pro.__setSingleWeibo=function(_pictureId){
+var _tmp=this._$domsVO['picwraper'+_pictureId];
+_tmp.singleWeiboModule=E._$parseElement(E._$getHtmlTemplate(__weiBoTemplate));
+_tmp.singleWeiboBtnArea=_tmp.singleWeiboModule&&E._$getElementsByClassName(_tmp.singleWeiboModule,'btnArea-weibo')[0];
+_tmp.weiboArea=_tmp.singleWeiboModule&&E._$getElementsByClassName(_tmp.singleWeiboModule,'lay-weibo')[0];
+_tmp.imgParentNode.appendChild(_tmp.singleWeiboModule);
+_tmp.lofterModel=E._$parseElement(E._$getHtmlTemplate(__lofterTemplate));
+_tmp.imgParentNode.appendChild(_tmp.lofterModel);
+!_tmp.isBindWeiboEvent&&this.__bindWeiboEvent(_pictureId);
+};
+__pro.__bindWeiboEvent=function(_pictureId){
+var _tmp=this._$domsVO['picwraper'+_pictureId]
+,that=this;
+_tmp.isBindWeiboEvent=true;
+V._$addEvent(_tmp.imgParentNode,'mouseover',function(_e){
+E._$addClassName(_tmp.singleWeiboModule,'m-singleWeibo-default');
+that.__resetSingleWeibo(_pictureId);
+_tmp.lofterModel.style.visibility="visible";
+});
+V._$addEvent(_tmp.imgParentNode,'mouseout',function(_e){
+var _el;
+_e=_e||window.event;
+_el=_e.relatedTarget||_e.toElement;
+if(!_el||U.dom._$isAncestor(_tmp.imgParentNode,_el)){
+return;
+}
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-default');
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-hover');
+_tmp.weiboArea.style.cssText+=';zoom:normal;';
+_tmp.lofterModel.style.visibility="hidden";
+that.__resetTopWeibo();
+});
+V._$addEvent(_tmp.lofterModel,'mouseenter',function(_e){
+E._$addClassName(_tmp.lofterModel,'i-share-lofter-hover');
+});
+V._$addEvent(_tmp.lofterModel,'mouseleave',function(_e){
+E._$delClassName(_tmp.lofterModel,'i-share-lofter-hover');
+});
+V._$addEvent(_tmp.singleWeiboBtnArea,'mouseover',function(_e){
+that.__resetSingleWeibo(_pictureId);
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-default');
+E._$addClassName(_tmp.singleWeiboModule,'m-singleWeibo-hover');
+_tmp.weiboArea.style.cssText+=';zoom:1;';
+});
+V._$addEvent(_tmp.singleWeiboModule,'mouseout',function(_e){
+var _el;
+_e=_e||window.event;
+_el=_e.relatedTarget||_e.toElement;
+if(!_el||U.dom._$isAncestor(_tmp.singleWeiboModule,_el)){
+return;
+}
+that.__resetTopWeibo();
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-hover');
+if(!U.dom._$isAncestor(_tmp.imgParentNode,_el)){
+E._$delClassName(_tmp.singleWeiboModule,'m-singleWeibo-default');
+}
+_tmp.weiboArea.style.cssText+=';zoom:normal;';
+});
+};
+__pro.__bindEvent=function(_pictureId){
+var _tmp=this._$domsVO['picwraper'+_pictureId];
+_tmp.isBindExifEvent=true;
+V._$addEvent(_tmp.imgParentNode,'mouseover',function(_e){
+_tmp.onpicExifBtn.style.visibility='visible';
+});
+V._$addEvent(_tmp.imgParentNode,'mouseout',function(_e){
+var _el;
+_e=_e||window.event;
+_el=_e.relatedTarget||_e.toElement;
+if(!_el||U.dom._$isAncestor(_tmp.imgParentNode,_el)){
+return;
+}
+_tmp.onpicExifBtn.style.visibility='hidden';
+_tmp.exifInfoModule.style.visibility='hidden';
+});
+V._$addEvent(_tmp.onpicExifBtn,'mouseover',function(_e){
+_tmp.exifInfoModule.style.visibility='visible';
+});
+V._$addEvent(_tmp.onpicExifBtn,'mouseout',function(_e){
+var _el;
+_e=_e||window.event;
+_el=_e.relatedTarget||_e.toElement;
+if(!_el||U.dom._$isAncestor(_tmp.onpicExifBtn,_el)||_el==_tmp.exifInfoModule||U.dom._$isAncestor(_tmp.exifInfoModule,_el)){
+return;
+}
+_tmp.exifInfoModule.style.visibility='hidden';
+});
+V._$addEvent(_tmp.exifInfoModule,'mouseout',function(_e){
+var _el;
+_e=_e||window.event;
+_el=_e.relatedTarget||_e.toElement;
+if(!_el||U.dom._$isAncestor(_tmp.exifInfoModule,_el)){
+return;
+}
+_tmp.exifInfoModule.style.visibility='hidden';
+if(!U.dom._$isAncestor(_tmp.imgParentNode,_el)){
+_tmp.onpicExifBtn.style.visibility='hidden';
+}
+});
+};
+__pro.__getMoreSets=function(){
+if(this._$domsVO['showMoreSetsContainer'].setHtml){
+return;
+}
+this.__shareDwrApi._$getPictureSetListWithCover({
+userId:this.__ud.hostId||0
+,offset:0
+,limit:5
+,isFor240:false
+,success:this.__getMoreSetsCB._$bind(this)
+,failer:this.__getMoreSetsCB._$bind(this,0)
+});
+};
+__pro.__getMoreSetsCB=function(_data){
+var _nodes;
+if(!!_data&&_data.length){
+U.arr._$forEach(_data,function(_el){
+var _tmp0=U.reg._$getRegex('REG_URL_COMPLETE'),_tmp1='http://img$1.'+(_el.s==3?'ph.126.net/':'bimg.126.net/');
+_el.cvurl=(_el.cvmurl||_el.cv240url).replace(_tmp0,_tmp1);
+});
+}
+if(_data&&_data.length){
+var _html=E._$getHtmlTemplate(__moreTemplate,{
+picsetlist:_data
+});
+_html&&(this._$domsVO['showMoreSetsContainer'].innerHTML=_html);
+}
+this._$domsVO['showMoreSetsContainer'].setHtml=true;
+this._$dataVO.morePicSetData=_data;
+};
+})();
+(function(){
+var p=P('p.w'),$=E._$getElement,__proCache;
+p._$$SHAREcommonFun=C();
+U.cls._$augment(p._$$SHAREcommonFun,P.ut._$$Single,true);
+__proCache=p._$$SHAREcommonFun._$extend(P(N.ut)._$$Event);
+__proCache._$initialize=function(_op){
+_op=_op||O;
+this._$super();
+this.__op=_op;
+this._$parent=_op.parent||this;
+this.__dwrApi=P('p.w')._$$DwrApiCache._$getInstance();
+this.__dataCacheModule=P('P.m')._$$ShareSetDataCache&&P('P.m')._$$ShareSetDataCache._$getInstance();
+this.__pushModule=P('np.m')._$ShareWorksPushModule&&P('np.m')._$ShareWorksPushModule._$getInstance();
+this.__cmtModule=P('p.w')._$$SHARETextArea&&P('p.w')._$$SHARETextArea._$getInstance({
+onAddCmtItem:this.__cmtCallback._$bind(this),
+onDataLoad:this.__cmtCallback._$bind(this),
+onGloableCmtReset:this.__op.onSingCmtSendOk._$bind(this)
+});
+this.__$reportNode=$('J-report');
+this.__ud=np.c._$UD||window.UD;
+this.__needCheckStyleData={
+joinGroupStyle:_op.joinGroupStyle||'J-group-join'
+,followGroupStyle:_op.followGroupStyle||'J-group-follow'
+,addBookmarkStyle:_op.addBookmarkStyle||'J-addBookmark'
+,getExifStyle:_op.getExifStyle||'J-getPhotoExif'
+,getLoveStyle:_op.getLoveStyle||'J-go-love'
+,cancelLoveStyle:_op.cancelLoveStyle||'J-cancel-love'
+,getCmtStyle:_op.getCmtStyle||'J-go-cmt'
+,getPushStyle:_op.getPushStyle||'J-go-push'
+};
+this.__needCheckAttribute=_op.needCheckAttribute||'data-operation';
+this.__newWindow=null;
+this.__bindEvents();
+};
+__proCache.__bindEvents=function(){
+V._$addEvent(document,'click',this.__picsetSysClick._$bind(this));
+if(P.ui._$$Report&&this.__$reportNode){
+V._$addEvent(this.__$reportNode,'click',function(){
+P.ui._$$Report._$getInstance({
+classname:'lay-rpt'
+})._$reset()._$show();
+}._$bind(this));
+}
+};
+__proCache.__cmtCallback=function(_num){
+return;
+this.__currentNode.innerHTML='评论('+(_num||0)+')';
+};
+__proCache.__isNeedCheck=function(_node){
+var _str='';
+if(_node==document.body||_node==document||!_node){
+return 0;
+}
+_str=U.str._$trim(_node[this.__needCheckAttribute]||_node.getAttribute(this.__needCheckAttribute));
+if(!_str){
+_node=_node.parentNode;
+if(_node.getAttribute){
+_str=_node[this.__needCheckAttribute]||_node.getAttribute(this.__needCheckAttribute);
+}else{
+_str=_node[this.__needCheckAttribute];
+}
+_str=U.str._$trim(_str);
+}
+if(!!_str){
+this.__currentNode=_node;
+this.__currentOperation=_str;
+return 1;
+}
+return 0;
+};
+__proCache.__picsetSysClick=function(_e){
+var _target=V._$getElement(_e)
+,that=this;
+if(!_target||this.__isNeedCheck(_target)!==1){
+return;
+}
+if(this.__currentOperation===this.__needCheckStyleData.addBookmarkStyle){
+this._$addBookmark();
+}else if(!np.c._$UD.isLogin&&(this.__currentNode.getAttribute('needlogin')||this.__currentNode.getAttribute('data-needlogin'))){
+this._$loginBeforeAct();
+}else if(this.__currentOperation===this.__needCheckStyleData.getCmtStyle){
+var _pictureid=this.__currentNode.getAttribute('data-pictureid'),_referUrl=this.__currentNode.getAttribute('data-referimgsrc');
+this.__cmtModule&&this.__cmtModule._$reset({
+setid:window.SID,
+pid:_pictureid,
+pidSurl:_referUrl||'',
+container:'J-picCmt'+_pictureid
+});
+}else if(this.__currentOperation===this.__needCheckStyleData.getLoveStyle){
+if(np.c._$UD.visitId===np.c._$UD.hostId||!!that.__currentNode.posting){
+return;
+}
+var _pictureid=this.__currentNode.getAttribute('data-pictureid');
+!this.__tweenModule&&(this.__tweenModule=P.ui._$$Tween._$getInstance());
+that.__currentNode.posting=true;
+_pictureid&&this.__dwrApi._$toLikeWithSetByVisitId({
+setId:window.PS.id,
+picId:_pictureid,
+success:function(_data){
+if(_data>=0){
+that.__tweenModule._$reset({
+parent:that.__currentNode,
+method:'float'
+});
+that.__dataCacheModule._$updateSingPicLike({
+pictureId:_pictureid,
+success:true
+});
+that.__currentNode.clickCB&&that.__currentNode.clickCB(_pictureid,_data);
+}
+that.__currentNode.posting=false;
+},
+failer:function(){
+that.__currentNode.posting=false;
+}
+});
+}else if(this.__currentOperation===this.__needCheckStyleData.cancelLoveStyle){
+if(np.c._$UD.visitId===np.c._$UD.hostId||!!that.__currentNode.posting){
+return;
+}
+var _pictureid=this.__currentNode.getAttribute('data-pictureid');
+that.__currentNode.posting=true;
+_pictureid&&this.__dwrApi._$toUnLikeWithSetByVisitId({
+setId:window.PS.id,
+picId:_pictureid,
+success:function(_data){
+if(_data>=0){
+that.__dataCacheModule._$cancelSingPicLike({
+pictureId:_pictureid,
+success:true
+});
+}
+that.__currentNode.clickCB&&that.__currentNode.clickCB(_pictureid,_data);
+that.__currentNode.posting=false;
+},
+failer:function(){
+that.__currentNode.posting=false;
+}
+});
+}else if(this.__currentOperation===this.__needCheckStyleData.getPushStyle){
+var _pictureid=this.__currentNode.getAttribute('data-pictureid');
+_pictureid&&this.__pushModule._$reset({
+pictureId:_pictureid,
+userId:np.c._$UD.visitId||0,
+ownerId:np.c._$UD.hostId||0
+});
+}
+};
+__proCache._$loginBeforeAct=function(){
+P.ui._$$QLogin._$getInstance({
+classname:'lay-login'
+})._$reset({
+onsuccess:function(){
+window.location.reload();
+}
+})._$show()._$focus();
+};
+})();
+
+;(function(){
+var m=P('P.m')
+,__pro
+,$=E._$getElement;
+m._$$SHARESetHostAct=C();
+U.cls._$augment(m._$$SHARESetHostAct,P.ut._$$Single,true);
+__pro=m._$$SHARESetHostAct._$extend(P(N.ut)._$$Event);
+__pro._$initialize=function(){
+this._$super();
+this.__ud=np.c._$UD;
+this.__gender=this.__ud.gender?'她':'他';
+this.__picsetData=window.PS||null;
+this.__shareDwrApi=P('p.w')._$$DwrApiCache._$getInstance();
+this.__goAttention=$('J-go-attention');
+this.__goUnfollow=$('J-go-unfollow');
+this.__goPraise=$('J-go-praise');
+this.__followArea=this.__goAttention&&this.__goAttention.parentNode||null;
+this.__storage=P(N.ut)._$$SESStorage;
+this.__bindEvents();
+};
+__pro.__bindEvents=function(){
+if(this.__ud.isLogin){
+if(this.__ud.editable){
+return;
+}
+V._$addEvent(this.__goAttention,'click',this.__followHostAct._$bind(this,1));
+V._$addEvent(this.__goUnfollow,'click',this.__followHostAct._$bind(this,0));
+V._$addEvent(this.__goPraise,'click',this.__praiseHostAct._$bind(this,1));
+this.__initFollow=true;
+this.__shareDwrApi._$getIsFollowed({
+hostId:this.__ud.hostId
+,visitId:this.__ud.visitId
+,success:this.__cbFollow._$bind(this)
+,failer:this.__cbFollow._$bind(this,0)
+});
+}else{
+U.dom._$initAnchor(this.__goAttention,{onbeforereload:this.__storage._$set._$bind(this,'goAttention',1)});
+U.dom._$initAnchor(this.__goUnfollow,{onbeforereload:this.__storage._$set._$bind(this,'goUnfollow',1)});
+U.dom._$initAnchor(this.__goPraise,{onbeforereload:this.__storage._$set._$bind(this,'goPraise',1)});
+}
+};
+__pro.__praiseHostAct=function(){
+this.__shareDwrApi._$toPraiseWithSetByVisitId({
+hostId:this.__ud.hostId
+,visitId:this.__ud.visitId
+,success:this.__cbPraise._$bind(this)
+,failer:this.__cbPraise._$bind(this,0)
+});
+};
+__pro.__cbPraise=function(_num){
+if(_num==null){
+E._$showHint('赞失败，请稍候再试！');
+return;
+}
+if(!_num){
+E._$hideHint();
+this.__onPraiseCountLoad(true,this.__ud.profile.praisedCount);
+return;
+}
+this.__onPraiseCountLoad(false,_num);
+};
+__pro.__onPraiseCountLoad=function(_flag,_num){
+V._$clearEvent(this.__goPraise);
+E._$hideHint();
+E._$replaceClassName(this.__goPraise,'w-btnWhiteSmoke','w-btnWhiteSmokeDisabled');
+if(_flag){
+this.__goPraise.innerText='明天再赞';
+setTimeout(function(){
+this.__goPraise.innerText='赞('+_num+')';
+}._$bind(this),3000);
+}else{
+this.__goPraise.innerText=this.__goPraise.innerText.slice(0,2)+'('+_num+')';
+!this.__tweenModule&&(this.__tweenModule=P.ui._$$Tween._$getInstance());
+this.__tweenModule._$reset({parent:this.__goPraise,method:'float'});
+}
+};
+__pro.__followHostAct=function(_tag){
+np.w._$$FollowModule._$show({
+title:!!_tag?'关注':'取消关注',
+follow:!!_tag,
+profile:{
+id:this.__ud.hostId,
+name:this.__ud.hostName,
+nickname:this.__ud.hostNickName
+},
+onfollow:this.__cbFollow._$bind(this,_tag),
+onunfollow:this.__cbFollow._$bind(this,_tag)
+});
+};
+__pro.__cbFollow=function(_tag,_result){
+var _t=!!_tag?'关注':'取消关注';
+if(this.__initFollow){
+_result=O;
+delete this.__initFollow;
+}
+if(_result){
+if(!!_tag){
+E._$replaceClassName(this.__followArea,'author-unfollow','author-followed');
+U.dom._$hoverElement(this.__followArea,'author-followedHover');
+}else{
+E._$replaceClassName(this.__followArea,'author-followed','author-unfollow');
+U.dom._$delHoverElement(this.__followArea,'author-followedHover');
+}
+}else{
+E._$showHint(_t+'失败，请稍候再试！',true);
+}
+};
+__pro._$reset=function(){
+};
+})();
+(function(){
+var m=P('P.m'),__pro,$=E._$getElement;
+m._$$SHAREsetManage=C();
+__pro=m._$$SHAREsetManage.prototype;
+__pro._$initialize=function(){
+this.__isOldIe=B._$ISOLDIE;
+this.__ud=window.UD||np.c._$UD||null;
+this.__sid=window.SID;
+this.__picsetInfo=window.PS;
+this.__manage=$('J-share-showmng');
+this.__menu=$('J-share-showmngList');
+this.__picsetTitle=$('J-picset-title');
+this.__picsetDesc=$('J-picset-intro');
+this.__dataCacheModule=P('P.m')._$$ShareSetDataCache&&P('P.m')._$$ShareSetDataCache._$getInstance();
+this.__editorModule=P('p.w')._$$SHARETextAreaEditor&&P('p.w')._$$SHARETextAreaEditor._$getInstance();
+if(!this.__manage||!this.__menu){
+return;
+}
+this.__getNode();
+this.__bindEvents();
+if(this.__ud&&this.__ud.isAdmin){
+this.__copyUserName();
+V._$addEvent(this.__recomWeibo,'click',this.__recom2Weibo._$bind(this));
+}
+this.__isInBlackList();
+};
+__pro.__recom2Weibo=function(){
+P.ui._$$WRecomm2Weibo._$getInstance({
+classname:'lay-weibo',
+iclass:this,
+sid:window.SID
+})._$show();
+};
+__pro.__isInBlackList=function(){
+if(this.__ud.isAdmin){
+J._$postDataByDWR(location.sdwr,'AuthorityBean','isInBlackList',this.__ud.hostId,(function(isBlackUser){
+this.__isBlackUser=isBlackUser;
+if(isBlackUser){
+this.__black.innerHTML='<a href="#" onclick="return false;"  hideFocus="true"><span class="w-borderarrow-r"></span>取消黑名单</a>';
+}else{
+this.__black.innerHTML='<a href="#" onclick="return false;"  hideFocus="true"><span class="w-borderarrow-r"></span>黑名单</a>';
+}
+})._$bind(this));
+}
+};
+__pro.__bindEvents=function(){
+V._$addEvent(this.__home,'click',this._$updatePictureSet._$bind(this,'Null'));
+V._$addEvent(this.__new,'click',this._$updatePictureSet._$bind(this,'ShareNew'));
+V._$addEvent(this.__recom,'click',this._$updatePictureSet._$bind(this,'ShareRecom'));
+V._$addEvent(this.__black,'click',this._$setBlackList._$bind(this));
+V._$addEvent(this.__divert,'click',this._$divert._$bind(this));
+U.dom._$hoverElement(this.__manage,'m-shareMangeHover');
+V._$addEvent(this.__modify,'click',function(){
+if(this.__dataCacheModule._$dataVO.setInfoVO.isSinglePicSet){
+location=np.c._$UD.hostDynamicUrl+'/sharepic/?setid='+this.__sid+'&refer='+encodeURIComponent(window.location.href);
+}else{
+location=np.c._$UD.hostDynamicUrl+'/share/?setid='+this.__sid+'&refer='+encodeURIComponent(window.location.href);
+}
+}._$bind(this));
+V._$addEvent(this.__del,'click',this._$onDelete._$bind(this,'del'));
+if(np.c._$UD.editable||this.__ud.editable){
+this.__picsetTitle.style.cursor='pointer';
+this.__picsetTitle.title='点击编辑标题';
+V._$addEvent(this.__picsetTitle,'click',this.__editTitle._$bind(this));
+this.__picsetDesc.style.cursor='pointer';
+if(this.__dataCacheModule._$dataVO.setInfoVO.isSinglePicSet){
+this.__picsetDesc.title='点击编辑该作品描述';
+}else{
+this.__picsetDesc.title='点击编辑该组图描述';
+}
+V._$addEvent(this.__picsetDesc,'click',this.__editPicSetDesc._$bind(this));
+this.__isOldIe&&U.dom._$hoverElement(this.__picsetDesc,'picset-introModifyHover');
+U.arr._$forEach(window.pictureList,function(_id){
+var _node=$('J-picDesc'+_id);
+_node.pictureid=_id;
+V._$addEvent(_node,'click',this.__editPicDesc._$bind(this,_node));
+this.__isOldIe&&U.dom._$hoverElement(_node,'pic-descModifyHover');
+}._$bind(this));
+}
+};
+__pro.__editPicSetDesc=function(_node){
+this.__picsetDesc.style.display='none';
+this.__editorModule._$reset({
+initContent:U._$unescape(this.__dataCacheModule._$getPicSetDesc()),
+targetDom:this.__picsetDesc,
+inputType:'textarea',
+maxlength:1000,
+classStyle:'m-picsetDescEditor',
+positionMethod:'fixed',
+onClickOK:this._$onUpdatePicSetDesc._$bind(this),
+onClickCancel:this.__showPicsetDesc._$bind(this)
+});
+};
+__pro._$onUpdatePicSetDesc=function(_desc){
+if(_desc.length>1000){
+alert('内容最多1000字，请修改');
+this.__editorModule._$dispatchEvent('onEditorFocus');
+return;
+}
+var _sid=this.__picsetInfo.id;
+J._$postDataByDWR(location.sdwr,'PictureSetBean','updateDesc',_sid,_desc,this.__onUpdatePicSetDescCB._$bind(this),this.__onUpdatePicSetDescCB._$bind(this,null));
+};
+__pro.__onUpdatePicSetDescCB=function(_pictureSet){
+if(!_pictureSet){
+E._$alert('信息提示','组图描述保存失败，请稍候再试！');
+return;
+}
+var _etype=_pictureSet.errorType;
+if(_etype){
+this.__editorModule._$dispatchEvent('onEditorFocus');
+switch(_etype){
+case 2:
+E._$alert('信息提示','更新失败，标题中含有不恰当的词汇。');
+this.__deditor._$show()._$focus();
+break;
+case 3:
+E._$alert('信息提示','更新失败，权限不够。');
+break;
+}
+}else{
+this.__setPicSetDesc(_pictureSet.desc);
+this.__picsetInfo.desc=_pictureSet.desc;
+this.__editorModule._$hide();
+}
+};
+__pro.__setPicSetDesc=function(_desc){
+if(!_desc){
+this.__picsetDesc.innerHTML='[点此修改描述]';
+}else{
+this.__picsetDesc.innerHTML=U._$escape(_desc)+' '+'<b class="modify-tip">[编辑]</b>';
+}
+this.__dataCacheModule._$updatePicSetDesc(U._$escape(_desc));
+};
+__pro.__showPicsetDesc=function(){
+this.__picsetDesc.style.display='';
+};
+__pro.__editTitle=function(){
+this.__editorModule._$reset({
+initContent:U._$unescape(this.__dataCacheModule._$getPicSetTitle()),
+targetDom:this.__picsetTitle,
+maxlength:18,
+positionMethod:'float',
+classStyle:'m-titleEditor',
+onClickOK:this._$onUpdatePicSetTitle._$bind(this)
+});
+};
+__pro._$onUpdatePicSetTitle=function(_title){
+if(!_title||_title===''){
+this.__editorModule._$dispatchEvent('onEditorFocus');
+return;
+}
+if(_title.length>18){
+alert('内容最多18字，请修改');
+this.__editorModule._$dispatchEvent('onEditorFocus');
+return;
+}
+var _obj={
+title:_title,
+sid:this.__picsetInfo.id
+};
+J._$postDataByDWR(location.sdwr,'PictureSetBean','updateName',_obj.sid,_obj.title,this.__updatePicSetTitleCB._$bind(this),this.__updatePicSetTitleCB._$bind(this,null));
+};
+__pro.__updatePicSetTitleCB=function(_pictureSet){
+if(!_pictureSet){
+E._$alert('信息提示','组图标题保存失败，请稍候再试！');
+this.__editorModule._$dispatchEvent('onEditorFocus');
+return;
+}
+var _etype=_pictureSet.errorType;
+if(_etype){
+switch(_etype){
+case 2:
+E._$alert('信息提示','更新失败。标题中含有不恰当的词汇。');
+break;
+case 3:
+E._$alert('信息提示','更新失败，权限不够。');
+break;
+default:
+E._$alert('信息提示','组图标题保存失败，请稍候再试！');
+}
+this.__editorModule._$dispatchEvent('onEditorFocus');
+}else{
+this.__setTitle(_pictureSet.name);
+this.__editorModule._$hide();
+}
+};
+__pro.__setTitle=function(_name){
+this.__dataCacheModule._$updatePicSetTitle(U._$escape(_name));
+this.__picsetInfo.name=this.__picsetTitle.innerHTML=U._$escape(_name)+' <b class="title-tip">[ 编辑]</b>';
+};
+__pro.__editPicDesc=function(_node){
+var _pictureid=_node.pictureid;
+this.__showPicDesc(_node,false);
+this.__editorModule._$reset({
+initContent:U._$unescape(this.__dataCacheModule._$getSingPicDesc(_pictureid)),
+targetDom:_node,
+inputType:'textarea',
+maxlength:1000,
+classStyle:'m-descEditor',
+positionMethod:'fixed',
+onClickOK:this._$onUpdatePicDesc._$bind(this,_node),
+onClickCancel:this.__showPicDesc._$bind(this,_node,true)
+});
+};
+__pro._$onUpdatePicDesc=function(_node,_desc){
+if(_desc.length>1000){
+alert('内容最多1000字，请修改');
+this.__editorModule._$dispatchEvent('onEditorFocus');
+return;
+}
+var _pictureid=_node.pictureid;
+J._$postDataByDWR(location.sdwr,'PictureBean','updateDesc',_pictureid||0,_desc,this.__onUpdatePicDescCB._$bind(this,_node),this.__onUpdatePicDescCB._$bind(this,_node,null));
+};
+__pro.__onUpdatePicDescCB=function(_node,_photo){
+var _pictureid=_node.pictureid;
+if(!_photo){
+E._$alert('信息提示','单图描述保存失败，请稍候再试！');
+return;
+}
+var _etype=_photo.errorType;
+if(_etype){
+switch(_etype){
+case'access_denied':
+E._$alert('信息提示','更新失败，权限不够。');
+break;
+case 2:
+E._$alert('信息提示','更新失败，描述中含有不恰当的词汇。');
+break;
+default:
+E._$alert('信息提示','更新失败。');
+}
+this.__editorModule._$dispatchEvent('onEditorFocus');
+}else{
+this.__setPicDesc(_node,_photo.desc);
+this.__editorModule._$hide();
+}
+};
+__pro.__showPicDesc=function(_node,_tag){
+_node.style.display=!!_tag?'':'none';
+};
+__pro.__setPicDesc=function(_node,_desc){
+var _pictureid=_node.pictureid;
+this.__dataCacheModule._$updateSingPicDesc({
+pictureId:_pictureid,
+desc:U._$escape(_desc)
+});
+_node.innerHTML=_desc!==''?U._$escape(_desc)+' <b class="pic-modifytip">[点此修改单图简介]</b>':'[点击修改]';
+};
+__pro.__getNode=function(){
+var _tnode=E._$getElementsByClassName(this.__menu,'mange-item');
+if(!this.__ud||(!this.__ud.editable&&!this.__ud.isAdmin)){
+return;
+}
+this.__modify=_tnode[0];
+this.__del=_tnode[1];
+if(!this.__ud.isAdmin){
+return;
+}
+this.__home=_tnode[2];
+this.__new=_tnode[3];
+this.__recom=_tnode[4];
+this.__black=_tnode[5];
+this.__divert=_tnode[6];
+if(this.__ud.isAdmin)
+this.__recomWeibo=_tnode[7];
+};
+__pro._$updatePictureSet=function(_status){
+J._$postDataByDWR(location.sdwr,'PictureSetBean','updatePictureSet',this.__sid,this.__ud.hostId,_status,this.__onDelete._$bind(this,_status));
+};
+__pro._$onDelete=function(){
+var _state=this.__ud.visitId==this.__ud.hostId?2:3;
+E._$confirm('信息提示','你确定要取消这组作品的展示？',function(){
+J._$postDataByDWR(location.sdwr,'PictureSetBean','updateDeleteFlag',this.__sid,_state,this.__onDelete._$bind(this,'del'));
+}._$bind(this));
+};
+__pro.__onDelete=function(_status,_suc){
+if(!_suc){
+E._$alert('信息提示','操作失败！');
+return;
+}
+if(_status==='del'){
+location=np.c._$UD.hostDynamicUrl+'/#p=1&m=0&page=1';
+}else{
+window.location.reload();
+}
+};
+__pro._$setBlackList=function(){
+var _tip=this.__isBlackUser?'取消':'加入';
+var _type=this.__isBlackUser?'NotInBlackList':'InBlackList';
+E._$confirm('信息提示','你确定要'+_tip+'这人黑名单？',function(){
+J._$postDataByDWR(location.sdwr,'AuthorityBean','updateBlackList',this.__ud.hostId,_type,function(succ){
+this.__isInBlackList();
+}._$bind(this));
+}._$bind(this));
+};
+__pro._$divert=function(){
+np.l._$$PickDirModule._$show({
+title:'选择分类',
+nook:true,
+noback:true,
+nocrumb:true,
+noinput:true,
+onok:this.__onSelect._$bind(this)
+});
+};
+__pro.__onSelect=function(_data){
+J._$postDataByDWR(location.sdwr,'PictureSetBean','divertPictureSet',this.__ud.hostId,this.__sid,_data.id,function(){
+location.reload();
+}._$bind(this));
+};
+__pro.__copyUserName=function(_event){
+var self=this;
+var clip=null;
+clip=new ZeroClipboard.Client();
+clip.addEventListener('mouseOver',function(client){
+clip.setText(UD.hostName);
+});
+clip.addEventListener('complete',function(client,text){
+if(U._$trim(text)){
+E._$alert('信息提示','复制成功，用户名：'+text);
+}
+});
+clip.glue('p_username_copy');
+};
+new P.m._$$SHAREsetManage();
+})();
+
+;(function(){
+var p=P('p.w')
+,$=E._$getElement
+,__pro
+,__windowOffset
+,__windowSize
+,__lazys=new Array()
+,__timer;
+p._$$lazyImageLoad=C();
+__pro=p._$$lazyImageLoad._$extend(P(N.ut)._$$Event);
+__pro.__getWindowClient=function(){
+var _top=U.dom._$scrollTop(),
+_height=U.dom._$clientHeight(),
+_bottom=_top+_height,
+_left=U.dom._$scrollLeft(),
+_width=U.dom._$clientWidth();
+return{
+top:_top
+,left:_left
+,right:_left+_width
+,bottom:_top+_height
+};
+};
+__pro.__isInViewport=function(_element){
+_element=$(_element);
+var _str=false;
+if(!_element){
+return;
+}
+var _position=_element.positionView;
+this.__windowClient=this.__getWindowClient();
+_str=(this.__windowClient.bottom+this.__threshold>=_position.top)||(this.__windowClient.top+this.__threshold>=_position.bottom);
+return _str;
+};
+__pro.__getLazys=function(){
+var _imgs=[]
+,that=this;
+__lazys.length=0;
+if(this.__collectByImgTag){
+_imgs=this.__container.getElementsByTagName('img');
+}else{
+_imgs=E._$getElementsByClassName(this.__container,this.__lazyStyle)
+}
+for(i=0;i<_imgs.length;i++){
+var _src=_imgs[i].getAttribute(this.__realSrcPlaceHolder);
+if(!!_src){
+var _tmp={
+element:_imgs[i]
+,bakImage:new Image()
+,tsrc:_src
+,loaded:false
+};
+this.__updateLazy(_tmp);
+_tmp.bakImage.onerror=function(_data){
+_data.bakImage.src=that.__errorDefaultSrc;
+}._$bind(that,_tmp);
+_tmp.bakImage.onload=function(_data){
+_data.bakImage.onerror=_data.bakImage.onload=null;
+_data.element.src=_data.bakImage.src;
+_data.loaded=true;
+that.__onImageItemLoad({tmpImg:_data.bakImage,realImg:_data.element});
+that.__batchUpdateLazys();
+}._$bind(that,_tmp);
+__lazys.push(_tmp);
+}
+}
+this.__sourceImages=__lazys;
+return __lazys;
+};
+__pro.__batchUpdateLazys=function(){
+U.arr._$forEach(__lazys,function(_el){
+_el.positionView=this._$updateImageOffset(_el.element);
+}._$bind(this));
+!this.__checking&&this.__loadimg();
+};
+__pro.__updateLazy=function(_el){
+_el.positionView=this._$updateImageOffset(_el.element);
+};
+__pro._$updateImageOffset=function(_img){
+var _img=$(_img),_l,_t,_h,_w;
+if(!_img){
+return;
+}
+_l=E._$offsetX(_img)||0;
+_t=E._$offsetY(_img)||0;
+_h=_img.offsetHeight;
+_w=_img.offsetWidth;
+return{
+top:_t
+,right:_l+_w
+,bottom:_t+_h
+,left:_l
+}
+};
+__pro.__loadimg=function(){
+this.__checking=true;
+if(!__lazys||!__lazys.length){
+return;
+}
+this.__batchUpdateLazys();
+for(var _i=0;_i<__lazys.length;_i++){
+if(!__lazys[_i].loaded&&this.__isInViewport(__lazys[_i])){
+var _tmp=__lazys[_i]
+,_src=_tmp.tsrc
+,that=this
+,_tmpImage=_tmp.bakImage
+,_relimage=_tmp.element;
+_tmp.bakImage.src=_tmp.tsrc;
+_tmp.loaded=true;
+_relimage.removeAttribute(this.__realSrcPlaceHolder);
+if(_tmp.bakImage.complete){
+_tmp.bakImage.onload&&_tmp.bakImage.onload();
+}
+__lazys.splice(_i,1);
+--_i;
+}
+}
+this.__batchUpdateLazys();
+this.__checking=false;
+};
+__pro._$initialize=function(_op){
+_op=_op||O;
+this._$super();
+this.__threshold=_op.threshold||0;
+this.__container=$(_op.container)||document.body;
+this.__lazyStyle=_op.lazyStyle||'data-lazyload-src';
+this.__collectByImgTag=_op.hasOwnProperty('collectByImgTag')?!!_op.collectByImgTag:false;
+this.__onImageItemLoad=_op.onImageItemLoad||F;
+this.__onImageItemLoadError=_op.onImageItemLoadError||F;
+this.__realSrcPlaceHolder=_op.realSrcPlaceHolder||'data-lazyload-src';
+this.__errorDefaultSrc=_op.errorDefaultSrc||location.fapp;
+__lazys=this.__getLazys();
+if(__lazys&&__lazys.length>0){
+this.__batchEvent();
+this.__lazyLoad(1);
+}
+return this;
+};
+__pro.__batchEvent=function(){
+if(!this.__hasBindEvents){
+this.__resizeEvent=this.__resize._$bind(this);
+this.__scrollEvent=this.__scroll._$bind(this);
+V._$addEvent(window,'resize',this.__resizeEvent);
+V._$addEvent(window,'scroll',this.__scrollEvent);
+this.__hasBindEvents=true;
+}
+};
+__pro.__lazyLoad=function(_tag){
+!!_tag&&this.__getWindowClient();
+if(!__lazys||__lazys.length<=0){
+V._$delEvent(window,'resize',this.__resizeEvent);
+V._$delEvent(window,'scroll',this.__scrollEvent);
+}else{
+!this.__checking&&this.__loadimg();
+}
+};
+__pro.__resize=function(){
+this.__getWindowClient();
+this.__lazyLoad(1);
+}
+__pro.__scroll=function(){
+this.__lazyLoad();
+}
+})();
+;(function(){
+var m=P('P.m')
+,__pro
+,$=E._$getElement;
+m._$$SHARESetPage=C();
+__pro=m._$$SHARESetPage._$extend(P(N.ut)._$$Event);
+__pro._$initialize=function(){
+this._$super();
+this.__isOldIe=B._$ISOLDIE;
+this.__ud=np.c._$UD||window.UD;
+this.__picset=window.PS;
+this.__barDom=$('J-floatBar');
+this.__goTopDom=$('J-goToTop');
+this.__preGroupPics=$('J-preGroup');
+this.__nextGroupPics=$('J-nextGroup');
+this.__quickMark=$("J-quickMark");
+this.__hostGradeDom=$('J-hostGrade');
+this.__picsetData=window.PS||null;
+this.__shareDwrApi=P('p.w')._$$DwrApiCache._$getInstance();
+this.__PhotoDwrApi=P('p.w')._$$PHOTODwrApiCache._$getInstance();
+this.__dataCacheModule=P('P.m')._$$ShareSetDataCache&&P('P.m')._$$ShareSetDataCache._$getInstance();
+this.__windowXbox=P('p.w')._$$ShareSetLightBox._$getInstance({hasLayer:true,parent:this});
+this.__ecmtCon=$('J-pageCmtArea');
+this.__picListContainer=$('J-picsContainer');
+this.__storage=P(N.ut)._$$SESStorage;
+this.__bindEvents();
+this._$setFloatBar();
+};
+__pro.__bindEvents=function(){
+U.dom._$showRank({
+node:this.__hostGradeDom
+,rank:this.__ud.hostShareGrade
+,isVip:this.__ud.hostIsVip
+,style:'margin-left:5px;vertical-align: middle;'
+});
+U.dom._$showRank({
+node:'J-bottom-grade'
+,rank:this.__ud.hostShareGrade
+,isVip:this.__ud.hostIsVip
+,style:'margin-left:5px;vertical-align: middle;'
+});
+this.__shareSetHostActModule=P.m._$$SHARESetHostAct&&P.m._$$SHARESetHostAct._$getInstance();
+V._$addEvent(window,'scroll',this._$setFloatBar._$bind(this));
+V._$addEvent(this.__goTopDom,'click',this._$goToTop._$bind(this));
+V._$addEvent(this.__preGroupPics,'click',this._$preGroupPics._$bind(this));
+V._$addEvent(this.__nextGroupPics,'click',this._$nextGroupPics._$bind(this));
+this.__initCmtModule();
+this.__commonFunModule=P('p.w')._$$SHAREcommonFun._$getInstance({
+parent:this
+,onSingCmtSendOk:this.__resetCmtModule._$bind(this)
+});
+this.__getWEiboStatu();
+this.__beginLazyLoad();
+this.__resetPosition();
+V._$addEvent(this.__picListContainer,'click',function(_e){
+var _node=V._$getElement(_e)
+,_pictureid
+,_arr;
+if(_node&&_node.getAttribute('data-operation')==='showlightbox'&&!this.__isOldIe){
+_pictureid=_node.getAttribute('data-pictureid');
+this.__onImageClick(_pictureid);
+}
+}._$bind(this));
+this._$addEvent('onGet960Img',this.__onGet960Img._$bind(this));
+};
+__pro.__beginLazyLoad=function(){
+this.__lazyimgModule=new p.w._$$lazyImageLoad({
+container:this.__picListContainer
+,errorDefaultSrc:location.fapp
+,threshold:1000
+,lazyStyle:'data-lazyload-src'
+,onImageItemLoad:this.__resetSizeImg._$bind(this)
+,onImageItemLoadError:this.__resetSizeImg._$bind(this)
+});
+};
+__pro.__getImageId=function(_img){
+var _photoid=_img.getAttribute('data-photoid')||''
+,_picturid=_img.getAttribute('data-pictureid')||'';
+if(_photoid||_picturid){
+return{photoId:_photoid,pictureId:_picturid};
+}else{
+return;
+}
+}
+__pro.__beForelazyImgLoad=function(_img){
+var _picinfo=this.__getImageId(_img);
+if(!_picinfo){
+return;
+}
+this.__dataCacheModule._$dispatchEvent('onToGetSingExifInfo',_picinfo);
+};
+__pro.__resetSizeImg=function(_data){
+var _photoid,
+_picturd,
+_img,
+_wraper,
+_picActArea,
+_picInfo,
+_picwraper;
+if(!_data||!_data.realImg||!_data.tmpImg){
+return;
+}
+_picInfo=this.__getImageId(_data.realImg);
+_picwraper=this.__dataCacheModule._$domsVO['picwraper'+_picInfo.pictureId];
+if(!_picInfo.pictureId||!_picwraper){
+return;
+}
+_img=_data.realImg||_picwraper.img;
+_wraper=_picwraper.rootNode;
+_picActArea=_picwraper.picActArea;
+_img.removeAttribute('width');
+_img.removeAttribute('height');
+_img.style.cssText+=';width:auto;height:auto;';
+_img.parentNode.style.cssText+='zoom:1;';
+if(_data.tmpImg.width<=650){
+var _w=960-60-_data.tmpImg.width;
+E._$replaceClassName(_wraper,'m-picsetitem-full','m-picsetitem-lite');
+_picActArea.style.cssText+='width:'+_w+'px;';
+_picwraper.rightWidth=_w;
+}else{
+}
+};
+__pro._$setFloatBar=function(_target){
+if(U.dom._$scrollTop()<U.dom._$clientHeight()/2){
+this.__canHideGoTop=true;
+if(!PREVID&&NEXTID){
+this.__canHideGoTop&&(this.__goTopDom.style.top=-99999+'px')&&(this.__nextGroupPics.style.top=0+'px')&&(this.__nextGroupPics.style.zIndex=10)
+&&(this.__canHideGoTop=false);
+this.__preGroupPics&&(this.__preGroupPics.style.display="none");
+this.__quickMark&&(this.__quickMark.style.top=60+"px");
+}
+else if(PREVID&&!NEXTID){
+this.__canHideGoTop&&(this.__goTopDom.style.top=-99999+'px')&&(this.__preGroupPics.style.top=0+'px')&&(this.__preGroupPics.style.zIndex=10)
+&&(this.__preGroupPics.style.transitionDuration=0.4+'s')&&(this.__canHideGoTop=false);
+this.__nextGroupPics&&(this.__nextGroupPics.style.display="none");
+this.__quickMark&&(this.__quickMark.style.top=60+"px");
+}
+else if(!PREVID&&!NEXTID){
+this.__canHideGoTop&&(this.__goTopDom.style.top=-99999+'px')&&(this.__canHideGoTop=false);
+this.__nextGroupPics&&(this.__nextGroupPics.style.display="none");
+this.__preGroupPics&&(this.__preGroupPics.style.display="none");
+this.__quickMark&&(this.__quickMark.style.top=0+"px");
+}
+else{
+this.__canHideGoTop&&(this.__goTopDom.style.top=-99999+'px')&&(this.__nextGroupPics.style.top=60+'px')&&(this.__nextGroupPics.style.zIndex=10)
+&&(this.__preGroupPics.style.top=0+'px')&&(this.__preGroupPics.style.zIndex=10)&&(this.__canHideGoTop=false);
+this.__quickMark&&(this.__quickMark.style.top=120+"px");
+}
+}
+else{
+this.__canHideGoTop=false;
+if(!PREVID&&NEXTID){
+!this.__canHideGoTop&&(this.__goTopDom.style.top=0+'px')&&(this.__nextGroupPics.style.zIndex=8)&&(this.__nextGroupPics.style.top=60+'px')
+&&(this.__canHideGoTop=true);
+this.__preGroupPics&&(this.__preGroupPics.style.display="none");
+this.__quickMark&&(this.__quickMark.style.top=120+"px");
+}
+else if(PREVID&&!NEXTID){
+!this.__canHideGoTop&&(this.__goTopDom.style.top=0+'px')&&(this.__preGroupPics.style.zIndex=8)&&(this.__preGroupPics.style.top=60+'px')
+&&(this.__preGroupPics.style.transitionDuration=0.4+'s')&&(this.__canHideGoTop=true);
+this.__nextGroupPics&&(this.__nextGroupPics.style.display="none");
+this.__quickMark&&(this.__quickMark.style.top=120+"px");
+}
+else if(!PREVID&&!NEXTID){
+!this.__canHideGoTop&&(this.__goTopDom.style.top=0+'px')&&(this.__canHideGoTop=true);
+this.__nextGroupPics&&(this.__nextGroupPics.style.display="none");
+this.__preGroupPics&&(this.__preGroupPics.style.display="none");
+this.__quickMark&&(this.__quickMark.style.top=60+"px");
+}
+else{
+!this.__canHideGoTop&&(this.__goTopDom.style.top=0+'px')&&(this.__nextGroupPics.style.zIndex=8)&&(this.__nextGroupPics.style.top=120+'px')
+&&(this.__preGroupPics.style.zIndex=6)&&(this.__preGroupPics.style.top=60+'px')&&(this.__canHideGoTop=true);
+this.__quickMark&&(this.__quickMark.style.top=180+"px");
+}
+}
+};
+__pro._$goToTop=function(_target){
+U.dom._$scrollTo($(_target)||document.body);
+};
+__pro._$nextGroupPics=function(_target){
+window.open(location.href.slice(0,location.href.lastIndexOf('/')+1)+NEXTID+".html","_self");
+}
+__pro._$preGroupPics=function(_target){
+window.open(location.href.slice(0,location.href.lastIndexOf('/')+1)+PREVID+".html","_self");
+}
+__pro.__getWEiboStatu=function(){
+if(np.c._$ISLOGIN){
+J._$postDataByDWR(location.bdwrnohost,'MiniBlogConnectBean','isSyncComment',this.__setMiniBlogStatusGetCB._$bind(this));
+}else{
+this.__setMiniBlogStatusGetCB(false);
+}
+};
+__pro.__setMiniBlogStatusGetCB=function(_statu){
+this.__cmtInstance&&this.__cmtInstance.__editor&&(this.__cmtInstance.__editor.__fneweibo.checked=this.__cmtCache.__send2NeWeiboStatu=!!_statu);
+};
+__pro.__initCmtModule=function(_neweibo){
+this.__cmtCache=new P.ut._$$ShareCommentCache({
+id:this.__picset.id
+});
+this.__cmtInstance=P.ui._$$Comment._$getInstance({
+lazy:{
+threshold:500
+},
+pnode:this.__ecmtCon,
+cache:this.__cmtCache,
+ud:np.c._$UD,
+title:'对该组图的评论',
+onaftercommentadd:function(){
+this.__cmtCache._$reset({
+cite:''
+});
+}._$bind(this),
+showneweibo:true,
+neweibocheck:_neweibo||false,
+vurl:np.c._$ISLOGIN,
+needntload:this.__setCommentCount==0
+});
+this.__resetCmtModule();
+};
+__pro.__resetCmtModule=function(){
+this.__cmtInstance._$reset({
+oid:this.__picset.id
+,force:true
+})
+};
+__pro.__onGet960Img=function(_tag){
+var _index=this.__winCurseqindex+_tag
+,_tmp
+,_dataVO=this.__dataCacheModule._$dataVO;
+if(_index===_dataVO.setInfoVO.currentPicSetCount){
+this.__windowXbox._$dispatchEvent('onDataIsReady',{statu:'end'}
+,this.__dataCacheModule._$pictureIdList.length,
+this.__dataCacheModule._$pictureIdList.length-1);
+}else if(_index<0){
+this.__windowXbox._$dispatchEvent('onDataIsReady',{statu:'first'}
+,this.__dataCacheModule._$pictureIdList.length,
+0);
+}else{
+_tmp=_dataVO.picListVO['pictureId'+this.__dataCacheModule._$pictureIdList[_index]];
+if(!_tmp){
+return;
+}
+this.__winCurseqindex=_index;
+this.__showBoxStatu=true;
+this.__windowXbox._$dispatchEvent('onDataIsReady',_tmp,this.__dataCacheModule._$pictureIdList.length,_index);
+}
+};
+__pro.__onImageClick=function(_pictureid){
+var _data=this.__dataCacheModule._$dataVO.picListVO['pictureId'+_pictureid];
+this.__winCurseqindex=_data.seqindex;
+this.__showBoxStatu=true;
+this.__windowXbox._$reset({classStyle:'m-shareSetXbox'});
+this.__windowXbox._$dispatchEvent('onDataIsReady',_data,this.__dataCacheModule._$pictureIdList.length,_data.seqindex);
+};
+__pro.__resetPosition=function(){
+var _hash=/(\d+)/.test(window.location.hash)
+,_tmp='';
+if(_hash&&RegExp.$1!==''){
+location.hash='#'+RegExp.$1;
+}else{
+this._$goToTop();
+}
+};
+new m._$$SHARESetPage();
+})();
