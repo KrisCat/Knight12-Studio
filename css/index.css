@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* 颜色 */
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.container .wrap1 img {
+  width: 100%;
+}
+.container .wrap1 nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -430px;
+  width: 860px;
+  height: 140px;
+}
+.container .wrap1 nav span {
+  line-height: 140px;
+  font-size: 16px;
+  width: 160px;
+  text-align: center;
+}
+.container .wrap2 {
+  height: 550px;
+  background-color: #e1ebed;
+}
+.container .wrap2 .title1 {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 32px;
+  color: #00a280;
+}
+.container .wrap2 .title2 {
+  line-height: 120px;
+  text-align: center;
+  font-size: 28px;
+  font-style: italic;
+}
+.container .wrap2 .intro {
+  width: 65%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  word-spacing: 5px;
+}
+.container .wrap3 {
+  height: 2162px;
+}
+.container .wrap3 .row {
+  height: 720px;
+}
+
+/*# sourceMappingURL=index.css.map */
