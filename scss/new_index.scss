@@ -1,0 +1,70 @@
+$bg-color: #e1ebed;
+html, body {
+	height: 100%;
+	font-family: "微软雅黑";
+}
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+/* 第1部分：导航加背景图 */
+.wrap1 {
+	width: 100%;
+	height: 100%;
+	background: url(../img/wrap1_bg.jpg) no-repeat center center;
+	nav {
+		width: 660px;
+		height: 60px;
+		position: relative;
+		margin: 0 auto;
+		top: 30px;
+		span {
+			display: inline-block;
+			margin-top: 18px;
+			width: 120px;
+			height: 25px;
+			font-size: 16px;
+			text-align: center;
+			line-height: 25px;
+			&.left {
+				float: left;
+			}
+			&.right {
+				float: right;
+			}
+		}
+		i {
+			display: inline-block;
+			width: 3px;
+			height: 3px;
+			background-color: #2c2b2b;
+			border-radius: 50%;
+			-webkit-border-radius: 50%;
+			margin-top: 29px;
+			&.left {
+				float: left;
+			}
+			&.right {
+				float: right;
+			}
+		}
+		.logo {
+			display: inline-block;
+			position: absolute;
+			top: 5px;
+			left: 50%;
+			margin-left: -68px;
+			width: 135px;
+			height: 53px;
+			background: url(../img/sprite.png) no-repeat 0 -73px;
+		}
+	}
+}
+
+/* 第2部分：工作室介绍 */
+.wrap2 {
+	width: 100%;
+	height: 466px;
+	background-color: $bg-color;
+}
