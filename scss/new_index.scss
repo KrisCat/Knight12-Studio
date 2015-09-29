@@ -4,6 +4,7 @@ $main-color: #1fb495;
 html, body {
 	height: 100%;
 	font-family: "Microsoft YaHei";
+	background-color: $bg-color;
 }
 .container {
 	width: 100%;
@@ -14,7 +15,7 @@ html, body {
 .wrap1 {
 	width: 100%;
 	height: 100%;
-	background: url(../img/wrap1_bg.jpg) no-repeat center center;
+	background: url(../img/wrap0_bg.jpg) no-repeat center center;
 	nav {
 		width: 660px;
 		height: 60px;
@@ -115,5 +116,47 @@ html, body {
 			margin-left: 65%;
 		}
 
+	}
+}
+
+/* 第3部分：文字配图 */
+.wrap3 {
+	width: 1205px;
+	height: 1800px;
+	margin: 0 auto;
+	background-color: #fff;
+	& > div {
+		height: 453px;
+	}
+	.big_img {
+		float: left;
+		display: inline-block;
+		width: 804px;
+		height: 453px;
+	}
+	.small_img {
+		float: left;
+		display: inline-block;
+		position: relative;
+		top: 302px;
+		width: 401px;
+		height: 151px;
+	}
+	.sub-wrap1 {
+		.big_img {
+			background: url(../img/wrap3_1big.jpg) no-repeat center center;
+		}
+		.small_img {
+
+			background: url(../img/wrap3_1small.jpg) no-repeat center center;
+		}
+	}
+	.sub-wrap2 {
+		.big_img {
+			background: url(../img/wrap3_2big.jpg) no-repeat center center;
+		}
+		.small_img {
+			background: url(../img/wrap3_2small.jpg) no-repeat center center;
+		}
 	}
 }

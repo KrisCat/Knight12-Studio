@@ -2,6 +2,7 @@
 html, body {
   height: 100%;
   font-family: "Microsoft YaHei";
+  background-color: #e1ebed;
 }
 
 .container {
@@ -13,7 +14,7 @@ html, body {
 .wrap1 {
   width: 100%;
   height: 100%;
-  background: url(../img/wrap1_bg.jpg) no-repeat center center;
+  background: url(../img/wrap0_bg.jpg) no-repeat center center;
 }
 .wrap1 nav {
   width: 660px;
@@ -114,6 +115,43 @@ html, body {
 }
 .wrap2 .intro .line4 {
   margin-left: 65%;
+}
+
+/* 第3部分：文字配图 */
+.wrap3 {
+  width: 1205px;
+  height: 1800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.wrap3 > div {
+  height: 453px;
+}
+.wrap3 .big_img {
+  float: left;
+  display: inline-block;
+  width: 804px;
+  height: 453px;
+}
+.wrap3 .small_img {
+  float: left;
+  display: inline-block;
+  position: relative;
+  top: 302px;
+  width: 401px;
+  height: 151px;
+}
+.wrap3 .sub-wrap1 .big_img {
+  background: url(../img/wrap3_1big.jpg) no-repeat center center;
+}
+.wrap3 .sub-wrap1 .small_img {
+  background: url(../img/wrap3_1small.jpg) no-repeat center center;
+}
+.wrap3 .sub-wrap2 .big_img {
+  background: url(../img/wrap3_2big.jpg) no-repeat center center;
+}
+.wrap3 .sub-wrap2 .small_img {
+  background: url(../img/wrap3_2small.jpg) no-repeat center center;
 }
 
 /*# sourceMappingURL=new_index.css.map */
