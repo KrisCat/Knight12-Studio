@@ -119,39 +119,89 @@ html, body {
 
 /* 第3部分：文字配图 */
 .wrap3 {
-  width: 1205px;
-  height: 1800px;
-  margin: 0 auto;
+  width: 100%;
   background-color: #fff;
 }
 .wrap3 > div {
-  height: 453px;
+  position: relative;
+  max-height: 720px;
+  overflow: hidden;
 }
 .wrap3 .big_img {
   float: left;
   display: inline-block;
-  width: 804px;
-  height: 453px;
+  max-width: 66.67%;
+  max-height: 720px;
 }
 .wrap3 .small_img {
   float: left;
   display: inline-block;
-  position: relative;
-  top: 302px;
-  width: 401px;
-  height: 151px;
+  position: absolute;
+  bottom: 0;
+  max-width: 33.33%;
+  max-height: 240px;
 }
-.wrap3 .sub-wrap1 .big_img {
-  background: url(../img/wrap3_1big.jpg) no-repeat center center;
+.wrap3 .text {
+  position: absolute;
+  width: 33.33%;
+  right: 0;
+  top: 9%;
+  font-size: 20px;
+  font-family: "FangSong";
+  margin: 0 auto;
 }
-.wrap3 .sub-wrap1 .small_img {
-  background: url(../img/wrap3_1small.jpg) no-repeat center center;
+.wrap3 .text .logo {
+  width: 58px;
+  height: 53px;
+  margin: 0 auto;
+  background: url(../img/sprite.png) no-repeat -135px -73px;
+}
+.wrap3 .text .title {
+  margin-top: 3px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 36px;
+}
+.wrap3 .text .content {
+  text-align: center;
+  line-height: 36px;
+}
+.wrap3 .text .linebt {
+  width: 9.8%;
+  height: 1px;
+  background-color: #aaa;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 .wrap3 .sub-wrap2 .big_img {
-  background: url(../img/wrap3_2big.jpg) no-repeat center center;
+  float: right;
 }
 .wrap3 .sub-wrap2 .small_img {
-  background: url(../img/wrap3_2small.jpg) no-repeat center center;
+  float: right;
+}
+.wrap3 .sub-wrap3 .left_img {
+  float: left;
+  display: inline-block;
+  max-width: 33.33%;
+  max-height: 720px;
+}
+.wrap3 .sub-wrap3 .small_img {
+  float: left;
+}
+.wrap3 .sub-wrap3 .right_img {
+  float: right;
+  display: inline-block;
+  max-width: 33.33%;
+  max-height: 720px;
+}
+
+/* 第4部分：美句轮播 */
+.wrap4 {
+  width: 100%;
+  height: 466px;
+  background-color: #e1ebed;
+  font-family: "FangSong";
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=new_index.css.map */
