@@ -374,9 +374,138 @@ html, body {
 }
 
 .wrap6 {
+  position: relative;
   width: 100%;
-  height: 200px;
   background-color: #fff;
+}
+.wrap6:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 12%;
+  width: 0;
+}
+.wrap6 .sub-wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 380px;
+  height: 300px;
+  text-align: center;
+  top: -118px;
+}
+.wrap6 .sub-wrap .logo {
+  width: 111px;
+  height: 73px;
+  background: url(../img/sprite.png) no-repeat;
+  margin: 0 auto;
+  transform: scale(1.1);
+}
+.wrap6 .sub-wrap .text {
+  margin-top: 72px;
+  margin-bottom: 45px;
+  font-size: 20px;
+  font-family: "FangSong";
+}
+.wrap6 .sub-wrap .QR-code {
+  width: 285px;
+  height: 108px;
+  background: url(../img/sprite.png) no-repeat 0 -159px;
+  margin: 0 auto;
+}
+.wrap6 .sub-wrap .QR-text {
+  font-family: "FangSong";
+  font-size: 14px;
+}
+.wrap6 .sub-wrap .QR-text span {
+  margin: 5px;
+}
+.wrap6 .line-bt {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.wrap6 .line-bt:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 0.78%;
+  width: 0;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  background-color: #e1ebed;
+}
+footer:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 13%;
+  width: 0;
+}
+footer .wrap {
+  display: inline-block;
+  position: absolute;
+  width: 70%;
+  overflow: hidden;
+  left: 50%;
+  margin-left: -35%;
+  top: 50%;
+  margin-top: -50px;
+}
+footer .wrap .left {
+  float: left;
+  width: 390px;
+  height: 100px;
+}
+footer .wrap .left .title {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+}
+footer .wrap .left .title em {
+  display: inline-block;
+  float: left;
+  width: 58px;
+  height: 34px;
+  background: url(../img/sprite.png) no-repeat -135px -81px;
+  transform: scale(0.8);
+}
+footer .wrap .left .title span {
+  font-size: 18px;
+  float: left;
+  font-family: "FangSong";
+  line-height: 34px;
+}
+footer .wrap .left .info {
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: "FangSong";
+  line-height: 30px;
+  font-weight: 200;
+}
+footer .wrap .middle {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  left: 50%;
+  margin-left: -150px;
+  text-align: center;
+}
+footer .wrap .right {
+  float: right;
+  width: 170px;
+  height: 100px;
+}
+footer .wrap .right .info {
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: "FangSong";
+  line-height: 30px;
+  font-weight: 200;
+}
+footer .wrap .right .info a:hover {
+  background-color: #1fb495;
+  color: #fff;
 }
 
 /*# sourceMappingURL=new_index.css.map */
