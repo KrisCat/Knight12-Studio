@@ -1,6 +1,7 @@
 $bg-color: #e1ebed;
 $main-color: #1fb495;
 $indicator: #8b8d8d;
+$album-hover: #25bb9d;
 
 html, body {
 	height: 100%;
@@ -12,7 +13,7 @@ html, body {
 	height: 100%;
 }
 
-/* 第1部分：导航加背景图 */
+// 第1部分：导航加背景图
 .wrap1 {
 	width: 100%;
 	height: 100%;
@@ -73,7 +74,7 @@ html, body {
 	}
 }
 
-/* 第2部分：工作室介绍 */
+// 第2部分：工作室介绍
 .wrap2 {
 	width: 100%;
 	height: 466px;
@@ -120,7 +121,7 @@ html, body {
 	}
 }
 
-/* 第3部分：文字配图 */
+// 第3部分：文字配图
 .wrap3 {
 	width: 100%;
 //	height: 1600px;
@@ -204,7 +205,7 @@ html, body {
 
 }
 
-/* 第4部分：美句轮播 */
+// 第4部分：美句轮播
 .wrap4 {
 	width: 100%;
 	height: 420px;
@@ -249,7 +250,7 @@ html, body {
 	.indicator {
 		position: relative;
 		width: 840px;
-		top: 50px;
+		top: 40px;
 		margin: 0 auto;
 		.container {
 			position: relative;
@@ -259,6 +260,7 @@ html, body {
 			padding-top: 25px;
 			text-align: center;
 			line-height: 12px;
+			cursor: default;
 			.circle-out {
 				position: relative;
 				display: inline-block;
@@ -278,4 +280,119 @@ html, body {
 			}
 		}
 	}
+}
+
+// 第5部分：相册专辑
+.wrap5 {
+	width: 100%;
+	.sub-wrap {
+		width: 100%;
+		&:before {
+			content:"";
+			display: inline-block;
+			padding-bottom: 18.2%;
+			width: 0;
+		}
+		.img-wrap {
+			position: relative;
+			float: left;
+			width: 25%;
+			&:before {
+				content:"";
+				display: inline-block;
+				padding-bottom: 73%;
+				width: 0;
+				vertical-align: middle;
+		    }
+			img {
+				position: absolute;
+				width: 100%;
+			}
+			.cover {
+				position: absolute;
+				width: 100%;
+				color: #fff;
+				opacity: 0;
+				.content {
+					position: absolute;
+					width: 200px;
+					height: 160px;
+					top: 50%;
+					left: 50%;
+					margin-left: -100px;
+					margin-top: -78px;
+					font-size: 20px;
+					font-family: "Fangsong";
+					text-align: center;
+					.icon {
+						width: 52px;
+						height: 52px;
+						background: url(../img/sprite.png) no-repeat -193px -74px;
+						margin: 0 auto;
+						margin-bottom: 30px;
+					}
+					div {
+						margin-bottom: 30px;
+					}
+					.date {
+						font-family: "SimHei";
+						font-weight: 500;
+						font-size: 18px;
+					}
+				}
+				&:before {
+					content:"";
+					display: inline-block;
+					padding-bottom: 73.3%;
+					width: 0;
+					vertical-align: middle;
+				}
+				&:hover {
+					background-color: $album-hover;
+					opacity: .85;
+					.content {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	.more-wrap {
+		width: 100%;
+		height: 200px;
+		background-color: $bg-color;
+		font-family: "FangSong";
+		font-size: 20px;
+		.seemore {
+			position: relative;
+			margin: 0 auto;
+			width: 18.8%;
+			&:before {
+					content:"";
+					display: inline-block;
+					padding-bottom: 16.67%;
+					width: 0;
+					vertical-align: middle;
+			}
+			top: 70px;
+			font-size: 20px;
+			font-family: "Microsoft YaHei";
+			letter-spacing: 3px;
+			color: $main-color;
+			border: 1px solid $main-color;
+			text-align: center;
+			&:hover {
+				cursor: pointer;
+				color: #fff;
+				background-color: $main-color;
+			}
+		}
+	}
+}
+
+
+.wrap6 {
+	width: 100%;
+	height: 200px;
+	background-color: #fff;
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body {
   height: 100%;
   font-family: "Microsoft YaHei";
@@ -10,7 +9,6 @@ html, body {
   height: 100%;
 }
 
-/* 第1部分：导航加背景图 */
 .wrap1 {
   width: 100%;
   height: 100%;
@@ -71,7 +69,6 @@ html, body {
   background: url(../img/sprite.png) no-repeat 0 -73px;
 }
 
-/* 第2部分：工作室介绍 */
 .wrap2 {
   width: 100%;
   height: 466px;
@@ -117,7 +114,6 @@ html, body {
   margin-left: 65%;
 }
 
-/* 第3部分：文字配图 */
 .wrap3 {
   width: 100%;
   background-color: #fff;
@@ -195,7 +191,6 @@ html, body {
   max-height: 720px;
 }
 
-/* 第4部分：美句轮播 */
 .wrap4 {
   width: 100%;
   height: 420px;
@@ -240,7 +235,7 @@ html, body {
 .wrap4 .indicator {
   position: relative;
   width: 840px;
-  top: 50px;
+  top: 40px;
   margin: 0 auto;
 }
 .wrap4 .indicator .container {
@@ -251,6 +246,7 @@ html, body {
   padding-top: 25px;
   text-align: center;
   line-height: 12px;
+  cursor: default;
 }
 .wrap4 .indicator .container .circle-out {
   position: relative;
@@ -268,6 +264,119 @@ html, body {
 }
 .wrap4 .indicator .container .slideActive {
   background-color: #8b8d8d;
+}
+
+.wrap5 {
+  width: 100%;
+}
+.wrap5 .sub-wrap {
+  width: 100%;
+}
+.wrap5 .sub-wrap:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 18.2%;
+  width: 0;
+}
+.wrap5 .sub-wrap .img-wrap {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+.wrap5 .sub-wrap .img-wrap:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 73%;
+  width: 0;
+  vertical-align: middle;
+}
+.wrap5 .sub-wrap .img-wrap img {
+  position: absolute;
+  width: 100%;
+}
+.wrap5 .sub-wrap .img-wrap .cover {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+}
+.wrap5 .sub-wrap .img-wrap .cover .content {
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -78px;
+  font-size: 20px;
+  font-family: "Fangsong";
+  text-align: center;
+}
+.wrap5 .sub-wrap .img-wrap .cover .content .icon {
+  width: 52px;
+  height: 52px;
+  background: url(../img/sprite.png) no-repeat -193px -74px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.wrap5 .sub-wrap .img-wrap .cover .content div {
+  margin-bottom: 30px;
+}
+.wrap5 .sub-wrap .img-wrap .cover .content .date {
+  font-family: "SimHei";
+  font-weight: 500;
+  font-size: 18px;
+}
+.wrap5 .sub-wrap .img-wrap .cover:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 73.3%;
+  width: 0;
+  vertical-align: middle;
+}
+.wrap5 .sub-wrap .img-wrap .cover:hover {
+  background-color: #25bb9d;
+  opacity: .85;
+}
+.wrap5 .sub-wrap .img-wrap .cover:hover .content {
+  opacity: 1;
+}
+.wrap5 .more-wrap {
+  width: 100%;
+  height: 200px;
+  background-color: #e1ebed;
+  font-family: "FangSong";
+  font-size: 20px;
+}
+.wrap5 .more-wrap .seemore {
+  position: relative;
+  margin: 0 auto;
+  width: 18.8%;
+  top: 70px;
+  font-size: 20px;
+  font-family: "Microsoft YaHei";
+  letter-spacing: 3px;
+  color: #1fb495;
+  border: 1px solid #1fb495;
+  text-align: center;
+}
+.wrap5 .more-wrap .seemore:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 16.67%;
+  width: 0;
+  vertical-align: middle;
+}
+.wrap5 .more-wrap .seemore:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #1fb495;
+}
+
+.wrap6 {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=new_index.css.map */
