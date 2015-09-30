@@ -198,10 +198,76 @@ html, body {
 /* 第4部分：美句轮播 */
 .wrap4 {
   width: 100%;
-  height: 466px;
+  height: 420px;
   background-color: #e1ebed;
   font-family: "FangSong";
   font-size: 20px;
+}
+.wrap4 .logo {
+  width: 58px;
+  height: 53px;
+  position: relative;
+  margin: 0 auto;
+  top: 46px;
+  background: url(../img/sprite.png) no-repeat -135px -73px;
+  transform: scale(1.3);
+}
+.wrap4 .name {
+  text-indent: -9999px;
+  width: 244px;
+  height: 32px;
+  position: relative;
+  margin: 0 auto;
+  top: 50px;
+  background: url(../img/sprite.png) no-repeat 0 -126px;
+}
+.wrap4 .text {
+  position: relative;
+  top: 70px;
+}
+.wrap4 .text div {
+  margin-bottom: 40px;
+}
+.wrap4 .text .main {
+  text-align: center;
+  line-height: 48px;
+}
+.wrap4 .text .auth {
+  position: absolute;
+  width: 130px;
+  right: 300px;
+}
+.wrap4 .indicator {
+  position: relative;
+  width: 840px;
+  top: 50px;
+  margin: 0 auto;
+}
+.wrap4 .indicator .container {
+  position: relative;
+  margin: 0 auto;
+  width: 230px;
+  height: 20px;
+  padding-top: 25px;
+  text-align: center;
+  line-height: 12px;
+}
+.wrap4 .indicator .container .circle-out {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #8b8d8d;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: none;
+}
+.wrap4 .indicator .container .slideActive {
+  background-color: #8b8d8d;
 }
 
 /*# sourceMappingURL=new_index.css.map */

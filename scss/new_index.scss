@@ -1,5 +1,6 @@
 $bg-color: #e1ebed;
 $main-color: #1fb495;
+$indicator: #8b8d8d;
 
 html, body {
 	height: 100%;
@@ -206,8 +207,75 @@ html, body {
 /* 第4部分：美句轮播 */
 .wrap4 {
 	width: 100%;
-	height: 466px;
+	height: 420px;
 	background-color: $bg-color;
 	font-family: "FangSong";
 	font-size: 20px;
+	.logo {
+		width: 58px;
+		height: 53px;
+		position: relative;
+		margin: 0 auto;
+		top: 46px;
+		background: url(../img/sprite.png) no-repeat -135px -73px;
+		transform: scale(1.3)
+	}
+	.name {
+		text-indent: -9999px;
+		width: 244px;
+		height: 32px;
+		position: relative;
+		margin: 0 auto;
+		top: 50px;
+		background: url(../img/sprite.png) no-repeat 0 -126px;
+	}
+	.text {
+		position: relative;
+		top: 70px;
+		div {
+			margin-bottom: 40px;
+		}
+		.main {
+			text-align: center;
+			line-height: 48px;
+		}
+		.auth {
+			position: absolute;
+			width: 130px;
+			right: 300px;
+		}
+
+	}
+	.indicator {
+		position: relative;
+		width: 840px;
+		top: 50px;
+		margin: 0 auto;
+		.container {
+			position: relative;
+			margin: 0 auto;
+			width: 230px;
+			height: 20px;
+			padding-top: 25px;
+			text-align: center;
+			line-height: 12px;
+			.circle-out {
+				position: relative;
+				display: inline-block;
+				top: 0;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				margin: 0 5px;
+				cursor: pointer;
+				border: 1px solid $indicator;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: none;
+			}
+			.slideActive {
+				background-color: $indicator;
+			}
+		}
+	}
 }
