@@ -1,0 +1,9 @@
+{
+	"name": "game.campue.163.com",
+	"version": "1.0.0",
+	"dependencies": {
+		"bootstrap": "latest",
+		"angular": "latest",
+		"angular-route": "latest"
+	}
+}
