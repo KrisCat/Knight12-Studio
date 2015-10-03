@@ -1,20 +1,9 @@
-# a AngularJS + NodeJS Application Starter
+# 新版beta1.0
 
-This is a repo for a starter appliation for a AngularJS + NodeJS application. Just download and install and you have a good foundation for building application. 
+使用说明待更新
+预览网址：http//218.244.148.188
 
-## Installation
-1. Download the repository
-2. Install npm modules: `npm install`
-3. Install bower dependencies `bower install`
-4. Start up the server: `node server.js`
-5. View in browser at http://localhost:8080
+##新版本首页预览
+![Alt text](https://github.com/muwenzi/photography-website/blob/master/img/new_index.jpg)
 
-Use this starter kit to build any AngularJS + NodeJS application you like.
 
-If you have any questions or requests, email us at [mrgaonju@gamil.com](mailto:mrgaonju@gamil.com) and we'll keep updating this to make it perfect.
-
-## Future Additions
-- CRUD examples
-- Development and Production Environments
-- Link examples
-- AngularJS Animations
