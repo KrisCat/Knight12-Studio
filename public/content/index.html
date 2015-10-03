@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>木纹子工作室</title>
+
+	<!-- CSS -->
+	<!--	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/icons.css">
+	<!-- custom styles -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- custom styles -->
+<!--	<link rel="stylesheet" href="css/campusRec.css">-->
+	<!-- custom styles -->
+
+	<!-- JS -->
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="../bower_components/angular-route/angular-route.min.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+<!--
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/NerdCtrl.js"></script>
+	<script src="js/services/NerdService.js"></script>
+	<script src="js/controllers/GeekCtrl.js"></script>
+	<script src="js/services/GeekService.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+-->
+</head>
+
+<body ng-app="sampleApp" ng-controller="DepController">
+	<div class="container">
+
+		<!-- HEADER -->
+		<nav class="navbar navbar-inverse">
+			<!--<div class="navbar-header">
+			<a class="navbar-brand" href="/">首页</a>
+		</div>-->
+			<section class="nav navbar-nav" id="content">
+				<div class='department-select'>
+					<a href="/nerds" ng-click="depSelect1()" ng-class="{'curr-depart': cur1}">互动娱乐事业群<em ng-class="{'i-arrow': cur1}"></em></a>
+					<a href="/geeks" ng-click="depSelect2()" ng-class="{'curr-depart': cur2}">雷火&盘古事业群<em ng-class="{'i-arrow': cur2}"></em></a>
+					<span class="depart-line"></span>
+				</div>
+				<!-- ANGULAR DYNAMIC CONTENT -->
+				<div ng-view></div>
+			</section>
+		</nav>
+
+
+	</div>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 {
-	"name": "game.campue.163.com",
-	"version": "1.0.0",
+	"name": "www.muwenzi.com",
+	"version": "2.0.0_beta",
 	"dependencies": {
 		"bootstrap": "latest",
 		"angular": "latest",
