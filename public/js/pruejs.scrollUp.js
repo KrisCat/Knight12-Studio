@@ -55,17 +55,17 @@
 //            el.onmouseout = function() {
 //                $(btnId).firstChild.style.backgroundColor = 'rgba(0, 0, 0, .2)';
 //            };
+			bindEvent('scroll',
+			function() {
+				var top = getScrollTop(), display = 'none';
+
+				if (top > 0) {
+					display = 'block';
+				}
+
+				$(btnId).style.display = display;
+			});
         }
     );
 
-    bindEvent('scroll',
-        function() {
-            var top = getScrollTop(), display = 'none';
-
-            if (top > 0) {
-                display = 'block';
-            }
-
-            $(btnId).style.display = display;
-        });
 })();
