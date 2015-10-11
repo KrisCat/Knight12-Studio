@@ -45,7 +45,7 @@ nav {
 			&.right {
 				float: right;
 				margin-right: 0;
-				width: 80px;
+				width: 70px;
 				height: 28px;
 				line-height: 28px;
 				background-color: $main-color;
@@ -321,3 +321,9 @@ footer {
 		}
 	}
 }
+
+//@media screen and (min-width:1401px) {
+//	.main {
+//		width: 1205px;
+//	}
+//}

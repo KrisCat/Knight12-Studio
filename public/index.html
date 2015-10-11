@@ -7,14 +7,14 @@
 	<link rel="stylesheet" href="./css/icons.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body  ng-app="index" ng-controller="indexController">
+<body ng-app="index" ng-controller="indexController">
 	<div class="container">
 		<div class="wrap1">
 			<nav>
 				<a href="index.html"><span class="left">网站首页</span></a>
 				<i class="left"></i>
 				<a href="album.html"><span class="left">相册专辑</span></a>
-				<span class="right">关于我们</span>
+				<span class="right">联系我们</span>
 				<i class="right"></i>
 				<span class="right">拍摄见闻</span>
 				<em class="logo"></em>
@@ -91,11 +91,27 @@
 			<div class="logo"></div>
 			<div class="name">Some Words of Youth</div>
 			<div class="text">
-				<div class="main">
-					如果我们有机会重返青春现场，一定发现，那个青春，与我们相携终身，不断怀念，<br>
-					惊鸿照影的青春有异，我们对它的怀念，是一种刻骨的高估。
+				<div class="sub-wrap active-in">
+					<div class="main">
+						如果我们有机会重返青春现场，一定发现，那个青春，与我们相携终身，不断怀念，<br>
+						惊鸿照影的青春有异，我们对它的怀念，是一种刻骨的高估。
+					</div>
+					<div class="auth">——韩松落</div>
 				</div>
-				<div class="auth">by 韩松落</div>
+				<div class="sub-wrap">
+					<div class="main">
+						那些男孩教会我成长，<br>
+						那些女孩教会我爱。
+					</div>
+					<div class="auth">——《夏至未至》</div>
+				</div>
+				<div class="sub-wrap">
+					<div class="main">
+						什么都可以从头再来，只是青春不能。那么多事情，跟青春绑在一起就是美好，<br>
+						离开青春，就是傻冒。
+					</div>
+					<div class="auth">——刘瑜《送你一颗子弹》</div>
+				</div>
 				<div class="indicator">
 					<div class="container">
 						<em class="circle-out slideActive" ></em>
@@ -174,6 +190,7 @@
 		</footer>
 	</div>
 	<script src="js/pruejs.scrollUp.js"></script>
+	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="js/index.js"></script>
 </body>

@@ -10,4 +10,12 @@ angular.module('index', []).controller('indexController', function ($scope, $htt
 				$scope.albumList2[i] = _data[j];
 			}
 		});
+	$(".wrap4 .circle-out").click(function() {
+		$(".wrap4 .circle-out").removeClass('slideActive');
+		$(this).addClass('slideActive');
+		$('.wrap4 .sub-wrap').removeClass('active-out');
+		$('.wrap4 .active-in').toggleClass('active-out');
+		$('.wrap4 .sub-wrap').removeClass('active-in');
+		$('.wrap4 .sub-wrap').eq($(this).index()).addClass('active-in');
+	});
 });

@@ -235,6 +235,7 @@ html, body {
 	background-color: $bg-color;
 	font-family: "FangSong";
 	font-size: 20px;
+	overflow: hidden;
 	.logo {
 		width: 58px;
 		height: 53px;
@@ -256,26 +257,35 @@ html, body {
 	}
 	.text {
 		position: relative;
-		top: 70px;
+		top: 80px;
 		div {
 			margin-bottom: 40px;
 		}
-		.main {
-			text-align: center;
-			line-height: 48px;
-		}
-		.auth {
+		.sub-wrap {
 			position: absolute;
-			width: 130px;
-			right: 300px;
+			display: none;
+			width: 800px;
+			left: 50%;
+			margin-left: -400px;
+			.main {
+				text-align: center;
+				line-height: 48px;
+			}
+			.auth {
+				position: relative;
+				width: 250px;
+				float: right;
+				text-align: center;
+			}
 		}
 
 	}
 	.indicator {
-		position: relative;
-		width: 840px;
-		top: 40px;
-		margin: 0 auto;
+		position: absolute;
+		width: 800px;
+		top: 180px;
+		left: 50%;
+		margin-left: -400px;
 		.container {
 			position: relative;
 			margin: 0 auto;
@@ -591,6 +601,11 @@ footer {
 			.content {
 				line-height: 28px;
 			}
+			.middle {
+				.linebt {
+					display: none;
+				}
+			}
 		}
 	}
 	.wrap6 {
@@ -606,4 +621,61 @@ footer {
 		}
 	}
 
+}
+
+// wrap4动画
+.wrap4 {
+	.sub-wrap.active-in {
+		display: block;
+		z-index: 2;
+		-webkit-animation: wrap4-text-in 1.5s linear forwards;
+		animation: wrap4-text-in 1.5s linear forwards;
+	}
+	.sub-wrap.active-out {
+		display: block;
+		z-index: 1;
+		-webkit-animation: wrap4-text-out .8s linear forwards;
+		animation: wrap4-text-out .8s linear forwards;
+	}
+}
+@keyframes wrap4-text-in {
+	0% {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+		opacity: 0; //占位，否则布局会出错
+	}
+	1% {
+		-webkit-transform: translate(1500px, 0);
+		transform: translate(1500px, 0);
+	}
+	82% {
+		-webkit-transform: translate(1500px, 0);
+		transform: translate(1500px, 0)
+	}
+	88% {
+		-webkit-transform: translate(-20px, 0);
+		transform: translate(-20px, 0)
+	}
+	94% {
+		-webkit-transform: translate(10px, 0);
+		transform: translate(10px, 0)
+	}
+	100% {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0)
+	}
+}
+@keyframes wrap4-text-out {
+	0% {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0)
+	}
+	70% {
+		-webkit-transform: translate(20px, 0);
+		transform: translate(20px, 0)
+	}
+	100% {
+		-webkit-transform: translate(-1500px, 0);
+		transform: translate(-1500px, 0)
+	}
 }
