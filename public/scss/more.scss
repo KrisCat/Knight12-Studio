@@ -12,8 +12,8 @@ $green: #5eb22d;
 $green-bottom: #53a424;
 
 // 大小屏幕适配
-$large_width: 1205px;
-$small_width: 960px;
+$large-width: 1205px;
+$small-width: 960px;
 
 html,
 body {
@@ -49,7 +49,7 @@ nav {
 		-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
 		position: relative;
 		.nav-content {
-			width: $large_width;
+			width: $large-width;
 //			border: 1px solid red;
 			margin: 0 auto;
 			font-size: 16px;
@@ -107,7 +107,7 @@ nav {
 
 // 主内容
 .main {
-	width: $large_width;
+	width: $large-width;
 	position: relative;
 	min-height: 75%;
 	margin: 0 auto;
@@ -240,10 +240,10 @@ footer {
 	.wrap {
 		display: inline-block;
 		position: absolute;
-		width: $large_width;
+		width: $large-width;
 		overflow: hidden;
 		left: 50%;
-		margin-left: -$large_width/2;
+		margin-left: -$large-width/2;
 		top: 50%;
 		margin-top: -46px;
 		&>div {
@@ -339,20 +339,20 @@ footer {
 	nav {
 		.nav-bar {
 			.nav-content {
-				width: $small_width;
+				width: $small-width;
 			}
 		}
 	}
 	.main {
-		width: $small_width;
+		width: $small-width;
 		.main-content {
 			width: 780px;
 		}
 	}
 	footer {
 		.wrap {
-			width: $small_width;
-			margin-left: -$small_width/2;
+			width: $small-width;
+			margin-left: -$small-width/2;
 		}
 	}
 }
