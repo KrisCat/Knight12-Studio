@@ -1,15 +1,15 @@
-angular.module('album', ['ngRoute', 'albumRoutes']).controller('albumController', function ($scope) {
+angular.module('album', ['ngRoute', 'albumRoutes'])
+	.controller('albumController', function ($scope) {
 
-//	$scope.tagline = 'Nothing beats a pocket protector!';
-//	$scope.cur1 = true;
-//	$scope.cur2 = false;
-//	$scope.depSelect1 = function() {
-//		$scope.cur1 = true;
-//		$scope.cur2 = false;
-//	}
-//	$scope.depSelect2 = function() {
-//		$scope.cur2 = true;
-//		$scope.cur1 = false;
-//	}
 
-});
+
+	})
+	.controller("album-nav", function ($scope) {
+//	console.log('aaa');
+//		$('.search-bar').focusin(function () {
+//			$(this).find('.search-btn').addClass('search-btn-foucs')
+//		});
+//		$('.search-bar').focusout(function () {
+//			$(this).find('.search-btn').removeClass('search-btn-foucs')
+//		});
+	});

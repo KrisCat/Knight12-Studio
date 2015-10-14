@@ -39,6 +39,62 @@ nav {
 	.nav-header {
 		height: 70px;
 		background-color: #fff;
+		em {
+			display: inline-block;
+			float: left;
+			width: 58px;
+			height: 34px;
+			background: url(../img/sprite.png) no-repeat -135px -81px;
+			transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			margin-top: 16px;
+		}
+		.content {
+			width: $large-width;
+			margin: 0 auto;
+			span {
+				display: inline-block;
+				font-size: 30px;
+				font-family: "FangSong";
+				line-height: 70px;
+				text-align: center;
+			}
+			.search-bar {
+				display: inline-block;
+				float: right;
+				position: relative;
+				margin-top: 15px;
+				input {
+					padding-right: 83px;
+					width: 322px;
+					height: 18px;
+					font-size: 14px;
+					padding: 10px 66px 10px 10px;
+					border: 1px solid #e3e3e3;
+				}
+				.search-btn {
+					position: absolute;
+					box-sizing: border-box;
+					top: 0;
+					right: 0;
+					width: 57px;
+					height: 40px;
+					cursor: pointer;
+					text-align: center;
+					line-height: 40px;
+					border: 1px solid #e3e3e3;
+					color: #999;
+				}
+				input:focus {
+					border: 1px solid $main-color;
+				}
+				.search-btn-foucs {
+					background-color: $main-color;
+					border: 1px solid $main-color-hover;
+					color: #fff;
+				}
+			}
+		}
 	}
 	.nav-bar {
 		background-color: $main-color;
@@ -77,11 +133,7 @@ nav {
 						background: url(../img/ren_icon.png) no-repeat;
 					}
 				}
-
 			}
-//			.right:after {
-//					background: url(../img/ren_icon.png) no-repeat;
-//			}
 			.active {
 				background-color: $main-color-hover;
 			}
@@ -92,15 +144,6 @@ nav {
 				cursor: pointer;
 				background-color: $main-color-hover;
 			}
-//			.logo {
-//				display: inline-block;
-//				position: absolute;
-//				top: 5px;
-//				left: 0;
-//				width: 135px;
-//				height: 53px;
-//				background: url(../img/sprite.png) no-repeat 0 -73px;
-//			}
 		} // content
 	} //nav-bar
 }
@@ -205,7 +248,7 @@ nav {
 						&:before {
 							content: "";
 							display: inline-block;
-							padding-bottom: 73.8%;
+							padding-bottom: 73.5%;
 							width: 0;
 							vertical-align: middle;
 						}
