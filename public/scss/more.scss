@@ -265,6 +265,41 @@ nav {
 			}
 		}
 	}
+	.old {
+		position: absolute;
+		bottom: 8%;
+		width: 600px;
+		height: 100px;
+		left: 50%;
+		margin-left: -300px;
+		text-align: center;
+		font-size: 18px;
+		font-family: "FangSong";
+		color: $main-color;
+		.title {
+			width: 600px;
+			margin-bottom: 30px;
+		}
+		a {
+			color: $main-color;
+		}
+		span {
+			display: inline-block;
+			background-color: $bg-color-less;
+			width: 250px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			border: 1px solid $main-color;
+			font-size: 14px;
+			font-family: "Microsoft YaHei";
+			&:hover {
+				cursor: pointer;
+				color: #fff;
+				background-color: $main-color;
+			}
+		}
+	}
 }
 
 // 页脚
@@ -380,6 +415,11 @@ footer {
 
 @media screen and (max-width:1400px) {
 	nav {
+		.nav-header {
+			.content {
+				width: $small-width;
+			}
+		}
 		.nav-bar {
 			.nav-content {
 				width: $small-width;

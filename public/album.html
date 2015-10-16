@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/icons.css">
 	<link rel="stylesheet" href="css/more.css">
+	<script data-main="js/main" src="js/require.js"></script>
 </head>
 
 <body ng-app="album" ng-controller="albumController">
@@ -44,6 +45,11 @@
 			</ul>
 			<!-- ANGULAR DYNAMIC CONTENT -->
 			<div ng-view></div>
+			<!-- 老版本入口 -->
+			<div class="old">
+				<div class="title">新版本（Version2.0）正在开发中,点击下面按钮可以浏览老版本</div>
+				<a href="v1/index.html"><span>老版本（Version1.0）</span></a>
+			</div>
 		</div>
 		<div ng-include="'views/common/footer.html'"></div>
 	</div>

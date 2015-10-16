@@ -1,0 +1,288 @@
+*[hidefocus] {
+    outline: 0
+}
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+fieldset,
+img,
+html,
+body,
+iframe {
+    border: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+li {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    font-size: 100%
+}
+
+em,
+strong {
+    font-weight: bold;
+    font-style: normal
+}
+
+body,
+textarea,
+select,
+input {
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", tahoma, arial, simsun, "\5B8B\4F53";
+    font-size: 12px;
+    color: #999
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.text ul,
+.text ol,
+.text p {
+    margin: 0 0 14px 0
+}
+
+.photo-block .text ul {
+    padding-left: 16px;
+    *padding-left: 19px
+}
+
+.photo-block .text ol {
+    padding-left: 19px;
+    *padding-left: 25px
+}
+
+.photo-block .text ul li {
+    list-style: disc outside none
+}
+
+.photo-block .text ol li {
+    list-style: decimal outside none
+}
+
+body,
+html {
+    word-photo-img: break-word;
+    _zoom: 1
+}
+
+.all-white {
+    position: relative;
+    padding: 0 5px 0 87px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    zoom: 1;
+}
+
+
+.right-white {
+    padding: 90px 55px 0 55px;
+    background-color: #fff;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+/* 对于手机屏幕进行适配 */
+@media (max-width: 767px) {
+  .all-white {
+    position: relative;
+    padding: 0 5px 0 5px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    zoom: 1;
+   }
+   .right-white {
+    padding: 90px 20px 0 20px;
+    background-color: #fff;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+   }
+}
+
+.photo-list {
+    padding-bottom: 1px;
+    margin-top: 45px;
+    _margin-bottom: -55px
+}
+
+.album-title {
+    height: 54px;
+    line-height: 54px;
+    font-size: 30px;
+    text-align: right;
+    color: #333;
+}
+
+.m-nick a {
+    font-size: 30px
+}
+
+.m-nick a:hover {
+    opacity: .8
+}
+
+.album-subtitle {
+    line-height: 21px;
+    text-align: right;
+    _zoom: 1;
+}
+
+.photo-block {
+    position: relative;
+    z-index: 5;
+    zoom: 1;
+    z-index: 5;
+    margin-bottom: 55px
+}
+
+.photo-block .photo-img {
+    margin-bottom: 10px
+}
+
+.photo-block .img img {
+    display: block;
+    max-width: 100%;  /* 照片排列宽度*/
+    _width: 100%
+}
+
+.photo-block .text {
+    line-height: 27px;
+    color: #666;
+    font-size: 14px
+}
+
+.photo-block .text a {
+    color: #999;
+    text-decoration: underline
+}
+
+.photo-block .text a:hover {
+    color: #333
+}
+
+.photo-block .text img {
+    max-width: 100%;
+    _width: 100%
+}
+
+.photo-block .text blockquote {
+    padding: 0 0 0 10px
+}
+
+.photo-block .left-white {
+    line-height: 22px
+}
+
+.photo-block .left-white a {
+    color: #ccc;
+    margin-right: 30px
+}
+
+.photo-block .left-white a:hover {
+    color: #333
+}
+
+.photo-block .left-white .tip {
+    position: absolute;
+    left: -142px;
+    top: -13px;
+    width: 87px;
+    height: 50px;
+    text-align: right
+}
+
+.photo-block .left-white .tip .tip-down {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 30px;
+    height: 16px;
+    line-height: 20px;
+    paddingt-right: 10px;
+    font-size: 13px;
+}
+
+.photo-block .left-white .tip .tip-up {
+    position: absolute;
+    left: 50px;
+    top: 13px;
+    width: 30px;
+    height: 20px;
+    line-height: 0px;
+    paddingt-right: 10px;
+    font-size: 13px;
+}
+
+.photo-block .left-white .tip .tip-big {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 38px;
+    text-align: left;
+    letter-spacing: 3px
+}
+
+.photo-block .left-white .tip .tip-arrow {
+    position: absolute;
+    left: 87px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-style: solid;
+    border-width: 12px 12px
+}
+
+.photo-block .text {
+    padding-bottom: 1px
+}
+
+.photo-block .left-white .tip {
+    cursor: default
+}
+
+.photo-block .left-white .tip:hover span {
+    opacity: .8
+}
+
+/* 背景色 */
+body{background-color:#292929;}
+/* 箭头颜色 */
+.photo-block .left-white .tip .tip-arrow{border-color:#fff #fff #fff #292929;}
+@media (max-width: 767px) {
+  .photo-block .left-white .tip .tip-arrow{border-color:#292929 #fff #292929 #292929;}
+}
+/* tip颜色 */
+.photo-block .left-white .tip,
+.photo-block .left-white .tip:hover {color:#8b8b8b;}
