@@ -147,12 +147,17 @@ nav {
 		} // content
 	} //nav-bar
 }
-
+.top-img {
+	width: 100%;
+	background: url(../img/topImg.png) no-repeat;
+	height: 200px;
+}
 // 主内容
 .main {
 	width: $large-width;
 	position: relative;
-	min-height: 75%;
+//	min-height: 75%;
+	height: 1000px;
 	margin: 0 auto;
 	//	border: 1px solid red;
 	background-color: #fff;
@@ -181,42 +186,32 @@ nav {
 		}
 	}
 	.main-content {
-		float: right;
 		margin-top: 30px;
-		width: 1020px;
-//		height: 900px;
+		width: 100%;
 		background-color: $bg-color-less;
-		// 第5部分：相册专辑
-		.wrap5 {
+		// 相册专辑-UI
+		.wrap {
 			width: 100%;
-			.sub-wrap {
+			.sub-wrap {  //一行
 				width: 100%;
-				&:before {
-					content: "";
-					display: inline-block;
-					padding-bottom: 18.2%;
-					width: 0;
-				}
-				.img-wrap {
+				margin-left: 7.5px; // 居中抵消
+				.img-wrap {  // 一个图片框
 					position: relative;
 					float: left;
-					width: 25%;
-					&:before {
-						content: "";
-						display: inline-block;
-						padding-bottom: 73%;
-						width: 0;
-						vertical-align: middle;
-					}
+					width: 241px;
+					height: 179px;
+					display: inline-block;
 					img {
 						position: absolute;
-						width: 100%;
+						width: 231px;
+						height: 169px;
 					}
-					.cover {
+					.cover { // hover的时候样式，默认opacity为0
 						position: absolute;
-						width: 100%;
 						color: #fff;
 						opacity: 0;
+						width: 231px;
+						height: 169px;
 						.content {
 							position: absolute;
 							width: 190px;
@@ -244,13 +239,6 @@ nav {
 								font-weight: 400;
 								font-size: 14px;
 							}
-						}
-						&:before {
-							content: "";
-							display: inline-block;
-							padding-bottom: 73.5%;
-							width: 0;
-							vertical-align: middle;
 						}
 						&:hover {
 							background-color: $album-hover;
