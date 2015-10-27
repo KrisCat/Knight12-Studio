@@ -1,0 +1,50 @@
+@media screen and (max-width: 1400px) {
+	nav {
+		.nav-header {
+			.content {
+				width: $small-width;
+			}
+		}
+		.nav-bar {
+			.nav-content {
+				width: $small-width;
+			}
+		}
+	}
+	.top-img {
+		width: 100%;
+		background: url(../img/topImg.png) no-repeat center center;
+		height: 148px;
+	}
+	.main {
+		width: $small-width;
+		.main-content {
+			.wrap {
+				.sub-wrap {
+					.img-wrap {
+						width: 192px;
+						height: 142.6px;
+						img {
+							width: 184px;
+							height: 134.6px;
+						}
+						.cover {
+							width: 184px;
+							height: 134.6px;
+							.content {
+								-webkit-transform: scale(.7);
+								transform: scale(.95);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		.wrap {
+			width: $small-width;
+			margin-left: -$small-width/2;
+		}
+	}
+}
