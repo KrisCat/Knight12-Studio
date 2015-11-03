@@ -1,0 +1,383 @@
+/* line 19, C:/workspace/photography-website/public/scss/more.scss */
+html,
+body {
+  height: 100%;
+  font-family: "Microsoft YaHei";
+  background-color: #fff; }
+
+/* line 25, C:/workspace/photography-website/public/scss/more.scss */
+.container {
+  width: 100%;
+  height: 100%; }
+
+/* line 2, C:/workspace/photography-website/public/scss/_all_large.scss */
+nav {
+  width: 100%;
+  background-color: #ecf4f5; }
+  /* line 5, C:/workspace/photography-website/public/scss/_all_large.scss */
+  nav .nav-top {
+    height: 28px;
+    background-color: #ecf4f5;
+    font-family: "Tahoma,sans-serif,Microsoft YaHei"; }
+  /* line 10, C:/workspace/photography-website/public/scss/_all_large.scss */
+  nav .nav-header {
+    height: 70px;
+    background-color: #fff; }
+    /* line 13, C:/workspace/photography-website/public/scss/_all_large.scss */
+    nav .nav-header em {
+      display: inline-block;
+      float: left;
+      width: 58px;
+      height: 34px;
+      background: url(../img/sprite.png) no-repeat -135px -81px;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      margin-top: 16px; }
+    /* line 23, C:/workspace/photography-website/public/scss/_all_large.scss */
+    nav .nav-header .content {
+      width: 1205px;
+      margin: 0 auto; }
+      /* line 26, C:/workspace/photography-website/public/scss/_all_large.scss */
+      nav .nav-header .content span {
+        display: inline-block;
+        font-size: 30px;
+        font-family: "FangSong";
+        line-height: 70px;
+        text-align: center; }
+      /* line 33, C:/workspace/photography-website/public/scss/_all_large.scss */
+      nav .nav-header .content .search-bar {
+        display: inline-block;
+        float: right;
+        position: relative;
+        margin-top: 15px; }
+        /* line 38, C:/workspace/photography-website/public/scss/_all_large.scss */
+        nav .nav-header .content .search-bar input {
+          padding-right: 83px;
+          width: 322px;
+          height: 18px;
+          font-size: 14px;
+          padding: 10px 66px 10px 10px;
+          border: 1px solid #e3e3e3; }
+        /* line 46, C:/workspace/photography-website/public/scss/_all_large.scss */
+        nav .nav-header .content .search-bar .search-btn {
+          position: absolute;
+          box-sizing: border-box;
+          top: 0;
+          right: 0;
+          width: 57px;
+          height: 40px;
+          cursor: pointer;
+          text-align: center;
+          line-height: 40px;
+          border: 1px solid #e3e3e3;
+          color: #999; }
+        /* line 59, C:/workspace/photography-website/public/scss/_all_large.scss */
+        nav .nav-header .content .search-bar input:focus {
+          border: 1px solid #1fb495; }
+        /* line 62, C:/workspace/photography-website/public/scss/_all_large.scss */
+        nav .nav-header .content .search-bar .search-btn-foucs {
+          background-color: #1fb495;
+          border: 1px solid #38c9ab;
+          color: #fff; }
+  /* line 70, C:/workspace/photography-website/public/scss/_all_large.scss */
+  nav .nav-bar {
+    background-color: #1fb495;
+    border-bottom: 1px solid #19b494;
+    height: 39px;
+    line-height: 40px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    position: relative; }
+    /* line 78, C:/workspace/photography-website/public/scss/_all_large.scss */
+    nav .nav-bar .nav-content {
+      width: 1205px;
+      margin: 0 auto;
+      font-size: 16px;
+      overflow: hidden; }
+      /* line 84, C:/workspace/photography-website/public/scss/_all_large.scss */
+      nav .nav-bar .nav-content span {
+        display: inline-block;
+        height: 40px;
+        padding: 0 25px;
+        line-height: 40px;
+        color: #fff; }
+        /* line 91, C:/workspace/photography-website/public/scss/_all_large.scss */
+        nav .nav-bar .nav-content span.left {
+          float: left; }
+        /* line 94, C:/workspace/photography-website/public/scss/_all_large.scss */
+        nav .nav-bar .nav-content span.right {
+          float: right;
+          margin-right: 0; }
+          /* line 97, C:/workspace/photography-website/public/scss/_all_large.scss */
+          nav .nav-bar .nav-content span.right i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            position: relative;
+            top: 2px;
+            background: url(../img/ren_icon.png) no-repeat; }
+      /* line 108, C:/workspace/photography-website/public/scss/_all_large.scss */
+      nav .nav-bar .nav-content .active {
+        background-color: #38c9ab; }
+      /* line 114, C:/workspace/photography-website/public/scss/_all_large.scss */
+      nav .nav-bar .nav-content span:hover {
+        cursor: pointer;
+        background-color: #38c9ab; }
+
+/* line 121, C:/workspace/photography-website/public/scss/_all_large.scss */
+.top-img {
+  width: 100%;
+  background: url(../img/topImg.png) no-repeat center center;
+  height: 200px; }
+
+/* line 127, C:/workspace/photography-website/public/scss/_all_large.scss */
+.main {
+  width: 1205px;
+  position: relative;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden; }
+  /* line 157, C:/workspace/photography-website/public/scss/_all_large.scss */
+  .main .main-content {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ecf4f5; }
+    /* line 162, C:/workspace/photography-website/public/scss/_all_large.scss */
+    .main .main-content .wrap {
+      width: 100%; }
+      /* line 164, C:/workspace/photography-website/public/scss/_all_large.scss */
+      .main .main-content .wrap .sub-wrap {
+        width: 100%;
+        margin-left: 7.5px; }
+        /* line 167, C:/workspace/photography-website/public/scss/_all_large.scss */
+        .main .main-content .wrap .sub-wrap .img-wrap {
+          position: relative;
+          float: left;
+          width: 241px;
+          height: 179px;
+          display: inline-block; }
+          /* line 173, C:/workspace/photography-website/public/scss/_all_large.scss */
+          .main .main-content .wrap .sub-wrap .img-wrap img {
+            position: absolute;
+            width: 231px;
+            height: 169px; }
+          /* line 178, C:/workspace/photography-website/public/scss/_all_large.scss */
+          .main .main-content .wrap .sub-wrap .img-wrap .cover {
+            position: absolute;
+            color: #fff;
+            opacity: 0;
+            width: 231px;
+            height: 169px; }
+            /* line 184, C:/workspace/photography-website/public/scss/_all_large.scss */
+            .main .main-content .wrap .sub-wrap .img-wrap .cover .content {
+              position: absolute;
+              width: 190px;
+              height: 130px;
+              top: 50%;
+              left: 50%;
+              margin-left: -95px;
+              margin-top: -70px;
+              font-size: 14px;
+              font-family: "Fangsong";
+              text-align: center; }
+              /* line 195, C:/workspace/photography-website/public/scss/_all_large.scss */
+              .main .main-content .wrap .sub-wrap .img-wrap .cover .content .icon {
+                width: 52px;
+                height: 52px;
+                background: url(../img/sprite.png) no-repeat -193px -74px;
+                margin: 0 auto;
+                margin-top: 15px;
+                transform: scale(0.8); }
+              /* line 203, C:/workspace/photography-website/public/scss/_all_large.scss */
+              .main .main-content .wrap .sub-wrap .img-wrap .cover .content div {
+                margin-top: 15px; }
+              /* line 206, C:/workspace/photography-website/public/scss/_all_large.scss */
+              .main .main-content .wrap .sub-wrap .img-wrap .cover .content .date {
+                font-family: "SimHei";
+                font-weight: 400;
+                font-size: 14px; }
+            /* line 212, C:/workspace/photography-website/public/scss/_all_large.scss */
+            .main .main-content .wrap .sub-wrap .img-wrap .cover:hover {
+              background-color: #25bb9d;
+              opacity: .85; }
+              /* line 215, C:/workspace/photography-website/public/scss/_all_large.scss */
+              .main .main-content .wrap .sub-wrap .img-wrap .cover:hover .content {
+                background-color: #25bb9d;
+                opacity: 1; }
+  /* line 225, C:/workspace/photography-website/public/scss/_all_large.scss */
+  .main .old {
+    position: absolute;
+    bottom: 8%;
+    width: 600px;
+    height: 100px;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "FangSong";
+    color: #1fb495; }
+    /* line 236, C:/workspace/photography-website/public/scss/_all_large.scss */
+    .main .old .title {
+      width: 600px;
+      margin-bottom: 30px; }
+    /* line 240, C:/workspace/photography-website/public/scss/_all_large.scss */
+    .main .old a {
+      color: #1fb495; }
+    /* line 243, C:/workspace/photography-website/public/scss/_all_large.scss */
+    .main .old span {
+      display: inline-block;
+      background-color: #ecf4f5;
+      width: 250px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid #1fb495;
+      font-size: 14px;
+      font-family: "Microsoft YaHei"; }
+      /* line 253, C:/workspace/photography-website/public/scss/_all_large.scss */
+      .main .old span:hover {
+        cursor: pointer;
+        color: #fff;
+        background-color: #1fb495; }
+
+/* line 263, C:/workspace/photography-website/public/scss/_all_large.scss */
+footer {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  bottom: 0;
+  background-color: #e1ebed; }
+  /* line 275, C:/workspace/photography-website/public/scss/_all_large.scss */
+  footer .wrap {
+    display: inline-block;
+    position: absolute;
+    width: 1205px;
+    overflow: hidden;
+    left: 50%;
+    margin-left: -602.5px;
+    top: 50%;
+    margin-top: -46px; }
+    /* line 287, C:/workspace/photography-website/public/scss/_all_large.scss */
+    footer .wrap .left {
+      float: left;
+      width: 390px;
+      height: 100px; }
+      /* line 291, C:/workspace/photography-website/public/scss/_all_large.scss */
+      footer .wrap .left .title {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 5px; }
+        /* line 295, C:/workspace/photography-website/public/scss/_all_large.scss */
+        footer .wrap .left .title em {
+          display: inline-block;
+          float: left;
+          width: 58px;
+          height: 34px;
+          background: url(../img/sprite.png) no-repeat -135px -81px;
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8); }
+        /* line 304, C:/workspace/photography-website/public/scss/_all_large.scss */
+        footer .wrap .left .title span {
+          font-size: 18px;
+          float: left;
+          font-family: "FangSong";
+          line-height: 34px; }
+      /* line 311, C:/workspace/photography-website/public/scss/_all_large.scss */
+      footer .wrap .left .info {
+        margin-left: 10px;
+        font-size: 14px;
+        font-family: "FangSong";
+        line-height: 30px;
+        font-weight: 200; }
+    /* line 319, C:/workspace/photography-website/public/scss/_all_large.scss */
+    footer .wrap .middle {
+      position: absolute;
+      width: 300px;
+      height: 100px;
+      left: 50%;
+      margin-left: -150px;
+      text-align: center;
+      padding-top: 30px; }
+      /* line 327, C:/workspace/photography-website/public/scss/_all_large.scss */
+      footer .wrap .middle a {
+        background-color: rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        font-family: "Ionicons";
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 22px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        overflow: hidden;
+        text-align: center;
+        margin-right: 6px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+        /* line 341, C:/workspace/photography-website/public/scss/_all_large.scss */
+        footer .wrap .middle a:hover {
+          background-color: #1fb495; }
+        /* line 344, C:/workspace/photography-website/public/scss/_all_large.scss */
+        footer .wrap .middle a i {
+          transform: scale(0.9);
+          -webkit-transform: scale(0.9); }
+        /* line 348, C:/workspace/photography-website/public/scss/_all_large.scss */
+        footer .wrap .middle a .fa-qq {
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8); }
+    /* line 354, C:/workspace/photography-website/public/scss/_all_large.scss */
+    footer .wrap .right {
+      float: right;
+      width: 170px;
+      height: 100px; }
+      /* line 358, C:/workspace/photography-website/public/scss/_all_large.scss */
+      footer .wrap .right .info {
+        margin-left: 10px;
+        font-size: 14px;
+        font-family: "FangSong";
+        line-height: 30px;
+        font-weight: 200; }
+        /* line 364, C:/workspace/photography-website/public/scss/_all_large.scss */
+        footer .wrap .right .info a:hover {
+          background-color: #1fb495;
+          color: #fff; }
+
+@media screen and (max-width: 1400px) {
+  /* line 4, C:/workspace/photography-website/public/scss/_all_small.scss */
+  nav .nav-header .content {
+    width: 960px; }
+  /* line 9, C:/workspace/photography-website/public/scss/_all_small.scss */
+  nav .nav-bar .nav-content {
+    width: 960px; }
+  /* line 14, C:/workspace/photography-website/public/scss/_all_small.scss */
+  .top-img {
+    width: 100%;
+    background: url(../img/topImg.png) no-repeat center center;
+    height: 148px; }
+  /* line 19, C:/workspace/photography-website/public/scss/_all_small.scss */
+  .main {
+    width: 960px;
+    height: 800px; }
+    /* line 25, C:/workspace/photography-website/public/scss/_all_small.scss */
+    .main .main-content .wrap .sub-wrap .img-wrap {
+      width: 192px;
+      height: 142.6px; }
+      /* line 28, C:/workspace/photography-website/public/scss/_all_small.scss */
+      .main .main-content .wrap .sub-wrap .img-wrap img {
+        width: 184px;
+        height: 134.6px; }
+      /* line 32, C:/workspace/photography-website/public/scss/_all_small.scss */
+      .main .main-content .wrap .sub-wrap .img-wrap .cover {
+        width: 184px;
+        height: 134.6px; }
+        /* line 35, C:/workspace/photography-website/public/scss/_all_small.scss */
+        .main .main-content .wrap .sub-wrap .img-wrap .cover .content {
+          -webkit-transform: scale(0.7);
+          transform: scale(0.95); }
+  /* line 46, C:/workspace/photography-website/public/scss/_all_small.scss */
+  footer .wrap {
+    width: 960px;
+    margin-left: -480px; } }
+
+/*# sourceMappingURL=more.css.map */
