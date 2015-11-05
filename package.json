@@ -1,6 +1,6 @@
 {
   "name": "photography-website",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "main": "server.js",
   "dependencies": {
     "express" : "~4.5.1",
