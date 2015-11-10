@@ -198,6 +198,10 @@ html,body {
 					cursor: pointer;
 					background-color: $main-color-hover;
 				}
+				span.span-hover {
+					cursor: pointer;
+					background-color: $main-color-hover;
+				}
 			} // nav-bar-menu
 		} //nav-bar
 			.nav-bar-layout {
@@ -256,11 +260,14 @@ html,body {
 							margin-top: 12px;
 						}
 						li:hover {
-							background-color: $main-color;
+							background-color: $main-color-hover;
 							a {
 								color: #fff;
 							}
 						}
+					} // end ul
+					ul.ul-active {
+						background-color: rgba(241,241,241,.73);
 					}
 				}
 			}
