@@ -205,14 +205,64 @@ html,body {
 				position: absolute;
 				z-index: 999999;
 				top: 110px;
-				height: 250px;
+				height: 180px;
 				width: 100%;
 				background-color: #f1f1f1;
-				background-color: rgba(241,241,241,0.6);
+				background-color: rgba(241,241,241,0.7);
 				transition: all .2s ease-in;
 				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.6);
 				-moz-box-shadow: 0 1px 2px rgba(0,0,0,.6);
 				box-shadow: 0 1px 2px rgba(0,0,0,.6);
+				.category {
+					width: $small-width;
+					position: relative;
+					margin: 0 auto;
+					ul {
+						display: inline-block;
+						float: left;
+						width: 114px;
+						height: 180px;
+						border-right: 1px solid #acadad;
+						vertical-align: top;
+						&:first-child {
+							margin-left: 83px;
+							border-left: 1px solid #acadad;
+						}
+						&:last-child {
+							position: absolute;
+							right: 0;
+							width: 138px;
+							border-left: 1px solid #acadad;
+							border-right: 1px solid #acadad;
+							li {
+								width: 138px;
+								a {
+									width: 138px;
+								}
+							}
+						}
+						li {
+							height: 30px;
+							width: 114px;
+							line-height: 30px;
+							font-size: 14px;
+							text-align: center;
+							a {
+								display: inline-block;
+								width: 114px;
+							}
+						}
+						li:first-child {
+							margin-top: 12px;
+						}
+						li:hover {
+							background-color: $main-color;
+							a {
+								color: #fff;
+							}
+						}
+					}
+				}
 			}
 	}
 	.slides {
