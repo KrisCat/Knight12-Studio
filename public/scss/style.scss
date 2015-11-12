@@ -18,7 +18,8 @@ $green-bottom: #53a424;
 // 大小屏幕适配
 $large-width: 1205px;
 $small-width: 960px;
-html,body {
+html,
+body {
 	height: 100%;
 	font-family: "Microsoft YaHei";
 	background-color: $bg-color;
@@ -31,26 +32,28 @@ html,body {
 
 // 第1部分：导航加背景图
 .wrap1 {
-	&:before {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 2px;
-		background-color: $main-color;
-	}
+	//	&:before {
+	//		content: '';
+	//		display: block;
+	//		width: 100%;
+	//		height: 2px;
+	//		background-color: $main-color;
+	//	}
 	width: 100%;
 	nav {
 		position: relative;
 		width: 100%;
-		background-color: $bg-color-less;
+		//		background-color: $bg-color-less;
 		.nav-top {
-			height: 28px;
-			background-color: $bg-color-less;
+			height: 36px;
+			//			background-color: $bg-color-less;
+			background-color: #edf0ef;
 			font-family: "Tahoma,sans-serif,Microsoft YaHei";
 		}
 		.nav-header {
 			height: 70px;
-			background-color: $bg-color-less;;
+			background-color: #fff;
+			//			background: url(../img/nav.png);
 			em {
 				display: inline-block;
 				float: left;
@@ -77,42 +80,51 @@ html,body {
 						color: $main-color;
 					}
 				}
-				.share {
-					position: absolute;
-					width: 135px;
-					height: 30px;
-					right: 0;
-					top: 20px;
-					text-align: center;
-					z-index: 3;
-					a {
-						background-color: $main-color;
-						display: inline-block;
-//						float: left;
-						font-family: "Ionicons";
-						color: rgba(255, 255, 255, .92);
-						font-size: 18px;
-						height: 30px;
-						width: 30px;
-						line-height: 30px;
-						border-radius: 2px;
-						overflow: hidden;
-						text-align: center;
-						margin-right: 1px;
-						text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-						&:hover {
-							background-color: $main-color-hover;
-						}
-						i {
-							transform: scale(.9);
-							-webkit-transform: scale(.9);
-						}
-						.fa-qq {
-							transform: scale(.8);
-							-webkit-transform: scale(.8);
-						}
-					}
-				}
+				//				.share {
+				//					position: absolute;
+				//					width: 140px;
+				//					height: 28px;
+				//					right: 0;
+				//					top: 24px;
+				//					text-align: center;
+				//					z-index: 3;
+				//					a {
+				//						background-color: #fafafa;
+				//						display: inline-block;
+				//						float: left;
+				//						font-family: "Ionicons";
+				//						color: rgba(255, 255, 255, .92);
+				//						font-size: 18px;
+				//						height: 28px;
+				//						width: 68px;
+				//						line-height: 28px;
+				//						overflow: hidden;
+				//						text-align: center;
+				//						text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+				//						border: solid 1px $main-color-bottom;
+				//						background-color: $main-color-hover;
+				//						&:hover {
+				//							background-color: #4fdbbe;
+				//							border: solid 1px #4fdbbe;
+				//							i {
+				//								color: #fafafa;
+				//							}
+				//						}
+				//						&:first-child {
+				//							border-top-left-radius: 6px;
+				//							border-bottom-left-radius: 6px;
+				//						}
+				//						&:last-child {
+				//							border-top-right-radius: 6px;
+				//							border-bottom-right-radius: 6px;
+				//						}
+				//						i {
+				//							color: #fff;
+				//							transform: scale(.9);
+				//							-webkit-transform: scale(.9);
+				//						}
+				//					}
+				//				}
 				.search-bar {
 					display: inline-block;
 					float: right;
@@ -120,27 +132,35 @@ html,body {
 					margin-top: 15px;
 					input {
 						padding-right: 83px;
-						width: 322px;
+						width: 309px;
 						height: 18px;
 						font-size: 14px;
 						padding: 10px 66px 10px 10px;
 						border: 1px solid #e3e3e3;
+						border-top-right-radius: 2px;
+						border-bottom-right-radius: 2px;
+					}
+					input:focus {
+						border: 1px solid $main-color;
 					}
 					.search-btn {
 						position: absolute;
 						box-sizing: border-box;
 						top: 0;
 						right: 0;
-						width: 57px;
+						width: 70px;
 						height: 40px;
 						cursor: pointer;
 						text-align: center;
 						line-height: 40px;
 						border: 1px solid #e3e3e3;
 						color: #999;
-					}
-					input:focus {
-						border: 1px solid $main-color;
+						border-top-right-radius: 2px;
+						border-bottom-right-radius: 2px;
+						&:hover {
+							background-color: $main-color-hover;
+							color: #fff;
+						}
 					}
 					.search-btn-foucs {
 						background-color: $main-color;
@@ -204,73 +224,73 @@ html,body {
 				}
 			} // nav-bar-menu
 		} //nav-bar
-			.nav-bar-layout {
-				display: none;
-				position: absolute;
-				z-index: 999999;
-				top: 110px;
-				height: 180px;
-				width: 100%;
-				background-color: #f1f1f1;
-				background-color: rgba(241,241,241,0.7);
-				transition: all .2s ease-in;
-				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.6);
-				-moz-box-shadow: 0 1px 2px rgba(0,0,0,.6);
-				box-shadow: 0 1px 2px rgba(0,0,0,.6);
-				.category {
-					width: $small-width;
-					position: relative;
-					margin: 0 auto;
-					ul {
-						display: inline-block;
-						float: left;
-						width: 114px;
-						height: 180px;
-						border-right: 1px solid #acadad;
-						vertical-align: top;
-						&:first-child {
-							margin-left: 83px;
-							border-left: 1px solid #acadad;
-						}
-						&:last-child {
-							position: absolute;
-							right: 0;
-							width: 138px;
-							border-left: 1px solid #acadad;
-							border-right: 1px solid #acadad;
-							li {
-								width: 138px;
-								a {
-									width: 138px;
-								}
-							}
-						}
-						li {
-							height: 30px;
-							width: 114px;
-							line-height: 30px;
-							font-size: 14px;
-							text-align: center;
-							a {
-								display: inline-block;
-								width: 114px;
-							}
-						}
-						li:first-child {
-							margin-top: 12px;
-						}
-						li:hover {
-							background-color: $main-color-hover;
-							a {
-								color: #fff;
-							}
-						}
-					} // end ul
-					ul.ul-active {
-						background-color: rgba(241,241,241,.73);
+		.nav-bar-layout {
+			display: none;
+			position: absolute;
+			z-index: 999999;
+			top: 146px;
+			height: 180px;
+			width: 100%;
+			background-color: #f1f1f1;
+			background-color: rgba(241, 241, 241, 0.7);
+			transition: all .2s ease-in;
+			-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+			-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+			.category {
+				width: $small-width;
+				position: relative;
+				margin: 0 auto;
+				ul {
+					display: inline-block;
+					float: left;
+					width: 114px;
+					height: 180px;
+					border-right: 1px solid #acadad;
+					vertical-align: top;
+					&:first-child {
+						margin-left: 83px;
+						border-left: 1px solid #acadad;
 					}
+					&:last-child {
+						position: absolute;
+						right: 0;
+						width: 138px;
+						border-left: 1px solid #acadad;
+						border-right: 1px solid #acadad;
+						li {
+							width: 138px;
+							a {
+								width: 138px;
+							}
+						}
+					}
+					li {
+						height: 30px;
+						width: 114px;
+						line-height: 30px;
+						font-size: 14px;
+						text-align: center;
+						a {
+							display: inline-block;
+							width: 114px;
+						}
+					}
+					li:first-child {
+						margin-top: 12px;
+					}
+					li:hover {
+						background-color: $main-color-hover;
+						a {
+							color: #fff;
+						}
+					}
+				} // end ul
+				ul.ul-active {
+					background-color: rgba(241, 241, 241, .73);
 				}
 			}
+		}
 	}
 	.slides {
 		background: url(../img/wrap1_bg.jpg) no-repeat center center;
@@ -279,15 +299,62 @@ html,body {
 		height: 425px;
 	}
 	.intro {
-		height: 49px;
 		width: 100%;
+		padding: 15px 0;
+		margin-bottom: 20px;
+		height: 42px;
 		background: #ebebeb;
 		border-bottom: 1px solid #ddd;
 		.content {
 			width: $small-width;
-			height: 49px;
-//			border: 1px solid red;
 			margin: 0 auto;
+			a {
+				display: block;
+				position: relative;
+				float: left;
+				width: 189px;
+				height: 20px;
+				padding-left: 50px;
+				margin-top: 11px;
+				text-align: center;
+				font-size: 14px;
+				color: #666;
+				border-right: 1px solid #d0cbc7;
+				i {
+					display: block;
+					position: absolute;
+					top: -11px;
+					left: 55px;
+					width: 42px;
+					height: 42px;
+				}
+			}
+			a:last-child {
+				border-right: 1px solid #ebebeb;
+			}
+			a:hover {
+				color: $main-color;
+			}
+			.icon1 {
+				background-image: url(../img/indexIntro.png);
+				background-repeat: no-repeat;
+				background-position: -60px 0;
+			}
+			.icon2 {
+				background-image: url(../img/indexIntro.png);
+				background-repeat: no-repeat;
+				background-position: -105px 0;
+			}
+			.icon3 {
+				background-image: url(../img/indexIntro.png);
+				background-repeat: no-repeat;
+				background-position: -150px 0;
+			}
+			.icon4 {
+				background-image: url(../img/indexIntro.png);
+				background-repeat: no-repeat;
+				background-position: -195px 0;
+			}
 		}
 	}
 }
@@ -295,344 +362,70 @@ html,body {
 // 第2部分：工作室介绍
 .wrap2 {
 	width: 100%;
-	height: 466px;
+	height: 1800px;
 	background-color: $bg-color;
 	font-family: "FangSong";
 	font-size: 20px;
-	.logo {
-		width: 58px;
-		height: 53px;
-		position: relative;
-		margin: 0 auto;
-		top: 46px;
-		background: url(../img/sprite.png) no-repeat -135px -73px;
-		transform: scale(1.3);
-		-webkit-transform: scale(1.3);
-	}
-	.name {
-		text-indent: -9999px;
-		width: 270px;
-		height: 73px;
-		position: relative;
-		margin: 0 auto;
-		top: 44px;
-		background: url(../img/sprite.png) no-repeat -109px 0;
-	}
-	.intro {
-		position: relative;
-		top: 70px;
-		div {
-			margin-bottom: 35px;
-		}
-		.line1 {
-			margin-left: 22%;
-		}
-		.line2 {
-			margin-left: 27.5%;
-		}
-		.line3 {
-			margin-left: 34%;
-		}
-		.line4 {
-			margin-left: 65%;
-		}
-	}
-}
-
-// 第3部分：文字配图
-.wrap3 {
-	width: 100%;
-	background-color: #fff;
 	& > div {
 		position: relative;
-		overflow: hidden;
-	}
-	.big_img {
-		float: left;
-		display: inline-block;
-		max-width: 66.67%;
-		max-height: 720px;
-	}
-	.small_img {
-		float: left;
-		display: inline-block;
-		position: absolute;
-		bottom: 0;
-		max-width: 33.33%;
-		max-height: 240px;
-	}
-	.text {
-		position: absolute;
-		width: 33.4%;
-		float: left;
-		display: table;
-		&:before {
-			content: "";
-			display: inline-block;
-			padding-bottom: 75.5%;
-			width: 0;
-			float: left;
-		}
-		right: 0;
-		font-size: 20px;
-		font-family: "FangSong";
-		margin: 0 auto;
-		.middle {
-			position: absolute;
-			width: 100%;
-			margin-top: -150px;
-			top: 50%;
-			.logo {
-				width: 58px;
-				height: 53px;
-				margin: 0 auto;
-				background: url(../img/sprite.png) no-repeat -135px -73px;
-			}
-			.title {
-				margin-top: 3px;
-				text-align: center;
-				font-weight: 800;
-				line-height: 36px;
-			}
-			.content {
-				text-align: center;
-				line-height: 36px;
-			}
-			.linebt {
-				width: 9.8%;
-				height: 1px;
-				background-color: #aaa;
-				margin: 0 auto;
-				margin-top: 20px;
-			}
-		}
-	}
-	.sub-wrap2 {
-		.big_img {
-			float: right;
-		}
-		.small_img {
-			float: right;
-		}
-		.text {
-			right: auto;
-			left: 0;
-		}
-	}
-	.sub-wrap3 {
-		.left_img {
-			float: left;
-			display: inline-block;
-			max-width: 33.33%;
-			max-height: 720px;
-		}
-		.small_img {
-			float: left;
-		}
-		.right_img {
-			float: right;
-			display: inline-block;
-			max-width: 33.33%;
-			max-height: 720px;
-		}
-		.text {
-			right: auto;
-			left: 33.33%;
-		}
-	}
-}
-
-// 第4部分：美句轮播
-.wrap4 {
-	width: 100%;
-	height: 420px;
-	background-color: $bg-color;
-	font-family: "FangSong";
-	font-size: 20px;
-	overflow: hidden;
-	padding-bottom: 20px;
-	.logo {
-		width: 58px;
-		height: 53px;
-		position: relative;
-		margin: 0 auto;
-		top: 46px;
-		background: url(../img/sprite.png) no-repeat -135px -73px;
-		transform: scale(1.3);
-		-webkit-transform: scale(1.3);
-	}
-	.name {
-		text-indent: -9999px;
-		width: 244px;
-		height: 32px;
-		position: relative;
-		margin: 0 auto;
-		top: 50px;
-		background: url(../img/sprite.png) no-repeat 0 -126px;
-	}
-	.text {
-		position: relative;
-		top: 80px;
-		div {
-			margin-bottom: 40px;
-		}
-		.sub-wrap {
-			position: absolute;
-			display: none;
-			width: 800px;
-			left: 50%;
-			margin-left: -400px;
-			.main {
-				text-align: center;
-				line-height: 48px;
-			}
-			.auth {
-				position: relative;
-				width: 250px;
-				float: right;
-				text-align: center;
-			}
-		}
-	}
-	.indicator {
-		position: absolute;
-		width: 800px;
-		top: 180px;
+		width: 1003px;
+		//		height: 600px;
+//		margin: 0 auto;
 		left: 50%;
-		margin-left: -400px;
-		.container {
-			position: relative;
-			margin: 0 auto;
-			width: 230px;
-			height: 20px;
-			padding-top: 25px;
-			text-align: center;
-			line-height: 12px;
-			cursor: default;
-			.circle-out {
-				position: relative;
-				display: inline-block;
-				top: 0;
-				left: 0;
-				width: 10px;
-				height: 10px;
-				margin: 0 5px;
-				cursor: pointer;
-				border: 1px solid $indicator;
-				-webkit-border-radius: 50%;
-				border-radius: 50%;
-				background: none;
-			}
-			.slideActive {
-				background-color: $indicator;
-			}
-		}
-	}
-}
-
-// 第5部分：相册专辑
-.wrap5 {
-	width: 100%;
-	.sub-wrap {
-		width: 100%;
-		&:before {
-			content: "";
-			display: inline-block;
-			padding-bottom: 18.2%;
-			width: 0;
-		}
-		.img-wrap {
-			position: relative;
-			float: left;
-			width: 25%;
-			&:before {
-				content: "";
-				display: inline-block;
-				padding-bottom: 73%;
-				width: 0;
-				vertical-align: middle;
-			}
-			img {
-				position: absolute;
-				width: 100%;
-			}
-			.cover {
-				position: absolute;
-				width: 100%;
-				color: #fff;
-				opacity: 0;
-				.content {
-					position: absolute;
-					width: 200px;
-					height: 160px;
-					top: 50%;
-					left: 50%;
-					margin-left: -100px;
-					margin-top: -78px;
-					font-size: 20px;
-					font-family: "Fangsong";
-					text-align: center;
-					.icon {
-						width: 52px;
-						height: 52px;
-						background: url(../img/sprite.png) no-repeat -193px -74px;
-						margin: 0 auto;
-						margin-bottom: 30px;
-					}
-					div {
-						margin-bottom: 30px;
-					}
-					.date {
-						font-family: "SimHei";
-						font-weight: 500;
-						font-size: 18px;
+		margin-left: -480px;
+		margin-top: 50px;
+		border-bottom: 1px solid red;
+		border-top: 1px solid red;
+		padding-top: 100px;
+		overflow: hidden;
+		ul {
+			li {
+				float: left;
+				width: 157.6px;
+				height: 226px;
+				padding: 0 43px 13px 0;
+//				border: 1px solid blue;
+				div.album-wrap {
+					width: 155px;
+//					border: 1px solid yellow;
+					font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+					.album-frame {
+						position: relative;
+						width: 155px;
+						height: 155px;
+						background: url(../img/album_frame.png) no-repeat 0 0;
+						padding: 1px 0 0 1px;
+						background-position: -25px -209px;
+						.count {
+							position: absolute;
+							right: 15px;
+							bottom: 15px;
+							height: 22px;
+							line-height: 22px;
+							color: #fff;
+							-webkit-border-radius: 3px;
+							border-radius: 3px;
+							padding: 0 11px;
+							cursor: pointer;
+							vertical-align: middle;
+							background: url(../img/count_bg.png) repeat-x 0 0;
+							_background: #555;
+						}
+					} // album-frame
+					.album-detail {
+						.album-title {
+							margin-top: 6px;
+							color: #555;
+						}
+						.album-date {
+							margin-top: 4px;
+							width: 155px;
+							white-space: nowrap;
+							color: #888;
+							cursor: default;
+						}
 					}
 				}
-				&:before {
-					content: "";
-					display: inline-block;
-					padding-bottom: 73.3%;
-					width: 0;
-					vertical-align: middle;
-				}
-				&:hover {
-					background-color: $album-hover;
-					opacity: .85;
-					.content {
-						opacity: 1;
-					}
-				}
-			}
-		}
-	}
-	.more-wrap {
-		width: 100%;
-		height: 200px;
-		background-color: $bg-color;
-		font-family: "FangSong";
-		font-size: 20px;
-		.seemore {
-			position: relative;
-			margin: 0 auto;
-			width: 18.8%;
-			&:before {
-				content: "";
-				display: inline-block;
-				padding-bottom: 16.67%;
-				width: 0;
-				vertical-align: middle;
-			}
-			top: 70px;
-			font-size: 20px;
-			font-family: "Microsoft YaHei";
-			letter-spacing: 3px;
-			color: $main-color;
-			border: 1px solid $main-color;
-			text-align: center;
-			&:hover {
-				cursor: pointer;
-				color: #fff;
-				background-color: $main-color;
 			}
 		}
 	}
