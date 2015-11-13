@@ -13,19 +13,27 @@
 	<div class="container">
 		<div class="wrap1">
 			<nav>
-				<div class="nav-top"></div>
+				<div class="nav-top">
+					<div class="nav-top-detail">
+						<ul class="left">
+							<li>网易摄影</li>
+							<li>POCO摄影</li>
+							<li><a href="http://tuchong.com/" target="_blank">图虫网</a></li>
+							<li>旅游攻略</li>
+						</ul>
+						<ul class="right">
+							<li>微博账号</li>
+							<li>微信公众号</li>
+							<i class="i-mobile"></i>
+							<li class="mobile">手机版网页</li>
+							<li>友情链接</li>
+						</ul>
+					</div>
+				</div>
 				<div class="nav-header">
 					<div class="content">
-						<!--						<em class="logo"></em>-->
+						<!--<em class="logo"></em>-->
 						<span><i class="fa fa-camera"></i> 木纹子印象派</span>
-						<!--
-						<div class="share">
-							<p>
-								<a title="公众号"><i class="fa fa-weixin"></i></a>
-								<a title="微博"><i class="fa fa-weibo"></i></a>
-							</p>
-						</div>
--->
 						<div class="search-bar">
 							<input class="search-input">
 							<a class="search-btn">搜全站</a>
@@ -80,18 +88,15 @@
 			<!-- 介绍：图标+文字 -->
 			<div class="slides-control">
 				<div class="content">
-					<a href=""><i class="icon1"></i>
-            商务宴请
-        </a>
-					<a href=""><i class="icon2"></i>
-            商务宴请
-        </a>
-					<a href=""><i class="icon3"></i>
-            商务宴请
-        </a>
-					<a href=""><i class="icon4"></i>
-            商务宴请
-        </a>
+					<span class="j-left"></span>
+					<div class="slides-small">
+						<a href="" class="active"><img src="./img/slides_small_1.jpg" alt="" width="170" height="80"></a>
+						<a href=""><img src="./img/slides_small_2.jpg" alt="" width="170" height="80"></a>
+						<a href=""><img src="./img/slides_small_3.jpg" alt="" width="170" height="80"></a>
+						<a href=""><img src="./img/slides_small_4.jpg" alt="" width="170" height="80"></a>
+						<a href=""><img src="./img/slides_small_5.jpg" alt="" width="170" height="80"></a>
+					</div>
+					<span class="j-right"></span>
 				</div>
 			</div>
 		</div>
@@ -99,17 +104,17 @@
 			<div class="people" ng-repeat="allList in allLists">
 				<div class="nav-classify">
 					<span class="name" ng-bind="allList.name"></span>
-					<span class="more"><i></i><a href="">更多</a></span>
+					<a href="" class="more">更多</a>
 				</div>
 				<ul>
-					<li class='album' ng-repeat="list in allList.lists">
-						<div class='album-wrap'>
-							<div class='album-cover'>
-								<div class='album-frame'>
+					<li class="album" ng-repeat="list in allList.lists">
+						<div class="album-wrap">
+							<div class="album-cover">
+								<div class="album-frame">
 									<a href=""><img src="{{list.cover}}" alt="{{list.name}}"><span class="count" ng-bind="list.count"></span></a>
 								</div>
 							</div>
-							<div class='album-detail'>
+							<div class="album-detail">
 								<p class="album-title"><a href=""><strong ng-bind="list.title"></strong></a></p>
 								<p class="album-date" ng-bind="list.date"></p>
 							</div>
@@ -143,16 +148,16 @@
 				</div>
 				<div class="middle">
 					<p>
-						<a title="公众号"><i class="fa fa-weixin"></i></a>
-						<a title="交流群"><i class="fa fa-qq"></i></a>
-						<a title="微博"><i class="fa fa-weibo"></i></a>
-						<a title="Github" href=""><i class="fa fa-github-alt"></i></a>
+						<a title="公众号见上二维码哦~"><i class="fa fa-weixin"></i></a>
+						<a title="小木瓜：136934101"><i class="fa fa-qq"></i></a>
+						<a title="@摄影师羊驼 @小木瓜DONG"><i class="fa fa-weibo"></i></a>
+						<a title="小木瓜的Github，点击新标签页打开" href="https://github.com/muwenzi" target="_blank"><i class="fa fa-github-alt"></i></a>
 					</p>
 				</div>
 				<div class="right">
-					<div class="info">特别感谢：<a href="https://github.com/douglascrockford" target="_blank">Crockford</a></div>
-					<div class="info">人像摄影师：<a href="http://weibo.com/u/1942937155" target="_blank">羊驼</a></div>
-					<div class="info">设计/开发/维护：<a href="http://weibo.com/u/2378141420" target="_blank">木瓜</a></div>
+					<div class="info">人像/胶片：<a href="http://weibo.com/u/1942937155" target="_blank">摄影师羊驼</a></div>
+					<div class="info">生活/城市印象：<a href="http://weibo.com/u/2378141420" target="_blank">小木瓜DONG</a></div>
+					<div class="info">设计/开发/维护：<a href="http://weibo.com/u/2378141420" target="_blank">小木瓜DONG</a></div>
 				</div>
 			</div>
 		</footer>
