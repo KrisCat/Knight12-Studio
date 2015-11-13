@@ -78,7 +78,7 @@
 
 			</div>
 			<!-- 介绍：图标+文字 -->
-			<div class="intro">
+			<div class="slides-control">
 				<div class="content">
 					<a href=""><i class="icon1"></i>
             商务宴请
@@ -96,82 +96,25 @@
 			</div>
 		</div>
 		<div class="wrap2">
-			<div class="people">
+			<div class="people" ng-repeat="allList in allLists">
+				<div class="nav-classify">
+					<span class="name" ng-bind="allList.name"></span>
+					<span class="more"><i></i><a href="">更多</a></span>
+				</div>
 				<ul>
-					<li class='album'>
+					<li class='album' ng-repeat="list in allList.lists">
 						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg" alt=""><span class="count">12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
+							<div class='album-cover'>
+								<div class='album-frame'>
+									<a href=""><img src="{{list.cover}}" alt="{{list.name}}"><span class="count" ng-bind="list.count"></span></a>
+								</div>
+							</div>
+							<div class='album-detail'>
+								<p class="album-title"><a href=""><strong ng-bind="list.title"></strong></a></p>
+								<p class="album-date" ng-bind="list.date"></p>
+							</div>
 						</div>
 					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww1.sinaimg.cn/thumb150/0062ZzD9gw1exs9sder84j31jm2bckjo.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1exnkbrvxodj31jm2bc7wk.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww3.sinaimg.cn/thumb150/0062ZzD9jw1ex8l94a60wj32bc1jm7wj.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1ex7x2jwwphj32bc1jme82.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1ewzpq4z6w3j32bc1jmu0y.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww4.sinaimg.cn/thumb150/0062ZzD9jw1ewayxa94ypj31jl2bchdt.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww3.sinaimg.cn/thumb150/0062ZzD9jw1evu30gznwjj3226334qv8.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1evksv5r3lmj3226334u0z.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-					<li class='album'>
-						<div class='album-wrap'>
-							<div class='album-cover'><div class='album-frame'><a href=""><img src="http://ww4.sinaimg.cn/thumb150/0062ZzD9jw1ev7nrnedpoj32bc1jmkjo.jpg" alt=""><span class='count'>12张</span></a></div></div>
-							<div class='album-detail'><p class="album-title"><a href=""><strong>南方姑娘</strong></a></p><p class="album-date">2014年11月8日</p></div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="people">
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
 				</ul>
 			</div>
 		</div>
@@ -207,8 +150,8 @@
 					</p>
 				</div>
 				<div class="right">
+					<div class="info">特别感谢：<a href="https://github.com/douglascrockford" target="_blank">Crockford</a></div>
 					<div class="info">人像摄影师：<a href="http://weibo.com/u/1942937155" target="_blank">羊驼</a></div>
-					<div class="info">风光摄影师：<a href="http://weibo.com/u/2378141420" target="_blank">木瓜</a></div>
 					<div class="info">设计/开发/维护：<a href="http://weibo.com/u/2378141420" target="_blank">木瓜</a></div>
 				</div>
 			</div>
