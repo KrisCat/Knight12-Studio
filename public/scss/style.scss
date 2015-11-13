@@ -125,18 +125,26 @@ body {
 				position: relative;
 				width: $small-width;
 				margin: 0 auto;
-				span {
-					display: inline-block;
-					font-size: 26px;
-					font-family: "FangSong";
-					line-height: 70px;
-					text-align: center;
-					.fa-camera {
-						position: relative;
-						top: 2px;
-						color: $main-color;
-					}
+//				span {
+//					display: inline-block;
+//					text-indent: -9999px;
+				img {
+					position: relative;
+					top: 20px;
 				}
+//					background: url(../img/logo_name.png) no-repeat;
+//					width: 101.6px*2.5;
+//					height: 15px*2.5;
+//					font-size: 26px;
+//					font-family: "FangSong";
+//					line-height: 70px;
+//					text-align: center;
+//					.fa-camera {
+//						position: relative;
+//						top: 2px;
+//						color: $main-color;
+//					}
+//				}
 				//				.share {
 				//					position: absolute;
 				//					width: 140px;
@@ -628,21 +636,26 @@ footer {
 				overflow: hidden;
 				position: relative;
 				margin-bottom: 5px;
-				em {
-					display: inline-block;
-					float: left;
-					width: 58px;
-					height: 34px;
-					background: url(../img/sprite.png) no-repeat -135px -81px;
-					transform: scale(.8);
-					-webkit-transform: scale(.8);
-				}
-				span {
-					font-size: 18px;
-					float: left;
-					font-family: "FangSong";
-					line-height: 34px;
-					cursor: default;
+				margin-top: 13px;
+//				em {
+//					display: inline-block;
+//					float: left;
+//					width: 58px;
+//					height: 34px;
+//					background: url(../img/sprite.png) no-repeat -135px -81px;
+//					transform: scale(.8);
+//					-webkit-transform: scale(.8);
+//				}
+//				span {
+//					font-size: 18px;
+//					float: left;
+//					font-family: "FangSong";
+//					line-height: 34px;
+//					cursor: default;
+//				}
+				img {
+					position: relative;
+					left: 12px;
 				}
 			}
 			.info {

@@ -192,7 +192,7 @@ angular.module('index', []).controller('indexController', function ($scope, $htt
 			date: '2014年11月8日'
 		}]
 	};
-	$scope.allLists.push($scope.people, $scope.film, $scope.city)
+	$scope.allLists.push($scope.people, $scope.film, $scope.city);
 		//	$http.get("http://218.244.148.188/json/albumList.json")
 		//		 .success(function (_data) {
 		//			var j = 0;
@@ -202,13 +202,5 @@ angular.module('index', []).controller('indexController', function ($scope, $htt
 		//				$scope.albumList2[i] = _data[j];
 		//			}
 		//		});
-		//	$(".wrap4 .circle-out").click(function() {
-		//		$(".wrap4 .circle-out").removeClass('slideActive');
-		//		$(this).addClass('slideActive');
-		//		$('.wrap4 .sub-wrap').removeClass('active-out');
-		//		$('.wrap4 .active-in').toggleClass('active-out');
-		//		$('.wrap4 .sub-wrap').removeClass('active-in');
-		//		$('.wrap4 .sub-wrap').eq($(this).index()).addClass('active-in');
-		//	});
 
 });
