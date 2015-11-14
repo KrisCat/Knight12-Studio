@@ -3,59 +3,43 @@
 
 <head>
 	<meta charset="UTF-8">
-<!--	<base href="/">-->
-	<title>木纹子视觉工作室</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/icons.css">
-	<link rel="stylesheet" href="css/more.css">
-<!--	<script data-main="js/main" src="js/require.js"></script>-->
+	<title>木纹子印象派</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/album.css">
+	<link rel="stylesheet" href="./css/icons.css">
 </head>
 
-<body ng-app="album" ng-controller="albumController">
+<body ng-app="album" ng-controller="album">
 	<div class="container">
-<!--		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>-->
-		<nav>
-	<div class="nav-top"></div>
-	<div class="nav-header">
-		<div class="content">
-			<em class="logo"></em>
-			<span>木纹子</span>
-			<div class="search-bar">
-				<input class="search-input">
-				<a class="search-btn">搜全站</a>
-			</div>
-		</div>
-	</div>
-	<div class="nav-bar">
-		<div class="nav-content">
-			<a href="/"><span class="left">网站首页</span></a>
-			<span class="left active">全部相册</span>
-			<span class="left">人像写真</span>
-			<span class="left">胶片味道</span>
-			<span class="left">生活印记</span>
-			<span class="right"><i></i>联系我们</span>
-		</div>
-	</div>
-</nav>
+		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
 		<div class="top-img"></div>
 		<div class="main">
-<!--
-			<ul class="nav">
-				<a href="#/all"><li class="active">全部相册</li></a>
-				<a href="#/people"><li>人像写真</li></a>
-				<a href="#/film"><li>胶片味道</li></a>
-				<a href="#/travel"><li>旅途印记</li></a>
-			</ul>
--->
-			<!-- ANGULAR DYNAMIC CONTENT -->
-			<div ng-view></div>
-			<!-- 老版本入口 -->
-			<div class="old">
-				<div class="title">新版本（Version2.0）正在开发中,点击下面按钮可以浏览老版本</div>
-				<a href="v1/index.html"><span>老版本（Version1.0）</span></a>
+			<div class="nav-side">
+				<a><span class="active">作品概述</span></a>
+				<a><span>第一张</span></a>
+				<a><span>最后一张</span></a>
+				<a><span>幻灯片浏览</span></a>
+				<a><span>全部相册</span></a>
+			</div>
+			<div class="photo-list">
+				<div class="intro">
+					<span class="title-line"><span class="title">作品概述</span></span>
+					<span class="cover">
+						<div class="album-wrap">
+							<div class="album-cover">
+								<div class="album-frame">
+									<img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg" alt=""><span class="count">13张</span>
+								</div>
+							</div>
+						</div>
+					</span>
+					<span class="text"></span>
+				</div>
+				<div class="show">
+					<span class="title-line"><span class="title">作品展示</span></span>
+				</div>
 			</div>
 		</div>
-		<div ng-include="'views/common/footer.html'"></div>
 	</div>
 	<script src="js/pruejs.scrollUp.js"></script>
 	<!-- JS libs -->
@@ -63,9 +47,8 @@
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
 	<!-- JS own -->
-	<script src="js/albumRoutes.js"></script>
-	<script src="js/album.js"></script>
-	<script src="js/jquery.more.js"></script>
+	<script src="js/controllers/album.js"></script>
+	<!--	<script src="js/jquery.album.js"></script>-->
 </body>
 
 </html>

@@ -1,9 +1,24 @@
 <nav>
-	<div class="nav-top"></div>
+	<div class="nav-top">
+		<div class="nav-top-detail">
+			<ul class="left">
+				<li>网易摄影</li>
+				<li>POCO摄影</li>
+				<li><a href="http://tuchong.com/" target="_blank">图虫网</a></li>
+				<li>旅游攻略</li>
+			</ul>
+			<ul class="right">
+				<li>微博账号</li>
+				<li>微信公众号</li>
+				<i class="i-mobile"></i>
+				<li class="mobile">手机版网页</li>
+				<li>友情链接</li>
+			</ul>
+		</div>
+	</div>
 	<div class="nav-header">
 		<div class="content">
-			<em class="logo"></em>
-			<span>木纹子</span>
+			<img src="./img/logo_name.png" alt="" width="203.2" height="30">
 			<div class="search-bar">
 				<input class="search-input">
 				<a class="search-btn">搜全站</a>
@@ -11,11 +26,91 @@
 		</div>
 	</div>
 	<div class="nav-bar">
-		<div class="nav-content">
-			<a href="/"><span class="left">网站首页</span></a>
-			<span class="left active">相册专辑</span>
-			<span class="left">拍摄见闻</span>
-			<span class="right"><i></i>联系我们</span>
+		<div class="nav-bar-menu">
+			<a href="/"><span class="left active">首页</span></a>
+			<span class="left">全部相册</span>
+			<span class="left">人像写真</span>
+			<span class="left">胶片味道</span>
+			<span class="left">城市印象</span>
+			<span class="right"><i></i>关于我们</span>
+		</div>
+	</div>
+	<div class="nav-bar-layout">
+		<div class="category">
+			<ul class="all">
+				<li><a href="">照片墙</a></li>
+			</ul>
+			<ul class="people">
+				<li><a href="">校园</a></li>
+				<li><a href="">风景</a></li>
+				<li><a href="">私房</a></li>
+				<li><a href="">婚纱</a></li>
+			</ul>
+			<ul class="film">
+				<li><a href="">人像</a></li>
+				<li><a href="">风景</a></li>
+				<li><a href="">生活</a></li>
+			</ul>
+			<ul class="life">
+				<li><a href="">南京&nbsp;&nbsp;&nbsp;&nbsp;杭州</a></li>
+				<li><a href="">上海&nbsp;&nbsp;&nbsp;&nbsp;西塘</a></li>
+				<li><a href="">苏州&nbsp;&nbsp;&nbsp;&nbsp;乌镇</a></li>
+				<li><a href="">扬州&nbsp;&nbsp;&nbsp;&nbsp;桐乡</a></li>
+				<li><a href="">内蒙&nbsp;&nbsp;&nbsp;&nbsp;三亚</a></li>
+			</ul>
+			<ul class="about">
+				<li><a href="">工作室</a></li>
+				<li><a href="">关于我们</a></li>
+				<li><a href="">联系方式</a></li>
+			</ul>
 		</div>
 	</div>
 </nav>
+
+
+<script>
+	$(function () {
+
+		$('.nav li').click(function () {
+			$("li").removeAttr("class");
+			$(this).addClass('active')
+		});
+		$('.search-bar').focusin(function () {
+			$(this).find('.search-btn').addClass('search-btn-foucs')
+		});
+		$('.search-bar').focusout(function () {
+			$(this).find('.search-btn').removeClass('search-btn-foucs')
+		});
+
+		$('.nav-bar-menu span').hover(
+			function () {
+				$('.nav-bar-layout').show();
+				$(this).index() !== 0 && $('.category ul').eq($(this).index() - 1).addClass('ul-active')
+			},
+			function () {
+				$('.nav-bar-layout ul').removeClass('ul-active');
+				$('.nav-bar-layout').hide();
+				$('.nav-bar-layout').hover(
+					function () {
+						$('.nav-bar-layout').show();
+					},
+					function () {
+						$('.nav-bar-layout').hide();
+					}
+				);
+			});
+		$('.category ul').hover(
+			function () {
+				$(this).addClass('ul-active')
+				$('.nav-bar-menu span').eq($(this).index() + 1).addClass('span-hover');
+			},
+			function () {
+				$(this).removeClass('ul-active')
+				$('.nav-bar-menu span').eq($(this).index() + 1).removeClass('span-hover');
+			}
+		);
+		$('.search-btn').click(function () {
+			alert('啊，这只程序猿好像还没来得及写搜索功能-_-!');
+		})
+	});
+</script>

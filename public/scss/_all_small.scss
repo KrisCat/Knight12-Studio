@@ -1,13 +1,257 @@
 @media screen and (max-width: 1400px) {
 	nav {
-		.nav-header {
-			.content {
+		position: relative;
+		width: 100%;
+		.nav-top {
+			height: 36px;
+			//background-color: $bg-color-less;
+			//			background-color: #edf0ef;
+			background-color: #f6f6f6;
+			font-family: "Microsoft YaHei";
+			.nav-top-detail {
+				//				border: 1px solid red;
+				//				box-sizing: border-box;
+				position: relative;
 				width: $small-width;
+				height: 36px;
+				margin: 0 auto;
+				ul,
+				li {
+					display: inline-block;
+					cursor: pointer;
+					color: #282828;
+					overflow: hidden;
+					//					box-sizing: content-box;
+				}
+				li {
+					padding: 0 10px;
+					margin-top: 11px;
+					//					border: 1px solid blue;
+					//					box-sizing: border-box;
+				}
+				.left {
+					float: left;
+					margin-left: -6px;
+					li {
+						padding-left: 8px;
+						border-left: 2px solid #ebebeb;
+						margin-left: -2px;
+					}
+				}
+				.right {
+					float: right;
+					position: relative;
+					margin-right: -9px;
+					li {
+						padding-left: 8px;
+						border-left: 2px solid #ebebeb;
+						margin-left: -2px;
+						&.mobile {
+							padding-left: 25px;
+						}
+					}
+					.i-mobile {
+						display: inline-block;
+						background: url(../img/top_icons.png) no-repeat;
+						width: 11px;
+						height: 14px;
+						background-position: -20px -40px;
+						margin-right: 5px;
+						margin-top: 2px;
+						position: absolute;
+						top: 8px;
+						left: 160px;
+						background-color: #f6f6f6;
+					}
+				}
+			}
+		}
+		.nav-header {
+			height: 70px;
+			background-color: #fff;
+			//			background: url(../img/nav.png);
+			em {
+				display: inline-block;
+				float: left;
+				width: 58px;
+				height: 34px;
+				background: url(../img/sprite.png) no-repeat -135px -81px;
+				transform: scale(1.1);
+				-webkit-transform: scale(1.1);
+				margin-top: 16px;
+			}
+			.content {
+				position: relative;
+				width: $small-width;
+				margin: 0 auto;
+				img {
+					position: relative;
+					top: 20px;
+				}
+				.search-bar {
+					display: inline-block;
+					float: right;
+					position: relative;
+					margin-top: 15px;
+					input {
+						padding-right: 83px;
+						width: 309px;
+						height: 18px;
+						font-size: 14px;
+						padding: 10px 66px 10px 10px;
+						border: 1px solid #e3e3e3;
+						border-top-right-radius: 2px;
+						border-bottom-right-radius: 2px;
+					}
+					input:focus {
+						border: 1px solid $main-color;
+					}
+					.search-btn {
+						position: absolute;
+						box-sizing: border-box;
+						top: 0;
+						right: 0;
+						width: 70px;
+						height: 40px;
+						cursor: pointer;
+						text-align: center;
+						line-height: 40px;
+						border: 1px solid #e3e3e3;
+						color: #999;
+						border-top-right-radius: 2px;
+						border-bottom-right-radius: 2px;
+						&:hover {
+							background-color: $main-color-hover;
+							color: #fff;
+						}
+					}
+					.search-btn-foucs {
+						background-color: $main-color;
+						border: 1px solid $main-color-hover;
+						color: #fff;
+					}
+				}
 			}
 		}
 		.nav-bar {
-			.nav-content {
+			position: relative;
+			background-color: $main-color;
+			border-bottom: 1px solid $main-color-bottom;
+			height: 39px;
+			line-height: 40px;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+			-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+			.nav-bar-menu {
 				width: $small-width;
+				margin: 0 auto;
+				font-size: 16px;
+				overflow: hidden;
+				span {
+					display: inline-block;
+					height: 40px;
+					padding: 0 25px;
+					line-height: 40px;
+					border-right: 1px solid #29a98f;
+					color: #fff;
+					&.left {
+						float: left;
+					}
+					&.right {
+						float: right;
+						margin-right: 0;
+						border-left: 1px solid #29a98f;
+						i {
+							display: inline-block;
+							width: 16px;
+							height: 16px;
+							margin-right: 8px;
+							position: relative;
+							top: 2px;
+							background: url(../img/ren_icon.png) no-repeat;
+						}
+					}
+				}
+				.active {
+					background-color: $main-color-hover;
+				}
+				span:first-child {
+					border-left: 1px solid #29a98f;
+				}
+				span:hover {
+					cursor: pointer;
+					background-color: $main-color-hover;
+				}
+				span.span-hover {
+					cursor: pointer;
+					background-color: $main-color-hover;
+				}
+			} // nav-bar-menu
+		} //nav-bar
+		.nav-bar-layout {
+			display: none;
+			position: absolute;
+			z-index: 999999;
+			top: 146px;
+			height: 180px;
+			width: 100%;
+			background-color: #f1f1f1;
+			background-color: rgba(241, 241, 241, 0.7);
+			transition: all .2s ease-in;
+			-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+			-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+			.category {
+				width: $small-width;
+				position: relative;
+				margin: 0 auto;
+				ul {
+					display: inline-block;
+					float: left;
+					width: 114px;
+					height: 180px;
+					border-right: 1px solid #acadad;
+					vertical-align: top;
+					&:first-child {
+						margin-left: 83px;
+						border-left: 1px solid #acadad;
+					}
+					&:last-child {
+						position: absolute;
+						right: 0;
+						width: 138px;
+						border-left: 1px solid #acadad;
+						border-right: 1px solid #acadad;
+						li {
+							width: 138px;
+							a {
+								width: 138px;
+							}
+						}
+					}
+					li {
+						height: 30px;
+						width: 114px;
+						line-height: 30px;
+						font-size: 14px;
+						text-align: center;
+						a {
+							display: inline-block;
+							width: 114px;
+						}
+					}
+					li:first-child {
+						margin-top: 12px;
+					}
+					li:hover {
+						background-color: $main-color-hover;
+						a {
+							color: #fff;
+						}
+					}
+				} // end ul
+				ul.ul-active {
+					background-color: rgba(241, 241, 241, .73);
+				}
 			}
 		}
 	}
@@ -17,28 +261,114 @@
 		height: 148px;
 	}
 	.main {
-		width: $small-width;
-		height: 800px;
-		.main-content {
-			.wrap {
-				.sub-wrap {
-					.img-wrap {
-						width: 192px;
-						height: 142.6px;
-						img {
-							width: 184px;
-							height: 134.6px;
-						}
-						.cover {
-							width: 184px;
-							height: 134.6px;
-							.content {
-								-webkit-transform: scale(.7);
-								transform: scale(.95);
+		box-sizing: border-box;
+//		border: 1px solid #ddd;
+		position: relative;
+		width: 860px;
+		left: 50%;
+		margin-left: -480px;
+		//		margin: 0 auto;
+//		height: 1800px;
+		margin-top: 80px;
+		margin-bottom: 120px;
+		font-family: "Microsoft YaHei";
+		.nav-side {
+			//			box-sizing: border-box;
+			//			border: 1px solid $main-color;
+			position: absolute;
+			width: 100px;
+			height: 162px;
+			right: -100px;
+			span {
+				display: block;
+				font-size: 13.5px;
+				height: 28px;
+				line-height: 28px;
+				padding-left: 10px;
+				border-left: 4px solid #e5e5e5;
+				background-color: #f6f6f6;
+				&:hover,
+				&.active {
+					border-left: 4px solid $main-color;
+					background-color: $bg-color;
+				}
+			}
+		}
+		.photo-list {
+//			padding: 10px;
+			span.title-line {
+				//				border: 1px solid red;
+//				border: 1px solid #ddd;
+				background-color: #f4f4f4;
+				display: inline-block;
+				height: 32px;
+				width: 858px;
+				margin-bottom: 25px;
+				.title {
+					display: inline-block;
+					background-color: $main-color;
+					text-align: center;
+					color: #fff;
+					width: 100px;
+					line-height: 32px;
+					font-size: 16px;
+					cursor: default;
+				}
+			}
+			.intro {
+								box-sizing: border-box;
+								border: 1px solid #ddd;
+				height: 240px;
+				span.cover {
+					position: relative;
+					left: 20px;
+					div.album-wrap {
+						width: 155px;
+						font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+						.album-frame {
+							position: relative;
+							width: 155px;
+							height: 155px;
+							background: url(../img/album_frame.png) no-repeat 0 0;
+							padding: 1px 0 0 1px;
+							background-position: -25px -209px;
+							.count {
+								position: absolute;
+								right: 15px;
+								bottom: 15px;
+								height: 22px;
+								line-height: 22px;
+								color: #fff;
+								-webkit-border-radius: 3px;
+								border-radius: 3px;
+								padding: 0 11px;
+								cursor: pointer;
+								vertical-align: middle;
+								background: url(../img/count_bg.png) repeat-x 0 0;
+								_background: #555;
+							}
+						} // album-frame
+						.album-detail {
+							.album-title {
+								margin-top: 6px;
+								color: #555;
+							}
+							.album-date {
+								margin-top: 4px;
+								width: 155px;
+								white-space: nowrap;
+								color: #888;
+								cursor: default;
 							}
 						}
 					}
 				}
+			}
+			.show {
+				box-sizing: border-box;
+				border: 1px solid #ddd;
+				margin-top: 50px;
+				height: 1500px;
 			}
 		}
 	}

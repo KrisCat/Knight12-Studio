@@ -32,13 +32,6 @@ body {
 
 // 第1部分：导航加背景图
 .wrap1 {
-	//	&:before {
-	//		content: '';
-	//		display: block;
-	//		width: 100%;
-	//		height: 2px;
-	//		background-color: $main-color;
-	//	}
 	width: 100%;
 	nav {
 		position: relative;
@@ -46,29 +39,29 @@ body {
 		.nav-top {
 			height: 36px;
 			//background-color: $bg-color-less;
-//			background-color: #edf0ef;
+			//			background-color: #edf0ef;
 			background-color: #f6f6f6;
-			font-family: "Tahoma,sans-serif,Microsoft YaHei";
+			font-family: "Microsoft YaHei";
 			.nav-top-detail {
-//				border: 1px solid red;
-//				box-sizing: border-box;
+				//				border: 1px solid red;
+				//				box-sizing: border-box;
 				position: relative;
 				width: $small-width;
 				height: 36px;
 				margin: 0 auto;
-				ul,li {
+				ul,
+				li {
 					display: inline-block;
 					cursor: pointer;
 					color: #282828;
 					overflow: hidden;
-//					box-sizing: content-box;
-					//					font-family: Tahoma,sans-serif,Microsoft YaHei;
+					//					box-sizing: content-box;
 				}
 				li {
 					padding: 0 10px;
 					margin-top: 11px;
-//					border: 1px solid blue;
-//					box-sizing: border-box;
+					//					border: 1px solid blue;
+					//					box-sizing: border-box;
 				}
 				.left {
 					float: left;
@@ -125,71 +118,10 @@ body {
 				position: relative;
 				width: $small-width;
 				margin: 0 auto;
-//				span {
-//					display: inline-block;
-//					text-indent: -9999px;
 				img {
 					position: relative;
 					top: 20px;
 				}
-//					background: url(../img/logo_name.png) no-repeat;
-//					width: 101.6px*2.5;
-//					height: 15px*2.5;
-//					font-size: 26px;
-//					font-family: "FangSong";
-//					line-height: 70px;
-//					text-align: center;
-//					.fa-camera {
-//						position: relative;
-//						top: 2px;
-//						color: $main-color;
-//					}
-//				}
-				//				.share {
-				//					position: absolute;
-				//					width: 140px;
-				//					height: 28px;
-				//					right: 0;
-				//					top: 24px;
-				//					text-align: center;
-				//					z-index: 3;
-				//					a {
-				//						background-color: #fafafa;
-				//						display: inline-block;
-				//						float: left;
-				//						font-family: "Ionicons";
-				//						color: rgba(255, 255, 255, .92);
-				//						font-size: 18px;
-				//						height: 28px;
-				//						width: 68px;
-				//						line-height: 28px;
-				//						overflow: hidden;
-				//						text-align: center;
-				//						text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-				//						border: solid 1px $main-color-bottom;
-				//						background-color: $main-color-hover;
-				//						&:hover {
-				//							background-color: #4fdbbe;
-				//							border: solid 1px #4fdbbe;
-				//							i {
-				//								color: #fafafa;
-				//							}
-				//						}
-				//						&:first-child {
-				//							border-top-left-radius: 6px;
-				//							border-bottom-left-radius: 6px;
-				//						}
-				//						&:last-child {
-				//							border-top-right-radius: 6px;
-				//							border-bottom-right-radius: 6px;
-				//						}
-				//						i {
-				//							color: #fff;
-				//							transform: scale(.9);
-				//							-webkit-transform: scale(.9);
-				//						}
-				//					}
-				//				}
 				.search-bar {
 					display: inline-block;
 					float: right;
@@ -438,8 +370,6 @@ body {
 	& > div {
 		position: relative;
 		width: 1003px;
-		//		height: 600px;
-		//		margin: 0 auto;
 		left: 50%;
 		margin-left: -480px;
 		margin-top: 80px;
@@ -637,22 +567,22 @@ footer {
 				position: relative;
 				margin-bottom: 5px;
 				margin-top: 13px;
-//				em {
-//					display: inline-block;
-//					float: left;
-//					width: 58px;
-//					height: 34px;
-//					background: url(../img/sprite.png) no-repeat -135px -81px;
-//					transform: scale(.8);
-//					-webkit-transform: scale(.8);
-//				}
-//				span {
-//					font-size: 18px;
-//					float: left;
-//					font-family: "FangSong";
-//					line-height: 34px;
-//					cursor: default;
-//				}
+				//				em {
+				//					display: inline-block;
+				//					float: left;
+				//					width: 58px;
+				//					height: 34px;
+				//					background: url(../img/sprite.png) no-repeat -135px -81px;
+				//					transform: scale(.8);
+				//					-webkit-transform: scale(.8);
+				//				}
+				//				span {
+				//					font-size: 18px;
+				//					float: left;
+				//					font-family: "FangSong";
+				//					line-height: 34px;
+				//					cursor: default;
+				//				}
 				img {
 					position: relative;
 					left: 12px;
@@ -724,19 +654,6 @@ footer {
 
 // 媒体查询
 @media screen and (max-width:1400px) {
-	.wrap3 {
-		.text {
-			font-size: 16px;
-			.content {
-				line-height: 28px;
-			}
-			.middle {
-				.linebt {
-					display: none;
-				}
-			}
-		}
-	}
 	.wrap6 {
 		.sub-wrap {
 			top: -95px;
@@ -752,60 +669,59 @@ footer {
 }
 
 // wrap4动画
-.wrap4 {
-	.sub-wrap.active-in {
-		display: block;
-		z-index: 2;
-		-webkit-animation: wrap4-text-in 1.5s linear forwards;
-		animation: wrap4-text-in 1.5s linear forwards;
-	}
-	.sub-wrap.active-out {
-		display: block;
-		z-index: 1;
-		-webkit-animation: wrap4-text-out .8s linear forwards;
-		animation: wrap4-text-out .8s linear forwards;
-	}
-}
-
-@keyframes wrap4-text-in {
-	0% {
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0);
-		opacity: 0; //占位，否则布局会出错
-	}
-	1% {
-		-webkit-transform: translate(1500px, 0);
-		transform: translate(1500px, 0);
-	}
-	82% {
-		-webkit-transform: translate(1500px, 0);
-		transform: translate(1500px, 0)
-	}
-	88% {
-		-webkit-transform: translate(-20px, 0);
-		transform: translate(-20px, 0)
-	}
-	94% {
-		-webkit-transform: translate(10px, 0);
-		transform: translate(10px, 0)
-	}
-	100% {
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0)
-	}
-}
-
-@keyframes wrap4-text-out {
-	0% {
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0)
-	}
-	70% {
-		-webkit-transform: translate(20px, 0);
-		transform: translate(20px, 0)
-	}
-	100% {
-		-webkit-transform: translate(-1500px, 0);
-		transform: translate(-1500px, 0)
-	}
-}
+//.wrap4 {
+//	.sub-wrap.active-in {
+//		display: block;
+//		z-index: 2;
+//		-webkit-animation: wrap4-text-in 1.5s linear forwards;
+//		animation: wrap4-text-in 1.5s linear forwards;
+//	}
+//	.sub-wrap.active-out {
+//		display: block;
+//		z-index: 1;
+//		-webkit-animation: wrap4-text-out .8s linear forwards;
+//		animation: wrap4-text-out .8s linear forwards;
+//	}
+//}
+//@keyframes wrap4-text-in {
+//	0% {
+//		-webkit-transform: translate(0, 0);
+//		transform: translate(0, 0);
+//		opacity: 0; //占位，否则布局会出错
+//	}
+//	1% {
+//		-webkit-transform: translate(1500px, 0);
+//		transform: translate(1500px, 0);
+//	}
+//	82% {
+//		-webkit-transform: translate(1500px, 0);
+//		transform: translate(1500px, 0)
+//	}
+//	88% {
+//		-webkit-transform: translate(-20px, 0);
+//		transform: translate(-20px, 0)
+//	}
+//	94% {
+//		-webkit-transform: translate(10px, 0);
+//		transform: translate(10px, 0)
+//	}
+//	100% {
+//		-webkit-transform: translate(0, 0);
+//		transform: translate(0, 0)
+//	}
+//}
+//
+//@keyframes wrap4-text-out {
+//	0% {
+//		-webkit-transform: translate(0, 0);
+//		transform: translate(0, 0)
+//	}
+//	70% {
+//		-webkit-transform: translate(20px, 0);
+//		transform: translate(20px, 0)
+//	}
+//	100% {
+//		-webkit-transform: translate(-1500px, 0);
+//		transform: translate(-1500px, 0)
+//	}
+//}
