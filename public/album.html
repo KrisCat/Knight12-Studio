@@ -16,8 +16,9 @@
 		<div class="main">
 			<div class="nav-side">
 				<a><span class="active">作品概述</span></a>
-				<a><span>第一张</span></a>
-				<a><span>最后一张</span></a>
+				<a><span>作品展示</span></a>
+				<a><span class="sub">第一张</span></a>
+				<a><span class="sub">最后一张</span></a>
 				<a><span>幻灯片浏览</span></a>
 				<a><span>全部相册</span></a>
 			</div>
@@ -37,9 +38,13 @@
 				</div>
 				<div class="show">
 					<span class="title-line"><span class="title">作品展示</span></span>
+					<div class="img">
+						<img src="{{img.src}}" alt="" ng-repeat="img in imgs" width="755">
+					</div>
 				</div>
 			</div>
 		</div>
+		<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>
 	</div>
 	<script src="js/pruejs.scrollUp.js"></script>
 	<!-- JS libs -->

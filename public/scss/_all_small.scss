@@ -262,47 +262,53 @@
 	}
 	.main {
 		box-sizing: border-box;
-//		border: 1px solid #ddd;
+		//		border: 1px solid #ddd;
 		position: relative;
-		width: 860px;
+		width: 800px;
 		left: 50%;
 		margin-left: -480px;
 		//		margin: 0 auto;
-//		height: 1800px;
+		//		height: 1800px;
 		margin-top: 80px;
 		margin-bottom: 120px;
 		font-family: "Microsoft YaHei";
 		.nav-side {
-			//			box-sizing: border-box;
+			box-sizing: border-box;
 			//			border: 1px solid $main-color;
 			position: absolute;
-			width: 100px;
+			width: 141px;
 			height: 162px;
-			right: -100px;
+			right: -160px;
 			span {
 				display: block;
 				font-size: 13.5px;
 				height: 28px;
 				line-height: 28px;
-				padding-left: 10px;
+				padding-left: 12px;
 				border-left: 4px solid #e5e5e5;
 				background-color: #f6f6f6;
+//				color: $main-color;
 				&:hover,
 				&.active {
 					border-left: 4px solid $main-color;
 					background-color: $bg-color;
+//					color: #000;
+				}
+				&.sub {
+					padding-left: 27px;
+					font-size: 12px;
 				}
 			}
 		}
 		.photo-list {
-//			padding: 10px;
+			//			padding: 10px;
 			span.title-line {
 				//				border: 1px solid red;
-//				border: 1px solid #ddd;
+				//				border: 1px solid #ddd;
 				background-color: #f4f4f4;
 				display: inline-block;
 				height: 32px;
-				width: 858px;
+				width: 798px;
 				margin-bottom: 25px;
 				.title {
 					display: inline-block;
@@ -316,8 +322,8 @@
 				}
 			}
 			.intro {
-								box-sizing: border-box;
-								border: 1px solid #ddd;
+				box-sizing: border-box;
+				border: 1px solid #ddd;
 				height: 240px;
 				span.cover {
 					position: relative;
@@ -368,14 +374,137 @@
 				box-sizing: border-box;
 				border: 1px solid #ddd;
 				margin-top: 50px;
-				height: 1500px;
+				//				height: 1500px;
+				.img {
+					text-align: center;
+					img {
+						margin-bottom: 20px;
+					}
+				}
 			}
 		}
 	}
+	// 页脚
+	.line-bt {
+//		    position: absolute;
+//    bottom: 0;
+    width: 100%;
+		height: 13px;
+    background-color: #f7f7f7;
+	}
 	footer {
+		width: 100%;
+		position: relative;
+		&:before {
+			content: "";
+			display: inline-block;
+			padding-bottom: 13%;
+			width: 0;
+		}
+		background-color: #e5edee;
 		.wrap {
+			display: inline-block;
+			position: absolute;
 			width: $small-width;
+			overflow: hidden;
+			left: 50%;
 			margin-left: -$small-width/2;
+			top: 50%;
+			margin-top: -50px;
+			&>div {
+				//			border: 1px solid red;
+			}
+			.left {
+				float: left;
+				width: 390px;
+				height: 100px;
+				.title {
+					overflow: hidden;
+					position: relative;
+					margin-bottom: 5px;
+					margin-top: 13px;
+					//				em {
+					//					display: inline-block;
+					//					float: left;
+					//					width: 58px;
+					//					height: 34px;
+					//					background: url(../img/sprite.png) no-repeat -135px -81px;
+					//					transform: scale(.8);
+					//					-webkit-transform: scale(.8);
+					//				}
+					//				span {
+					//					font-size: 18px;
+					//					float: left;
+					//					font-family: "FangSong";
+					//					line-height: 34px;
+					//					cursor: default;
+					//				}
+					img {
+						position: relative;
+						left: 12px;
+					}
+				}
+				.info {
+					margin-left: 10px;
+					font-size: 14px;
+					font-family: "FangSong";
+					line-height: 30px;
+					font-weight: 200;
+					cursor: default;
+				}
+			}
+			.middle {
+				position: absolute;
+				width: 300px;
+				height: 100px;
+				left: 50%;
+				margin-left: -150px;
+				text-align: center;
+				padding-top: 30px;
+				a {
+					background-color: rgba(0, 0, 0, .2);
+					display: inline-block;
+					font-family: "Ionicons";
+					color: rgba(255, 255, 255, .92);
+					font-size: 22px;
+					height: 40px;
+					width: 40px;
+					line-height: 40px;
+					border-radius: 20px;
+					overflow: hidden;
+					text-align: center;
+					margin-right: 6px;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+					&:hover {
+						background-color: $main-color;
+					}
+					i {
+						transform: scale(.9);
+						-webkit-transform: scale(.9);
+					}
+					.fa-qq {
+						transform: scale(.8);
+						-webkit-transform: scale(.8);
+					}
+				}
+			}
+			.right {
+				float: right;
+				width: 200px;
+				height: 100px;
+				.info {
+					margin-left: 10px;
+					font-size: 14px;
+					font-family: "FangSong";
+					line-height: 30px;
+					font-weight: 200;
+					cursor: default;
+					a:hover {
+						background-color: $main-color;
+						color: #fff;
+					}
+				}
+			}
 		}
 	}
 }
