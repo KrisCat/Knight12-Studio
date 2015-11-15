@@ -1,5 +1,16 @@
 angular.module('album', [])
 	   .controller('album', function ($scope) {
+			$scope.info = {
+				name: '《后棠》',
+				belong: '人像写真--其他',
+				model: '@耳东耳东LION',
+//				device: 'Canon 5DMarkIII 35/1.4L',
+				date: '2015-11-5',
+				place: '南京·咖啡馆',
+				author: '@摄影师羊驼',
+				description: '如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。',
+				by: '——简媜《美丽的茧》'
+			};
 			$scope.imgs = [
 				{src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpclu82qj32bc1jme83.jpg'},
 				{src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg'},
