@@ -14,46 +14,40 @@
 		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
 		<div class="top-img"></div>
 		<div class="main">
-			<div class="nav-side">
-				<a><span class="active">作品概述</span></a>
-				<a><span>作品展示</span></a>
-				<a><span class="sub">第一张</span></a>
-				<a><span class="sub">最后一张</span></a>
-				<a><span>幻灯片浏览</span></a>
-				<a><span>全部相册</span></a>
+			<div class="sub-nav">
+				<span>所有分类</span>
 			</div>
-			<div class="photo-list">
-				<div class="intro">
-					<span class="title-line"><span class="title">作品概述</span></span>
-					<span class="cover">
-						<div class="album-wrap">
-							<div class="album-cover">
-								<div class="album-frame">
-									<img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg" alt=""><span class="count">13张</span>
-								</div>
-							</div>
-						</div>
-					</span>
-					<span class="text">
-						<div class="row">
-							<i class="left">专辑名称：<em ng-bind="info.name"></em></i>
-							<i class="middle">所属分类：<em ng-bind="info.belong"></em></i>
-							<i class="right">麻豆：<em ng-bind="info.model"></em></i>
-						</div>
-						<div class="row">
-							<i class="left">拍摄日期：<em ng-bind="info.date"></em></i>
-							<i class="middle">拍摄地点：<em ng-bind="info.place"></em></i>
-							<i class="right">摄影师：<em ng-bind="info.author"></em></i>
-						</div>
-						<div class="description"><em>“</em><span ng-bind="info.description"></span><em>”</em><div class="by" ng-bind="info.by"></div></div>
-					</span>
-				</div>
-				<div class="show">
-					<span class="title-line"><span class="title">作品展示</span></span>
-					<div class="img">
-						<img src="{{img.src}}" alt="" ng-repeat="img in imgs" width="755">
-					</div>
-				</div>
+			<div class="allclass">
+				<span class="tagclass">人像写真</span>
+				<span>环境</span>
+				<span>妆面</span>
+				<span>黑白</span>
+				<span>日系</span>
+				<span>私房</span>
+				<span>糖水</span>
+				<span class="tagclass">胶片味道</span>
+				<span>人像</span>
+				<span>风景</span>
+				<span>街拍</span>
+				<span>生活</span>
+				<span>随拍</span>
+				<span>其他</span>
+				<span class="tagclass">城市印象</span>
+				<span>南京</span>
+				<span>杭州</span>
+				<span>苏州</span>
+				<span>扬州</span>
+				<span>西塘</span>
+				<span>乌镇</span>
+				<span>桐乡</span>
+				<span>内蒙</span>
+				<span class="tagclass">舌尖味道</span>
+				<span>三亚</span>
+				<span>校园的日子</span>
+				<span>校园的日子</span>
+				<span>校园的日子</span>
+				<span>校园的日子</span>
+				<span>校园的日子</span>
 			</div>
 		</div>
 		<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>

@@ -223,29 +223,36 @@ nav {
 					li {
 						width: 138px;
 						a {
-							width: 138px;
+//							width: 138px;
 						}
 					}
 				}
 				li {
 					height: 30px;
 					width: 114px;
-					line-height: 30px;
-					font-size: 14px;
 					text-align: center;
 					a {
+						line-height: 21px;
+						font-size: 14px;
 						display: inline-block;
-						width: 114px;
+						i {
+							margin-left: 6px;
+							margin-right: 6px;
+						}
+//						width: 114px;
 					}
 				}
 				li:first-child {
 					margin-top: 12px;
 				}
-				li:hover {
-					background-color: $main-color-hover;
-					a {
-						color: #fff;
+				a:hover {
+					i {
+					color: $main-color;
+					border-bottom: 2px solid $main-color;
 					}
+//					a {
+//						color: #fff;
+//					}
 				}
 			} // end ul
 			ul.ul-active {
