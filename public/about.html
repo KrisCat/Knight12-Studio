@@ -5,16 +5,43 @@
 	<meta charset="UTF-8">
 	<title>木纹子印象派</title>
 	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/function.css">
 	<link rel="stylesheet" href="./css/about.css">
 	<link rel="stylesheet" href="./css/icons.css">
 </head>
 
-<body ng-app="album" ng-controller="album">
+<body ng-app="about" ng-controller="about">
 	<div class="container">
 		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
 		<div class="top-img"></div>
-		<div class="main">
-
+		<div class="main f-cb">
+			<div class="sub-nav f-oh">
+<!--				<span class="tag f-fl"></span>-->
+				<span class="title f-fl f-tac f-fwbr">关于我们</span>
+				<div class="classify f-ib f-fr f-tac">
+					<span class='active'>简介</span>
+					<span>印象派</span>
+					<span>爱心公益</span>
+				</div>
+			</div>
+			<div class="content"></div>
+<!--
+			<ul>
+				<li class="album" ng-repeat="list in people.lists">
+					<div class="album-wrap">
+						<div class="album-cover">
+							<div class="album-frame">
+								<a href=""><img src="{{list.cover}}" alt="{{list.name}}"><span class="count" ng-bind="list.count"></span></a>
+							</div>
+						</div>
+						<div class="album-detail">
+							<p class="album-title"><a href=""><strong ng-bind="list.title"></strong></a></p>
+							<p class="album-date" ng-bind="list.date"></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+-->
 		</div>
 		<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>
 	</div>
@@ -24,7 +51,7 @@
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
 	<!-- JS own -->
-	<script src="js/controllers/album.js"></script>
+	<script src="js/controllers/about.js"></script>
 	<!--	<script src="js/jquery.album.js"></script>-->
 </body>
 

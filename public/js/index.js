@@ -203,4 +203,6 @@ angular.module('index', []).controller('indexController', function ($scope, $htt
 		//			}
 		//		});
 
-});
+}).controller('album-nav', function ($scope) {
+
+	});

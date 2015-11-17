@@ -17,10 +17,124 @@ body {
 }
 
 .main {
-	box-sizing: border-box;
-	border: 1px solid #ddd;
+	//	box-sizing: border-box;
+	//	border: 1px solid #ddd;
 	position: relative;
 	width: $small-width;
-	height: 1800px;
+//	height: 1800px;
 	margin: 0 auto;
+	margin-bottom: 50px;
+	.sub-nav {
+		margin-top: 50px;
+		width: 100%;
+		height: 40px;
+		border: 1px solid #eee;
+		cursor: default;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-ms-border-radius: 2px;
+		-o-border-radius: 2px;
+		border-radius: 2px;
+//		span.tag {
+//			background-color: $main-color;
+//			width: 4px;
+//			height: 40px;
+//			margin-right: 12px;
+//		}
+		span.title {
+			height: 40px;
+			width: 120px;
+			line-height: 40px;
+			font-size: 16px;
+			background-color: $main-color;
+			color: #fff;
+		}
+		.classify {
+			margin-right: 10px;
+			height: 40px;
+			line-height: 40px;
+			span {
+				height: 22px;
+				line-height: 22px;
+				font-size: 13px;
+				width: 70px;
+				border-left: 1px solid #eee;
+				cursor: pointer;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				-ms-border-radius: 2px;
+				-o-border-radius: 2px;
+				border-radius: 2px;
+				&:first-child {
+					border-left: 1px solid #fff;
+				}
+				&:hover,
+				&.active {
+					background-color: $main-color;
+					color: #fff;
+//					padding: 3px;
+				}
+				&:last-child:hover,&:last-child.active {
+					background-color: #ed4040;
+					color: #fff;
+				}
+			}
+		}
+	} // sub-nav
+	.content {
+		height: 800px;
+		border: 1px #eee solid;
+	}
+	ul {
+		margin-top: 30px;
+		width: 1003px;
+		li {
+			float: left;
+			width: 157.6px;
+			height: 226px;
+			padding: 0 43px 13px 0;
+			//				border: 1px solid blue;
+			div.album-wrap {
+				width: 155px;
+				//					border: 1px solid yellow;
+				font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+				.album-frame {
+					position: relative;
+					width: 155px;
+					height: 155px;
+					background: url(../img/album_frame.png) no-repeat 0 0;
+					padding: 1px 0 0 1px;
+					background-position: -25px -209px;
+					.count {
+						position: absolute;
+						right: 15px;
+						bottom: 15px;
+						height: 22px;
+						line-height: 22px;
+						color: #fff;
+						-webkit-border-radius: 3px;
+						border-radius: 3px;
+						padding: 0 11px;
+						cursor: pointer;
+						vertical-align: middle;
+						background: url(../img/count_bg.png) repeat-x 0 0;
+						_background: #555;
+					}
+				} // album-frame
+				.album-detail {
+					.album-title {
+						margin-top: 6px;
+						color: #555;
+					}
+					.album-date {
+						margin-top: 4px;
+						width: 155px;
+						white-space: nowrap;
+						color: #888;
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
 }
