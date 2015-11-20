@@ -24,6 +24,7 @@ body {
 		width: 110px;
 		margin-right: 0;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+		border: 3px solid rgba(255,255,255,.5);
 		-webkit-border-radius: 50%;
 		-moz-border-radius: 50%;
 		-ms-border-radius: 50%;
@@ -48,7 +49,7 @@ body {
 		width: 300px;
 		left: 50%;
 		margin-left: -150px;
-//				border: 1px #0f0 solid;
+		//				border: 1px #0f0 solid;
 		span {
 			position: relative;
 			cursor: pointer;
@@ -59,9 +60,10 @@ body {
 			line-height: 30px;
 			font-size: 16px;
 			text-align: center;
-//						border: 1px #f00 solid;
+			//						border: 1px #f00 solid;
 		}
-		span.active, span:hover {
+		span.active,
+		span:hover {
 			color: #fff;
 		}
 		span.active:after {
@@ -78,8 +80,8 @@ body {
 }
 
 .main {
-//	box-sizing: border-box;
-//	border: 1px solid #ddd;
+	//	box-sizing: border-box;
+	//	border: 1px solid #ddd;
 	position: relative;
 	width: $small-width;
 	min-height: 1200px;

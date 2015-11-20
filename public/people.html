@@ -13,10 +13,22 @@
 <body ng-app="people" ng-controller="people">
 	<div class="container">
 		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
-		<div class="top-img"></div>
+		<div class="top-img">
+			<img src="./img/avatar1.jpg" alt="">
+			<span class="name f-fwb">摄影师羊驼</span>
+			<span class="intro"></span>
+			<div class="buttons f-cb">
+				<span>图片墙</span>
+				<span class="active">全部相册</span>
+				<span>环境</span>
+				<span>黑白</span>
+				<span>胶片</span>
+				<span>私房</span>
+			</div>
+		</div>
 		<div class="main f-cb">
+<!--
 			<div class="sub-nav f-oh">
-<!--				<span class="tag f-fl"></span>-->
 				<span class="title f-fl f-tac f-fwbr">人像写真</span>
 				<div class="classify f-ib f-fr f-tac">
 					<span class='active'>全部</span>
@@ -28,6 +40,7 @@
 					<span>重曝</span>
 				</div>
 			</div>
+-->
 			<ul>
 				<li class="album" ng-repeat="list in people.lists">
 					<div class="album-wrap">
