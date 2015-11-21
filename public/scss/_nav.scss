@@ -1,4 +1,4 @@
-$nav-bar-layout-height: 182px;
+$nav-bar-layout-height: 148px;
 nav {
 	position: relative;
 	width: 100%;
@@ -174,7 +174,7 @@ nav {
 			.active {
 				background-color: $main-color-hover;
 			}
-			span:first-child {
+			span.index {
 				border-left: 1px solid #29a98f;
 			}
 			span:hover {

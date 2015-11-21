@@ -27,12 +27,12 @@
 	</div>
 	<div class="nav-bar">
 		<div class="nav-bar-menu">
-			<a href="/"><span class="left">首页</span></a>
-			<span class="left active">人像摄影</span>
+			<a href="index.html"><span class="index f-fl">首页</span></a>
+			<a href="people.html"><span class="f-fl active">人像摄影</span></a>
 			<span class="left">风光摄影</span>
 			<span class="left">人文摄影</span>
-			<span class="left">爱心公益</span>
-			<span class="right"><i></i>关于我们</span>
+			<a href="love.html"><span class="f-fl">爱心公益</span></a>
+			<a href="about.html"><span class="right"><i></i>关于我们</span></a>
 		</div>
 	</div>
 	<div class="nav-bar-layout">
@@ -89,10 +89,10 @@
 				$('.nav-bar-layout').hide();
 				$('.nav-bar-layout').hover(
 					function () {
-						$('.nav-bar-layout').show();
+						$('.nav-bar-layout').show().fadeIn("slow");
 					},
 					function () {
-						$('.nav-bar-layout').hide();
+						$('.nav-bar-layout').hide().fadeOut("slow");
 					}
 				);
 			});
@@ -102,7 +102,7 @@
 				$('.nav-bar-menu span').eq($(this).index() + 1).addClass('span-hover');
 			},
 			function () {
-				$(this).removeClass('ul-active')
+				$(this).removeClass('ul-active');
 				$('.nav-bar-menu span').eq($(this).index() + 1).removeClass('span-hover');
 			}
 		);
