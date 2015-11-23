@@ -5,23 +5,24 @@
 	<meta charset="UTF-8">
 	<title>木纹子印象派</title>
 	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/function.css">
 	<link rel="stylesheet" href="./css/album.css">
 	<link rel="stylesheet" href="./css/icons.css">
 </head>
 
 <body ng-app="album" ng-controller="album">
-	<div class="container">
+	<div class="container" id="intro">
 		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
 		<div class="top-img"></div>
+		<div class="nav-side">
+			<a ng-click="goto('intro')"><span class="active">作品概述</span></a>
+			<a ng-click="goto('imgFirst')"><span>作品展示</span></a>
+			<a ng-click="goto('imgFirst')"><span class="sub">第一张</span></a>
+			<a ng-click="goto('footer')"><span class="sub">最后一张</span></a>
+			<a><span>幻灯片浏览</span></a>
+			<a><span>全部相册</span></a>
+		</div>
 		<div class="main">
-			<div class="nav-side">
-				<a><span class="active">作品概述</span></a>
-				<a><span>作品展示</span></a>
-				<a><span class="sub">第一张</span></a>
-				<a><span class="sub">最后一张</span></a>
-				<a><span>幻灯片浏览</span></a>
-				<a><span>全部相册</span></a>
-			</div>
 			<div class="photo-list">
 				<div class="intro">
 					<span class="title-line"><span class="title">作品概述</span></span>
@@ -30,11 +31,11 @@
 							<div class="album-cover">
 								<div class="album-frame">
 									<img src="http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg" alt=""><span class="count">13张</span>
-								</div>
-							</div>
-						</div>
-					</span>
-					<span class="text">
+				</div>
+			</div>
+		</div>
+		</span>
+		<span class="text">
 						<div class="row">
 							<i class="left">专辑名称：<em ng-bind="info.name"></em></i>
 							<i class="middle">所属分类：<em ng-bind="info.belong"></em></i>
@@ -45,22 +46,26 @@
 							<i class="middle">拍摄地点：<em ng-bind="info.place"></em></i>
 							<i class="right">摄影师：<em ng-bind="info.author"></em></i>
 						</div>
-						<div class="description"><em>“</em><span ng-bind="info.description"></span><em>”</em><div class="by" ng-bind="info.by"></div></div>
-					</span>
-				</div>
-				<div class="show">
-					<span class="title-line"><span class="title">作品展示</span></span>
-					<div class="img">
-						<img src="{{img.src}}" alt="" ng-repeat="img in imgs" width="755">
-					</div>
-				</div>
-			</div>
+						<div class="description"><em>“ </em><span ng-bind="info.description"></span><em>”</em>
+		<div class="by" ng-bind="info.by"></div>
+	</div>
+	</span>
+	</div>
+	<div class="show" id="imgFirst">
+		<span class="title-line"><span class="title">作品展示</span></span>
+		<div class="img">
+			<img src="{{img.src}}" alt="" ng-repeat="img in imgs" width="755">
 		</div>
-		<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>
+	</div>
+	</div>
+	</div>
+	<div ng-include="'views/common/footer.html'" ng-controller="album-nav" id="footer"></div>
 	</div>
 	<script src="js/pruejs.scrollUp.js"></script>
 	<!-- JS libs -->
 	<script src="libs/jquery/dist/jquery.min.js"></script>
+<!--	<script src="libs/jquery/plugins/stickUp.min.js"></script>-->
+	<script src="libs/jquery/plugins/stickUp.js"></script>
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
 	<!-- JS own -->

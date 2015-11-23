@@ -5,7 +5,7 @@
 				<li>网易摄影</li>
 				<li>POCO摄影</li>
 				<li><a href="http://tuchong.com/" target="_blank">图虫网</a></li>
-				<li>旅游攻略</li>
+<!--				<li>旅游攻略</li>-->
 			</ul>
 			<ul class="right">
 				<li>微博账号</li>
@@ -34,32 +34,32 @@
 			<a href="love.html"><span class="f-fl">爱心公益</span></a>
 			<a href="about.html"><span class="right"><i></i>关于我们</span></a>
 		</div>
-	</div>
-	<div class="nav-bar-layout">
-		<div class="category">
-			<ul class="people">
-				<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
-				<li><a href=""><i>环境</i></a><a href=""><i>黑白</i></a></li>
-				<li><a href=""><i>胶片</i></a><a href=""><i>私房</i></a></li>
-			</ul>
-			<ul class="life">
-				<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
-				<li><a href=""><i>建筑</i></a><a href=""><i>自然</i></a></li>
-			</ul>
-			<ul class="film">
-				<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
-				<li><a href=""><i>街拍</i></a><a href=""><i>生活</i></a></li>
-			</ul>
-			<ul class="love">
-				<li><a href=""><i class="love">图片墙</i></a></li>
-				<li><a href=""><i class="love">活动相册</i></a></li>
-				<li><a href=""><i class="love">公社介绍</i></a></li>
-			</ul>
-			<ul class="about">
-				<li><a href=""><i>简介</i></a></li>
-				<li><a href=""><i>摄影师</i></a></li>
-				<li><a href=""><i>开发者</i></a></li>
-			</ul>
+		<div class="nav-bar-layout">
+			<div class="category">
+				<ul class="people">
+					<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
+					<li><a href=""><i>环境</i></a><a href=""><i>黑白</i></a></li>
+					<li><a href=""><i>胶片</i></a><a href=""><i>私房</i></a></li>
+				</ul>
+				<ul class="life">
+					<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
+					<li><a href=""><i>建筑</i></a><a href=""><i>自然</i></a></li>
+				</ul>
+				<ul class="film">
+					<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
+					<li><a href=""><i>街拍</i></a><a href=""><i>生活</i></a></li>
+				</ul>
+				<ul class="love">
+					<li><a href=""><i class="love">图片墙</i></a></li>
+					<li><a href=""><i class="love">活动相册</i></a></li>
+					<li><a href=""><i class="love">公社介绍</i></a></li>
+				</ul>
+				<ul class="about">
+					<li><a href=""><i>简介</i></a></li>
+					<li><a href=""><i>摄影师</i></a></li>
+					<li><a href=""><i>开发者</i></a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </nav>
@@ -67,7 +67,6 @@
 
 <script>
 	$(function () {
-
 		$('.nav li').click(function () {
 			$("li").removeAttr("class");
 			$(this).addClass('active')
@@ -108,6 +107,9 @@
 		);
 		$('.search-btn').click(function () {
 			alert('啊，这只程序猿好像还没来得及写搜索功能-_-!');
-		})
+		});
+
+		//导航栏滚动悬浮
+		$('.nav-bar').stickUp();
 	});
 </script>
