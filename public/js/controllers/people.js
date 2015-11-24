@@ -157,8 +157,6 @@ angular.module('people', ['ngRoute']).controller('people', function ($scope, $ht
 		$scope.showPicWall.photos = _.shuffle($scope.showPicWall.photos);
 	})
 	.controller('list', function ($scope, $routeParams) {
-//		console.log($routeParams.type);
-
 		$scope.temp_all = {
 			name: '人像写真',
 			lists: [{
@@ -539,19 +537,12 @@ angular.module('people', ['ngRoute']).controller('people', function ($scope, $ht
 				date: '2014年11月8日'
 		}]
 		};
-		($routeParams.type == undefined) && $scope.showList = $scope.temp_all;
-		($routeParams.type === 'all') && $scope.showList = $scope.temp_all;
-		($routeParams.type === 'environment') && $scope.showList = $scope.temp_environment;
-		($routeParams.type === 'black') && $scope.showList = $scope.temp_black;
-		($routeParams.type === 'film') && $scope.showList = $scope.temp_film;
-		($routeParams.type === 'private') && $scope.showList = $scope.temp_private;
-//		if ($routeParams.type == undefined) $scope.showList = $scope.temp_all;
-//		if ($routeParams.type === 'all') $scope.showList = $scope.temp_all;
-//		if ($routeParams.type === 'environment') $scope.showList = $scope.temp_environment;
-//		if ($routeParams.type === 'black') $scope.showList = $scope.temp_black;
-//		if ($routeParams.type === 'film') $scope.showList = $scope.temp_film;
-//		if ($routeParams.type === 'private') $scope.showList = $scope.temp_private;
-//	})
+		$routeParams.type === 'all' && ($scope.showList = $scope.temp_all);
+		$routeParams.type === 'environment' && ($scope.showList = $scope.temp_environment);
+		$routeParams.type === 'black' && ($scope.showList = $scope.temp_black);
+		$routeParams.type === 'film' && ($scope.showList = $scope.temp_film);
+		$routeParams.type === 'private' && ($scope.showList = $scope.temp_private);
+	})
 	.controller('album-nav', function ($scope) {
 
 	});
