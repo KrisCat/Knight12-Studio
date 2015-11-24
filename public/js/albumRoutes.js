@@ -1,25 +1,23 @@
-angular.module('albumRoutes', []).
+angular.module('albumRoutes', ['ngRoute']).
 		config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
-
-			// home page
 			.when('/', {
-				templateUrl: 'views/album/all.html'
+				templateUrl: 'views/album/picwall.html'
 			})
-
-			.when('/all', {
-				templateUrl: 'views/album/all.html'
+			.when('/picwall', {
+				templateUrl: 'views/album/picwall.html'
 			})
-
-			.when('/people', {
-				templateUrl: 'views/album/people.html'
+			.when('/list', {
+				templateUrl: 'views/album/list.html'
 			})
 			.when('/film', {
 				templateUrl: 'views/album/film.html'
 			})
-
-			.when('/travel', {
-				templateUrl: 'views/album/travel.html'
+			.when('/private', {
+				templateUrl: 'views/album/private.html'
+			})
+			.when('/black', {
+				templateUrl: 'views/album/black.html'
 			});
 
 //		$locationProvider.html5Mode(false); //html5模式

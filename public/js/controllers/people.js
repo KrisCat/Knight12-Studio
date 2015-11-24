@@ -1,4 +1,4 @@
-angular.module('people', []).controller('people', function ($scope, $http) {
+angular.module('people', ['ngRoute']).controller('people', function ($scope, $http) {
 		$scope.people = {
 			name: '人像写真',
 			lists: [{

@@ -1,7 +1,9 @@
 angular.module('album', [])
 	.controller('album', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
 		$scope.info = {
+			id: '1001',
 			name: '《后棠》',
+			cover: 'img//album/1001/0.jpg',
 			belong: '人像写真--其他',
 			model: '@耳东耳东LION',
 			//				device: 'Canon 5DMarkIII 35/1.4L',
@@ -13,46 +15,46 @@ angular.module('album', [])
 		};
 		$scope.imgs = [
 			{
-				src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpclu82qj32bc1jme83.jpg'
+				src: 'img/album/1001/1.jpg'
 			},
 			{
-				src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg'
+				src: 'img/album/1001/2.jpg'
 			},
 			{
-				src: 'http://ww3.sinaimg.cn/mw690/0062ZzD9jw1exdpcfox7wj32bc1jme83.jpg'
+				src: 'img/album/1001/3.jpg'
 			},
 			{
-				src: 'http://ww3.sinaimg.cn/mw690/0062ZzD9jw1exdpdcqcdcj32bc1jmu0y.jpg'
+				src: 'img/album/1001/4.jpg'
 			},
 			{
-				src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpcjbadgj31jm2bcb2b.jpg'
+				src: 'img/album/1001/5.jpg'
 			},
 			{
-				src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpdjpzqhj32bc1jmhdv.jpg'
+				src: 'img/album/1001/6.jpg'
 			},
 			{
-				src: 'http://ww4.sinaimg.cn/mw690/0062ZzD9jw1exdpd2q4dpj32bc1jm1kz.jpg'
+				src: 'img/album/1001/7.jpg'
 			},
 			{
-				src: 'http://ww3.sinaimg.cn/mw690/0062ZzD9jw1exdpcq9j3rj31jm2bcb2b.jpg'
+				src: 'img/album/1001/8.jpg'
 			},
 			{
-				src: 'http://ww3.sinaimg.cn/mw690/0062ZzD9jw1exdpdgmg1lj329f1icu0y.jpg'
+				src: 'img/album/1001/9.jpg'
 			},
 			{
-				src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpd6mkpgj31jm2bce83.jpg'
+				src: 'img/album/1001/10.jpg'
 			},
 			{
-				src: 'http://ww3.sinaimg.cn/mw690/0062ZzD9jw1exdpcyi3anj31jm2bcqv7.jpg'
+				src: 'img/album/1001/11.jpg'
 			},
 			{
-				src: 'http://ww2.sinaimg.cn/mw690/0062ZzD9jw1exdpdpi15oj31jm2bckjn.jpg'
+				src: 'img/album/1001/12.jpg'
 			},
 			{
-				src: 'http://ww3.sinaimg.cn/mw690/0062ZzD9jw1exdpdacjaej32bc1awe82.jpg'
+				src: 'img/album/1001/13.jpg'
 			},
 			];
-		//页面锚点解决方案
+		// 页面锚点解决方案
 		$scope.goto = function (_id) {
 			// set the location.hash to the id of
 			// the element you wish to scroll to.
@@ -61,14 +63,23 @@ angular.module('album', [])
 			// call $anchorScroll()
 			$anchorScroll();
 		};
-		//单个相册侧边栏滚动悬浮
+		// 单个相册侧边栏滚动悬浮
 		$(function () {
-			$('.nav-side').stickUp({
-				//			topMargin : '55px'
-				//			parts: {
-				//				  0: 'intro',
-				//				  1: 'show',
-				//			}
+				$('.nav-side').stickUp({
+					//							topMargin : '55px'
+					parts: {
+						0: 'intro',
+						1: 'imgFirst',
+						2: 'imgFirst',
+						3: 'footer'
+					},
+					itemHover: ''
+				});
+			})
+		// 幻灯片浏览
+		$(function () {
+			$(".boxer").boxer({
+				mobile: true
 			});
 		})
 	}])
