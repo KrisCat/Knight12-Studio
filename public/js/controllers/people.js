@@ -28,6 +28,7 @@ angular.module('people', ['ngRoute'])
 		$rootScope.temp_black = [];
 		$rootScope.temp_film = [];
 		$rootScope.temp_private = [];
+		$rootScope.state = [];
 		$rootScope.listTypeConfirm = function () {
 			$routeParams.type === 'all' && ($rootScope.showList = $rootScope.temp_all);
 			$routeParams.type === 'environment' && ($rootScope.showList = $rootScope.temp_environment);
@@ -39,6 +40,12 @@ angular.module('people', ['ngRoute'])
 			.success(function (_data) {
 				$rootScope.showPicWall = _data;
 			});
+		$rootScope.isActive = function(_index) {
+			_.each($rootScope.state, function(element) {
+				element = false;
+			});
+			$rootScope.state[_index] = true;
+		};
 	})
 	.controller('picwall', function ($scope, $rootScope) {
 		$rootScope.showPicWall = _.shuffle($rootScope.showPicWall);

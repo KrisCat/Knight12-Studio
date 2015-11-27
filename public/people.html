@@ -23,12 +23,12 @@
 -->
 		</span>
 			<div class="buttons f-cb">
-				<a href="#/picwall"><span class="active">图片墙</span></a>
-				<a href="#/list/all"><span>全部相册</span></a>
-				<a href="#/list/environment"><span>环境</span></a>
-				<a href="#/list/black"><span>黑白</span></a>
-				<a href="#/list/film"><span>胶片</span></a>
-				<a href="#/list/private"><span>私房</span></a>
+				<a href="#/picwall" ng-click="isActive($index)"><span ng-class="{active: state[0]}">图片墙</span></a>
+				<a href="#/list/all" ng-click="isActive($index)"><span ng-class="{active: state[1]}">全部相册</span></a>
+				<a href="#/list/environment" ng-click="isActive($index)"><span ng-class="{active: state[2]}">环境</span></a>
+				<a href="#/list/black" ng-click="isActive($index)"><span ng-class="{active: state[3]}">黑白</span></a>
+				<a href="#/list/film" ng-click="isActive($index)"><span ng-class="{active: state[4]}">胶片</span></a>
+				<a href="#/list/private" ng-click="isActive($index)"><span ng-class="{active: state[5]}">私房</span></a>
 			</div>
 		</div>
 		<div class="main f-cb">
