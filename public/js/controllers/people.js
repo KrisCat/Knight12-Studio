@@ -28,7 +28,7 @@ angular.module('people', ['ngRoute'])
 		$rootScope.temp_black = [];
 		$rootScope.temp_film = [];
 		$rootScope.temp_private = [];
-		$rootScope.state = [];
+		$rootScope.state = [0,0,0,0,0];
 		$rootScope.listTypeConfirm = function () {
 			$routeParams.type === 'all' && ($rootScope.showList = $rootScope.temp_all);
 			$routeParams.type === 'environment' && ($rootScope.showList = $rootScope.temp_environment);
@@ -40,17 +40,27 @@ angular.module('people', ['ngRoute'])
 			.success(function (_data) {
 				$rootScope.showPicWall = _data;
 			});
-		$rootScope.isActive = function(_index) {
-			_.each($rootScope.state, function(element) {
-				element = false;
+		$rootScope.activeTypeConfirm = function(_index) {
+			$rootScope.state = _.map($rootScope.state, function() {
+				return 0;
 			});
-			$rootScope.state[_index] = true;
+			$rootScope.state[_index] = 1;
 		};
+		$rootScope.isActive = function () {
+			$routeParams.type === 'all' && $rootScope.activeTypeConfirm(1);
+			$routeParams.type === 'environment' && $rootScope.activeTypeConfirm(2);
+			$routeParams.type === 'black' && $rootScope.activeTypeConfirm(3);
+			$routeParams.type === 'film' && $rootScope.activeTypeConfirm(4);
+			$routeParams.type === 'private' && $rootScope.activeTypeConfirm(5);
+		};
+
 	})
 	.controller('picwall', function ($scope, $rootScope) {
+		$rootScope.state = [1,0,0,0,0];
 		$rootScope.showPicWall = _.shuffle($rootScope.showPicWall);
 	})
-	.controller('list', function ($scope, $routeParams, $rootScope, $http) {
+	.controller('list', function ($scope, $rootScope, $http) {
+		$rootScope.isActive();
 		if ($rootScope.temp_all.length === 0) {
 			$http.get("/json/people_list.json")
 				 .success(function (_data) {
