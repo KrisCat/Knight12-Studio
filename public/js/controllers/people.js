@@ -23,18 +23,18 @@ angular.module('people', ['ngRoute'])
 		// 根数据初始化
 		$rootScope.showPicWall = {};
 		$rootScope.showList = [];
-		$rootScope.temp_all = [];
-		$rootScope.temp_environment = [];
-		$rootScope.temp_black = [];
-		$rootScope.temp_film = [];
-		$rootScope.temp_private = [];
+		$rootScope._all = [];
+		$rootScope._environment = [];
+		$rootScope._black = [];
+		$rootScope._film = [];
+		$rootScope._private = [];
 		$rootScope.state = [0,0,0,0,0];
 		$rootScope.listTypeConfirm = function () {
-			$routeParams.type === 'all' && ($rootScope.showList = $rootScope.temp_all);
-			$routeParams.type === 'environment' && ($rootScope.showList = $rootScope.temp_environment);
-			$routeParams.type === 'black' && ($rootScope.showList = $rootScope.temp_black);
-			$routeParams.type === 'film' && ($rootScope.showList = $rootScope.temp_film);
-			$routeParams.type === 'private' && ($rootScope.showList = $rootScope.temp_private);
+			$routeParams.type === 'all' && ($rootScope.showList = $rootScope._all);
+			$routeParams.type === 'environment' && ($rootScope.showList = $rootScope._environment);
+			$routeParams.type === 'black' && ($rootScope.showList = $rootScope._black);
+			$routeParams.type === 'film' && ($rootScope.showList = $rootScope._film);
+			$routeParams.type === 'private' && ($rootScope.showList = $rootScope._private);
 		};
 		$http.get("/json/people_picwall.json")
 			.success(function (_data) {
@@ -61,15 +61,15 @@ angular.module('people', ['ngRoute'])
 	})
 	.controller('list', function ($scope, $rootScope, $http) {
 		$rootScope.isActive();
-		if ($rootScope.temp_all.length === 0) {
+		if ($rootScope._all.length === 0) {
 			$http.get("/json/people_list.json")
 				 .success(function (_data) {
-					$rootScope.temp_all = _data.lists;
-					_.each($rootScope.temp_all, function (element) {
-						element.type === 'environment' && $rootScope.temp_environment.push(element);
-						element.type === 'black' && $rootScope.temp_black.push(element);
-						element.type === 'film' && $rootScope.temp_film.push(element);
-						element.type === 'private' && $rootScope.temp_private.push(element);
+					$rootScope._all = _data.lists;
+					_.each($rootScope._all, function (element) {
+						element.type === 'environment' && $rootScope._environment.push(element);
+						element.type === 'black' && $rootScope._black.push(element);
+						element.type === 'film' && $rootScope._film.push(element);
+						element.type === 'private' && $rootScope._private.push(element);
 					});
 					$rootScope.listTypeConfirm();
 				});
