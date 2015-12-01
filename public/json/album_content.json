@@ -1,0 +1,110 @@
+[
+	{
+		"id": "1001",
+		"type": "people",
+		"name": "《后棠》",
+		"cover": "img//album/1001/0.jpg",
+		"belong": "人像写真--其他",
+		"model": "@耳东耳东LION",
+		"date": "2015-11-5",
+		"place": "南京·咖啡馆",
+		"author": "@摄影师羊驼",
+		"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。",
+		"by": "——简媜《美丽的茧》",
+		"imgs": [
+			{
+				"src": "img/album/1001/1.jpg"
+			},
+			{
+				"src": "img/album/1001/2.jpg"
+			},
+			{
+				"src": "img/album/1001/3.jpg"
+			},
+			{
+				"src": "img/album/1001/4.jpg"
+			},
+			{
+				"src": "img/album/1001/5.jpg"
+			},
+			{
+				"src": "img/album/1001/6.jpg"
+			},
+			{
+				"src": "img/album/1001/7.jpg"
+			},
+			{
+				"src": "img/album/1001/8.jpg"
+			},
+			{
+				"src": "img/album/1001/9.jpg"
+			},
+			{
+				"src": "img/album/1001/10.jpg"
+			},
+			{
+				"src": "img/album/1001/11.jpg"
+			},
+			{
+				"src": "img/album/1001/12.jpg"
+			},
+			{
+				"src": "img/album/1001/13.jpg"
+			}
+			]
+},
+	{
+		"id": "1002",
+		"type": "people",
+		"name": "《ssss棠》",
+		"cover": "img//album/1001/0.jpg",
+		"belong": "人像写真--其他",
+		"model": "@耳东耳东LION",
+		"date": "2015-11-5",
+		"place": "南京·咖啡馆",
+		"author": "@摄影师羊驼",
+		"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。",
+		"by": "——简媜《美丽的茧》",
+		"imgs": [
+			{
+				"src": "img/album/1001/1.jpg"
+			},
+			{
+				"src": "img/album/1001/2.jpg"
+			},
+			{
+				"src": "img/album/1001/3.jpg"
+			},
+			{
+				"src": "img/album/1001/4.jpg"
+			},
+			{
+				"src": "img/album/1001/5.jpg"
+			},
+			{
+				"src": "img/album/1001/6.jpg"
+			},
+			{
+				"src": "img/album/1001/7.jpg"
+			},
+			{
+				"src": "img/album/1001/8.jpg"
+			},
+			{
+				"src": "img/album/1001/9.jpg"
+			},
+			{
+				"src": "img/album/1001/10.jpg"
+			},
+			{
+				"src": "img/album/1001/11.jpg"
+			},
+			{
+				"src": "img/album/1001/12.jpg"
+			},
+			{
+				"src": "img/album/1001/13.jpg"
+			}
+			]
+}
+]
