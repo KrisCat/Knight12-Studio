@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="./css/lightbox.css">
 </head>
 
-<body ng-app="album" ng-controller="album">
+<body ng-app="album">
 	<div class="container" id="intro">
 		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
 		<div class="top-img"></div>
@@ -20,7 +20,7 @@
 			<a ng-click="goto('imgFirst')"><span>作品展示</span></a>
 			<a ng-click="goto('imgFirst')"><span class="sub">第一张</span></a>
 			<a ng-click="goto('footer')"><span class="sub">最后一张</span></a>
-			<a href="img/album/{{info.id}}/cover.jpg" class="boxer" data-gallery="gallery" title="{{info.name}}"><span>幻灯片浏览</span></a>
+			<a href="img/album/{{album_content.id}}/cover.jpg" class="boxer" data-gallery="gallery" title="{{album_content.name}}"><span>幻灯片浏览</span></a>
 			<a><span>全部相册</span></a>
 		</div>
 		<div class="main">
@@ -31,34 +31,30 @@
 						<div class="album-wrap">
 							<div class="album-cover">
 								<div class="album-frame">
-									<img src="{{info.cover}}" alt=""><span class="count">13张</span>
+									<img src="{{album_content.cover}}" alt=""><span class="count">13张</span>
 				</div>
 			</div>
 		</div>
 		</span>
 		<span class="text">
 						<div class="row">
-							<i class="left">专辑名称：<em ng-bind="info.name"></em></i>
-							<i class="middle">所属分类：<em ng-bind="info.belong"></em></i>
-							<i class="right">麻豆：<em ng-bind="info.model"></em></i>
+							<i class="left">专辑名称：<em ng-bind="album_content.name"></em></i>
+							<i class="middle">所属分类：<em ng-bind="album_content.belong"></em></i>
+							<i class="right">麻豆：<em ng-bind="album_content.model"></em></i>
 						</div>
 						<div class="row">
-							<i class="left">拍摄日期：<em ng-bind="info.date"></em></i>
-							<i class="middle">拍摄地点：<em ng-bind="info.place"></em></i>
-							<i class="right">摄影师：<em ng-bind="info.author"></em></i>
+							<i class="left">拍摄日期：<em ng-bind="album_content.date"></em></i>
+							<i class="middle">拍摄地点：<em ng-bind="album_content.place"></em></i>
+							<i class="right">摄影师：<em ng-bind="album_content.author"></em></i>
 						</div>
-						<div class="description"><em>“ </em><span ng-bind="info.description"></span><em>”</em>
-		<div class="by" ng-bind="info.by"></div>
+						<div class="description"><em>“ </em><span ng-bind="album_content.description"></span><em>”</em>
+		<div class="by" ng-bind="album_content.by"></div>
 	</div>
 	</span>
 	</div>
 	<div class="show" id="imgFirst">
 		<span class="title-line"><span class="title">作品展示</span></span>
-		<div class="img">
-			<a href="{{img.src}}" class="boxer" data-gallery="gallery" title="{{info.name}}" ng-repeat="img in imgs">
-			<img src="{{img.src}}" alt=""  width="755" >
-			</a>
-		</div>
+		<div ng-view></div>
 	</div>
 	</div>
 	</div>
@@ -71,9 +67,9 @@
 	<script src="libs/jquery/plugins/lightbox.min.js"></script>
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
+	<script src="libs/underscore/underscore-min.js"></script>
 	<!-- JS own -->
 	<script src="js/controllers/album.js"></script>
-	<!--	<script src="js/jquery.album.js"></script>-->
 </body>
 
 </html>

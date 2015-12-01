@@ -1,0 +1,11 @@
+<div class="img">
+	<a href="{{img.src}}" class="boxer" data-gallery="gallery" title="{{album_content.name}}" ng-repeat="img in album_content.imgs">
+		<img src="{{img.src}}" alt="" width="755">
+	</a>
+</div>
+<script>
+	// 幻灯片浏览
+	$(function () {
+		console.log($(".boxer"))
+	});
+</script>
