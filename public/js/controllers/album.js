@@ -6,7 +6,7 @@ angular.module('album', ['ngRoute'])
 			link: function (scope, element, attr) {
 				if (scope.$last === true) {
 					$timeout(function () {
-						scope.$emit('ngRepeatFinished');
+						scope.$emit('domFinished');
 					});
 				}
 			}
@@ -63,7 +63,14 @@ angular.module('album', ['ngRoute'])
 				_.each(_data, function (element) {
 					element.id === $routeParams.id && ($rootScope.album_content = element);
 				});
-
+				$scope.$on('domFinished', function (domFinishedEvent) {
+					//下面是在table render完成后执行的js
+					$(function () {
+						$(".boxer").boxer({
+							mobile: true
+						});
+					});
+				});
 			});
 	})
 
