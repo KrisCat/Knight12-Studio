@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hans">
+<html lang="hans" ng-app="index">
 
 <head>
 	<meta charset="UTF-8">
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body ng-app="index" ng-controller="indexController">
+<body ng-controller="indexController">
 	<div class="container">
 		<div class="wrap1">
 			<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
@@ -89,63 +89,309 @@
 			<div class="slides">
 				<div class="slides-img f-m0a">
 					<!-- 左侧所有相册分类-->
-					<div class="album-classify">
-						<li>
-							<div class="title"><a href="">人像摄影</a></div>
-							<div class="type">
-								<span><a href="">环境</a></span>
-								<span><a href="">黑白</a></span>
-								<span><a href="">校园</a></span>
-								<span><a href="">妆面</a></span>
-							</div>
-						</li>
-						<li>
-							<div class="title"><a href="">人像摄影</a></div>
-							<div class="type">
-								<span><a href="">环境</a></span>
-								<span><a href="">黑白</a></span>
-								<span><a href="">校园</a></span>
-								<span><a href="">妆面</a></span>
-							</div>
-						</li>
-						<li>
-							<div class="title"><a href="">人像摄影</a></div>
-							<div class="type">
-								<span><a href="">环境</a></span>
-								<span><a href="">黑白</a></span>
-								<span><a href="">校园</a></span>
-								<span><a href="">妆面</a></span>
-							</div>
-						</li>
-						<li>
-							<div class="title"><a href="">人像摄影</a></div>
-							<div class="type">
-								<span><a href="">环境</a></span>
-								<span><a href="">黑白</a></span>
-								<span><a href="">校园</a></span>
-								<span><a href="">妆面</a></span>
-							</div>
-						</li>
-						<li>
-							<div class="title"><a href="">人像摄影</a></div>
-							<div class="type">
-								<span><a href="">环境</a></span>
-								<span><a href="">黑白</a></span>
-								<span><a href="">校园</a></span>
-								<span><a href="">妆面</a></span>
-							</div>
-						</li>
-						<li>
-							<div class="title"><a href="">人像摄影</a></div>
-							<div class="type">
-								<span><a href="">环境</a></span>
-								<span><a href="">黑白</a></span>
-								<span><a href="">校园</a></span>
-								<span><a href="">妆面</a></span>
+					<div class="album-category">
+						<li ng-repeat="item in classItems">
+							<div class="title"><a href="" ng-bind="item.title"></a></div>
+							<div class="tag">
+								<span ng-repeat="tag in item.tags"><a href="" ng-bind="tag.name"></a></span>
 							</div>
 						</li>
 					</div>
+					<ul id="j-category-view" class="album-category-detail">
 
+<!--
+                        <li>
+
+                                <dl class="first">
+                                    <dt class="clearfix">
+                                    <h3>上装</h3>
+                                    <span class="hot">可爱韩系style</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="http://hot.weidian.com/cpsCategorySearch.do?keyword=T恤女&amp;adsCategoryId=3&amp;adsItemId=9&amp;infr_p=b1_1_1_1" data-spm="infr_p=b1_1_1_1" target="_blank">T恤</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=春季针织衫女&amp;adsCategoryId=3&amp;adsItemId=7&amp;infr_p=b1_1_1_2" data-spm="infr_p=b1_1_1_2" target="_blank">针织衫</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=蕾丝衫&amp;adsCategoryId=3&amp;adsItemId=346&amp;infr_p=b1_1_1_3" data-spm="infr_p=b1_1_1_3" target="_blank">蕾丝衫</a>
+
+                                            <a href="http://hot.weidian.com/cpsCategorySearch.do?keyword=春装连衣裙&amp;adsCategoryId=3&amp;adsItemId=1926&amp;infr_p=b1_1_1_4" data-spm="infr_p=b1_1_1_4" target="_blank">连衣裙</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=针织衫&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=339&amp;infr_p=b1_1_1_5" data-spm="infr_p=b1_1_1_5" target="_blank">开衫</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=西装&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=10&amp;infr_p=b1_1_1_6" data-spm="infr_p=b1_1_1_6" target="_blank">小西装</a>
+
+                                            <a href="http://hot.weidian.com/cpsCategorySearch.do?keyword=半身裙&amp;adsCategoryId=3&amp;adsItemId=11&amp;infr_p=b1_1_1_7" data-spm="infr_p=b1_1_1_7" target="_blank">半身裙</a>
+
+                                            <a href="http://hot.weidian.com/cpsCategorySearch.do?keyword=韩版春装&amp;adsCategoryId=3&amp;adsItemId=348&amp;infr_p=b1_1_1_8" data-spm="infr_p=b1_1_1_8" target="_blank">韩版</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=打底衫&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=349&amp;infr_p=b1_1_1_9" data-spm="infr_p=b1_1_1_9" target="_blank">打底衫</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>下装</h3>
+                                    <span class="hot">秀出修长双腿</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=短裙&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=12&amp;infr_p=b1_1_2_1" data-spm="infr_p=b1_1_2_1" target="_blank">短裙</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=短裤&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=342&amp;infr_p=b1_1_2_2" data-spm="infr_p=b1_1_2_2" target="_blank">短裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=牛仔裤&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=14&amp;infr_p=b1_1_2_3" data-spm="infr_p=b1_1_2_3" target="_blank">牛仔裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=铅笔裤&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=15&amp;infr_p=b1_1_2_4" data-spm="infr_p=b1_1_2_4" target="_blank">铅笔裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=针织裙&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=16&amp;infr_p=b1_1_2_5" data-spm="infr_p=b1_1_2_5" target="_blank">针织裙</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=包臀裙&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=17&amp;infr_p=b1_1_2_6" data-spm="infr_p=b1_1_2_6" target="_blank">包臀裙</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=打底裤&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=341&amp;infr_p=b1_1_2_7" data-spm="infr_p=b1_1_2_7" target="_blank">打底裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=九分裤女&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=344&amp;infr_p=b1_1_2_8" data-spm="infr_p=b1_1_2_8" target="_blank">九分裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=哈伦裤&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=13&amp;infr_p=b1_1_2_9" data-spm="infr_p=b1_1_2_9" target="_blank">哈伦裤</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>内衣</h3>
+                                    <span class="hot">性感到骨子里</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=薄款&amp;tCategoryId=1625&amp;adsCategoryId=3&amp;adsItemId=19&amp;infr_p=b1_1_3_1" data-spm="infr_p=b1_1_3_1" target="_blank">薄款文胸</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=性感睡裙&amp;adsCategoryId=3&amp;adsItemId=20&amp;infr_p=b1_1_3_2" data-spm="infr_p=b1_1_3_2" target="_blank">性感睡裙</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=隐形文胸&amp;adsCategoryId=3&amp;adsItemId=21&amp;infr_p=b1_1_3_3" data-spm="infr_p=b1_1_3_3" target="_blank">隐形文胸</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=打底袜&amp;adsCategoryId=3&amp;adsItemId=22&amp;infr_p=b1_1_3_4" data-spm="infr_p=b1_1_3_4" target="_blank">打底袜</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=安全裤&amp;tCategoryId=1625&amp;adsCategoryId=3&amp;adsItemId=350&amp;infr_p=b1_1_3_5" data-spm="infr_p=b1_1_3_5" target="_blank">安全裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=秋冬睡衣&amp;tCategoryId=16&amp;adsCategoryId=3&amp;adsItemId=351&amp;infr_p=b1_1_3_6" data-spm="infr_p=b1_1_3_6" target="_blank">秋冬睡衣</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=卡通内裤&amp;adsCategoryId=3&amp;adsItemId=352&amp;infr_p=b1_1_3_7" data-spm="infr_p=b1_1_3_7" target="_blank">卡通内裤</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>鞋子</h3>
+                                    <span class="hot">今冬新款抢先看</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=平底鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=24&amp;infr_p=b1_1_4_1" data-spm="infr_p=b1_1_4_1" target="_blank">平底鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=帆布鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=25&amp;infr_p=b1_1_4_2" data-spm="infr_p=b1_1_4_2" target="_blank">帆布鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=高跟鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=26&amp;infr_p=b1_1_4_3" data-spm="infr_p=b1_1_4_3" target="_blank">高跟鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=凉鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=356&amp;infr_p=b1_1_4_4" data-spm="infr_p=b1_1_4_4" target="_blank">凉鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=坡跟鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=27&amp;infr_p=b1_1_4_5" data-spm="infr_p=b1_1_4_5" target="_blank">坡跟鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=N字&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=28&amp;infr_p=b1_1_4_6" data-spm="infr_p=b1_1_4_6" target="_blank">N字鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=内增高&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=358&amp;infr_p=b1_1_4_7" data-spm="infr_p=b1_1_4_7" target="_blank">内增高</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=人字拖&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=386&amp;infr_p=b1_1_4_8" data-spm="infr_p=b1_1_4_8" target="_blank">人字拖</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=豆豆鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=385&amp;infr_p=b1_1_4_9" data-spm="infr_p=b1_1_4_9" target="_blank">豆豆鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=粗跟鞋&amp;tCategoryId=50006843&amp;adsCategoryId=3&amp;adsItemId=387&amp;infr_p=b1_1_4_10" data-spm="infr_p=b1_1_4_10" target="_blank">粗跟鞋</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>包包</h3>
+                                    <span class="hot">背上美包才能出门</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=单肩包&amp;tCategoryId=50006842&amp;adsCategoryId=3&amp;adsItemId=31&amp;infr_p=b1_1_5_1" data-spm="infr_p=b1_1_5_1" target="_blank">单肩包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=斜挎包&amp;tCategoryId=50006842&amp;adsCategoryId=3&amp;adsItemId=32&amp;infr_p=b1_1_5_2" data-spm="infr_p=b1_1_5_2" target="_blank">斜挎包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=机车包&amp;adsCategoryId=3&amp;adsItemId=1446&amp;infr_p=b1_1_5_3" data-spm="infr_p=b1_1_5_3" target="_blank">机车包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=钱包&amp;tCategoryId=121434005&amp;adsCategoryId=3&amp;adsItemId=33&amp;infr_p=b1_1_5_4" data-spm="infr_p=b1_1_5_4" target="_blank">钱包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=零钱包&amp;adsCategoryId=3&amp;adsItemId=1447&amp;infr_p=b1_1_5_5" data-spm="infr_p=b1_1_5_5" target="_blank">零钱包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=拉杆箱&amp;tCategoryId=50006842&amp;adsCategoryId=3&amp;adsItemId=34&amp;infr_p=b1_1_5_6" data-spm="infr_p=b1_1_5_6" target="_blank">拉杆箱</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=链条包&amp;tCategoryId=50006842&amp;adsCategoryId=3&amp;adsItemId=35&amp;infr_p=b1_1_5_7" data-spm="infr_p=b1_1_5_7" target="_blank">链条包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=复古包&amp;adsCategoryId=3&amp;adsItemId=1448&amp;infr_p=b1_1_5_8" data-spm="infr_p=b1_1_5_8" target="_blank">复古包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=手提包&amp;tCategoryId=50006842&amp;adsCategoryId=3&amp;adsItemId=36&amp;infr_p=b1_1_5_9" data-spm="infr_p=b1_1_5_9" target="_blank">手提包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=双肩包&amp;tCategoryId=50006842&amp;adsCategoryId=3&amp;adsItemId=37&amp;infr_p=b1_1_5_10" data-spm="infr_p=b1_1_5_10" target="_blank">双肩包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=旅行包&amp;adsCategoryId=3&amp;adsItemId=1445&amp;infr_p=b1_1_5_11" data-spm="infr_p=b1_1_5_11" target="_blank">旅行包</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>配饰</h3>
+                                    <span class="hot">画龙点睛少不了它</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=项链&amp;tCategoryId=50013864&amp;adsCategoryId=3&amp;adsItemId=38&amp;infr_p=b1_1_6_1" data-spm="infr_p=b1_1_6_1" target="_blank">项链</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=遮阳帽&amp;tCategoryId=50013864&amp;adsCategoryId=3&amp;adsItemId=39&amp;infr_p=b1_1_6_2" data-spm="infr_p=b1_1_6_2" target="_blank">遮阳帽</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=发箍&amp;tCategoryId=50013864&amp;adsCategoryId=3&amp;adsItemId=40&amp;infr_p=b1_1_6_3" data-spm="infr_p=b1_1_6_3" target="_blank">发箍</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=墨镜&amp;tCategoryId=50013864&amp;adsCategoryId=3&amp;adsItemId=42&amp;infr_p=b1_1_6_4" data-spm="infr_p=b1_1_6_4" target="_blank">墨镜</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=手链&amp;tCategoryId=50013864&amp;adsCategoryId=3&amp;adsItemId=41&amp;infr_p=b1_1_6_5" data-spm="infr_p=b1_1_6_5" target="_blank">手链</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=戒指&amp;adsCategoryId=3&amp;adsItemId=1450&amp;infr_p=b1_1_6_6" data-spm="infr_p=b1_1_6_6" target="_blank">戒指</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=锁骨链&amp;adsCategoryId=3&amp;adsItemId=1451&amp;infr_p=b1_1_6_7" data-spm="infr_p=b1_1_6_7" target="_blank">锁骨链</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=脚链&amp;adsCategoryId=3&amp;adsItemId=1452&amp;infr_p=b1_1_6_8" data-spm="infr_p=b1_1_6_8" target="_blank">脚链</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=佛珠手串&amp;adsCategoryId=3&amp;adsItemId=1453&amp;infr_p=b1_1_6_9" data-spm="infr_p=b1_1_6_9" target="_blank">佛珠手串</a>
+
+                                    </dd>
+                                </dl>
+
+                        </li>
+
+                        <li>
+
+                                <dl class="first">
+                                    <dt class="clearfix">
+                                    <h3>男上装</h3>
+                                    <span class="hot">男人气质的体现</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=T恤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=43&amp;infr_p=b1_2_1_1" data-spm="infr_p=b1_2_1_1" target="_blank">T恤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=polo衫男&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=45&amp;infr_p=b1_2_1_2" data-spm="infr_p=b1_2_1_2" target="_blank">polo衫</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=西服|男&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=47&amp;infr_p=b1_2_1_3" data-spm="infr_p=b1_2_1_3" target="_blank">西服</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=卫衣&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=374&amp;infr_p=b1_2_1_4" data-spm="infr_p=b1_2_1_4" target="_blank">卫衣</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=衬衫|男&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=375&amp;infr_p=b1_2_1_5" data-spm="infr_p=b1_2_1_5" target="_blank">衬衫</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=棒球衫&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=376&amp;infr_p=b1_2_1_6" data-spm="infr_p=b1_2_1_6" target="_blank">棒球衫</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=夹克|男&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=377&amp;infr_p=b1_2_1_7" data-spm="infr_p=b1_2_1_7" target="_blank">夹克</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=防晒衣|男&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=380&amp;infr_p=b1_2_1_8" data-spm="infr_p=b1_2_1_8" target="_blank">防晒衣</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>男裤</h3>
+                                    <span class="hot">沉稳就是下盘要稳</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=休闲裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=48&amp;infr_p=b1_2_2_1" data-spm="infr_p=b1_2_2_1" target="_blank">休闲裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=短裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=49&amp;infr_p=b1_2_2_2" data-spm="infr_p=b1_2_2_2" target="_blank">短裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=牛仔裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=50&amp;infr_p=b1_2_2_3" data-spm="infr_p=b1_2_2_3" target="_blank">牛仔裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=西裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=51&amp;infr_p=b1_2_2_4" data-spm="infr_p=b1_2_2_4" target="_blank">西裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=工装裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=363&amp;infr_p=b1_2_2_5" data-spm="infr_p=b1_2_2_5" target="_blank">工装裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=九分裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=364&amp;infr_p=b1_2_2_6" data-spm="infr_p=b1_2_2_6" target="_blank">九分裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=运动裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=365&amp;infr_p=b1_2_2_7" data-spm="infr_p=b1_2_2_7" target="_blank">运动裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=亚麻裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=366&amp;infr_p=b1_2_2_8" data-spm="infr_p=b1_2_2_8" target="_blank">亚麻裤</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=直筒裤&amp;tCategoryId=30&amp;adsCategoryId=4&amp;adsItemId=367&amp;infr_p=b1_2_2_9" data-spm="infr_p=b1_2_2_9" target="_blank">直筒裤</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>男鞋</h3>
+                                    <span class="hot">千里之行始于足下</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=皮鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=53&amp;infr_p=b1_2_3_1" data-spm="infr_p=b1_2_3_1" target="_blank">皮鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=凉鞋男&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=54&amp;infr_p=b1_2_3_2" data-spm="infr_p=b1_2_3_2" target="_blank">凉鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=商务鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=56&amp;infr_p=b1_2_3_3" data-spm="infr_p=b1_2_3_3" target="_blank">商务鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=休闲鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=368&amp;infr_p=b1_2_3_4" data-spm="infr_p=b1_2_3_4" target="_blank">休闲鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=豆豆鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=370&amp;infr_p=b1_2_3_5" data-spm="infr_p=b1_2_3_5" target="_blank">豆豆鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=驾车鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=369&amp;infr_p=b1_2_3_6" data-spm="infr_p=b1_2_3_6" target="_blank">驾车鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=板鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=371&amp;infr_p=b1_2_3_7" data-spm="infr_p=b1_2_3_7" target="_blank">板鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=帆布鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=372&amp;infr_p=b1_2_3_8" data-spm="infr_p=b1_2_3_8" target="_blank">帆布鞋</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=尖头鞋&amp;tCategoryId=50011740&amp;adsCategoryId=4&amp;adsItemId=373&amp;infr_p=b1_2_3_9" data-spm="infr_p=b1_2_3_9" target="_blank">尖头鞋</a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt class="clearfix">
+                                    <h3>男包</h3>
+                                    <span class="hot">装着梦想前进</span>
+                                    </dt>
+                                    <dd>
+
+                                            <a href="/cpsCategorySearch.do?keyword=斜挎包&amp;tCategoryId=50006842&amp;adsCategoryId=4&amp;adsItemId=57&amp;infr_p=b1_2_4_1" data-spm="infr_p=b1_2_4_1" target="_blank">斜挎包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=双肩包&amp;tCategoryId=50006842&amp;adsCategoryId=4&amp;adsItemId=58&amp;infr_p=b1_2_4_2" data-spm="infr_p=b1_2_4_2" target="_blank">双肩包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=胸包&amp;tCategoryId=50006842&amp;adsCategoryId=4&amp;adsItemId=59&amp;infr_p=b1_2_4_3" data-spm="infr_p=b1_2_4_3" target="_blank">胸包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=钱包&amp;tCategoryId=50006842&amp;adsCategoryId=4&amp;adsItemId=60&amp;infr_p=b1_2_4_4" data-spm="infr_p=b1_2_4_4" target="_blank">钱包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=帆布包&amp;tCategoryId=50006842&amp;adsCategoryId=4&amp;adsItemId=61&amp;infr_p=b1_2_4_5" data-spm="infr_p=b1_2_4_5" target="_blank">帆布包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=邮差包+男&amp;adsCategoryId=4&amp;adsItemId=1442&amp;infr_p=b1_2_4_6" data-spm="infr_p=b1_2_4_6" target="_blank">邮差包</a>
+
+                                            <a href="/cpsCategorySearch.do?keyword=手拿包&amp;tCategoryId=50006842&amp;adsCategoryId=4&amp;adsItemId=359&amp;infr_p=b1_2_4_7" data-spm="infr_p=b1_2_4_7" target="_blank">手拿包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=腰包+男&amp;adsCategoryId=4&amp;adsItemId=1443&amp;infr_p=b1_2_4_8" data-spm="infr_p=b1_2_4_8" target="_blank">腰包</a>
+
+                                            <a href="http://hot.weidian.com/cSearch.do?keyword=电脑包&amp;adsCategoryId=4&amp;adsItemId=1444&amp;infr_p=b1_2_4_9" data-spm="infr_p=b1_2_4_9" target="_blank">电脑包</a>
+
+                                    </dd>
+                                </dl>
+
+
+
+                        </li>
+-->
+
+					</ul>
 				</div>
 			</div>
 			<!-- 介绍：图标+文字 -->
@@ -167,7 +413,7 @@
 		</div>
 		<div class="wrap2">
 			<div class="people" ng-repeat="allList in allLists">
-				<div class="nav-classify">
+				<div class="nav-category">
 					<span class="name" ng-bind="allList.name"></span>
 					<a href="" class="more">更多</a>
 				</div>
@@ -208,7 +454,7 @@
 						<img src="./img/logo_name.png" alt="" width="101.6" height="15">
 					</div>
 					<div class="info">坐标：南京/杭州/上海 </div>
-					<div class="info">© 2015 MuWenZi-Studio 版权所有</div>
+					<div class="info">© 2015 版权所有 苏ICP备15056713号</div>
 				</div>
 				<div class="middle">
 					<p>

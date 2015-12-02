@@ -13,18 +13,30 @@ body {
 // 第1部分：导航加背景图
 .wrap1 {
 	width: 100%;
-	.album-classify {
-		width: $album-classify-width - 4px;
+//	border-bottom: 2px solid #ddd;
+//	box-shadow: 0 2px 2px rgba(0,0,0,.1);
+	.slides {
+		width: 100%;
+		background-color: #273625;
+		.slides-img {
+			position: relative;
+			background: url(../img/slides1.jpg) no-repeat center center;
+			width: $small-width;
+			height: 474px;
+		}
+	}
+	.album-category {
+		width: $album-category-width - 4px;
 		height: 468px;
 		position: relative;
 		left: 50%;
 		margin-left: -$small-width/2;
-		background-color: $album-classify-color;
+		background-color: $album-category-color;
 		border: 1px solid #29a98f;
 		border-top: 1px solid $main-color;
 		padding: 2px;
 		li {
-			width: $album-classify-width - 31px;
+			width: $album-category-width - 31px;
 			height: 78px;
 			padding-left: 15px;
 			padding-right: 15px;
@@ -33,7 +45,7 @@ body {
 			&:hover {
 				background-color: #fff;
 				a{color: #656565;}
-				.type {border-bottom: 1px $album-classify-color solid;}
+				.tag {border-bottom: 1px $album-category-color solid;}
 			}
 			.title {
 //				border: 1px #f00 solid;
@@ -48,10 +60,11 @@ body {
 					border-bottom: 2px $main-color solid;
 				}
 			}
-			.type {
+			.tag {
 				margin-top: 5px;
 				margin-bottom: 5px;
-				border-bottom: 1px #fff dashed;
+				border-bottom: 1px #fff dotted;
+				cursor: default;
 				span {
 					padding: 3px;
 					padding-bottom: 17px;
@@ -62,20 +75,21 @@ body {
 				}
 			}
 			&:last-child {
-				.type {
-					border-bottom: 0px #fff dashed;
+				.tag {
+					border-bottom: 0px #fff dotted;
 				}
 			}
 		}
 	}
-	.slides {
-		width: 100%;
-		background-color: #273625;
-		.slides-img {
-			background: url(../img/slides1.jpg) no-repeat center center;
-			width: $small-width;
-			height: 474px;
-		}
+
+	.album-category-detail {
+		position: absolute;
+		top: 0;
+		left: 202px;
+		width: 500px;
+		height: 472px;
+		background-color: #fff;
+
 	}
 	.slides-control {
 		width: 100%;
@@ -159,7 +173,7 @@ body {
 		//		border-top: 1px solid red;
 		padding-top: 80px;
 		overflow: hidden;
-		.nav-classify {
+		.nav-category {
 			position: absolute;
 			top: 0;
 			width: $small-width;
