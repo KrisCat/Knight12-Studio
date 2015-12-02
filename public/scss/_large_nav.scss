@@ -1,0 +1,24 @@
+@media screen and (min-width: 1400px) {
+	nav {
+		.nav-top {
+			.nav-top-detail {
+				width: $large-width;
+			}
+		}
+		.nav-header {
+			.content {
+				width: $large-width;
+			}
+		}
+		.nav-bar {
+			.nav-bar-menu {
+				width: $large-width;
+			}
+			.nav-bar-layout {
+				.category {
+					width: $large-width;
+				}
+			}
+		}
+	}
+}
