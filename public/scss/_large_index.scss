@@ -4,14 +4,30 @@
 		.album-category {
 			margin-left: -$large-width/2;
 		}
-		.slides {
-			.slides-img {
-				width: $large-width;
+		.slider {
+			div.flexslider {
+				ul.slides li {
+					span {
+						width: $large-width;
+					}
+				}
 			}
 		}
 		.slides-control {
 			.content {
 				width: $large-width;
+			}
+		}
+	}
+	.wrap3 {
+		.sub-wrap {
+			top: -95px;
+			.logo {
+				transform: scale(.8);
+				-webkit-transform: scale(.8);
+			}
+			.text {
+				font-size: 18px;
 			}
 		}
 	}

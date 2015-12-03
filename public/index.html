@@ -86,8 +86,38 @@
 			</nav>
 -->
 			<!-- 轮播图 -->
-			<div class="slides">
-				<div class="slides-img f-m0a">
+			<div class="slider">
+				<div id="banner_tabs" class="flexslider">
+					<ul class="slides f-tac">
+						<li>
+							<a title="" href="#">
+								<span class="slider1"></span>
+							</a>
+						</li>
+						<li>
+							<a title="" href="#">
+								<span class="slider2"></span>
+							</a>
+						</li>
+						<li>
+							<a title="" href="#">
+								<span class="slider3"></span>
+							</a>
+						</li>
+					</ul>
+<!--
+					<ul class="flex-direction-nav">
+						<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+						<li><a class="flex-next" href="javascript:;">Next</a></li>
+					</ul>
+-->
+					<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+						<li><a>1</a></li>
+						<li><a>2</a></li>
+						<li><a>3</a></li>
+					</ol>
+				</div>
+				<div class="category f-m0a">
 					<!-- 左侧所有相册分类-->
 					<div class="album-category">
 						<li ng-repeat="item in classItems" on-finish-render-filters>
@@ -591,7 +621,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="wrap6">
+		<div class="wrap3">
 			<div class="sub-wrap">
 				<div class="logo"></div>
 				<div class="text">热爱生活，源自于内心</div>
@@ -633,7 +663,7 @@
 	<script src="js/pruejs.scrollUp.js"></script>
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/jquery/plugins/stickUp.min.js"></script>
-	<script src="js/jquery.index.js"></script>
+	<script src="libs/jquery/plugins/slider.min.js"></script>
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="js/index.js"></script>
 </body>
