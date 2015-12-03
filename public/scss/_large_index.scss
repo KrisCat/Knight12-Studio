@@ -19,6 +19,23 @@
 			}
 		}
 	}
+	.wrap2 {
+		& > div {
+			width: 1252px;
+			margin-left: -$large-width/2;
+			.nav-category {
+				width: $large-width - 2px;
+				a.more {
+					margin-left: 1015px;
+				}
+			}
+			ul {
+				li {
+					padding: 8px 51px 16px 0;
+				}
+			}
+		}
+	}
 	.wrap3 {
 		.sub-wrap {
 			top: -95px;
