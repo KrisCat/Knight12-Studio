@@ -1,4 +1,20 @@
-angular.module('index', []).controller('indexController', function ($scope, $http) {
+angular.module('index', [])
+	// 自定义指令
+	.directive('onFinishRenderFilters', function ($timeout) {
+		return {
+			restrict: 'A',
+			// 链接函数将作用域和dom进行链接
+			link: function(scope,element,attr) {
+            if (scope.$last === true) {
+                $timeout(function() {
+                    //根据controller的关系是选择$emit或者$broadcast
+                    scope.$emit('ngRepeatFinished');
+                });
+            }
+        }
+		};
+	})
+	.controller('indexController', function ($scope, $http) {
 
 	/**
 	 * 轮播图切换
@@ -202,8 +218,40 @@ angular.module('index', []).controller('indexController', function ($scope, $htt
 	};
 	$scope.allLists.push($scope.people, $scope.film, $scope.city);
 	$http.get("/json/album_category.json")
-		 .success(function (_data) {
+		.success(function (_data) {
 			$scope.classItems = _data;
+		});
+	$scope.$on('ngRepeatFinished', function () {
+			// 下面是在dom render完成后执行的js
+			// 所有相册分类类目展示切换
+			$('.album-category li').click(function() {
+				console.log('ok');
+			})
+			var _li_this = '';
+			$('.album-category li').hover(
+				function () {
+					_li_this = ($(this).index());
+					$(this).addClass('active');
+					$('#j-category-view').show();
+					$('#j-category-view li').eq(_li_this).show();
+				},
+				function () {
+					$(this).removeClass('active');
+					$('#j-category-view').hide();
+					$('#j-category-view li').eq(_li_this).hide();
+					$('#j-category-view').hover(
+						function() {
+							$('.album-category li').eq(_li_this).addClass('active');
+							$(this).show();
+							$('#j-category-view li').eq(_li_this).show()
+						},
+						function() {
+							$(this).hide();
+							$('#j-category-view li').eq(_li_this).hide();
+							$('.album-category li.active').removeClass('active');
+						}
+					)
+			});
 		});
 
 }).controller('album-nav', function ($scope) {

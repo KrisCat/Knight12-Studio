@@ -90,16 +90,173 @@
 				<div class="slides-img f-m0a">
 					<!-- 左侧所有相册分类-->
 					<div class="album-category">
-						<li ng-repeat="item in classItems">
-							<div class="title"><a href="" ng-bind="item.title"></a></div>
+						<li ng-repeat="item in classItems" on-finish-render-filters>
+							<div class="title">
+								<a href="" ng-bind="item.title"></a>
+							</div>
 							<div class="tag">
 								<span ng-repeat="tag in item.tags"><a href="" ng-bind="tag.name"></a></span>
 							</div>
 						</li>
 					</div>
 					<ul id="j-category-view" class="album-category-detail">
-
-<!--
+						<li>
+							<dl>
+								<dt><h3>aaa1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>aaa2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>aaa3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>bbb1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>bbb2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>bbb3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>ccc1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ccc2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ccc3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>ddd1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ddd2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ddd3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>eee1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>eee2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>eee3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>fff1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>fff2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>fff3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<!--
                         <li>
 
                                 <dl class="first">
