@@ -121,6 +121,7 @@ body {
 	position: relative;
 	top: -502px;
 }
+
 .album-category {
 	width: $album-category-width - 4px;
 	height: 468px;
@@ -218,8 +219,8 @@ body {
 		left: 50%;
 		margin-left: -480px;
 		margin-top: 80px;
-		//		border-bottom: 1px solid red;
-		//		border-top: 1px solid red;
+		//				border-bottom: 1px solid red;
+		//				border-top: 1px solid red;
 		padding-top: 80px;
 		overflow: hidden;
 		.nav-category {
@@ -268,12 +269,15 @@ body {
 			}
 		}
 		ul {
+			//			border: 1px solid yellow;
+			overflow: hidden;
+			height: 400px;
 			li {
 				float: left;
 				width: 157.6px;
 				height: 226px;
 				padding: 0 43px 13px 0;
-				//				border: 1px solid blue;
+				//								border: 1px solid blue;
 				div.album-wrap {
 					width: 155px;
 					//					border: 1px solid yellow;

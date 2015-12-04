@@ -1,0 +1,36 @@
+// 图片墙UI通用样式
+div.photos {
+	position: relative;
+	width: $small-width;
+	height: 1537px;
+	overflow: hidden;
+	li {
+		display: inline-block;
+		float: left;
+		width: 190px;
+		height: 190px;
+		border: 1px #fff solid;
+		cursor: pointer;
+		img {
+			width: 190px;
+			height: 190px;
+		}
+		&:hover {
+			opacity: .5;
+		}
+	}
+}
+@media screen and (min-width: 1400px) {
+	div.photos {
+		width: $large-width;
+		height: 1430px;
+		li {
+			width: 198.8px;
+			height: 198.8px;
+			img {
+				width: 198.8px;
+				height: 198.8px;
+			}
+		}
+	}
+}

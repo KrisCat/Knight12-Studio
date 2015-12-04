@@ -63,17 +63,21 @@ angular.module('index', [])
 									    .compact()
 									    .value();
 			}
-			if ($(window).width() >= 1400) {
-				select($scope.people, 12);
-				select($scope.scenery, 12);
-				select($scope.humanity, 12);
-				select($scope.impression, 12);
-			} else {
-				select($scope.people, 10);
-				select($scope.scenery, 10);
-				select($scope.humanity, 10);
-				select($scope.impression, 10);
-			}
+			select($scope.people, 12);
+			select($scope.scenery, 12);
+			select($scope.humanity, 12);
+			select($scope.impression, 12);
+//			if ($(window).width() >= 1400) {
+//				select($scope.people, 12);
+//				select($scope.scenery, 12);
+//				select($scope.humanity, 12);
+//				select($scope.impression, 12);
+//			} else {
+//				select($scope.people, 10);
+//				select($scope.scenery, 10);
+//				select($scope.humanity, 10);
+//				select($scope.impression, 10);
+//			}
 			// 加工过后的数据
 			$scope.allLists = [];
 			$scope.allLists.push($scope.people, $scope.scenery, $scope.humanity, $scope.impression);

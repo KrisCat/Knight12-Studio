@@ -1,13 +1,16 @@
 footer {
 	width: 100%;
-	position: relative;
-	&:before {
-		content: "";
-		display: inline-block;
-		padding-bottom: 13%;
-		width: 0;
-	}
+	position: absolute;
+//	&:before {
+//		content: "";
+//		display: inline-block;
+//		padding-bottom: 13%;
+//		width: 0;
+//	}
+	height: 160px;
 	background-color: #e5edee;
+	bottom: 0;
+	clear:both;
 	.wrap {
 		display: inline-block;
 		position: absolute;
@@ -16,9 +19,9 @@ footer {
 		left: 50%;
 		margin-left: -$small-width/2;
 		top: 50%;
-		margin-top: -50px;
+		margin-top: -45px;
 		&>div {
-			//			border: 1px solid red;
+//						border: 1px solid red;
 		}
 		.left {
 			float: left;
@@ -111,6 +114,14 @@ footer {
 					color: #fff;
 				}
 			}
+		}
+	}
+}
+@media screen and (min-width: 1400px) {
+	footer {
+		.wrap {
+			width: $large-width;
+			margin-left: -$large-width/2;
 		}
 	}
 }
