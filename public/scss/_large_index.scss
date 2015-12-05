@@ -20,6 +20,16 @@
 			}
 		}
 	}
+	.category {
+		top: -502px;
+	}
+	.album-category {
+		height: 468px;
+		li {
+			height: 78px;
+		}
+	}
+
 	.wrap2 {
 		& > div {
 			width: 1252px;
