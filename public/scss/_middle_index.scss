@@ -20,7 +20,7 @@ body {
 			margin: 0px auto 20px;
 			position: relative;
 			width: 100%;
-			height: 482px;
+			height: 432px;
 			overflow: hidden;
 			zoom: 1;
 			ul.slides li {
@@ -119,12 +119,12 @@ body {
 
 .category {
 	position: relative;
-	top: -502px;
+	top: -452px;
 }
 
 .album-category {
 	width: $album-category-width - 4px;
-	height: 468px;
+	height: 426px;
 	position: relative;
 	z-index: 2;
 	left: 50%;
@@ -135,7 +135,7 @@ body {
 	padding: 2px;
 	li {
 		width: $album-category-width - 31px;
-		height: 78px;
+		height: 71px;
 		padding-left: 15px;
 		padding-right: 15px;
 		//			overflow: hidden;
