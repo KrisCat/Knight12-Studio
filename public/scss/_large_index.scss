@@ -8,8 +8,10 @@
 			div.flexslider {
 				height: 482px;
 				ul.slides li {
+					height: 474px;
 					span {
 						width: $large-width;
+						height: 474px;
 						&.slider1 {
 							background: url(../img/slider/slider1.jpg) no-repeat center center;
 						}
