@@ -26,18 +26,20 @@ body {
 			ul.slides li {
 				width: 100%;
 				height: 474px;
-				background-color: #273625;
+				&.bg1 {background-color: #273625;}
+				&.bg2 {background-color: #EBE0DE;}
+				&.bg3 {background-color: #B19336;}
 				span {
 					width: $small-width;
 					height: 474px;
 					&.slider1 {
-						background: url(../img/slider/slider1.jpg) no-repeat center center;
+						background: url(../img/slider/slider1_m.jpg) no-repeat center center;
 					}
 					&.slider2 {
-						background: url(../img/slider/slider2.jpg) no-repeat center center;
+						background: url(../img/slider/slider2_m.jpg) no-repeat center center;
 					}
 					&.slider3 {
-						background: url(../img/slider/slider3.jpg) no-repeat center center;
+						background: url(../img/slider/slider3_m.jpg) no-repeat center center;
 					}
 				}
 			}
@@ -215,7 +217,7 @@ body {
 // 第2部分：首页照片预览
 .wrap2 {
 	position: relative;
-	top: -502px;
+	top: -466px;
 	width: 100%;
 	padding-bottom: 50px;
 	background-color: $bg-color;
@@ -336,12 +338,13 @@ body {
 	position: relative;
 	top: -502px;
 	width: 100%;
-	&:before {
-		content: "";
-		display: inline-block;
-		padding-bottom: 12%;
-		width: 0;
-	}
+	height: 450px;
+//	&:before {
+//		content: "";
+//		display: inline-block;
+//		padding-bottom: 12%;
+//		width: 0;
+//	}
 	background-color: #fff;
 	.sub-wrap {
 		position: relative;
@@ -349,14 +352,14 @@ body {
 		width: 380px;
 		height: 300px;
 		text-align: center;
-		top: -118px;
+		top: 56px;
 		.logo {
 			width: 111px;
 			height: 73px;
 			background: url(../img/sprite.png) no-repeat;
 			margin: 0 auto;
-			transform: scale(1.1);
-			-webkit-transform: scale(1.1);
+				transform: scale(.9);
+				-webkit-transform: scale(.9);
 		}
 		.text {
 			margin-top: 72px;

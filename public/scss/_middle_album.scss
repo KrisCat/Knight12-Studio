@@ -6,7 +6,10 @@ body {
 }
 
 .container {
+	position: relative;
 	width: 100%;
+	min-height: 100%;
+	height: auto !important;
 	height: 100%;
 }
 
@@ -62,6 +65,8 @@ body {
 	//		height: 1800px;
 	margin-top: -162px;
 	margin-bottom: 120px;
+	/*预留footer的高度和边距*/
+	padding-bottom: 240px;
 	font-family: "Microsoft YaHei";
 	background-color: #fff;
 	.photo-list {
