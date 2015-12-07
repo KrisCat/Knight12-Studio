@@ -22,14 +22,28 @@
 	}
 	.category {
 		top: -502px;
+		.layout {
+			width: $large-width;
+			margin-left: -$large-width/2;
+		}
 	}
 	.album-category {
 		height: 468px;
 		li {
 			height: 78px;
+			.title {
+				padding-top: 18px;
+			}
+			.tag {
+				span {
+					padding-bottom: 17px;
+				}
+			}
 		}
 	}
-
+	.album-category-detail {
+		height: 468px;
+	}
 	.wrap2 {
 		& > div {
 			width: 1252px;

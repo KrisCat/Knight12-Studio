@@ -20,7 +20,7 @@ body {
 			margin: 0px auto 20px;
 			position: relative;
 			width: 100%;
-			height: 432px;
+			height: 420px;
 			overflow: hidden;
 			zoom: 1;
 			ul.slides li {
@@ -119,12 +119,17 @@ body {
 
 .category {
 	position: relative;
-	top: -452px;
+	top: -440px;
+	.layout {
+		position: relative;
+		width: $small-width;
+		left: 50%;
+		margin-left: -$small-width/2;
+	}
 }
-
 .album-category {
 	width: $album-category-width - 4px;
-	height: 426px;
+	height: 414px;
 	position: relative;
 	z-index: 2;
 	left: 50%;
@@ -135,7 +140,7 @@ body {
 	padding: 2px;
 	li {
 		width: $album-category-width - 31px;
-		height: 71px;
+		height: 69px;
 		padding-left: 15px;
 		padding-right: 15px;
 		//			overflow: hidden;
@@ -157,7 +162,7 @@ body {
 			font-size: 15px;
 			font-weight: bold;
 			vertical-align: top;
-			padding-top: 18px;
+			padding-top: 15px;
 			padding-bottom: 5px;
 			a:hover {
 				color: $main-color;
@@ -171,7 +176,8 @@ body {
 			cursor: default;
 			span {
 				padding: 3px;
-				padding-bottom: 17px;
+				padding-bottom: 11px;
+				&:first-child {padding-left: 0;}
 			}
 			a:hover {
 				color: $main-color;
@@ -191,9 +197,9 @@ body {
 	position: absolute;
 	z-index: 2;
 	top: 0px;
-	left: 551px;
+	left: 202px;
 	width: 600px;
-	height: 468px;
+	height: 414px;
 	background-color: #fff;
 	-webkit-background-clip: content-box;
 	-moz-background-clip: content-box;
@@ -204,6 +210,7 @@ body {
 		display: none;
 	}
 }
+
 
 // 第2部分：首页照片预览
 .wrap2 {
