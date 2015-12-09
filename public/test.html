@@ -2,19 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>.nav_scroll{ position:fixed;top:0;left:0;z-index:1200; width:100%;}
-
-</style>
+	<title>Test</title>
 </head>
 <body>
-	<div ng-model="">id为1叶子节点个数： </div>
-	<div ng-model="">id为2叶子节点个数： </div>
-<script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/underscore/underscore-min.js"></script>
-<script src="libs/angular/angular.min.js"></script>
+<script src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
 <script type="text/javascript">
-	$(function() {
+	;(function() {
 		var data = [
 		{"id":1, "text":"Office itinerancy", "order":"10", progress: 0.4, open: true, priority:0, project:1 },
 		{"id":2, "text":"Office facing", "start_date":"02-04-2013", "duration":"42", progress:0.5, "order":"10", progress: 0.6, "parent":"1", open: true, priority:1 },
@@ -27,52 +20,59 @@
         {"id":9, "text":"Workplaces importation", "start_date":"14-04-2013", "duration":"4", "order":"3", "parent":"4", progress: 0.5, open: true, priority:0 },
         {"id":10, "text":"Workplaces exportation", "start_date":"14-04-2013", "duration":"3", "order":"3", "parent":"4", progress: 0.5, open: true, priority:0 },
 		{"id":11, "text":"Workplaces exportation", "start_date":"14-04-2013", "duration":"3", "order":"3", "parent":"10", progress: 0.5, open: true, priority:0 },
-		{"id":12, "text":"Workplaces exportation", "start_date":"14-04-2013", "duration":"3", "order":"3", "parent":"10", progress: 0.5, open: true, priority:0 }
+		{"id":12, "text":"Workplaces exportation", "start_date":"14-04-2013", "duration":"3", "order":"3", "parent":"10", progress: 0.5, open: true, priority:0 },
+		{"id":13, "text":"Workplaces exportation", "start_date":"14-04-2013", "duration":"3", "order":"3", "parent":"12", progress: 0.5, open: true, priority:0 },
+		{"id":14, "text":"Workplaces exportation", "start_date":"14-04-2013", "duration":"3", "order":"3", "parent":"12", progress: 0.5, open: true, priority:0 },
 		];
 
-		parentNode = [{}];
-		var i = 0;
-
-		_.each(data, function(e1) {
-			parentNode[i] = _(data).chain().map(function(e2, i) {
-				console.log('this is e2.'+i +'----' + e2.parent);
-				if (e1.id == e2.parent) {
-					console.log(e2);
-					return e2;
-				}
-			}).compact().value();
-			console.log(parentNode[i]);
-			i++;
-			console.log('ok');
-		})
-		parentNode = _.filter(parentNode, function(e){ if(e.length != 0) return e });;
-		console.log(parentNode);
-		_.each(parentNode, function(e1) {
-			e1.size = 0;
-			//@e2 第一个数组的第一个对象
-			_.each(e1, function(e2) {
-				check(e2);
-				debugger;
-				function check(obj) {
-					_.each(parentNode, function(e) {
-						debugger;
-						_.each(e, function(e_obj) {
-							if (obj.id == e_obj.parent) {
-								check(e_obj);
-								debugger;
-							}
-//								e1.size++;
-						})
+		// ---Begin: 算法函数，对原始数据进行处理：在每个对象上增加size属性---
+		function addSize(_data) {
+			var parentNode = [];
+			var i = 0;
+			// 提取有孩子的节点组成新的数组，孩子为数组里对象，并且打上区分标记
+			_.each(_data, function(e1) {
+				e1.tag = 'hasNone';
+				e1.size = 1;
+				parentNode[i] = _(_data).chain().map(function(e2, i) {
+					if (e1.id == e2.parent) {
+						e1.tag = 'hasChild';
+						e1.size = 0;
+						return e2;
+					}
+				}).compact().value();
+				i++;
+			})
+			parentNode = _.filter(parentNode, function(e){ if(e.length != 0) return e });
+			console.log(parentNode);
+			// 递归计算该节点包含的所有层级叶节点个数
+			function check(arr) {
+				var hasChildArr = [];
+				var _tag = 0;
+				var _id = arr[0].parent;
+				_.each(arr, function(obj) {
+					_tag += obj.size;
+					obj.size == 0 && hasChildArr.push(obj);
+				});
+				if (_tag < arr.length) {
+					_.each(hasChildArr, function(e) {
+						var nodeArr = _(parentNode).chain().map(function(e_arr) {
+							if (e.id == e_arr[0].parent) return e_arr;
+						}).compact().value();
+						_tag += check(nodeArr[0]);
 					})
 				}
-//			debugger;
-//				if (e2.tag == 'hasNone') e1.size++;
-			});
-			console.log(e1.size);
-		});
+				_.each(_data, function(obj) {
+					obj.id == _id && (obj.size = _tag);
+				});
+				return _tag;
+			}
+			check(parentNode[0]); // 从根元素开始check
+			return _data;
+		}
+		// ---End: 算法函数---
 
-	})
-</script>
+		console.log(addSize(data));
+	})();
 </script>
 </body>
 </html>
