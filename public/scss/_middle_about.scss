@@ -12,9 +12,12 @@ body {
 
 .top-img {
 	width: 100%;
-	background: url(../img/top_about.jpg) no-repeat center center;
-	height: 148px;
-	background-color: #f3eee9;
+//	background: url(../img/top_bg.jpg) no-repeat center center;
+	background: url(../img/about/top.jpg) no-repeat center -43px;
+//	background: url(../img/about-top.jpg) no-repeat center center;
+//	background: url(../img/bg-lg.jpg) no-repeat center center;
+	height: 540px;
+	background-color: #1F1F1F;
 }
 
 .main {
@@ -234,4 +237,7 @@ body {
 			}
 		}
 	}
+}
+footer {
+	position: relative;
 }

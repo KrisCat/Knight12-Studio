@@ -1,0 +1,14 @@
+@media screen and (min-width: 1400px) {
+	.main {
+		width: $large-width;
+	}
+	.wrap3 {
+//		border: 1px #f00 solid;
+		height: 800px;
+		margin: 0 auto;
+		background: url(../img/about/wrap3_bg.jpg) no-repeat center center;
+//		background-size: 1205px auto;
+		background-color: #F4F4F4;
+		padding-bottom: 135px;
+	}
+}
