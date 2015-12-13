@@ -1,0 +1,47 @@
+<div class="container" id="album" ng-controller="albumController">
+	<div class="top-img"></div>
+	<div class="nav-side">
+		<a ng-click="goto('intro')"><span class="active">作品概述</span></a>
+		<a ng-click="goto('imgFirst')"><span>作品展示</span></a>
+		<a ng-click="goto('imgFirst')"><span class="sub">第一张</span></a>
+		<a ng-click="goto('footer')"><span class="sub">最后一张</span></a>
+		<a href="img/album/{{album_content.id}}/cover.jpg" class="boxer" data-gallery="gallery" title="{{album_content.name}}"><span>幻灯片浏览</span></a>
+		<a><span>全部相册</span></a>
+	</div>
+	<div class="main">
+		<div class="photo-list">
+			<div class="intro">
+				<span class="title-line"><span class="title">作品概述</span></span>
+				<span class="cover">
+						<div class="album-wrap">
+							<div class="album-cover">
+								<div class="album-frame">
+									<img src="{{album_content.cover}}" alt=""><span class="count">13张</span>
+			</div>
+		</div>
+	</div>
+	</span>
+	<span class="text">
+						<div class="row">
+							<i class="left">专辑名称：<em ng-bind="album_content.name"></em></i>
+							<i class="middle">所属分类：<em ng-bind="album_content.belong"></em></i>
+							<i class="right">麻豆：<em ng-bind="album_content.model"></em></i>
+						</div>
+						<div class="row">
+							<i class="left">拍摄日期：<em ng-bind="album_content.date"></em></i>
+							<i class="middle">拍摄地点：<em ng-bind="album_content.place"></em></i>
+							<i class="right">摄影师：<em ng-bind="album_content.author"></em></i>
+						</div>
+						<div class="description"><em>“ </em><span ng-bind="album_content.description"></span><em>”</em>
+	<div class="by" ng-bind="album_content.by"></div>
+</div>
+</span>
+</div>
+<div class="show" id="imgFirst">
+	<span class="title-line"><span class="title">作品展示</span></span>
+	<div ng-view></div>
+</div>
+</div>
+</div>
+<div ng-include="'views/common/footer.html'" ng-controller="album-nav" id="footer"></div>
+</div>

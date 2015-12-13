@@ -1,0 +1,27 @@
+// 主样式入口
+@import 'reset';
+@import 'function';
+@import 'icons';
+
+@import 'color';
+@import 'picwall';
+@import 'album_list';
+@import 'lightbox';
+@import 'footer_other';
+
+@import 'middle/middle_nav';  // 960px <=1400px
+@import 'middle/middle_index';  // 960px <=1400px
+@import 'middle/middle_people';
+@import 'middle/middle_album';
+@import 'middle/middle_walker';
+@import 'middle/middle_nature';
+@import 'middle/middle_love';
+@import 'middle/middle_about';
+
+@import 'large/large_nav';  // >1400px
+@import 'large/large_index';  // >1400px
+@import 'large/large_people';
+@import 'large/large_walker';
+@import 'large/large_nature';
+@import 'large/large_love';
+@import 'large/large_about';

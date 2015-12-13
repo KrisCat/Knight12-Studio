@@ -1,0 +1,270 @@
+<div id="index" class="container" ng-controller="indexController">
+	<div class="wrap1">
+		<!-- 轮播图 -->
+		<div class="slider">
+			<div id="banner_tabs" class="flexslider">
+				<ul class="slides f-tac">
+					<li class="bg1">
+						<a title="" href="#">
+							<span class="slider1"></span>
+						</a>
+					</li>
+					<li class="bg2">
+						<a title="" href="#">
+							<span class="slider2"></span>
+						</a>
+					</li>
+					<li class="bg3">
+						<a title="" href="#">
+							<span class="slider3"></span>
+						</a>
+					</li>
+				</ul>
+				<!--
+					<ul class="flex-direction-nav">
+						<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+						<li><a class="flex-next" href="javascript:;">Next</a></li>
+					</ul>
+-->
+				<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+					<li><a>1</a></li>
+					<li><a>2</a></li>
+					<li><a>3</a></li>
+				</ol>
+			</div>
+			<div class="category f-m0a">
+				<!-- 左侧所有相册分类-->
+				<div class="layout">
+					<div class="album-category">
+						<li ng-repeat="item in classItems" on-finish-render-filters>
+							<div class="title">
+								<a href="" ng-bind="item.title"></a>
+							</div>
+							<div class="tag">
+								<span ng-repeat="tag in item.tags"><a href="" ng-bind="tag.name"></a></span>
+							</div>
+						</li>
+					</div>
+					<ul id="j-category-view" class="album-category-detail">
+						<li>
+							<dl>
+								<dt><h3>aaa1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>aaa2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>aaa3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>bbb1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>bbb2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>bbb3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>ccc1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ccc2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ccc3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>ddd1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ddd2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>ddd3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>eee1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>eee2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>eee3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><h3>fff1</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>fff2</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+							<dl>
+								<dt><h3>fff3</h3><span></span></dt>
+								<dd>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap2">
+		<div class="people" ng-repeat="allList in allLists">
+			<div class="nav-category">
+				<span class="name" ng-bind="allList.name"></span>
+				<a href="" class="more">更多</a>
+			</div>
+			<ul>
+				<li class="album" ng-repeat="list in allList.lists">
+					<div class="album-wrap">
+						<div class="album-cover">
+							<div class="album-frame">
+								<a href=""><img src="{{list.cover}}" alt="{{list.name}}"><span class="count" ng-bind="list.count"></span></a>
+							</div>
+						</div>
+						<div class="album-detail">
+							<p class="album-title"><a href=""><strong ng-bind="list.title"></strong></a></p>
+							<p class="album-date" ng-bind="list.date"></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap3">
+		<div class="sub-wrap">
+			<div class="logo"></div>
+			<div class="text">热爱生活，源自于内心</div>
+			<div class="QR-code"></div>
+			<div class="QR-text">
+				<span>「敬请期待」</span>
+				<span>「敬请期待」</span>
+				<span>「敬请期待」</span>
+			</div>
+		</div>
+		<!--			<div class="line-bt"></div>-->
+	</div>
+	<footer>
+		<div class="wrap">
+			<div class="left">
+				<div class="title">
+					<img src="./img/logo_name.png" alt="" width="101.6" height="15">
+				</div>
+				<div class="info">坐标：南京/杭州/上海 </div>
+				<div class="info">© 2015 苏ICP备15056713号</div>
+			</div>
+			<div class="middle">
+				<p>
+					<a title="暂未开通"><i class="fa fa-weixin"></i></a>
+					<a title="暂未开通"><i class="fa fa-qq"></i></a>
+					<a title="暂未开通"><i class="fa fa-weibo"></i></a>
+					<a title="暂未开通"><i class="fa fa-envelope-o"></i></a>
+				</p>
+			</div>
+			<div class="right">
+				<div class="info">人像摄影：<a href="http://weibo.com/u/1942937155" target="_blank">摄影师羊驼</a></div>
+				<div class="info">风景/人文：<a href="http://weibo.com/u/2378141420" target="_blank">张宇卿</a></div>
+				<div class="info">设计/开发：<a href="http://weibo.com/u/2378141420" target="_blank">小木瓜DONG</a></div>
+			</div>
+		</div>
+	</footer>
+</div>
