@@ -1,11 +1,8 @@
-html,
-body {
-	height: 100%;
-	font-family: "Microsoft YaHei";
+html,body {
 	background-color: $bg-color;
 }
-
-.container {
+#index {
+	&.container {
 	width: 100%;
 	height: 100%;
 }
@@ -394,3 +391,5 @@ body {
 		background-color: $grey;
 	}
 }
+}
+

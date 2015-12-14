@@ -1,40 +1,26 @@
-<!DOCTYPE html>
-<html lang="hans">
-
-<head>
-	<meta charset="UTF-8">
-	<title>木纹子印象派</title>
-	<link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/function.css">
-	<link rel="stylesheet" href="./css/people.css">
-	<link rel="stylesheet" href="./css/icons.css">
-</head>
-
-<body ng-app="people">
-	<div class="container">
-		<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
-		<div class="top-img">
-<!--			<img src="./img/avatar1.jpg" alt="">-->
-<!--			<span class="name f-fwb">摄影师羊驼</span>-->
-			<span class="intro">
+<div class="container" id="people" ng-controller="peopleController">
+	<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
+	<div class="top-img">
+		<!--			<img src="./img/avatar1.jpg" alt="">-->
+		<!--			<span class="name f-fwb">摄影师羊驼</span>-->
+		<span class="intro">
 <!--
 			<span>“</span>人像摄影
-<span>”</span><span class="by f-fr"></span>
--->
+		<span>”</span><span class="by f-fr"></span> -->
 		</span>
-			<div class="buttons f-cb">
-				<a href="#/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
-				<a href="#/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
-				<a href="#/list/environment"><span ng-class="{active: state[2]}">环境</span></a>
-				<a href="#/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
-				<a href="#/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
-				<a href="#/list/private"><span ng-class="{active: state[5]}">私房</span></a>
-			</div>
+		<div class="buttons f-cb">
+			<a href="#/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
+			<a href="#/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/list/environment"><span ng-class="{active: state[2]}">环境</span></a>
+			<a href="#/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
+			<a href="#/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
+			<a href="#/list/private"><span ng-class="{active: state[5]}">私房</span></a>
 		</div>
-		<div class="main f-cb">
-			<!-- ANGULAR DYNAMIC CONTENT -->
-			<div ng-view></div>
-<!--
+	</div>
+	<div class="main f-cb">
+		<!-- ANGULAR DYNAMIC CONTENT -->
+		<div ng-view></div>
+		<!--
 			<div class="sub-nav f-oh">
 				<span class="title f-fl f-tac f-fwbr">人像写真</span>
 				<div class="category f-ib f-fr f-tac">
@@ -49,18 +35,6 @@
 			</div>
 -->
 
-		</div>
-		<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>
 	</div>
-	<script src="js/pruejs.scrollUp.js"></script>
-	<!-- JS libs -->
-	<script src="libs/jquery/dist/jquery.min.js"></script>
-	<script src="libs/jquery/plugins/stickUp.min.js"></script>
-	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
-	<script src="libs/underscore/underscore-min.js"></script>
-	<!-- JS own -->
-	<script src="js/controllers/people.js"></script>
-</body>
-
-</html>
+	<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>
+</div>

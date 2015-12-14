@@ -1,6 +1,6 @@
 /**
  * ------------------------------------------
- * 关于我们（about）控制器
+ * 印象系列（impression）控制器
  * @version  1.0
  * @update   2015/12/14
  * @author   cisheng(mrgaonju@gmail.com)
@@ -20,5 +20,5 @@ var f = function (angular, tpl) {
 
 define([
 	'angular',
-	'text!module/about/about.html'
+	'text!module/impression/impression.html'
 ], f)

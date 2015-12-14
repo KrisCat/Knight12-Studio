@@ -1,164 +1,157 @@
-html,
-body {
-	height: 100%;
-	font-family: "Microsoft YaHei";
-	background-color: #fff;
-}
-
-.container {
-	position: relative;
-	width: 100%;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-}
-
-.top-img {
-	position: relative;
-	width: 100%;
-	background: url(../img/top_people.jpg) no-repeat center center;
-	background-color: #50606f;
-	height: 220px;
-	img {
-		display: inline-block;
+#people {
+	&.container {
 		position: relative;
-		left: 50%;
-		margin-left: -55px;
-		top: 60px;
-		width: 110px;
-		margin-right: 0;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-		border: 3px solid rgba(255, 255, 255, .5);
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		-ms-border-radius: 50%;
-		-o-border-radius: 50%;
-		border-radius: 50%;
+		width: 100%;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
 	}
-	span.name {
-		position: absolute;
-		width: 200px;
-		height: 30px;
-		left: 50%;
-		margin-left: -100px;
-		top: 190px;
-		line-height: 30px;
-		font-size: 18px;
-		color: #fff;
-		text-align: center;
-	}
-	.intro {
-		position: absolute;
-		width: 600px;
-		height: 50px;
-		left: 50%;
-		margin-left: -300px;
-		top: 80px;
-		text-align: center;
-		color: #fff;
-		span {
-			font: bold 40px/44px Helvetica, Arial, sans-serif;
-		}
-		font: 30px "Arial";
-		span.by {
-			font: 26px "Arial";
-			margin-top: 20px;
-		}
-	}
-	.buttons {
-		position: absolute;
-		bottom: 0;
-		width: 600px;
-		left: 50%;
-		margin-left: -300px;
-		//				border: 1px #0f0 solid;
-		span {
+	.top-img {
+		position: relative;
+		width: 100%;
+		background: url(../img/top_people.jpg) no-repeat center center;
+		background-color: #50606f;
+		height: 220px;
+		img {
+			display: inline-block;
 			position: relative;
-			cursor: pointer;
-			float: left;
-			width: 100px;
-			height: 45px;
-			color: rgba(255, 255, 255, 0.5);
+			left: 50%;
+			margin-left: -55px;
+			top: 60px;
+			width: 110px;
+			margin-right: 0;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+			border: 3px solid rgba(255, 255, 255, .5);
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			border-radius: 50%;
+		}
+		span.name {
+			position: absolute;
+			width: 200px;
+			height: 30px;
+			left: 50%;
+			margin-left: -100px;
+			top: 190px;
 			line-height: 30px;
-			font-size: 16px;
-			text-align: center;
-			//						border: 1px #f00 solid;
-		}
-		span.active,
-		span:hover {
+			font-size: 18px;
 			color: #fff;
+			text-align: center;
 		}
-		span.active:after {
+		.intro {
+			position: absolute;
+			width: 600px;
+			height: 50px;
+			left: 50%;
+			margin-left: -300px;
+			top: 80px;
+			text-align: center;
+			color: #fff;
+			span {
+				font: bold 40px/44px Helvetica, Arial, sans-serif;
+			}
+			font: 30px "Arial";
+			span.by {
+				font: 26px "Arial";
+				margin-top: 20px;
+			}
+		}
+		.buttons {
 			position: absolute;
 			bottom: 0;
+			width: 600px;
 			left: 50%;
-			content: '';
-			margin-left: -10px;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
-			border-bottom: 10px solid #f5f8fa;
+			margin-left: -300px;
+			//				border: 1px #0f0 solid;
+			span {
+				position: relative;
+				cursor: pointer;
+				float: left;
+				width: 100px;
+				height: 45px;
+				color: rgba(255, 255, 255, 0.5);
+				line-height: 30px;
+				font-size: 16px;
+				text-align: center;
+				//						border: 1px #f00 solid;
+			}
+			span.active,
+			span:hover {
+				color: #fff;
+			}
+			span.active:after {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				content: '';
+				margin-left: -10px;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid #f5f8fa;
+			}
 		}
 	}
-}
-
-.main {
-	//	box-sizing: border-box;
-	//	border: 1px solid #ddd;
-	position: relative;
-	//	height: 1800px;
-	margin: 0 auto;
-	margin-top: 60px;
-	/*预留footer的高度和边距*/
-	padding-bottom: 240px;
-	.sub-nav {
-		margin-top: 50px;
-		width: 100%;
-		height: 40px;
-		border: 1px solid #eee;
-		cursor: default;
-		-webkit-border-radius: 2px;
-		-moz-border-radius: 2px;
-		-ms-border-radius: 2px;
-		-o-border-radius: 2px;
-		border-radius: 2px;
-		//		span.tag {
-		//			background-color: $main-color;
-		//			width: 4px;
-		//			height: 40px;
-		//			margin-right: 12px;
-		//		}
-		span.title {
+	.main {
+		//	box-sizing: border-box;
+		//	border: 1px solid #ddd;
+		position: relative;
+		//	height: 1800px;
+		margin: 0 auto;
+		margin-top: 60px;
+		/*预留footer的高度和边距*/
+		padding-bottom: 240px;
+		.sub-nav {
+			margin-top: 50px;
+			width: 100%;
 			height: 40px;
-			width: 120px;
-			line-height: 40px;
-			font-size: 16px;
-			background-color: $main-color;
-			color: #fff;
-		}
-		.category {
-			margin-right: 10px;
-			height: 40px;
-			line-height: 40px;
-			span {
-				height: 22px;
-				line-height: 22px;
-				font-size: 13px;
-				width: 60px;
-				border-left: 1px solid #eee;
-				cursor: pointer;
-				-webkit-border-radius: 2px;
-				-moz-border-radius: 2px;
-				-ms-border-radius: 2px;
-				-o-border-radius: 2px;
-				border-radius: 2px;
-				&:first-child {
-					border-left: 1px solid #fff;
-				}
-				&:hover,
-				&.active {
-					background-color: $main-color;
-					color: #fff;
-					//					padding: 3px;
+			border: 1px solid #eee;
+			cursor: default;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			-ms-border-radius: 2px;
+			-o-border-radius: 2px;
+			border-radius: 2px;
+			//		span.tag {
+			//			background-color: $main-color;
+			//			width: 4px;
+			//			height: 40px;
+			//			margin-right: 12px;
+			//		}
+			span.title {
+				height: 40px;
+				width: 120px;
+				line-height: 40px;
+				font-size: 16px;
+				background-color: $main-color;
+				color: #fff;
+			}
+			.category {
+				margin-right: 10px;
+				height: 40px;
+				line-height: 40px;
+				span {
+					height: 22px;
+					line-height: 22px;
+					font-size: 13px;
+					width: 60px;
+					border-left: 1px solid #eee;
+					cursor: pointer;
+					-webkit-border-radius: 2px;
+					-moz-border-radius: 2px;
+					-ms-border-radius: 2px;
+					-o-border-radius: 2px;
+					border-radius: 2px;
+					&:first-child {
+						border-left: 1px solid #fff;
+					}
+					&:hover,
+					&.active {
+						background-color: $main-color;
+						color: #fff;
+						//					padding: 3px;
+					}
 				}
 			}
 		}

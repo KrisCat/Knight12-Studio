@@ -1,9 +1,10 @@
 {
-	"name": "www.muwenzi.com",
-	"version": "2.0.0_beta",
-	"dependencies": {
-		"bootstrap": "latest",
-		"angular": "latest",
-		"angular-route": "latest"
-	}
+  "name": "www.muwenzi.com",
+  "version": "2.0.0_beta",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-ui-router": "~0.2.15"
+  }
 }
