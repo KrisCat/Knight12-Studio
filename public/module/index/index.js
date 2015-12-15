@@ -11,8 +11,7 @@ var f = function (angular, tpl) {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
 	return {
-		controller: function ($scope, $http, $interval, $q) {
-			//            console.log($routeParams);  //获得路由中的参数
+		controller: function ($scope, $http, $routeParams, $interval, $q) {
 			/**
 			 * 轮播图切换
 			 * 每隔4s切换一次，无限循环

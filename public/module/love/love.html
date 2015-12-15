@@ -1,5 +1,4 @@
 <div class="container" id="love" ng-controller="loveController">
-	<div ng-include="'views/common/nav.html'" ng-controller="album-nav"></div>
 	<div class="top-img">
 		<img src="./img/love_avatar.jpg" alt="">
 		<span class="name f-fwb">艾反哺</span>
@@ -15,5 +14,4 @@
 			<li ng-repeat="photo in love.photos"><img src="{{photo.src}}" width="190" height="190"></li>
 		</div>
 	</div>
-	<div ng-include="'views/common/footer.html'" ng-controller="album-nav"></div>
 </div>

@@ -8,9 +8,7 @@
  */
 var f = function (angular, require) {
 
-	var app = angular.module('webapp', [
-        'ngRoute'
-    ]);
+	var app = angular.module('webapp', ['ngRoute']);
 	// 自定义指令
 	app.directive('onFinishRenderFilters', function ($timeout) {
 		return {
@@ -29,20 +27,47 @@ var f = function (angular, require) {
 	app.controller('navController', function ($scope) {
 
 	});
-	app.config(['$routeProvider', '$controllerProvider',
-        function ($routeProvider, $controllerProvider) {
+	app.config(['$routeProvider', '$controllerProvider', '$locationProvider',
+        function ($routeProvider, $controllerProvider, $locationProvider) {
 
 			var routeMap = {
-				'/': { //路由
+				'/': {
 					path: 'module/index/index.js', //模块的代码路径
-					controller: 'indexController' //控制器名称
-				}
+					controller: 'indexController'  //控制器名称
+				},
+				'/people': {
+					path: 'module/people/people.js', //模块的代码路径
+					controller: 'peopleController'  //控制器名称
+				},
+				'/walker': {
+					path: 'module/walker/walker.js', //模块的代码路径
+					controller: 'walkerController'  //控制器名称
+				},
+				'/nature': {
+					path: 'module/nature/nature.js', //模块的代码路径
+					controller: 'natureController'  //控制器名称
+				},
+				'/impression': {
+					path: 'module/impression/impression.js', //模块的代码路径
+					controller: 'impressionController'  //控制器名称
+				},
+				'/love': {
+					path: 'module/love/love.js', //模块的代码路径
+					controller: 'loveController'  //控制器名称
+				},
+				'/about': {
+					path: 'module/about/about.js', //模块的代码路径
+					controller: 'aboutController'  //控制器名称
+				},
 			};
 			var defaultRoute = '/'; //默认跳转到某个路由
 
 			$routeProvider.otherwise({
 				redirectTo: defaultRoute
 			});
+
+			$locationProvider.html5Mode(true);
+
 			for (var key in routeMap) {
 				$routeProvider.when(key, {
 					template: '',
