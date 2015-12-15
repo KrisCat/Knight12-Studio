@@ -4000,7 +4000,6 @@ function $ViewDirectiveFill (  $compile,   $controller,   $state,   $interpolate
       var initial = tElement.html();
       return function (scope, $element, attrs) {
         var current = $state.$current,
-            _current = $state.current,
             name = getUiViewName(scope, attrs, $element, $interpolate),
             locals  = current && current.locals[name];
 
@@ -4009,7 +4008,7 @@ function $ViewDirectiveFill (  $compile,   $controller,   $state,   $interpolate
         }
 
         $element.data('$uiView', { name: name, state: locals.$$state });
-        $element.html(_current.template ? _current.template : initial);
+        $element.html(current.$template ? current.$template : initial);
 
         var link = $compile($element.contents());
 
