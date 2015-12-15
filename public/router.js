@@ -26,7 +26,7 @@ var f = function (angular, require) {
 			}
 		};
 	});
-	app.controller('album-nav', function ($scope) {
+	app.controller('navController', function ($scope) {
 
 	});
 	app.config(['$routeProvider', '$controllerProvider',
