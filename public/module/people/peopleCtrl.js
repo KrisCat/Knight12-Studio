@@ -10,8 +10,7 @@
 var f = function (angular, tpl) {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
-	return {
-		controller: function ($scope, $routeParams, $http, $interval, $q) {
+	return function ($scope, $routeParams, $http, $interval, $q) {
 			console.log($routeParams);  //获得路由中的参数
 //			$scope.showPicWall = {};
 //			$scope.showList = [];
@@ -45,12 +44,9 @@ var f = function (angular, tpl) {
 //				$routeParams.type === 'film' && $scope.activeTypeConfirm(4);
 //				$routeParams.type === 'private' && $scope.activeTypeConfirm(5);
 //			};
-		},
-		tpl: tpl
-	};
+		}
 };
 
 define([
-	'angular',
-	'text!module/people/people.html'
+	'angular'
 ], f)
