@@ -39,65 +39,65 @@ var f = function (angular, require) {
 			viewUrl: 'module/index/people.html',
 			ctrlUrl: 'module/people/peopleCtrl', //模块的代码路径
 			ctrlName: 'peopleController' //控制器名称
+		},
+		'walker': {
+			url: '/walker',
+			viewUrl: 'module/index/walker.html',
+			ctrlUrl: 'module/walker/walkerCtrl', //模块的代码路径
+			ctrlName: 'walkerController' //控制器名称
+		},
+		'nature': {
+			url: '/nature',
+			viewUrl: 'module/index/nature.html',
+			ctrlUrl: 'module/nature/natureCtrl', //模块的代码路径
+			ctrlName: 'natureController' //控制器名称
+		},
+		'impression': {
+			url: '/impression',
+			viewUrl: 'module/index/impression.html',
+			ctrlUrl: 'module/impression/impressionCtrl', //模块的代码路径
+			ctrlName: 'impressionController' //控制器名称
+		},
+		'love': {
+			url: '/love',
+			viewUrl: 'module/index/love.html',
+			ctrlUrl: 'module/love/loveCtrl', //模块的代码路径
+			ctrlName: 'loveController' //控制器名称
+		},
+		'about': {
+			url: '/about',
+			viewUrl: 'module/index/about.html',
+			ctrlUrl: 'module/about/aboutCtrl', //模块的代码路径
+			ctrlName: 'aboutController' //控制器名称
 		}
-//		'walker': {
-//			url: '/walker',
-//			viewUrl: 'module/index/walker.html',
-//			ctrlUrl: 'module/walker/walkerCtrl', //模块的代码路径
-//			ctrlName: 'walkerController' //控制器名称
-//		},
-//		'nature': {
-//			url: '/nature',
-//			viewUrl: 'module/index/nature.html',
-//			ctrlUrl: 'module/nature/natureCtrl', //模块的代码路径
-//			ctrlName: 'natureController' //控制器名称
-//		},
-//		'impression': {
-//			url: '/impression',
-//			viewUrl: 'module/index/impression.html',
-//			ctrlUrl: 'module/impression/impressionCtrl', //模块的代码路径
-//			ctrlName: 'impressionController' //控制器名称
-//		},
-//		'love': {
-//			url: '/love',
-//			viewUrl: 'module/index/love.html',
-//			ctrlUrl: 'module/love/loveCtrl', //模块的代码路径
-//			ctrlName: 'loveController' //控制器名称
-//		},
-//		'about': {
-//			url: '/about',
-//			viewUrl: 'module/index/about.html',
-//			ctrlUrl: 'module/about/aboutCtrl', //模块的代码路径
-//			ctrlName: 'aboutController' //控制器名称
-//		}
 	};
-	app.config(['$stateProvider', '$controllerProvider', '$locationProvider',
-        function ($stateProvider, $controllerProvider, $locationProvider) {
+	app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
 			//			var defaultRoute = '/'; //默认跳转到某个路由
 			//
 			//			$routeProvider.otherwise({
 			//				redirectTo: defaultRoute
 			//			});
 
-			//			$locationProvider.html5Mode(true);
-			$stateProvider
-				.state('index', {
-					url: '/index',
-					templateUrl: 'module/index/index.html',
-					controller: 'indexController'
-				})
-				.state('people', {
-					url: '/people',
-					templateUrl: 'module/people/people.html',
-					controller: 'peopleController'
-				});
-//			for (var key in routeMap) {
-//				$stateProvider.state(key, {
-//					url: routeMap[key].url,
-//					templateUrl: routeMap[key].viewUrl,
-//					controller: routeMap[key].ctrlName
+						$locationProvider.html5Mode(true);
+//			$stateProvider
+//				.state('index', {
+//					url: '/',
+//					templateUrl: 'module/index/index.html',
+//					controller: 'indexController'
+//				})
+//				.state('people', {
+//					url: '/people',
+//					templateUrl: 'module/people/people.html',
+//					controller: 'peopleController'
 //				});
-//			}
+			for (var key in routeMap) {
+				$stateProvider.state(key, {
+					url: routeMap[key].url,
+					templateUrl: routeMap[key].viewUrl,
+					controller: routeMap[key].ctrlName
+				});
+			}
+			 $urlRouterProvider.otherwise('/');
 
 			//			function requireModule(path, controller) {
 			//				return function ($state, $q) {
@@ -111,9 +111,9 @@ var f = function (angular, require) {
 			//				}
 			//			}
 
-	}]);
+	});
 	for (var key in routeMap) {
-		app.controller(routeMap[key].controller, ['$scope', require(routeMap[key].ctrlUrl)]);
+		app.controller(routeMap[key].ctrlName, ['$scope','$http', '$stateParams', '$interval', '$q',  require(routeMap[key].ctrlUrl)]);
 	}
 	return app;
 };
@@ -123,10 +123,10 @@ define([
 		'require',
 		'angular-route',
 		'module/index/indexCtrl',
-		'module/people/peopleCtrl'
-//		'module/walker/walkerCtrl',
-//		'module/nature/natureCtrl',
-//		'module/impression/impressionCtrl',
-//		'module/love/loveCtrl',
-//		'module/about/aboutCtrl'
+		'module/people/peopleCtrl',
+		'module/walker/walkerCtrl',
+		'module/nature/natureCtrl',
+		'module/impression/impressionCtrl',
+		'module/love/loveCtrl',
+		'module/about/aboutCtrl'
 ], f);
