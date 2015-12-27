@@ -25,7 +25,7 @@ var f = function (angular, require) {
 		};
 	});
 	app.controller('navController', function ($scope) {
-
+		// 导航栏控制器
 	});
 	var routeMap = {
 		'index': {
