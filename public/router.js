@@ -3,7 +3,7 @@
  * 整个网站的路由配置
  * @version  1.0
  * @update   2015/12/23
- * @author   xiaomugua(mrgaonju@gmail.com)
+ * @author   小木瓜(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 var f = function (angular, require) {
@@ -27,50 +27,62 @@ var f = function (angular, require) {
 
 	// 路由配置
 	var routeMap = {
+		// 一级路由
 		'index': {
 			url: '/',
 			viewUrl: 'module/index/index.html',
-			ctrlUrl: 'module/index/indexCtrl', //模块的代码路径
-			ctrlName: 'indexCtrl' //控制器名称
+			ctrlUrl: 'module/index/indexCtrl',
+			ctrlName: 'indexCtrl'
 		},
 		'people': {
 			url: '/people',
 			viewUrl: 'module/people/people.html',
-			ctrlUrl: 'module/people/peopleCtrl', //模块的代码路径
-			ctrlName: 'peopleCtrl' //控制器名称
+			ctrlUrl: 'module/people/peopleCtrl',
+			ctrlName: 'peopleCtrl'
 		},
 		'walker': {
 			url: '/walker',
 			viewUrl: 'module/walker/walker.html',
-			ctrlUrl: 'module/walker/walkerCtrl', //模块的代码路径
-			ctrlName: 'walkerCtrl' //控制器名称
+			ctrlUrl: 'module/walker/walkerCtrl',
+			ctrlName: 'walkerCtrl'
 		},
 		'nature': {
 			url: '/nature',
 			viewUrl: 'module/nature/nature.html',
-			ctrlUrl: 'module/nature/natureCtrl', //模块的代码路径
-			ctrlName: 'natureCtrl' //控制器名称
+			ctrlUrl: 'module/nature/natureCtrl',
+			ctrlName: 'natureCtrl'
 		},
 		'impression': {
 			url: '/impression',
 			viewUrl: 'module/impression/impression.html',
-			ctrlUrl: 'module/impression/impressionCtrl', //模块的代码路径
-			ctrlName: 'impressionCtrl' //控制器名称
+			ctrlUrl: 'module/impression/impressionCtrl',
+			ctrlName: 'impressionCtrl'
 		},
 		'love': {
 			url: '/love',
 			viewUrl: 'module/love/love.html',
-			ctrlUrl: 'module/love/loveCtrl', //模块的代码路径
-			ctrlName: 'loveCtrl' //控制器名称
+			ctrlUrl: 'module/love/loveCtrl',
+			ctrlName: 'loveCtrl'
 		},
 		'about': {
 			url: '/about',
 			viewUrl: 'module/about/about.html',
-			ctrlUrl: 'module/about/aboutCtrl', //模块的代码路径
-			ctrlName: 'aboutCtrl' //控制器名称
+			ctrlUrl: 'module/about/aboutCtrl',
+			ctrlName: 'aboutCtrl'
 		},
 		// 二级路由
-
+		'people.picWall': {
+			url: '/picWall',
+			viewUrl: 'module/people/ui/picWall.html',
+			ctrlUrl: 'module/people/ui/picWallCtrl',
+			ctrlName: 'picWallCtrl'
+		}
+//		'people.list': {
+//			url: '/people/list/:type',
+//			viewUrl: 'module/people/ui/list.html',
+//			ctrlUrl: 'module/people/ui/listCtrl',
+//			ctrlName: 'listCtrl'
+//		}
 	};
 	app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 		for (var key in routeMap) {
@@ -105,5 +117,7 @@ define([
 		'module/nature/natureCtrl',
 		'module/impression/impressionCtrl',
 		'module/love/loveCtrl',
-		'module/about/aboutCtrl'
+		'module/about/aboutCtrl',
+		'module/people/ui/picWallCtrl',
+//		'module/people/ui/listCtrl'
 ], f);

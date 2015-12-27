@@ -8,17 +8,19 @@
 		<span>”</span><span class="by f-fr"></span> -->
 		</span>
 		<div class="buttons f-cb">
-			<a href="/people/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
-			<a href="/people/all"><span ng-class="{active: state[1]}">全部相册</span></a>
-			<a href="/people/environment"><span ng-class="{active: state[2]}">环境</span></a>
-			<a href="/people/black"><span ng-class="{active: state[3]}">黑白</span></a>
-			<a href="/people/film"><span ng-class="{active: state[4]}">胶片</span></a>
-			<a href="/people/private"><span ng-class="{active: state[5]}">私房</span></a>
+			<a href=""><span ng-class="{active: state[0]}" ui-sref=".picWall">图片墙</span></a>
+			<!--
+			<a href="/people/"><span ng-class="{active: state[1]}" ui-sref=".list/all">全部相册</span></a>
+			<a href="/people/list/environment"><span ng-class="{active: state[2]}" ui-sref=".Page1">环境</span></a>
+			<a href="/people/list/black"><span ng-class="{active: state[3]}" ui-sref=".Page1">黑白</span></a>
+			<a href="/people/list/film"><span ng-class="{active: state[4]}" ui-sref=".Page1">胶片</span></a>
+			<a href="/people/list/private"><span ng-class="{active: state[5]}" ui-sref=".Page1">私房</span></a>
+-->
 		</div>
 	</div>
 	<div class="main f-cb">
-		<!-- ANGULAR DYNAMIC CONTENT -->
-<!--		<div ng-view></div>-->
+		<!-- 二级路由嵌套 -->
+		<div ui-view="" />
 		<!--
 			<div class="sub-nav f-oh">
 				<span class="title f-fl f-tac f-fwbr">人像写真</span>

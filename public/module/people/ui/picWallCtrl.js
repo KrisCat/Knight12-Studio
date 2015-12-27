@@ -7,19 +7,15 @@
  * ------------------------------------------
  */
 
-var f = function (angular, tpl) {
+var f = function (angular) {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
-	return {
-		controller: function ($scope, $http, $interval, $q) {
+	return function ($scope, $http, $interval, $q) {
 			$scope.state = [1, 0, 0, 0, 0];
 			$scope.showPicWall = _.shuffle($scope.showPicWall);
-		},
-		tpl: tpl
-	};
+		}
 };
 
 define([
-	'angular',
-	'text!module/common/picwall.html'
+	'angular'
 ], f)

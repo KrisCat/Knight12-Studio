@@ -34,5 +34,4 @@ var f = function (angular, tpl) {
 
 define([
 	'angular',
-	'text!module/common/list.html'
 ], f)
