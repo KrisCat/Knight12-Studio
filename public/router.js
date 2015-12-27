@@ -24,97 +24,74 @@ var f = function (angular, require) {
 			}
 		};
 	});
-	app.controller('navController', function ($scope) {
-		// 导航栏控制器
-	});
+
+	// 路由配置
 	var routeMap = {
 		'index': {
 			url: '/',
 			viewUrl: 'module/index/index.html',
 			ctrlUrl: 'module/index/indexCtrl', //模块的代码路径
-			ctrlName: 'indexController' //控制器名称
+			ctrlName: 'indexCtrl' //控制器名称
 		},
 		'people': {
 			url: '/people',
-			viewUrl: 'module/index/people.html',
+			viewUrl: 'module/people/people.html',
 			ctrlUrl: 'module/people/peopleCtrl', //模块的代码路径
-			ctrlName: 'peopleController' //控制器名称
+			ctrlName: 'peopleCtrl' //控制器名称
 		},
 		'walker': {
 			url: '/walker',
-			viewUrl: 'module/index/walker.html',
+			viewUrl: 'module/walker/walker.html',
 			ctrlUrl: 'module/walker/walkerCtrl', //模块的代码路径
-			ctrlName: 'walkerController' //控制器名称
+			ctrlName: 'walkerCtrl' //控制器名称
 		},
 		'nature': {
 			url: '/nature',
-			viewUrl: 'module/index/nature.html',
+			viewUrl: 'module/nature/nature.html',
 			ctrlUrl: 'module/nature/natureCtrl', //模块的代码路径
-			ctrlName: 'natureController' //控制器名称
+			ctrlName: 'natureCtrl' //控制器名称
 		},
 		'impression': {
 			url: '/impression',
-			viewUrl: 'module/index/impression.html',
+			viewUrl: 'module/impression/impression.html',
 			ctrlUrl: 'module/impression/impressionCtrl', //模块的代码路径
-			ctrlName: 'impressionController' //控制器名称
+			ctrlName: 'impressionCtrl' //控制器名称
 		},
 		'love': {
 			url: '/love',
-			viewUrl: 'module/index/love.html',
+			viewUrl: 'module/love/love.html',
 			ctrlUrl: 'module/love/loveCtrl', //模块的代码路径
-			ctrlName: 'loveController' //控制器名称
+			ctrlName: 'loveCtrl' //控制器名称
 		},
 		'about': {
 			url: '/about',
-			viewUrl: 'module/index/about.html',
+			viewUrl: 'module/about/about.html',
 			ctrlUrl: 'module/about/aboutCtrl', //模块的代码路径
-			ctrlName: 'aboutController' //控制器名称
-		}
+			ctrlName: 'aboutCtrl' //控制器名称
+		},
+		// 二级路由
+
 	};
-	app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
-			//			var defaultRoute = '/'; //默认跳转到某个路由
-			//
-			//			$routeProvider.otherwise({
-			//				redirectTo: defaultRoute
-			//			});
+	app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+		for (var key in routeMap) {
+			$stateProvider.state(key, {
+				url: routeMap[key].url,
+				templateUrl: routeMap[key].viewUrl,
+				controller: routeMap[key].ctrlName
+			});
+		}
+		$urlRouterProvider.otherwise('/');
+		$locationProvider.html5Mode(true);
+	});
 
-						$locationProvider.html5Mode(true);
-//			$stateProvider
-//				.state('index', {
-//					url: '/',
-//					templateUrl: 'module/index/index.html',
-//					controller: 'indexController'
-//				})
-//				.state('people', {
-//					url: '/people',
-//					templateUrl: 'module/people/people.html',
-//					controller: 'peopleController'
-//				});
-			for (var key in routeMap) {
-				$stateProvider.state(key, {
-					url: routeMap[key].url,
-					templateUrl: routeMap[key].viewUrl,
-					controller: routeMap[key].ctrlName
-				});
-			}
-			 $urlRouterProvider.otherwise('/');
-
-			//			function requireModule(path, controller) {
-			//				return function ($state, $q) {
-			//					var deferred = $q.defer();
-			//					require([path], function (ret) {
-			//						$controllerProvider.register(controller, ret.controller);
-			//						//						$route.current.template = ret.tpl;
-			//						deferred.resolve();
-			//					});
-			//					return deferred.promise;
-			//				}
-			//			}
-
+	// 控制器配置
+	app.controller('navCtrl', function ($scope) {
+		// 导航栏控制器
 	});
 	for (var key in routeMap) {
-		app.controller(routeMap[key].ctrlName, ['$scope','$http', '$stateParams', '$interval', '$q',  require(routeMap[key].ctrlUrl)]);
+		app.controller(routeMap[key].ctrlName, ['$scope', '$http', '$stateParams', '$interval', '$q', require(routeMap[key].ctrlUrl)]);
 	}
+
 	return app;
 };
 

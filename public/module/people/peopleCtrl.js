@@ -3,15 +3,15 @@
  * 人像摄影（people）父控制器
  * @version  1.0
  * @update   2015/12/14
- * @author   cisheng(mrgaonju@gmail.com)
+ * @author   小木瓜(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 
-var f = function (angular, tpl) {
+var f = function (angular) {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
-	return function ($scope, $routeParams, $http, $interval, $q) {
-			console.log($routeParams);  //获得路由中的参数
+	return function ($scope, $http, $interval, $q) {
+//			console.log();  //获得路由中的参数
 //			$scope.showPicWall = {};
 //			$scope.showList = [];
 //			$scope._all = [];
