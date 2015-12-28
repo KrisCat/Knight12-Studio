@@ -2,7 +2,7 @@
  * ------------------------------------------
  * 整个网站的路由配置
  * @version  1.0
- * @update   2015/12/23
+ * @update   2015/12/28
  * @author   小木瓜(mrgaonju@gmail.com)
  * ------------------------------------------
  */
@@ -71,18 +71,18 @@ var f = function (angular, require) {
 			ctrlName: 'aboutCtrl'
 		},
 		// 二级路由
-		'people.picWall': {
-			url: '/picWall',
-			viewUrl: 'module/people/ui/picWall.html',
-			ctrlUrl: 'module/people/ui/picWallCtrl',
-			ctrlName: 'picWallCtrl'
+		'people.picwall': {
+			url: '/picwall',
+			viewUrl: 'module/people/ui/picwall.html',
+			ctrlUrl: 'module/people/ui/picwallCtrl',
+			ctrlName: 'picwallCtrl'
+		},
+		'people.list': {
+			url: '/list/:type',
+			viewUrl: 'module/people/ui/list.html',
+			ctrlUrl: 'module/people/ui/listCtrl',
+			ctrlName: 'listCtrl'
 		}
-//		'people.list': {
-//			url: '/people/list/:type',
-//			viewUrl: 'module/people/ui/list.html',
-//			ctrlUrl: 'module/people/ui/listCtrl',
-//			ctrlName: 'listCtrl'
-//		}
 	};
 	app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 		for (var key in routeMap) {
@@ -93,7 +93,7 @@ var f = function (angular, require) {
 			});
 		}
 		$urlRouterProvider.otherwise('/');
-		$locationProvider.html5Mode(true);
+//		$locationProvider.html5Mode(true);
 	});
 
 	// 控制器配置
@@ -118,6 +118,6 @@ define([
 		'module/impression/impressionCtrl',
 		'module/love/loveCtrl',
 		'module/about/aboutCtrl',
-		'module/people/ui/picWallCtrl',
-//		'module/people/ui/listCtrl'
+		'module/people/ui/picwallCtrl',
+		'module/people/ui/listCtrl'
 ], f);

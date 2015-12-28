@@ -11,8 +11,8 @@ var f = function (angular) {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
 	return function ($scope, $http, $interval, $q, $stateParams) {
-			console.log($stateParams);  //获得路由中的参数
-			$scope.showPicWall = {};
+
+			$scope.showpicwall = {};
 			$scope.showList = [];
 			$scope._all = [];
 			$scope._environment = [];
@@ -27,10 +27,7 @@ var f = function (angular) {
 				$stateParams.type === 'film' && ($scope.showList = $scope._film);
 				$stateParams.type === 'private' && ($scope.showList = $scope._private);
 			};
-			$http.get("/json/people_picwall.json")
-				.success(function (_data) {
-					$scope.showPicWall = _data;
-				});
+
 			$scope.activeTypeConfirm = function (_index) {
 				$scope.state = _.map($scope.state, function () {
 					return 0;
