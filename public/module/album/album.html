@@ -39,9 +39,13 @@
 </div>
 <div class="show" id="imgFirst">
 	<span class="title-line"><span class="title">作品展示</span></span>
-	<div ng-view></div>
+	<div class="img">
+	<a href="{{img.src}}" class="boxer" data-gallery="gallery" title="{{album_content.name}}" ng-repeat="img in album_content.imgs"  on-finish-render-filters>
+		<img src="{{img.src}}" alt="" width="755">
+	</a>
 </div>
 </div>
 </div>
-<div ng-include="'views/common/footer.html'" ng-controller="album-nav" id="footer"></div>
+</div>
+<!--<div ng-include="'views/common/footer.html'" ng-controller="album-nav" id="footer"></div>-->
 </div>

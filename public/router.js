@@ -82,6 +82,13 @@ var f = function (angular, require) {
 			viewUrl: 'module/people/ui/list.html',
 			ctrlUrl: 'module/people/ui/listCtrl',
 			ctrlName: 'listCtrl'
+		},
+		// 相册浏览
+		'album': {
+			url: '/album/:id',
+			viewUrl: 'module/album/album.html',
+			ctrlUrl: 'module/album/albumCtrl',
+			ctrlName: 'albumCtrl'
 		}
 	};
 	app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -119,5 +126,6 @@ define([
 		'module/love/loveCtrl',
 		'module/about/aboutCtrl',
 		'module/people/ui/picwallCtrl',
-		'module/people/ui/listCtrl'
+		'module/people/ui/listCtrl',
+		'module/album/albumCtrl'
 ], f);
