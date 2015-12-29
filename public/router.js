@@ -101,7 +101,7 @@ var f = function (angular, require) {
 		// 导航栏控制器
 	});
 	for (var key in routeMap) {
-		app.controller(routeMap[key].ctrlName, ['$scope', '$http', '$stateParams', '$interval', '$q', require(routeMap[key].ctrlUrl)]);
+		app.controller(routeMap[key].ctrlName, require(routeMap[key].ctrlUrl));
 	}
 
 	return app;

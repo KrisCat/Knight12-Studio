@@ -12,21 +12,15 @@ var f = function (angular) {
 	//angular会自动根据controller函数的参数名，导入相应的服务
 	return function ($scope, $http, $interval, $q, $stateParams) {
 
-			$scope.showpicwall = {};
-			$scope.showList = [];
-			$scope._all = [];
-			$scope._environment = [];
-			$scope._black = [];
-			$scope._film = [];
-			$scope._private = [];
-			$scope.state = [0, 0, 0, 0, 0];
-			$scope.listTypeConfirm = function () {
-				$stateParams.type === 'all' && ($scope.showList = $scope._all);
-				$stateParams.type === 'environment' && ($scope.showList = $scope._environment);
-				$stateParams.type === 'black' && ($scope.showList = $scope._black);
-				$stateParams.type === 'film' && ($scope.showList = $scope._film);
-				$stateParams.type === 'private' && ($scope.showList = $scope._private);
-			};
+//			$scope.showpicwall = {};
+//			$scope.showList = [];
+//			$scope._all = [];
+//			$scope._environment = [];
+//			$scope._black = [];
+//			$scope._film = [];
+//			$scope._private = [];
+			$scope.state = [1, 0, 0, 0, 0];
+
 
 			$scope.activeTypeConfirm = function (_index) {
 				$scope.state = _.map($scope.state, function () {
