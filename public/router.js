@@ -28,8 +28,7 @@ var f = function (angular, require) {
 	// 路由配置
 	var routeMap = {
 		// 一级路由
-		'index': {
-			url: '/',
+		'index': {url: '/',
 			viewUrl: 'module/index/index.html',
 			ctrlUrl: 'module/index/indexCtrl',
 			ctrlName: 'indexCtrl'
@@ -100,7 +99,7 @@ var f = function (angular, require) {
 			});
 		}
 		$urlRouterProvider.otherwise('/');
-//		$locationProvider.html5Mode(true);
+		$locationProvider.html5Mode(true);
 	});
 
 	// 控制器配置
@@ -114,18 +113,17 @@ var f = function (angular, require) {
 	return app;
 };
 
-define([
-		'angular',
-		'require',
-		'angular-route',
-		'module/index/indexCtrl',
-		'module/people/peopleCtrl',
-		'module/walker/walkerCtrl',
-		'module/nature/natureCtrl',
-		'module/impression/impressionCtrl',
-		'module/love/loveCtrl',
-		'module/about/aboutCtrl',
-		'module/people/ui/picwallCtrl',
-		'module/people/ui/listCtrl',
-		'module/album/albumCtrl'
+define(['angular'
+	   ,'require'
+	   ,'angular-route'
+	   ,'module/index/indexCtrl'
+	   ,'module/people/peopleCtrl'
+	   ,'module/walker/walkerCtrl'
+	   ,'module/nature/natureCtrl'
+	   ,'module/impression/impressionCtrl'
+	   ,'module/love/loveCtrl'
+	   ,'module/about/aboutCtrl'
+	   ,'module/people/ui/picwallCtrl'
+	   ,'module/people/ui/listCtrl'
+	   ,'module/album/albumCtrl'
 ], f);
