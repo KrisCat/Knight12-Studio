@@ -39,6 +39,11 @@ var f = function (angular) {
 				});
 		} else
 			$scope.listTypeConfirm();
+//		$scope.$on('ngRepeatFinished', function () {
+//			// 下面是在dom render完成后执行的js
+//			// ng-repeat渲染之后再加载页脚
+//			$("#footer").html('<div ng-include="' + "'module/layout/footer.html'" + '"ng-controller="navCtrl"></div>');
+//		});
 	}
 };
 
