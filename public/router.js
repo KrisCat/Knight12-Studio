@@ -99,7 +99,7 @@ var f = function (angular, require) {
 			});
 		}
 		$urlRouterProvider.otherwise('/');
-		$locationProvider.html5Mode(true);
+//		$locationProvider.html5Mode(true);
 	});
 
 	// 控制器配置

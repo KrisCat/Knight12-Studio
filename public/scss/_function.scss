@@ -38,3 +38,17 @@
 .f-m0a{margin:0 auto;}
 .f-ml8{margin-left: 8px;}
 .f-mr8{margin-right: 8px;}
+
+/* 重用代码块，调试使用 */
+
+@mixin red {
+	border: 1px #f00 solid
+}
+
+@mixin green {
+	border: 1px #0f0 solid
+}
+
+@mixin blue {
+	border: 1px #00f solid
+}

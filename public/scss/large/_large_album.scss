@@ -1,0 +1,24 @@
+#album {
+	.main {
+		width: $large-width;
+		box-sizing: border-box;
+//		@include red;
+		left: 50%;
+		margin-left: -$large-width/2;
+		.photo-list {
+			width: 1020px;
+			span.title-line {
+				width: 1018px;
+			}
+			.intro {
+				span.text {
+					width: 782px;
+				}
+			}
+		}
+	}
+	.nav-side {
+		margin-left: -$large-width/2;
+		padding-left: 1063px;
+	}
+}

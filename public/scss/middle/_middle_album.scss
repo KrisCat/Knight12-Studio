@@ -1,3 +1,8 @@
+html,
+body {
+	font-family: "Microsoft YaHei";
+	background-color: $bg-color-less;
+}
 #album {
 	&.container {
 		position: relative;
@@ -30,7 +35,7 @@
 			line-height: 28px;
 			padding-left: 12px;
 			border-left: 4px solid #e5e5e5;
-			background-color: #f6f6f6;
+			background-color: #fff;
 			cursor: pointer;
 			//				color: $main-color;
 			&:hover,
@@ -51,7 +56,7 @@
 		position: relative;
 		width: $small-width;
 		left: 50%;
-		margin-left: -480px;
+		margin-left: -$small-width/2;
 		//		margin: 0 auto;
 		//		height: 1800px;
 		margin-top: -162px;
@@ -59,7 +64,7 @@
 		/*预留footer的高度和边距*/
 		padding-bottom: 240px;
 		font-family: "Microsoft YaHei";
-		background-color: #fff;
+		background-color: $bg-color-less;
 		.photo-list {
 			//			padding: 10px;
 			width: 800px;
@@ -83,6 +88,7 @@
 				}
 			}
 			.intro {
+			background-color: #fff;
 				box-sizing: border-box;
 				border: 1px solid #ddd;
 				height: 240px;
@@ -189,6 +195,7 @@
 				box-sizing: border-box;
 				border: 1px solid #ddd;
 				margin-top: 50px;
+				background-color: #fff;
 				//				height: 1500px;
 				.img {
 					text-align: center;
