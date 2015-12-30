@@ -5,6 +5,7 @@
 			margin-left: -$large-width/2;
 		}
 		.slider {
+			height: 470px;
 			div.flexslider {
 				height: 482px;
 				ul.slides li {
@@ -56,7 +57,7 @@
 		height: 468px;
 	}
 	.wrap2 {
-		top: -506px;
+//		top: -506px;
 		& > div {
 			width: 1252px;
 			margin-left: -$large-width/2;
@@ -67,10 +68,15 @@
 				}
 			}
 			ul {
-				height: 475px;
+				height: 478px;
+				padding-left: 43px;
 				li {
-					padding: 8px 51px 16px 0;
+					padding: 8px 35px 6px 0;
 				}
+			}
+			.bg {
+				width: 1203px;
+				height: 556px;
 			}
 		}
 	}
