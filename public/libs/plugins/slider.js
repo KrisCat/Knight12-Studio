@@ -1,9 +1,9 @@
 /**
  * slider插件可悬停控制
  */
-; $(function ($, window, document, undefined) {
+//; $(function ($, window, document, undefined) {
 
-    Slider = function (container, options) {
+     function Slider (container, options) {
         /*
         options = {
             auto: true,
@@ -103,7 +103,8 @@
                 }
             })() : (function () {
                 if (slidesWrapper.children(':visible').index() == index) return;
-                slidesWrapper.children().fadeOut(delay).eq(index).fadeIn(delay);
+                slidesWrapper.children().fadeOut();
+				slidesWrapper.children().eq(index).fadeIn();
             })();
 
             try {
@@ -153,4 +154,4 @@
         }
     };
 
-}(jQuery, window, document));
+//}(jQuery, window, document));

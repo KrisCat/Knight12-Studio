@@ -7,7 +7,7 @@
  * ------------------------------------------
  */
 
-var f = function (angular) {
+var f = function () {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
 	return function ($scope, $http, $stateParams, $interval, $q) {
@@ -16,28 +16,27 @@ var f = function (angular) {
 			 * 每隔4s切换一次，无限循环
 			 * hover触发切换事件
 			 */
-			$(function () {
-				var bannerSlider = new Slider($('#banner_tabs'), {
-					time: 5000,
-					delay: 400,
-					event: 'hover',
-					auto: true,
-					mode: 'fade',
-					controller: $('#bannerCtrl'),
-					activeControllerCls: 'active'
-				});
-				$('#banner_tabs .flex-prev').click(function () {
-					bannerSlider.prev();
-				});
-				$('#banner_tabs .flex-next').click(function () {
-					bannerSlider.next();
-				});
-			});
-			$q.all({
-				req1: $http.get("/json/people_list.json"),
-				req2: $http.get("/json/scenery_list.json"),
-				req3: $http.get("/json/humanity_list.json"),
-				req4: $http.get("/json/impression_list.json")
+//			$(function () {
+			Slider($('#banner_tabs'), {time: 5000
+				                      ,delay: 400
+				                      ,event: 'hover'
+				                      ,auto: true
+				                      ,mode: 'fade'
+				                      ,controller: $('#bannerCtrl')
+				                      ,activeControllerCls: 'active'
+									  }
+				  );
+//				$('#banner_tabs .flex-prev').click(function () {
+//					bannerSlider.prev();
+//				});
+//				$('#banner_tabs .flex-next').click(function () {
+//					bannerSlider.next();
+//				});
+//			});
+			$q.all({req1: $http.get("/json/people_list.json")
+				   ,req2: $http.get("/json/scenery_list.json")
+				   ,req3: $http.get("/json/humanity_list.json")
+				   ,req4: $http.get("/json/impression_list.json")
 			}).then(function (arr) {
 				// 以上请求都完成后执行以下代码
 				_.each(arr, function (e) {
@@ -119,5 +118,6 @@ var f = function (angular) {
 };
 
 define([
-	'angular'
+	   ,'angular'
+	   ,'jquery.ui.slider'
 ], f)

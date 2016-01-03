@@ -19,7 +19,7 @@
 	var config = {
 		baseUrl: baseUrl, //依赖相对路径
 		paths: { //如果某个前缀的依赖不是按照baseUrl拼接这么简单，就需要在这里指出
-			jquery: 'libs/jquery.min',
+			jquery: 'libs/jquery',
 			'jquery.ui.slider': 'libs/plugins/slider',
 			'jquery.ui.lightbox': 'libs/plugins/lightbox.min',
 			'jquery.ui.stickUp': 'libs/plugins/stickUp.min',
@@ -52,7 +52,7 @@
 	 * 手工启动angular
 	 * @webapp  刚才定义的angular module
 	 */
-	require(['jquery', 'underscore', 'jquery.ui.slider', 'jquery.ui.lightbox', 'jquery.ui.stickUp'], function($, _) {
+	require(['jquery', 'underscore', 'jquery.ui.lightbox', 'jquery.ui.stickUp'], function($, _) {
 		require(['angular', 'router'], function (angular) {
 			angular.bootstrap(document, ['webapp']);
 		});
