@@ -52,15 +52,12 @@ body {
 	}
 	.main {
 		box-sizing: border-box;
-		//		border: 1px solid #ddd;
 		position: relative;
 		width: $small-width;
 		left: 50%;
 		margin-left: -$small-width/2;
-		//		margin: 0 auto;
-		//		height: 1800px;
 		margin-top: -162px;
-		margin-bottom: 120px;
+		margin-bottom: -110px;
 		/*预留footer的高度和边距*/
 		padding-bottom: 240px;
 		font-family: "Microsoft YaHei";
