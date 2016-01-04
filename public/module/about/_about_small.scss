@@ -3,16 +3,18 @@
 		position: relative;
 		//		display: table;
 		//		width: 100%;
-		background: url(../img/about/wrap2.jpg) no-repeat center center;
-		background-size: 1400px 933px;
-		height: 394px;
+		background: url(../img/about/top4.jpg) no-repeat center -203px;
+		background-size: 1920px 1080px;
+		// height: 852px;
+		height: 300px;
 		.pos-wrap {
 			position: absolute;
 			top: 0;
 			width: $small-width;
 			left: 50%;
 			margin-left: -$small-width/2;
-			height: 394px;
+			// height: 852px;
+			height: 300px;
 			//			@include red;
 			.button {
 				position: absolute;
@@ -28,20 +30,34 @@
 				text-align: center;
 				font-size: 20px;
 				line-height: 40px;
-				border: 2px #fff solid;
+				border: 1px #fff solid;
 				color: #fff;
+				&:hover {
+					background-color: $main-color;
+					border: 1px $main-color solid;
+					color: #fff;
+				}
 				&.star {
-					top: 200px;
-					&:hover {
-						background-color: #fff;
-						color: $main-color;
-					}
+					top: 110px;
 				}
 				&.map {
-					top: 260px;
-					border: 2px $main-color solid;
-					background-color: $main-color;
+					top: 170px;
+					// border: 2px $main-color solid;
+					// background-color: $main-color;
 				}
+			}
+			.next {
+				position: fixed;
+				width: 87px;
+				height: 54px;
+				background: url(../img/about/next.png);
+				bottom: 40px;
+				left: 50%;
+				margin-left: (-87px/2);
+				cursor: pointer;
+				-webkit-animation: slideHintShake 1.5s linear infinite;
+				-o-animation: slideHintShake 1.5s linear infinite;
+				animation: slideHintShake 1.5s linear infinite;
 			}
 		}
 	}
@@ -74,14 +90,255 @@
 		.content {
 			position: relative;
 			box-sizing: border-box;
-			@include red;
+			// @include red;
 	//		border: 1px solid #ddd;
 			top: 70px;
 			width: $small-width;
 	//		background-color: #fff;
-			height: 1800px;
+			height: 650px;
 			margin: 0 auto;
 			margin-bottom: 155px;
+			.title {
+				position: relative;
+				margin: 0 auto;
+				text-align: center;
+				width: 900px;
+				height: 118px;
+				margin-bottom: 10px;
+				//				@include green;
+				.line {
+					position: relative;
+					margin: 0 auto;
+					top: 18px;
+					width: 200px;
+					height: 1px;
+					background-color: $main-color;
+				}
+				.name1 {
+					position: relative;
+					top: 35px;
+					font-size: 30px;
+				}
+				.name2 a {
+					position: relative;
+					top: 50px;
+					color: $main-color;
+					font-size: 16px;
+				}
+			} //title
+			.cards {
+				position: relative;
+				width: 908px;
+				left: 0;
+				margin-bottom: 68px;
+				// @include blue;
+				.card-item {
+					display: inline-block;
+					position: relative;
+					box-sizing: border-box;
+					width: 280px;
+					height: 300px;
+					margin-right: 28px;
+					margin-top: 28px;
+					//										@include green;
+					background-color: #eee;
+					overflow: hidden;
+					.card-item-bg {
+						position: absolute;
+						top: 0;
+						overflow: hidden;
+						width: 279px;
+						height: 600px;
+						cursor: pointer;
+						//						@include red
+						.transparent {
+							width: 279px;
+							height: 300px;
+							background-color: transparent;
+						}
+						.color {
+							width: 279px;
+							height: 300px;
+							background-color: $main-color;
+							color: #fff;
+							font-size: 14px;
+							padding-top: 15px;
+							//							position: absolute;
+							//						top: 176px;
+							&>span {
+								display: inline-block;
+								width: 246px;
+								margin-left: 15px;
+								font-size: 14px;
+								cursor: pointer;
+								//							@include red;
+								&.line1 {
+									position: relative;
+									font-size: 24px;
+									line-height: 36px;
+								}
+								&.line2 {
+									line-height: 22px;
+									span {
+										display: inline-table;
+										&.ml {
+											margin-left: 25px;
+										}
+									}
+								}
+								&.line3 {
+									margin-top: 20px;
+									padding-top: 20px;
+									border-top: 1px #fff solid;
+									line-height: 22px;
+									color: #fff;
+								}
+							}
+							.by {
+								margin-right: 10px;
+							}
+						}
+						-webkit-transition: top .3s ease-in;
+						-o-transition: top .3s ease-in;
+						transition: top .3s ease-in;
+						//						-webkit-opacity: .8;
+						//						-moz-opacity: .8;
+						//						-ms-opacity: .8;
+						//						-o-opacity: .8;
+						//						opacity: .8;
+						&:hover {
+							top: -300px;
+						}
+					}
+					img {
+						position: absolute;
+					}
+					div.intro {
+						position: absolute;
+						top: 176px;
+						background-color: #eee;
+						&>span {
+							display: inline-block;
+							width: 246px;
+							margin-left: 12px;
+							font-size: 14px;
+							//							@include red;
+							&.line1 {
+								position: relative;
+								font-size: 24px;
+								line-height: 36px;
+							}
+							&.line2 {
+								line-height: 22px;
+								span {
+									display: inline-table;
+									&.ml {
+										margin-left: 25px;
+									}
+								}
+							}
+							&.line3 {
+								line-height: 22px;
+								color: #666;
+								margin-top: 6px;
+							}
+						}
+					}
+				}
+			}
+			.say {
+				position: relative;
+				top: -10px;
+				.say-wrap {
+					position: relative;
+					margin: 0 auto;
+					width: $large-width;
+					height: 177px;
+					//					@include red;
+					span {
+						display: inline-block;
+						vertical-align: top;
+						&.avator {
+							&.a1 {background: url(/img/about/avatar1.jpg) no-repeat center center;background-size: 100% auto;}
+							&.a2 {background: url(/img/about/avatar2.jpg) no-repeat center center;background-size: 100% auto;}
+							&.a3 {background: url(/img/about/avatar3.jpg) no-repeat center center;background-size: 100% auto;}
+							&.a4 {background: url(/img/about/avatar4.jpg) no-repeat center center;background-size: 100% auto;}
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100px;
+							height: 100px;
+							-webkit-border-radius: 50%;
+							-moz-border-radius: 50%;
+							-ms-border-radius: 50%;
+							-o-border-radius: 50%;
+							border-radius: 50%;
+						}
+						&.name {
+							position: absolute;
+							top: 0;
+							left: 101px;
+							font-size: 18px;
+							margin-left: 22px;
+						}
+						&.arrow {
+							position: absolute;
+							top: 56px;
+							left: 100px;
+							width: 0;
+							height: 0;
+							border-top: 8px #fff solid;
+							border-bottom: 8px #fff solid;
+							border-left: 11px #fff solid;
+							border-right: 11px #eee solid;
+						}
+						&.content {
+							position: absolute;
+							top: 35px;
+							left: 122px;
+							width: 756px;
+							height: 95px;
+							background-color: #eee;
+							-webkit-border-radius: 4px;
+							-moz-border-radius: 4px;
+							-ms-border-radius: 4px;
+							-o-border-radius: 4px;
+							border-radius: 4px;
+							color: #666;
+							font-size: 14px;
+							line-height: 23px;
+							padding: 15px;
+							box-sizing: border-box;
+						}
+					}
+				}
+				.say-wrap:nth-child(2n) {
+					//					@include green;
+					span {
+						&.avator {
+							right: 0;
+							left: auto;
+						}
+						&.name {
+							text-align: right;
+							right: 101px;
+							left: auto;
+							margin-left: 0;
+							margin-right: 22px;
+						}
+						&.arrow {
+							left: auto;
+							right: 100px;
+							border-left: 11px #eee solid;
+							border-right: 11px #fff solid;
+						}
+						&.content {
+							right: -204px;
+							left: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 	// 第3部分：二维码
@@ -149,3 +406,5 @@
 		position: relative;
 	}
 }
+
+@keyframes slideHintShake{0%{bottom:40px}25%{bottom:50px}50%{bottom:40px}75%{bottom:30px}100%{bottom:40px}}

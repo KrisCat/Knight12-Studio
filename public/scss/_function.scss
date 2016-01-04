@@ -42,13 +42,13 @@
 /* 重用代码块，调试使用 */
 
 @mixin red {
-	border: 1px #f00 solid
+	border: 1px #f00 dashed
 }
 
 @mixin green {
-	border: 1px #0f0 solid
+	border: 1px #0f0 dashed
 }
 
 @mixin blue {
-	border: 1px #00f solid
+	border: 1px #00f dashed
 }

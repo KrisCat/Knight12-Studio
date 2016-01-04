@@ -8,8 +8,15 @@
  */
 
 var f = function () {
-	return function ($scope) {
-
+	return function ($scope, $http, $sce) {
+		$http.get("/json/about_choice.json")
+			.success(function (_data) {
+				// angular取消对 HTML 片段的转义
+				$scope.items = _.map(_data, function(e) {
+					e.bg_intro = $sce.trustAsHtml(e.bg_intro);
+					return e;
+				})
+			});
 	}
 };
 
