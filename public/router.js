@@ -39,17 +39,17 @@ var f = function (angular, require) {
 			ctrlUrl: 'module/people/peopleCtrl',
 			ctrlName: 'peopleCtrl'
 		},
-		'walker': {
-			url: '/walker',
-			viewUrl: 'module/walker/walker.html',
-			ctrlUrl: 'module/walker/walkerCtrl',
-			ctrlName: 'walkerCtrl'
+		'humanity': {
+			url: '/humanity',
+			viewUrl: 'module/humanity/humanity.html',
+			ctrlUrl: 'module/humanity/humanityCtrl',
+			ctrlName: 'humanityCtrl'
 		},
-		'nature': {
-			url: '/nature',
-			viewUrl: 'module/nature/nature.html',
-			ctrlUrl: 'module/nature/natureCtrl',
-			ctrlName: 'natureCtrl'
+		'scenery': {
+			url: '/scenery',
+			viewUrl: 'module/scenery/scenery.html',
+			ctrlUrl: 'module/scenery/sceneryCtrl',
+			ctrlName: 'sceneryCtrl'
 		},
 		'impression': {
 			url: '/impression',
@@ -103,9 +103,9 @@ var f = function (angular, require) {
 	});
 
 	// 控制器配置
-	app.controller('navCtrl', function ($scope) {
-		// 导航栏控制器
-	});
+//	app.controller('navCtrl', function ($scope) {
+//		// 导航栏控制器
+//	});
 	for (var key in routeMap) {
 		app.controller(routeMap[key].ctrlName, require(routeMap[key].ctrlUrl));
 	}
@@ -118,8 +118,8 @@ define(['angular'
 	   ,'angular-route'
 	   ,'module/index/indexCtrl'
 	   ,'module/people/peopleCtrl'
-	   ,'module/walker/walkerCtrl'
-	   ,'module/nature/natureCtrl'
+	   ,'module/humanity/humanityCtrl'
+	   ,'module/scenery/sceneryCtrl'
 	   ,'module/impression/impressionCtrl'
 	   ,'module/love/loveCtrl'
 	   ,'module/about/aboutCtrl'
