@@ -406,18 +406,6 @@ html,body {
 			}
 		}
 	}
-	.line-bt {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		&:before {
-			content: "";
-			display: inline-block;
-			padding-bottom: 0.78%;
-			width: 0;
-		}
-		background-color: $grey;
-	}
 }
 }
 
