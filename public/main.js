@@ -2,8 +2,8 @@
  * ------------------------------------------
  * 配置require.js
  * @version  1.0
- * @update   2015/12/13
- * @author   cisheng(mrgaonju@gmail.com)
+ * @update   2016/01/06
+ * @author   小木瓜(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 
