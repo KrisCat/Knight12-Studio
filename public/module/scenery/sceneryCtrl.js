@@ -9,7 +9,7 @@
 
 var f = function () {
 	return function ($scope, $http) {
-
+		$scope.state = [1, 0, 0, 0, 0];
 	}
 };
 

@@ -1,4 +1,10 @@
 #scenery {
+	.top-img {
+		.text {
+			width: $large-width;
+			margin-left: -$large-width/2;
+		}
+	}
 	.main {
 		width: $large-width;
 	}

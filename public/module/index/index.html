@@ -27,7 +27,7 @@
 					</ul>
 -->
 				<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
-					<li><a>1</a></li>
+					<li class="active"><a>1</a></li>
 					<li><a>2</a></li>
 					<li><a>3</a></li>
 				</ol>
@@ -246,3 +246,14 @@
 		<!--			<div class="line-bt"></div>-->
 	</div>
 </div>
+<script>
+	Slider($('#banner_tabs'), {time: 5000
+				                      ,delay: 400
+				                      ,event: 'hover'
+				                      ,auto: true
+				                      ,mode: 'fade'
+				                      ,controller: $('#bannerCtrl')
+				                      ,activeControllerCls: 'active'
+									  }
+		  );
+</script>
