@@ -106,6 +106,10 @@ var f = function (angular, require) {
 //	app.controller('navCtrl', function ($scope) {
 //		// 导航栏控制器
 //	});
+	// 导航栏状态判断
+	app.run(function($rootScope) {
+		$rootScope.navState = [0,0,0,0,0,0,0]
+	});
 	for (var key in routeMap) {
 		app.controller(routeMap[key].ctrlName, require(routeMap[key].ctrlUrl));
 	}

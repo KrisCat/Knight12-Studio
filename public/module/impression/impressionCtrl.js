@@ -2,19 +2,15 @@
  * ------------------------------------------
  * 印象系列（impression）控制器
  * @version  1.0
- * @update   2015/12/14
- * @author   cisheng(mrgaonju@gmail.com)
+ * @update   2016/01/06
+ * @author   小木瓜(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 
-var f = function (angular, tpl) {
-
-	//angular会自动根据controller函数的参数名，导入相应的服务
-	return function ($scope, $http, $interval, $q) {
-
-		}
+var f = function () {
+	return function ($scope, $http, $rootScope) {
+		$rootScope.navState = [0, 0, 0, 0, 1, 0, 0];
+	}
 };
 
-define([
-	'angular'
-], f)
+define(['angular'], f)

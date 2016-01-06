@@ -8,7 +8,8 @@
  */
 
 var f = function () {
-	return function ($scope, $http) {
+	return function ($scope, $rootScope, $http) {
+		$rootScope.navState = [0, 0, 1, 0, 0, 0, 0];
 		$scope.state = [1, 0, 0, 0, 0];
 	}
 };

@@ -10,7 +10,9 @@
 var f = function () {
 
 	//angular会自动根据controller函数的参数名，导入相应的服务
-	return function ($scope, $http, $stateParams, $interval, $q) {
+	return function ($scope, $rootScope, $http, $stateParams, $interval, $q) {
+			$rootScope.navState = [1, 0, 0, 0, 0, 0, 0];
+
 			/**
 			 * 轮播图切换
 			 * 每隔4s切换一次，无限循环

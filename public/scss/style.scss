@@ -1,33 +1,35 @@
-// 主样式入口
+// style.css模块路径
 @import 'reset';
 @import 'function';
 @import 'icons';
 
 @import 'base';
 @import 'color';
-@import 'picwall';
-@import 'album_list';
 @import 'lightbox';
-@import 'footer_other';
+@import '../module/people/ui/picwall';
+@import '../module/people/ui/list';
+@import '../module/layout/footer';
 
-@import 'middle/middle_nav';  // 960px <=1400px
-@import 'middle/middle_index';  // 960px <=1400px
-@import 'middle/middle_people';
-@import 'middle/middle_album';
-@import 'middle/middle_walker';
+// 960px
+@import '../module/layout/nav_small';
+@import '../module/index/index_small';
+@import '../module/people/people_small';
+@import '../module/album/album_small';
+@import '../module/humanity/humanity_small';
 @import '../module/scenery/scenery_small';
-@import 'middle/middle_impression';
-@import 'middle/middle_love';
+@import '../module/impression/impression_small';
+@import '../module/love/love_small';
 @import '../module/about/about_small';
 
+// 1205px
 @media screen and (min-width: 1400px) {
-	@import 'large/large_nav';  // >1400px
-	@import 'large/large_index';  // >1400px
-	@import 'large/large_people';
-	@import 'large/large_album';
-	@import 'large/large_walker';
+	@import '../module/layout/nav_large';
+	@import '../module/index/index_large';
+	@import '../module/people/people_large';
+	@import '../module/album/album_large';
+	@import '../module/humanity/humanity_large';
 	@import '../module/scenery/scenery_large';
-	@import 'large/large_impression';
-	@import 'large/large_love';
+	@import '../module/impression/impression_large';
+	@import '../module/love/love_large';
 	@import '../module/about/about_large';
 }
