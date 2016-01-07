@@ -9,7 +9,7 @@
 		background: url(../../img/scenery/top-bg.jpg) no-repeat center -173px;
 		background-size: 100% auto;
 		.text {
-//			@include red;
+			//			@include red;
 			position: absolute;
 			left: 50%;
 			margin-left: -$small-width/2;
@@ -17,20 +17,20 @@
 			color: #fff;
 			height: 400px;
 			.title {
-//				@include blue;
+				//				@include blue;
 				display: table;
 				font-size: 42px;
 				margin-top: 60px;
-//				background: rgba(0,0,0,0.5);
-//				padding: 10px 30px;
-				font-family: "Open Sans","Segoe UI","Helvetica",sans-serif;
+				//				background: rgba(0,0,0,0.5);
+				//				padding: 10px 30px;
+				font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
 			}
 			.word {
-//				@include green;
+				//				@include green;
 				display: table;
 				font-size: 18px;
 				margin-top: 60px;
-				background: rgba(0,0,0,0.3);
+				background: rgba(0, 0, 0, 0.3);
 				padding: 5px 30px 8px;
 				font-family: 'FangSong';
 				i {
@@ -46,7 +46,7 @@
 			width: 600px;
 			left: 50%;
 			margin-left: -300px;
-//							border: 1px #0f0 solid;
+			//							border: 1px #0f0 solid;
 			span {
 				position: relative;
 				cursor: pointer;
@@ -82,7 +82,49 @@
 		width: $small-width;
 		top: -170px;
 		min-height: 1500px;
+		padding-bottom: 45px;
 		background-color: #fff;
 		//		@include blue;
+		.wrap-intro, .wrap-show {
+			h2.headline-1.custom-title {
+				position: relative;
+				border-left: 12px $main-color solid;
+				font-size: 22px;
+				display: block;
+				font-weight: 500;
+				line-height: 22px;
+				margin: 50px 960px 15px -1px;
+//				@include blue;
+				background: url(http://baike.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/customTitle/img/title-line_c5e6d61.png) repeat-x;
+				overflow: hidden;
+				.headline-content {
+					line-height: 1;
+					color: #000;
+					background: #fff;
+					padding: 0 8px 0 18px;
+				}
+			}
+			.content {
+				display: table;
+//				@include red;
+				margin-left: 50px;
+				color: #000;
+				line-height: 40px;
+				font-size: 14px;
+//				text-indent: 30px;
+			}
+			.description {
+				margin-left: 50px;
+				margin-right: 50px;
+				color: #000;
+				font-size: 14px;
+				line-height: 30px;
+			}
+			.img img {
+				max-width: 1100px;
+				margin-left: 50px;
+				margin-top: 10px;
+			}
+		}
 	}
 }

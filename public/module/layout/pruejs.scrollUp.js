@@ -23,7 +23,7 @@
 
     bindEvent('load',
         function() {
-            var css = 'background-color: rgba(0, 0, 0, .2);display: inline-block;font-family: "Ionicons";color: rgba(255, 255, 255, .92);font-size: 22px;height: 40px;width: 40px;line-height: 40px;overflow: hidden;text-align: center;margin-right: 6px;text-shadow: 0 1px 1px rgba(0, 0, 0, .3);position:fixed;right:30px;bottom:60px;cursor:pointer;display:none;';
+            var css = 'position:relative;z-index:999;background-color: rgba(0, 0, 0, .2);display: inline-block;font-family: "Ionicons";color: rgba(255, 255, 255, .92);font-size: 22px;height: 40px;width: 40px;line-height: 40px;overflow: hidden;text-align: center;margin-right: 6px;text-shadow: 0 1px 1px rgba(0, 0, 0, .3);position:fixed;left:50%;margin-left:622px;bottom:60px;cursor:pointer;display:none;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;';
 
             if (isIE && isIE < 7) {
                 css += '_position:absolute;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-30-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))';
