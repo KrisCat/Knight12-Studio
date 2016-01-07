@@ -46,7 +46,7 @@ var f = function (angular, require) {
 			ctrlName: 'humanityCtrl'
 		},
 		'scenery': {
-			url: '/scenery',
+			url: '/scenery/:type',
 			viewUrl: 'module/scenery/scenery.html',
 			ctrlUrl: 'module/scenery/sceneryCtrl',
 			ctrlName: 'sceneryCtrl'
