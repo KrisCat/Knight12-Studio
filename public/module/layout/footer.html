@@ -24,15 +24,10 @@
 	</div>
 </footer>
 
-<div id="scrollUp">
-	<div class="wrap-scroll">
-		<i class="fa fa-angle-up"></i>
-	</div>
-</div>
+<div id="scrollUp"><i class="fa fa-angle-up"></i></div>
 <script>
 	$(window).scroll(function () {
 		var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
-
 		if (scrollY > 300) { //如果滚动距离大于300px显示
 			$('#scrollUp').show();
 		} else {

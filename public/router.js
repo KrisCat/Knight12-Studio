@@ -40,7 +40,7 @@ var f = function (angular, require) {
 			ctrlName: 'peopleCtrl'
 		},
 		'humanity': {
-			url: '/humanity',
+			url: '/humanity/:type',
 			viewUrl: 'module/humanity/humanity.html',
 			ctrlUrl: 'module/humanity/humanityCtrl',
 			ctrlName: 'humanityCtrl'

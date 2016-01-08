@@ -7,7 +7,6 @@ body {
 
 // 回到顶部按钮样式
 #scrollUp {
-//	@include red;
 	display: none;
 	position: fixed;
 	height: 40px;
@@ -31,20 +30,20 @@ body {
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 	border-radius: 5px;
-	.wrap-scroll {
-		margin-top:-1px;
-		i {
-			-webkit-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			-o-transform: scale(1.2);
-			transform: scale(1.2);
-		}
+	i {
+		display: block;
+		margin-top: 7px;
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
 	}
 	&:hover {
 		background-color: $main-color;
 		color: #fff;
 	}
 }
+
 @media screen and (min-width: 1400px) {
 	#scrollUp {
 		margin-left: 622px;

@@ -1,3 +1,9 @@
 #humanity {
-	min-height: 1500px;
+	.top-img {
+		background: url(../../img/humanity/top-bg.jpg) no-repeat center 0 !important;
+		.buttons {
+			width: 500px!important;
+			margin-left: -250px!important;
+		}
+	}
 }
