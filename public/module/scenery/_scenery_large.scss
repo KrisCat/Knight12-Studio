@@ -1,5 +1,6 @@
 #scenery {
 	.top-img {
+		height: 550px;
 		.text {
 			width: $large-width;
 			margin-left: -$large-width/2;
@@ -7,5 +8,15 @@
 	}
 	.main {
 		width: $large-width;
+		.wrap-intro, .wrap-show {
+			h2.headline-1.custom-title {
+				margin: 50px 960px 15px -1px;
+			}
+			.img img {
+				max-width: 1100px;
+				margin-left: 50px;
+				margin-top: 10px;
+			}
+		}
 	}
 }
