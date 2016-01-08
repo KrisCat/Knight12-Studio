@@ -4,3 +4,49 @@ body {
 	font-family: "Microsoft YaHei";
 	background-color: #fff;
 }
+
+// 回到顶部按钮样式
+#scrollUp {
+//	@include red;
+	display: none;
+	position: fixed;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	left: 50%;
+	margin-left: 500px;
+	bottom: 60px;
+	margin-right: 6px;
+	z-index: 99;
+	background-color: rgba(0, 0, 0, .2);
+	font-family: "Ionicons";
+	color: rgba(255, 255, 255, .92);
+	font-size: 22px;
+	overflow: hidden;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	.wrap-scroll {
+		margin-top:-1px;
+		i {
+			-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+	}
+	&:hover {
+		background-color: $main-color;
+		color: #fff;
+	}
+}
+@media screen and (min-width: 1400px) {
+	#scrollUp {
+		margin-left: 622px;
+	}
+}
