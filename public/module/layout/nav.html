@@ -35,37 +35,8 @@
 			<a href="#/love"><span class="f-fl" ng-class="{active: navState[5]}">爱心公益</span></a>
 			<a href="#/about"><span class="right" ng-class="{active: navState[6]}"><i></i>关于我们</span></a>
 		</div>
-
-		<!--<div class="nav-bar-layout">
-			<div class="category">
-				<ul class="people">
-					<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
-					<li><a href=""><i>环境</i></a><a href=""><i>黑白</i></a></li>
-					<li><a href=""><i>胶片</i></a><a href=""><i>私房</i></a></li>
-				</ul>
-				<ul class="life">
-					<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
-					<li><a href=""><i>西北</i></a><a href=""><i>航拍</i></a></li>
-				</ul>
-				<ul class="film">
-					<li><a href=""><i>图墙</i></a><a href=""><i>全部</i></a></li>
-					<li><a href=""><i>街拍</i></a><a href=""><i>生活</i></a></li>
-				</ul>
-				<ul class="love">
-					<li><a href=""><i class="love">图片墙</i></a></li>
-					<li><a href=""><i class="love">活动相册</i></a></li>
-					<li><a href=""><i class="love">公社介绍</i></a></li>
-				</ul>
-				<ul class="about">
-					<li><a href=""><i>简介</i></a></li>
-					<li><a href=""><i>摄影师</i></a></li>
-					<li><a href=""><i>开发者</i></a></li>
-				</ul>
-			</div>
-		</div>-->
 	</div>
 </nav>
-
 
 <script>
 	$(function () {
@@ -80,37 +51,9 @@
 			$(this).find('.search-btn').removeClass('search-btn-foucs')
 		});
 
-		$('.nav-bar-menu span').hover(
-			function () {
-				$('.nav-bar-layout').show();
-				$(this).index() !== 0 && $('.category ul').eq($(this).index() - 1).addClass('ul-active')
-			},
-			function () {
-				$('.nav-bar-layout ul').removeClass('ul-active');
-				$('.nav-bar-layout').hide();
-				$('.nav-bar-layout').hover(
-					function () {
-						$('.nav-bar-layout').show().fadeIn("slow");
-					},
-					function () {
-						$('.nav-bar-layout').hide().fadeOut("slow");
-					}
-				);
-			});
-//		$('.category ul').hover(
-//			function () {
-//				$(this).addClass('ul-active')
-//				$('.nav-bar-menu span').eq($(this).index() + 1).addClass('span-hover');
-//			},
-//			function () {
-//				$(this).removeClass('ul-active');
-//				$('.nav-bar-menu span').eq($(this).index() + 1).removeClass('span-hover');
-//			}
-//		);
 		$('.search-btn').click(function () {
 			alert('啊，这只程序猿好像还没来得及写搜索功能-_-!');
 		});
-
 		//导航栏滚动悬浮
 		$('.nav-bar').stickUp();
 	});
