@@ -1,3 +1,38 @@
+<div id="love" ng-controller="loveCtrl">
+	<div class="top-img">
+		<div class="text">
+			<div class="title">摄影世界</div>
+			<div class="word"><i>“</i>有一种旅行，不为跋涉千里的向往<br>只为漫无目的的闲逛，或走，或停，原则就是看心情<i> ”</i></div>
+		</div>
+		<div class="buttons f-cb">
+			<a href="#/love/nanking"><span ng-class="{active: state[0]}">何为摄影</span></a>
+			<a href="#/love/hangzhou"><span ng-class="{active: state[1]}">西湖梦寻</span></a>
+			<a href="#/love/honglou"><span ng-class="{active: state[2]}">红楼旧梦</span></a>
+			<a href="#/love/honglou"><span ng-class="{active: state[2]}">红楼旧梦</span></a>
+			<a href="#/love/honglou"><span ng-class="{active: state[2]}">后记</span></a>
+		</div>
+	</div>
+	<div class="main f-m0a">
+		<div class="wrap-intro">
+			<h2 class="headline-1 custom-title f-cb">
+				<span class="headline-content">起源</span>
+			</h2>
+			<div class="content" ng-bind-html="data.description"></div>
+		</div>
+		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
+			<h2 class="headline-1 custom-title f-cb">
+				<span class="headline-content" ng-bind="item.name"></span>
+			</h2>
+			<div class="description" ng-bind="item.description"></div>
+			<div class="img">
+				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
+					<img src="{{item.src}}" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
 <div class="container" id="love" ng-controller="loveCtrl">
 	<div class="top-img">
 		<img src="./img/love_avatar.jpg" alt="">
@@ -15,3 +50,4 @@
 		</div>
 	</div>
 </div>
+-->

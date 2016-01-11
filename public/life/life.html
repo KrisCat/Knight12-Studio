@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="hans">
+
+<head>
+	<meta charset="UTF-8">
+	<title>木纹子生活馆</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<base href="/">
+</head>
+
+<body>
+	<div ng-include="'module/layout/nav.html'"></div>
+	<div id="container" ui-view></div>
+	<div ng-include="'module/layout/footer.html'" id="footer"></div>
+	<script data-baseurl="./" data-main="main.js" src="libs/require.min.js" id="main"></script>
+</body>
+
+</html>
