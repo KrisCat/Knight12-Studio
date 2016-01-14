@@ -3,14 +3,14 @@
 	"lists": [{
 		"type": "environment",
 		"id": "1001",
-		"cover": "http://ww2.sinaimg.cn/thumb150/0062ZzD9jw1exdpcutw29j31jm2bc7wj.jpg",
+		"cover": "img/album/1001/0.jpg",
 		"count": "12张",
-		"title": "南方姑娘",
+		"title": "后棠",
 		"date": "2014年11月8日"
 		}, {
 		"type": "environment",
 		"id": "1002",
-		"cover": "http://ww1.sinaimg.cn/thumb150/0062ZzD9gw1exs9sder84j31jm2bckjo.jpg",
+		"cover": "img/album/1002/0.jpg",
 		"count": "12张",
 		"title": "南方姑娘",
 		"date": "2014年11月8日"

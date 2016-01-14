@@ -25,9 +25,10 @@ var f = function (angular) {
 			$stateParams.type === 'private' && ($scope.showList = $scope._private);
 		};
 		if ($scope._all.length === 0) {
-			$http.get("/json/people_list.json")
+			$http.get("/json/album_content.json")
 				.success(function (_data) {
-					$scope._all = _data.lists;
+//					$scope._all = _data.lists;
+					$scope._all = _data;
 					_.each($scope._all, function (element) {
 						element.type === 'environment' && $scope._environment.push(element);
 						element.type === 'black' && $scope._black.push(element);

@@ -5,8 +5,8 @@
 		<a ng-click="goto('imgFirst')"><span>作品展示</span></a>
 		<a ng-click="goto('imgFirst')"><span class="sub">第一张</span></a>
 		<a ng-click="goto('footer')"><span class="sub">最后一张</span></a>
-		<a href="img/album/{{album_content.id}}/cover.jpg" class="boxer" data-gallery="gallery" title="{{album_content.name}}"><span>幻灯片浏览</span></a>
-		<a><span>全部相册</span></a>
+		<a href="img/album/{{album_content.id}}/0.jpg" class="boxer" data-gallery="gallery" title="{{album_content.name}}"><span>幻灯片浏览</span></a>
+		<a href="#/people/list/all"><span>全部相册</span></a>
 	</div>
 	<div class="main">
 		<div class="photo-list">
@@ -16,7 +16,7 @@
 						<div class="album-wrap">
 							<div class="album-cover">
 								<div class="album-frame">
-									<img src="{{album_content.cover}}" alt=""><span class="count">13张</span>
+									<img src="{{album_content.cover}}" alt="" width="150" height="150"><span class="count" ng-bind="album_content.count"></span>
 			</div>
 		</div>
 	</div>
