@@ -133,6 +133,23 @@
 		  ,{"src": "img/album/1005/9.jpg"}
 		  ]
  }
+ ,{"id": "1011"
+ ,"type": "environment"
+ ,"name": "《蔷薇》"
+ ,"title": "蔷薇"
+ ,"cover": "img/album/1011/0.jpg"
+ ,"count": "2张"
+ ,"belong": "环境人像"
+ ,"model": "@蔷薇"
+ ,"date": "2014年11月8日"
+ ,"place": "南京·河西"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/1011/1.jpg"}
+		  ,{"src": "img/album/1011/2.jpg"}
+		  ]
+ }
  ,{"id": "1006"
  ,"type": "environment"
  ,"name": "《和平大厦》"
@@ -214,6 +231,136 @@
 		  ,{"src": "img/album/1008/11.jpg"}
 		  ,{"src": "img/album/1008/12.jpg"}
 		  ,{"src": "img/album/1008/13.jpg"}
+		  ]
+ }
+ ,{"id": "1009"
+ ,"type": "environment"
+ ,"name": "《兰州姑娘》"
+ ,"title": "兰州姑娘"
+ ,"cover": "img/album/1009/0.jpg"
+ ,"count": "13张"
+ ,"belong": "环境人像"
+ ,"model": "@兰州姑娘"
+ ,"date": "2014年11月2日"
+ ,"place": "甘肃·兰州"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/1009/1.jpg"}
+		  ,{"src": "img/album/1009/2.jpg"}
+		  ,{"src": "img/album/1009/3.jpg"}
+		  ,{"src": "img/album/1009/4.jpg"}
+		  ,{"src": "img/album/1009/5.jpg"}
+		  ,{"src": "img/album/1009/6.jpg"}
+		  ,{"src": "img/album/1009/7.jpg"}
+		  ,{"src": "img/album/1009/8.jpg"}
+		  ,{"src": "img/album/1009/9.jpg"}
+		  ,{"src": "img/album/1009/10.jpg"}
+		  ,{"src": "img/album/1009/11.jpg"}
+		  ,{"src": "img/album/1009/12.jpg"}
+		  ,{"src": "img/album/1009/13.jpg"}
+		  ]
+ }
+ ,{"id": "1010"
+ ,"type": "environment"
+ ,"name": "《小姑娘》"
+ ,"title": "小姑娘"
+ ,"cover": "img/album/1010/0.jpg"
+ ,"count": "12张"
+ ,"belong": "环境人像"
+ ,"model": "@小姑娘"
+ ,"date": "2014年11月2日"
+ ,"place": "南京·江宁火车道"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/1010/1.jpg"}
+		  ,{"src": "img/album/1010/2.jpg"}
+		  ,{"src": "img/album/1010/3.jpg"}
+		  ,{"src": "img/album/1010/4.jpg"}
+		  ,{"src": "img/album/1010/5.jpg"}
+		  ,{"src": "img/album/1010/6.jpg"}
+		  ,{"src": "img/album/1010/7.jpg"}
+		  ,{"src": "img/album/1010/8.jpg"}
+		  ,{"src": "img/album/1010/9.jpg"}
+		  ,{"src": "img/album/1010/10.jpg"}
+		  ,{"src": "img/album/1010/11.jpg"}
+		  ,{"src": "img/album/1010/12.jpg"}
+		  ,{"src": "img/album/1010/13.jpg"}
+		  ]
+ }
+ ,{"id": "2001"
+ ,"type": "film"
+ ,"name": "《早冬》"
+ ,"title": "早冬"
+ ,"cover": "img/album/2001/0.jpg"
+ ,"count": "11张"
+ ,"belong": "胶片人像"
+ ,"model": "@早冬"
+ ,"date": "2014年11月2日"
+ ,"place": "南京·长江大桥"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/2001/1.jpg"}
+		  ,{"src": "img/album/2001/2.jpg"}
+		  ,{"src": "img/album/2001/3.jpg"}
+		  ,{"src": "img/album/2001/4.jpg"}
+		  ,{"src": "img/album/2001/5.jpg"}
+		  ,{"src": "img/album/2001/6.jpg"}
+		  ,{"src": "img/album/2001/7.jpg"}
+		  ,{"src": "img/album/2001/8.jpg"}
+		  ,{"src": "img/album/2001/9.jpg"}
+		  ,{"src": "img/album/2001/10.jpg"}
+		  ,{"src": "img/album/2001/11.jpg"}
+		  ]
+ }
+ ,{"id": "3001"
+ ,"type": "black"
+ ,"name": "《黑白の夜》"
+ ,"title": "黑白の夜"
+ ,"cover": "img/album/3001/0.jpg"
+ ,"count": "7张"
+ ,"belong": "黑白人像"
+ ,"model": "@吴婧"
+ ,"date": "2014年11月2日"
+ ,"place": "南京·江浦"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/3001/1.jpg"}
+		  ,{"src": "img/album/3001/2.jpg"}
+		  ,{"src": "img/album/3001/3.jpg"}
+		  ,{"src": "img/album/3001/4.jpg"}
+		  ,{"src": "img/album/3001/5.jpg"}
+		  ,{"src": "img/album/3001/6.jpg"}
+		  ,{"src": "img/album/3001/7.jpg"}
+		  ]
+ }
+ ,{"id": "4001"
+ ,"type": "private"
+ ,"name": "《红衣少女の私语》"
+ ,"title": "红衣少女の私语"
+ ,"cover": "img/album/4001/0.jpg"
+ ,"count": "12张"
+ ,"belong": "私房人像"
+ ,"model": "@祝雅"
+ ,"date": "2014年11月2日"
+ ,"place": "南京·江宁"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/4001/1.jpg"}
+		  ,{"src": "img/album/4001/2.jpg"}
+		  ,{"src": "img/album/4001/3.jpg"}
+		  ,{"src": "img/album/4001/4.jpg"}
+		  ,{"src": "img/album/4001/5.jpg"}
+		  ,{"src": "img/album/4001/6.jpg"}
+		  ,{"src": "img/album/4001/7.jpg"}
+		  ,{"src": "img/album/4001/8.jpg"}
+		  ,{"src": "img/album/4001/9.jpg"}
+		  ,{"src": "img/album/4001/10.jpg"}
+		  ,{"src": "img/album/4001/11.jpg"}
 		  ]
  }
 ]
