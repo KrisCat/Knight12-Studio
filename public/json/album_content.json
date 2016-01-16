@@ -363,4 +363,27 @@
 		  ,{"src": "img/album/4001/11.jpg"}
 		  ]
  }
+ ,{"id": "2002"
+ ,"type": "film"
+ ,"name": "《大众书局》"
+ ,"title": "大众书局"
+ ,"cover": "img/album/2002/0.jpg"
+ ,"count": "9张"
+ ,"belong": "胶片人像"
+ ,"model": "@胶片"
+ ,"date": "2014年11月2日"
+ ,"place": "南京·仙林"
+ ,"author": "@摄影师羊驼"
+ ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"by": "——简媜《美丽的茧》"
+ ,"imgs": [{"src": "img/album/2002/1.jpg"}
+		  ,{"src": "img/album/2002/2.jpg"}
+		  ,{"src": "img/album/2002/3.jpg"}
+		  ,{"src": "img/album/2002/4.jpg"}
+		  ,{"src": "img/album/2002/5.jpg"}
+		  ,{"src": "img/album/2002/6.jpg"}
+		  ,{"src": "img/album/2002/7.jpg"}
+		  ,{"src": "img/album/2002/8.jpg"}
+		  ]
+ }
 ]
