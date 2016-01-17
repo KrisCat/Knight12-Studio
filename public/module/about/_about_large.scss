@@ -22,6 +22,18 @@
 			.cards {
 				width: 1382px
 			}
+			.say {
+				.say-wrap {
+					width: $large-width;
+				}
+				.say-wrap:nth-child(2n) {
+					span {
+						&.content {
+							right: -204px;
+						}
+					}
+				}
+			}
 		}
 	}
 }

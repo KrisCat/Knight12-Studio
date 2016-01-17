@@ -253,7 +253,7 @@
 				.say-wrap {
 					position: relative;
 					margin: 0 auto;
-					width: $large-width;
+					width: $small-width;
 					height: 177px;
 					//					@include red;
 					span {
@@ -334,7 +334,7 @@
 							border-right: 11px #fff solid;
 						}
 						&.content {
-							right: -204px;
+							right: 40px;
 							left: 0;
 						}
 					}
