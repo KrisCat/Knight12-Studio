@@ -1,1 +1,36 @@
-<div id="impression" ng-controller="impressionCtrl"></div>
+<div id="impression" ng-controller="impressionCtrl">
+	<div class="top-img">
+		<div class="text">
+			<div class="title">印象系列</div>
+			<div class="word"><i>“</i>人生就像一场旅行，在乎的不是目的地
+				<br>而是沿途的风景以及看风景的心情，让心灵去旅行 <i>”</i></div>
+		</div>
+		<div class="buttons f-cb">
+			<a href="#/impression/west"><span ng-class="{active: state[0]}">印象派</span></a>
+			<a href="#/impression/monet"><span ng-class="{active: state[1]}">莫奈</span></a>
+			<a href="#/impression/vangogh"><span ng-class="{active: state[2]}">梵高</span></a>
+			<a href="#/impression/renoir"><span ng-class="{active: state[3]}">雷诺阿</span></a>
+			<a href="#/impression/works"><span ng-class="{active: state[4]}">印象摄影</span></a>
+<!--			<a href="#/impression/water"><span ng-class="{active: state[5]}">水波</span></a>-->
+		</div>
+	</div>
+	<div class="main f-m0a">
+		<div class="wrap-intro">
+			<h2 class="headline-1 custom-title f-cb">
+				<span class="headline-content">基本介绍</span>
+			</h2>
+			<div class="content" ng-bind-html="data.description"></div>
+		</div>
+		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
+			<h2 class="headline-1 custom-title f-cb">
+				<span class="headline-content" ng-bind="item.name"></span>
+			</h2>
+			<div class="description" ng-bind="item.description"></div>
+			<div class="img">
+				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
+					<img src="{{item.src}}" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

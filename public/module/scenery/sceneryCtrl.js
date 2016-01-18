@@ -9,6 +9,7 @@
 
 var f = function () {
 	return function ($scope, $rootScope, $http, $stateParams, $sce) {
+		$rootScope.toTop();
 		$rootScope.navState = [0, 0, 1, 0, 0, 0, 0];
 		var _map = {'west':     [1, 0, 0, 0, 0, 0]
 			       ,'nanking':  [0, 1, 0, 0, 0, 0]

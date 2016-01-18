@@ -28,7 +28,8 @@ var f = function (angular, require) {
 	// 路由配置
 	var routeMap = {
 		// 一级路由
-		'index': {url: '/',
+		'index': {
+			url: '/',
 			viewUrl: 'module/index/index.html',
 			ctrlUrl: 'module/index/indexCtrl',
 			ctrlName: 'indexCtrl'
@@ -52,7 +53,7 @@ var f = function (angular, require) {
 			ctrlName: 'sceneryCtrl'
 		},
 		'impression': {
-			url: '/impression',
+			url: '/impression/:type',
 			viewUrl: 'module/impression/impression.html',
 			ctrlUrl: 'module/impression/impressionCtrl',
 			ctrlName: 'impressionCtrl'
@@ -99,16 +100,24 @@ var f = function (angular, require) {
 			});
 		}
 		$urlRouterProvider.otherwise('/');
-//		$locationProvider.html5Mode(true);
+		//		$locationProvider.html5Mode(true);
 	});
 
 	// 控制器配置
-//	app.controller('navCtrl', function ($scope) {
-//		// 导航栏控制器
-//	});
+	//	app.controller('navCtrl', function ($scope) {
+	//		// 导航栏控制器
+	//	});
 	// 导航栏状态判断
-	app.run(function($rootScope) {
-		$rootScope.navState = [0,0,0,0,0,0,0]
+	app.run(function ($rootScope) {
+		$rootScope.navState = [0, 0, 0, 0, 0, 0, 0];
+		$rootScope.toTop = function() {
+			$("html, body").animate({
+				scrollTop: "0px"
+			}, {
+				duration: 0
+					//				easing: "swing"
+			});
+		};
 	});
 	for (var key in routeMap) {
 		app.controller(routeMap[key].ctrlName, require(routeMap[key].ctrlUrl));
@@ -118,16 +127,16 @@ var f = function (angular, require) {
 };
 
 define(['angular'
-	   ,'require'
-	   ,'angular-route'
-	   ,'module/index/indexCtrl'
-	   ,'module/people/peopleCtrl'
-	   ,'module/humanity/humanityCtrl'
-	   ,'module/scenery/sceneryCtrl'
-	   ,'module/impression/impressionCtrl'
-	   ,'module/love/loveCtrl'
-	   ,'module/about/aboutCtrl'
-	   ,'module/people/ui/picwallCtrl'
-	   ,'module/people/ui/listCtrl'
-	   ,'module/album/albumCtrl'
+	   , 'require'
+	   , 'angular-route'
+	   , 'module/index/indexCtrl'
+	   , 'module/people/peopleCtrl'
+	   , 'module/humanity/humanityCtrl'
+	   , 'module/scenery/sceneryCtrl'
+	   , 'module/impression/impressionCtrl'
+	   , 'module/love/loveCtrl'
+	   , 'module/about/aboutCtrl'
+	   , 'module/people/ui/picwallCtrl'
+	   , 'module/people/ui/listCtrl'
+	   , 'module/album/albumCtrl'
 ], f);

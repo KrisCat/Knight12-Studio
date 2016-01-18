@@ -9,6 +9,7 @@
 
 var f = function () {
 	return function ($scope, $rootScope, $http, $sce) {
+		$rootScope.toTop();
 		$rootScope.navState = [0,0,0,0,0,0,1];
 		$http.get("/json/about_choice.json")
 			.success(function (_data) {

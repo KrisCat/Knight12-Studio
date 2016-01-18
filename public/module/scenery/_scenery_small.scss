@@ -1,4 +1,4 @@
-#scenery, #humanity, #love {
+#scenery, #humanity, #love, #impression {
 	background-color: $bg-color-less;
 	//	@include red;
 	min-height: 1000px;
@@ -35,7 +35,7 @@
 				font-family: 'FangSong';
 				i {
 					font-family: Helvetica, Arial, sans-serif;
-					font-size: 28px;
+					font-size: 30px;
 				}
 			}
 		}
@@ -126,5 +126,11 @@
 				margin-top: 10px;
 			}
 		}
+	}
+}
+#scenery {
+	.top-img {
+		background: url(../../img/scenery/top-bg.jpg) no-repeat center -100px;
+		background-size: 100% auto;
 	}
 }
