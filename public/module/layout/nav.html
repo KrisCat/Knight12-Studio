@@ -5,7 +5,7 @@
 				<li>网易摄影</li>
 				<li>POCO摄影</li>
 				<li><a href="http://tuchong.com/" target="_blank">图虫网</a></li>
-<!--				<li>旅游攻略</li>-->
+				<!--				<li>旅游攻略</li>-->
 			</ul>
 			<ul class="right">
 				<li>微博账号</li>
@@ -55,6 +55,14 @@
 			alert('啊，这只程序猿好像还没来得及写搜索功能-_-!');
 		});
 		//导航栏滚动悬浮
-		$('.nav-bar').stickUp();
+//		$('.nav-bar').stickUp();
+		$(window).scroll(function () {
+			var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
+			if (scrollY > 100) { //如果滚动距离大于100px悬浮
+				$('.nav-bar').css({position: "fixed", top: "0px"});
+			} else {
+				$('.nav-bar').css({position: "relative"});
+			}
+		});
 	});
 </script>

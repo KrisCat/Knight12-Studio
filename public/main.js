@@ -22,7 +22,6 @@
 			jquery: 'libs/jquery.min',
 			'jquery.ui.slider': 'libs/plugins/slider.min',
 			'jquery.ui.lightbox': 'libs/plugins/lightbox.min',
-			'jquery.ui.stickUp': 'libs/plugins/stickUp.min',
 			underscore: 'libs/underscore.min',
 			angular: 'libs/angular.min',
 			'angular-route': 'libs/angular-ui-router/release/angular-ui-router',
@@ -41,8 +40,7 @@
 				exports: 'ngRouteModule'
 			},
 			'jquery.ui.slider': ['jquery'],
-			'jquery.ui.lightbox': ['jquery'],
-			'jquery.ui.stickUp': ['jquery']
+			'jquery.ui.lightbox': ['jquery']
 		}
 	};
 
@@ -52,7 +50,7 @@
 	 * 手工启动angular
 	 * @webapp  刚才定义的angular module
 	 */
-	require(['jquery', 'underscore', 'jquery.ui.lightbox', 'jquery.ui.stickUp'], function($, _) {
+	require(['jquery', 'underscore', 'jquery.ui.lightbox'], function($, _) {
 		require(['angular', 'router'], function (angular) {
 			angular.bootstrap(document, ['webapp']);
 		});

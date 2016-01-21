@@ -23,15 +23,16 @@ var f = function (angular) {
 		};
 		// 侧边栏滚动悬浮
 		$(function () {
-			$('.nav-side').stickUp({
-				// topMargin : '55px'
-				parts: {
-					0: 'intro',
-					1: 'imgFirst',
-					2: 'imgFirst',
-					3: 'footer'
-				},
-				itemHover: ''
+			$(window).scroll(function () {
+				var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
+				if (scrollY > 300) { //如果滚动距离大于100px悬浮
+					$('.nav-side').css({
+						position: "fixed",
+						top: "0px"
+					});
+				} else {
+					$('.nav-side').css("position", "relative");
+				}
 			});
 		});
 		$http.get("/json/album_content.json")
