@@ -10,9 +10,21 @@
 	.top-img {
 		position: relative;
 		width: 100%;
-		background: url(../img/top_people.jpg) no-repeat center center;
+		background: url(../img/people/top-bg.jpg) no-repeat center -131px;
+		background-size: 100% auto;
 		background-color: #50606f;
 		height: 220px;
+		.mask {
+			width: 100%;
+			height: 220px;
+//			@include red;
+			background-color: #000;
+			-webkit-opacity: .5;
+			-moz-opacity: .5;
+			-ms-opacity: .5;
+			-o-opacity: .5;
+			opacity: .5;
+		}
 		img {
 			display: inline-block;
 			position: relative;
@@ -45,18 +57,17 @@
 			position: relative;
 			width: $small-width;
 			margin: 0 auto;
-			top: 80px;
+			top: 100px;
 			.title {
 				//			text-align: center;
 				position: absolute;
 				top: -20px;
 				display: table;
 				color: #fff;
-//				@include blue;
 				//				font-size: 34px;
 				//				margin-top: 50px;
 				background: rgba(0, 0, 0, 0.3);
-				padding: 10px 42px;
+				padding: 10px 20px;
 				font-family: "SimSun", "Segoe UI", "Helvetica", sans-serif;
 //				font: bold 40px/44px Helvetica, Arial, sans-serif;
 				font: 30px "Arial";
@@ -79,7 +90,7 @@
 				float: left;
 				width: 100px;
 				height: 45px;
-				color: rgba(255, 255, 255, 0.5);
+				color: rgba(255, 255, 255, 0.7);
 				line-height: 30px;
 				font-size: 16px;
 				text-align: center;

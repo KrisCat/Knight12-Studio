@@ -13,7 +13,8 @@ body {
 	}
 	.top-img {
 		width: 100%;
-		background: url(../img/top_people.jpg) no-repeat center center;
+		background: url(../img/people/top-bg.jpg) no-repeat center -131px;
+		background-size: 100% auto;
 		background-color: #50606f;
 		height: 220px;
 	}

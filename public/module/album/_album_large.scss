@@ -1,4 +1,8 @@
 #album {
+	.top-img {
+		background: url(../img/people/top-bg.jpg) no-repeat center -195px;
+		background-size: 100% auto;
+	}
 	.main {
 		width: $large-width;
 		box-sizing: border-box;

@@ -1,4 +1,11 @@
 #people {
+	.top-img {
+		background: url(../img/people/top-bg.jpg) no-repeat center -195px;
+		background-size: 100% auto;
+		.intro {
+			width: $large-width;
+		}
+	}
 	.main {
 		min-height: 610px;
 	}
