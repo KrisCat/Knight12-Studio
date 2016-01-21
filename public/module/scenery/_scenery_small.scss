@@ -46,6 +46,7 @@
 			width: 600px;
 			left: 50%;
 			margin-left: -300px;
+			overflow: visible;
 //										border: 1px #0f0 solid;
 			span {
 				position: relative;
@@ -57,7 +58,7 @@
 				line-height: 30px;
 				font-size: 16px;
 				text-align: center;
-				//						border: 1px #f00 solid;
+//										border: 1px #f00 solid;
 			}
 			span.active,
 			span:hover {
