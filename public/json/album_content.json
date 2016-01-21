@@ -232,11 +232,11 @@
 		  ,{"src": "img/album/1008/12.jpg"}
 		  ]
  }
- ,{"id": "3001"
+ ,{"id": "1013"
  ,"type": "black"
  ,"name": "《黑白の夜》"
  ,"title": "黑白の夜"
- ,"cover": "img/album/3001/0.jpg"
+ ,"cover": "img/album/1013/0.jpg"
  ,"count": "7张"
  ,"belong": "黑白人像"
  ,"model": "@吴婧"
@@ -245,20 +245,20 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/3001/1.jpg"}
-		  ,{"src": "img/album/3001/2.jpg"}
-		  ,{"src": "img/album/3001/3.jpg"}
-		  ,{"src": "img/album/3001/4.jpg"}
-		  ,{"src": "img/album/3001/5.jpg"}
-		  ,{"src": "img/album/3001/6.jpg"}
-		  ,{"src": "img/album/3001/7.jpg"}
+ ,"imgs": [{"src": "img/album/1013/1.jpg"}
+		  ,{"src": "img/album/1013/2.jpg"}
+		  ,{"src": "img/album/1013/3.jpg"}
+		  ,{"src": "img/album/1013/4.jpg"}
+		  ,{"src": "img/album/1013/5.jpg"}
+		  ,{"src": "img/album/1013/6.jpg"}
+		  ,{"src": "img/album/1013/7.jpg"}
 		  ]
  }
- ,{"id": "4001"
+ ,{"id": "1014"
  ,"type": "private"
  ,"name": "《红衣少女の私语》"
  ,"title": "红衣少女の私语"
- ,"cover": "img/album/4001/0.jpg"
+ ,"cover": "img/album/1014/0.jpg"
  ,"count": "12张"
  ,"belong": "私房人像"
  ,"model": "@祝雅"
@@ -267,24 +267,24 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/4001/1.jpg"}
-		  ,{"src": "img/album/4001/2.jpg"}
-		  ,{"src": "img/album/4001/3.jpg"}
-		  ,{"src": "img/album/4001/4.jpg"}
-		  ,{"src": "img/album/4001/5.jpg"}
-		  ,{"src": "img/album/4001/6.jpg"}
-		  ,{"src": "img/album/4001/7.jpg"}
-		  ,{"src": "img/album/4001/8.jpg"}
-		  ,{"src": "img/album/4001/9.jpg"}
-		  ,{"src": "img/album/4001/10.jpg"}
-		  ,{"src": "img/album/4001/11.jpg"}
+ ,"imgs": [{"src": "img/album/1014/1.jpg"}
+		  ,{"src": "img/album/1014/2.jpg"}
+		  ,{"src": "img/album/1014/3.jpg"}
+		  ,{"src": "img/album/1014/4.jpg"}
+		  ,{"src": "img/album/1014/5.jpg"}
+		  ,{"src": "img/album/1014/6.jpg"}
+		  ,{"src": "img/album/1014/7.jpg"}
+		  ,{"src": "img/album/1014/8.jpg"}
+		  ,{"src": "img/album/1014/9.jpg"}
+		  ,{"src": "img/album/1014/10.jpg"}
+		  ,{"src": "img/album/1014/11.jpg"}
 		  ]
  }
- ,{"id": "2002"
+ ,{"id": "1012"
  ,"type": "film"
  ,"name": "《大众书局》"
  ,"title": "大众书局"
- ,"cover": "img/album/2002/0.jpg"
+ ,"cover": "img/album/1012/0.jpg"
  ,"count": "9张"
  ,"belong": "胶片人像"
  ,"model": "@胶片"
@@ -293,14 +293,14 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/2002/1.jpg"}
-		  ,{"src": "img/album/2002/2.jpg"}
-		  ,{"src": "img/album/2002/3.jpg"}
-		  ,{"src": "img/album/2002/4.jpg"}
-		  ,{"src": "img/album/2002/5.jpg"}
-		  ,{"src": "img/album/2002/6.jpg"}
-		  ,{"src": "img/album/2002/7.jpg"}
-		  ,{"src": "img/album/2002/8.jpg"}
+ ,"imgs": [{"src": "img/album/1012/1.jpg"}
+		  ,{"src": "img/album/1012/2.jpg"}
+		  ,{"src": "img/album/1012/3.jpg"}
+		  ,{"src": "img/album/1012/4.jpg"}
+		  ,{"src": "img/album/1012/5.jpg"}
+		  ,{"src": "img/album/1012/6.jpg"}
+		  ,{"src": "img/album/1012/7.jpg"}
+		  ,{"src": "img/album/1012/8.jpg"}
 		  ]
  }
 ]
