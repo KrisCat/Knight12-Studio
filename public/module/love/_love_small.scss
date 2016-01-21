@@ -10,18 +10,18 @@
 			span {
 //				display: inline-block;
 				position: relative;
-				width: 150px;
+				width: 149.5px;
 				height: 40px;
 				line-height: 40px;
-				background-color: rgba(0,0,0,.3);
+				background-color: rgba(0,0,0,.4);
 				color: #fff;
 			}
 			span.active,
 			span:hover {
 //				@include red;
 				background-color: #fff!important;
-				color: $main-color;
-				height: 41px;
+				color: #000;
+				height: 40px;
 				top: 1px;
 //				margin-top: 1px;
 //				z-index: 99;

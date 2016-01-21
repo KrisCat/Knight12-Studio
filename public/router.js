@@ -59,7 +59,7 @@ var f = function (angular, require) {
 			ctrlName: 'impressionCtrl'
 		},
 		'love': {
-			url: '/love',
+			url: '/love/:type',
 			viewUrl: 'module/love/love.html',
 			ctrlUrl: 'module/love/loveCtrl',
 			ctrlName: 'loveCtrl'
