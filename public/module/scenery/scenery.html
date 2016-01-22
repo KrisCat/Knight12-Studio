@@ -1,7 +1,7 @@
 <div id="scenery" ng-controller="sceneryCtrl">
 	<div class="top-img">
 		<div class="text">
-			<div class="title">人文城市</div>
+			<div class="title">人文游记</div>
 			<div class="word"><i>“</i>人生就像一场旅行，在乎的不是目的地
 				<br>而是沿途的风景以及看风景的心情，让心灵去旅行 <i>”</i></div>
 		</div>
@@ -21,7 +21,7 @@
 	<div class="main f-m0a">
 		<div class="wrap-intro">
 			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content">基本介绍</span>
+				<span class="headline-content" ng-bind="data.first"></span>
 			</h2>
 			<div class="content" ng-bind-html="data.description"></div>
 		</div>
