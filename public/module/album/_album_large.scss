@@ -1,7 +1,8 @@
 #album {
 	.top-img {
-		background: url(../img/people/top-bg.jpg) no-repeat center -195px;
-		background-size: 100% auto;
+		background: url(../img/people/top-bg.jpg) no-repeat 630px 0px;
+//		background-size: 100% auto;
+		background-color: #d6c1b7;
 	}
 	.main {
 		width: $large-width;
