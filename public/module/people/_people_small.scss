@@ -10,10 +10,10 @@
 	.top-img {
 		position: relative;
 		width: 100%;
-		background: url(../img/people/top-bg.jpg) no-repeat center -131px;
-		background-size: 100% auto;
-		background-color: #50606f;
-		height: 220px;
+		background: url(../img/people/top-bg.jpg) no-repeat 10px 0px;
+//		background-size: 100% auto;
+		background-color: #c19b88;
+		height: 333px;
 		.mask {
 			width: 100%;
 			height: 220px;
@@ -25,7 +25,7 @@
 			-o-opacity: .5;
 			opacity: .5;
 		}
-		img {
+	img {
 			display: inline-block;
 			position: relative;
 			left: 50%;
@@ -57,7 +57,8 @@
 			position: relative;
 			width: $small-width;
 			margin: 0 auto;
-			top: 100px;
+			top: 40px;
+//			@include red;
 			.title {
 				//			text-align: center;
 				position: absolute;
@@ -66,7 +67,7 @@
 				color: #fff;
 				//				font-size: 34px;
 				//				margin-top: 50px;
-				background: rgba(0, 0, 0, 0.3);
+				background: rgba(0, 0, 0, 0.7);
 				padding: 10px 20px;
 				font-family: "SimSun", "Segoe UI", "Helvetica", sans-serif;
 //				font: bold 40px/44px Helvetica, Arial, sans-serif;
@@ -75,6 +76,37 @@
 			span.by {
 				font: 26px "Arial";
 				margin-top: 20px;
+			}
+		}
+		.text {
+			//			@include red;
+			position: absolute;
+			left: 50%;
+			margin-left: -$small-width/2;
+			width: $small-width;
+			color: #fff;
+			height: 400px;
+			.title {
+				//				@include blue;
+				display: table;
+				font-size: 34px;
+				margin-top: 50px;
+				//				background: rgba(0,0,0,0.5);
+				//				padding: 10px 30px;
+				font-family: "SimSun", "Segoe UI", "Helvetica", sans-serif;
+			}
+			.word {
+				//				@include green;
+				display: table;
+				margin-top: 40px;
+				background: rgba(0, 0, 0, 0.3);
+				font-size: 16px;
+				padding: 5px 22px 8px;
+				font-family: 'FangSong';
+				i {
+					font-family: Helvetica, Arial, sans-serif;
+					font-size: 30px;
+				}
 			}
 		}
 		.buttons {

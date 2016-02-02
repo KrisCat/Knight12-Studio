@@ -1,9 +1,24 @@
 #people {
 	.top-img {
-		background: url(../img/people/top-bg.jpg) no-repeat center -195px;
-		background-size: 100% auto;
+		background: url(../img/people/top-bg.jpg) no-repeat 630px 0px;
+//		background-size: 100% auto;
+		background-color: #d6c1b7;
 		.intro {
 			width: $large-width;
+		}
+		.text {
+			width: $large-width;
+			margin-left: -$large-width/2;
+			.title {
+				font-size: 38px;
+			}
+			.word {
+				font-size: 18px;
+				padding: 5px 30px 8px;
+				i {
+					font-size: 30px;
+				}
+			}
 		}
 	}
 	.main {
