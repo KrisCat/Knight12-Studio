@@ -1,9 +1,9 @@
 // 图片墙UI通用样式
-
 .dy-wrap {
 	position: relative;
-//	@include red;
+	//	@include red;
 }
+
 .date {
 	width: $small-width;
 	position: relative;
@@ -17,6 +17,7 @@
 		font-size: 18px;
 	}
 }
+
 .location {
 	width: $small-width;
 	position: relative;
@@ -24,21 +25,29 @@
 	font-size: 17px;
 	color: #000;
 	top: -8px;
-//	@include red;
+	//	@include red;
 }
 
 .photos {
-//	@include red;
+	//	@include red;
 	position: relative;
 	width: 524.4px;
-	margin-bottom: 40px;
+	margin-bottom: 2px;
 	left: 50%;
 	top: -78px;
 	margin-left: -471px;
 	//	height: 1537px;
 	overflow: hidden;
-	padding-right: 415px;
-	background-color: $bg-color-less;
+	//	padding-right: 380px;
+	background-color: #f6f6f6;
+	.dy-text {
+		position: absolute;
+		top: 20px;
+		left: 22px;
+		color: #555;
+		font-size: 14px;
+//		@include red;
+	}
 	li {
 		display: inline-block;
 		float: left;
@@ -64,16 +73,19 @@
 		width: $large-width;
 	}
 	div.photos {
-		width: 524.4px;
-		margin-bottom: 50px;
-		padding-right: 551px;
+//		@include red;
+		width: 525px;
+		margin-bottom: 2px;
+		padding: 20px;
+		padding-top: 55px;
+				padding-right: 529px;
 		//		height: 1430px;
 		li {
-			width: 170.8px;
-			height: 170.8px;
+			width: 150.8px;
+			height: 150.8px;
 			img {
-				width: 170.8px;
-				height: 170.8px;
+				width: 150.8px;
+				height: 150.8px;
 			}
 		}
 	}
