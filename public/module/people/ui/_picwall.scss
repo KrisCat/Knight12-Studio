@@ -1,35 +1,79 @@
 // 图片墙UI通用样式
-div.photos {
+
+.dy-wrap {
 	position: relative;
+//	@include red;
+}
+.date {
 	width: $small-width;
-	height: 1537px;
+	position: relative;
+	margin: 0 auto;
+	font-size: 36px;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 20px;
+	i {
+		font-weight: normal;
+		font-size: 18px;
+	}
+}
+.location {
+	width: $small-width;
+	position: relative;
+	margin: 0 auto;
+	font-size: 17px;
+	color: #000;
+	top: -8px;
+//	@include red;
+}
+
+.photos {
+//	@include red;
+	position: relative;
+	width: 524.4px;
+	margin-bottom: 40px;
+	left: 50%;
+	top: -78px;
+	margin-left: -471px;
+	//	height: 1537px;
 	overflow: hidden;
+	padding-right: 415px;
+	background-color: $bg-color-less;
 	li {
 		display: inline-block;
 		float: left;
-		width: 190px;
-		height: 190px;
+		width: 170.8px;
+		height: 170.8px;
 		border: 1px #fff solid;
 		cursor: pointer;
 		img {
-			width: 190px;
-			height: 190px;
+			width: 170.8px;
+			height: 170.8px;
 		}
 		&:hover {
 			opacity: .5;
 		}
 	}
 }
+
 @media screen and (min-width: 1400px) {
-	div.photos {
+	.date {
 		width: $large-width;
-		height: 1430px;
+	}
+	.location {
+		width: $large-width;
+	}
+	div.photos {
+		width: 524.4px;
+		margin-bottom: 50px;
+		padding-right: 551px;
+		//		height: 1430px;
 		li {
-			width: 198.8px;
-			height: 198.8px;
+			width: 170.8px;
+			height: 170.8px;
 			img {
-				width: 198.8px;
-				height: 198.8px;
+				width: 170.8px;
+				height: 170.8px;
 			}
 		}
 	}
