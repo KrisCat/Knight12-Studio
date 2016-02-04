@@ -8,22 +8,22 @@
  ,"model": "@耳东耳东LION"
  ,"date": "2015年11月5日"
  ,"place": "南京·咖啡馆"
- ,"author": "@摄影师羊驼"
+ ,"author": "@周睿文"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1001/1.jpg"}
-		  ,{"src": "img/album/1001/2.jpg"}
-		  ,{"src": "img/album/1001/3.jpg"}
-		  ,{"src": "img/album/1001/4.jpg"}
-		  ,{"src": "img/album/1001/5.jpg"}
-		  ,{"src": "img/album/1001/6.jpg"}
-		  ,{"src": "img/album/1001/7.jpg"}
-		  ,{"src": "img/album/1001/8.jpg"}
-		  ,{"src": "img/album/1001/9.jpg"}
-		  ,{"src": "img/album/1001/10.jpg"}
-		  ,{"src": "img/album/1001/11.jpg"}
-		  ,{"src": "img/album/1001/12.jpg"}
-		  ,{"src": "img/album/1001/13.jpg"}
+ ,"imgs": [{"src": "img/album/1001/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1001/2.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1001/3.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1001/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1001/5.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1001/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1001/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1001/8.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1001/9.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1001/10.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1001/11.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1001/12.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1001/13.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1002"
@@ -39,21 +39,21 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1002/1.jpg"}
-		  ,{"src": "img/album/1002/2.jpg"}
-		  ,{"src": "img/album/1002/3.jpg"}
-		  ,{"src": "img/album/1002/4.jpg"}
-		  ,{"src": "img/album/1002/5.jpg"}
-		  ,{"src": "img/album/1002/6.jpg"}
-		  ,{"src": "img/album/1002/7.jpg"}
-		  ,{"src": "img/album/1002/8.jpg"}
-		  ,{"src": "img/album/1002/9.jpg"}
-		  ,{"src": "img/album/1002/10.jpg"}
-		  ,{"src": "img/album/1002/11.jpg"}
-		  ,{"src": "img/album/1002/12.jpg"}
-		  ,{"src": "img/album/1002/13.jpg"}
-		  ,{"src": "img/album/1002/14.jpg"}
-		  ,{"src": "img/album/1002/15.jpg"}
+ ,"imgs": [{"src": "img/album/1002/3.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/1.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1002/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/5.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1002/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/8.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1002/9.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/10.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/11.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/12.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/13.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/14.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1002/15.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1003"
@@ -69,15 +69,15 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1003/1.jpg"}
-		  ,{"src": "img/album/1003/2.jpg"}
-		  ,{"src": "img/album/1003/3.jpg"}
-		  ,{"src": "img/album/1003/4.jpg"}
-		  ,{"src": "img/album/1003/5.jpg"}
-		  ,{"src": "img/album/1003/6.jpg"}
-		  ,{"src": "img/album/1003/7.jpg"}
-		  ,{"src": "img/album/1003/8.jpg"}
-		  ,{"src": "img/album/1003/9.jpg"}
+ ,"imgs": [{"src": "img/album/1003/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1003/2.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1003/3.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1003/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1003/5.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1003/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1003/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1003/8.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1003/9.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1004"
@@ -93,20 +93,20 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1004/1.jpg"}
-		  ,{"src": "img/album/1004/2.jpg"}
-		  ,{"src": "img/album/1004/3.jpg"}
-		  ,{"src": "img/album/1004/4.jpg"}
-		  ,{"src": "img/album/1004/5.jpg"}
-		  ,{"src": "img/album/1004/6.jpg"}
-		  ,{"src": "img/album/1004/7.jpg"}
-		  ,{"src": "img/album/1004/8.jpg"}
-		  ,{"src": "img/album/1004/9.jpg"}
-		  ,{"src": "img/album/1004/10.jpg"}
-		  ,{"src": "img/album/1004/11.jpg"}
-		  ,{"src": "img/album/1004/12.jpg"}
-		  ,{"src": "img/album/1004/13.jpg"}
-		  ,{"src": "img/album/1004/14.jpg"}
+ ,"imgs": [{"src": "img/album/1004/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/3.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/5.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/8.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1004/9.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/10.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/11.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/12.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/13.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1004/14.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1005"
@@ -122,15 +122,15 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1005/1.jpg"}
-		  ,{"src": "img/album/1005/2.jpg"}
-		  ,{"src": "img/album/1005/3.jpg"}
-		  ,{"src": "img/album/1005/4.jpg"}
-		  ,{"src": "img/album/1005/5.jpg"}
-		  ,{"src": "img/album/1005/6.jpg"}
-		  ,{"src": "img/album/1005/7.jpg"}
-		  ,{"src": "img/album/1005/8.jpg"}
-		  ,{"src": "img/album/1005/9.jpg"}
+ ,"imgs": [{"src": "img/album/1005/1.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/2.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/3.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1005/5.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/6.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/7.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/8.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1005/9.jpg", "direction": "shu"}
 		  ]
  }
 ,{"id": "1011"
@@ -146,8 +146,8 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1011/1.jpg"}
-		  ,{"src": "img/album/1011/2.jpg"}
+ ,"imgs": [{"src": "img/album/1011/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1011/1.jpg", "direction": "shu"}
 		  ]
  }
 ,{"id": "1006"
@@ -163,20 +163,20 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1006/1.jpg"}
-		  ,{"src": "img/album/1006/2.jpg"}
-		  ,{"src": "img/album/1006/3.jpg"}
-		  ,{"src": "img/album/1006/4.jpg"}
-		  ,{"src": "img/album/1006/5.jpg"}
-		  ,{"src": "img/album/1006/6.jpg"}
-		  ,{"src": "img/album/1006/7.jpg"}
-		  ,{"src": "img/album/1006/8.jpg"}
-		  ,{"src": "img/album/1006/9.jpg"}
-		  ,{"src": "img/album/1006/10.jpg"}
-		  ,{"src": "img/album/1006/11.jpg"}
-		  ,{"src": "img/album/1006/12.jpg"}
-		  ,{"src": "img/album/1006/13.jpg"}
-		  ,{"src": "img/album/1006/14.jpg"}
+ ,"imgs": [{"src": "img/album/1006/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/3.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1006/4.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1006/5.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/7.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1006/8.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/9.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/10.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/11.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/12.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1006/13.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1006/14.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1007"
@@ -192,17 +192,17 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1007/1.jpg"}
-		  ,{"src": "img/album/1007/2.jpg"}
-		  ,{"src": "img/album/1007/3.jpg"}
-		  ,{"src": "img/album/1007/4.jpg"}
-		  ,{"src": "img/album/1007/5.jpg"}
-		  ,{"src": "img/album/1007/6.jpg"}
-		  ,{"src": "img/album/1007/7.jpg"}
-		  ,{"src": "img/album/1007/8.jpg"}
-		  ,{"src": "img/album/1007/9.jpg"}
-		  ,{"src": "img/album/1007/10.jpg"}
-		  ,{"src": "img/album/1007/11.jpg"}
+ ,"imgs": [{"src": "img/album/1007/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/3.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1007/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/5.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/8.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/9.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/10.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1007/11.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1008"
@@ -218,18 +218,18 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1008/1.jpg"}
-		  ,{"src": "img/album/1008/2.jpg"}
-		  ,{"src": "img/album/1008/3.jpg"}
-		  ,{"src": "img/album/1008/4.jpg"}
-		  ,{"src": "img/album/1008/5.jpg"}
-		  ,{"src": "img/album/1008/6.jpg"}
-		  ,{"src": "img/album/1008/7.jpg"}
-		  ,{"src": "img/album/1008/8.jpg"}
-		  ,{"src": "img/album/1008/9.jpg"}
-		  ,{"src": "img/album/1008/10.jpg"}
-		  ,{"src": "img/album/1008/11.jpg"}
-		  ,{"src": "img/album/1008/12.jpg"}
+ ,"imgs": [{"src": "img/album/1008/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1008/2.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1008/3.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1008/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1008/5.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1008/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1008/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1008/8.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1008/9.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1008/10.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1008/11.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1008/12.jpg", "direction": "shu"}
 		  ]
  }
 ,{"id": "1013"
@@ -245,13 +245,13 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1013/1.jpg"}
-		  ,{"src": "img/album/1013/2.jpg"}
-		  ,{"src": "img/album/1013/3.jpg"}
-		  ,{"src": "img/album/1013/4.jpg"}
-		  ,{"src": "img/album/1013/5.jpg"}
-		  ,{"src": "img/album/1013/6.jpg"}
-		  ,{"src": "img/album/1013/7.jpg"}
+ ,"imgs": [{"src": "img/album/1013/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1013/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1013/3.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1013/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1013/5.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1013/6.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1013/7.jpg", "direction": "shu"}
 		  ]
  }
 ,{"id": "1014"
@@ -267,17 +267,17 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1014/1.jpg"}
-		  ,{"src": "img/album/1014/2.jpg"}
-		  ,{"src": "img/album/1014/3.jpg"}
-		  ,{"src": "img/album/1014/4.jpg"}
-		  ,{"src": "img/album/1014/5.jpg"}
-		  ,{"src": "img/album/1014/6.jpg"}
-		  ,{"src": "img/album/1014/7.jpg"}
-		  ,{"src": "img/album/1014/8.jpg"}
-		  ,{"src": "img/album/1014/9.jpg"}
-		  ,{"src": "img/album/1014/10.jpg"}
-		  ,{"src": "img/album/1014/11.jpg"}
+ ,"imgs": [{"src": "img/album/1014/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1014/2.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1014/3.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1014/4.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1014/5.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1014/6.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1014/7.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1014/8.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1014/9.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1014/10.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1014/11.jpg", "direction": "heng"}
 		  ]
  }
 ,{"id": "1012"
@@ -293,14 +293,14 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/album/1012/1.jpg"}
-		  ,{"src": "img/album/1012/2.jpg"}
-		  ,{"src": "img/album/1012/3.jpg"}
-		  ,{"src": "img/album/1012/4.jpg"}
-		  ,{"src": "img/album/1012/5.jpg"}
-		  ,{"src": "img/album/1012/6.jpg"}
-		  ,{"src": "img/album/1012/7.jpg"}
-		  ,{"src": "img/album/1012/8.jpg"}
+ ,"imgs": [{"src": "img/album/1012/1.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1012/2.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1012/3.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1012/4.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1012/5.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1012/6.jpg", "direction": "shu"}
+		  ,{"src": "img/album/1012/7.jpg", "direction": "heng"}
+		  ,{"src": "img/album/1012/8.jpg", "direction": "heng"}
 		  ]
  }
 ]
