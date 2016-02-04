@@ -143,7 +143,7 @@ body {
 			width: 700px;
 			left: 50%;
 			margin-left: -295px;
-//							border: 1px #0f0 solid;
+			//							border: 1px #0f0 solid;
 			span {
 				position: relative;
 				cursor: pointer;
@@ -168,7 +168,8 @@ body {
 				margin-left: -10px;
 				border-left: 10px solid transparent;
 				border-right: 10px solid transparent;
-				border-bottom: 10px solid $bg-color-less;;
+				border-bottom: 10px solid $bg-color-less;
+				;
 			}
 		}
 	}
@@ -219,9 +220,25 @@ body {
 		background-color: $bg-color-less;
 		.photo-list {
 			//			padding: 10px;
-//			@include red;
+			//			@include red;
 			float: right;
 			width: 1003px;
+			.dy-wrap {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				.date {
+					font-weight: normal;
+					font-size: 30px;
+				}
+				.dy-text {
+					position: absolute;
+					top: 20px;
+					color: #555;
+					font-size: 14px;
+					//						@include blue;
+				}
+			}
 			span.title-line {
 				//				border: 1px solid red;
 				//				border: 1px solid #ddd;
@@ -246,22 +263,6 @@ body {
 				box-sizing: border-box;
 				border: 1px solid #ddd;
 				height: 240px;
-				.dy-wrap {
-					position: absolute;
-					top: 0px;
-					left: 0px;
-					.date {
-						font-weight: normal;
-						font-size: 30px;
-					}
-					.dy-text {
-						position: absolute;
-						top: 20px;
-						color: #555;
-						font-size: 14px;
-//						@include blue;
-					}
-				}
 				span.cover {
 					position: relative;
 					left: 20px;
@@ -363,23 +364,42 @@ body {
 				}
 			}
 			.show {
-//				box-sizing: border-box;
-//				border: 1px solid #ddd;
+				//				box-sizing: border-box;
+				//				border: 1px solid #ddd;
 				margin-top: 60px;
-//				background-color: #fff;
+				//				background-color: #fff;
 				//				height: 1500px;
 				div.img {
+					position: relative;
 					background-color: #fff;
-//					padding: 20px;
-//					padding-right: 80px;
+					//					padding: 20px;
+					//					padding-right: 80px;
 					margin-bottom: 40px;
-//					padding-top: 20px;
-//					padding-bottom: 20px;
+					//					padding-top: 20px;
+					//					padding-bottom: 20px;
 					box-sizing: border-box;
 					border: 1px solid #ddd;
 					padding: 10px;
-//					text-align: center;
-//					@include red;
+					//					text-align: center;
+					//					@include red;
+					.dy-wrap {
+						position: absolute;
+						top: 0px;
+						left: -203px;
+						.date {
+							font-size: 36px;
+//							line-height: 36px;
+							font-weight: 600;
+//							vertical-align: baseline;
+						}
+						.dy-text {
+							position: absolute;
+							top: 20px;
+							color: #555;
+							font-size: 14px;
+							//						@include blue;
+						}
+					}
 					img {
 						margin-top: 2px;
 					}

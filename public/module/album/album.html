@@ -9,13 +9,13 @@
 			</div>
 		</div>
 		<div class="buttons f-cb">
-		<a href="#/people/picwall"><span ng-class="{active: state[0]}">拍摄动态</span></a>
-		<a href="#/people/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
-		<a href="#/people/list/environment"><span ng-class="{active: state[2]}">糖水</span></a>
-		<a href="#/people/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
-		<a href="#/people/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
-		<a href="#/people/list/private"><span ng-class="{active: state[5]}">私房</span></a>
-		<a href=""><span class="active">作品展示</span></a>
+			<a href="#/people/picwall"><span ng-class="{active: state[0]}">拍摄动态</span></a>
+			<a href="#/people/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/people/list/environment"><span ng-class="{active: state[2]}">糖水</span></a>
+			<a href="#/people/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
+			<a href="#/people/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
+			<a href="#/people/list/private"><span ng-class="{active: state[5]}">私房</span></a>
+			<a href=""><span class="active">作品展示</span></a>
 		</div>
 	</div>
 	<!--
@@ -33,19 +33,18 @@
 			<div class="intro">
 				<div class="dy-wrap">
 					<div class="date">作品介绍<i></i></div>
-<!--					<div class="location">杭州</div>-->
+					<!--					<div class="location">杭州</div>-->
 				</div>
-<!--				<span class="title-line"><span class="title">作品介绍</span></span>-->
 				<span class="cover">
 					<div class="album-wrap">
 							<div class="album-cover">
 								<div class="album-frame">
 									<img src="{{album_content.cover}}" alt="" width="150" height="150"><span class="count" ng-bind="album_content.count"></span>
-								</div>
-							</div>
-					</div>
-				</span>
-				<span class="text">
+			</div>
+		</div>
+	</div>
+	</span>
+	<span class="text">
 					<div class="row">
 						<i class="left">专辑名称：<em ng-bind="album_content.name"></em></i>
 						<i class="middle">所属分类：<em ng-bind="album_content.belong"></em></i>
@@ -57,13 +56,16 @@
 						<i class="right">摄影师：<em ng-bind="album_content.author"></em></i>
 					</div>
 					<div class="description"><em>“ </em><span ng-bind="album_content.description"></span><em>”</em>
-					<div class="by" ng-bind="album_content.by"></div>
-					</div>
-				</span>
+	<div class="by" ng-bind="album_content.by"></div>
+</div>
+</span>
 </div>
 <div class="show" id="imgFirst">
-<!--	<span class="title-line"><span class="title">作品展示</span></span>-->
 	<div class="img" ng-repeat="img in album_content.imgs" on-finish-render-filters>
+		<div class="dy-wrap">
+			<div class="date"><i>第 </i>{{img.number}}<i> 张</i></div>
+			<!--					<div class="location">杭州</div>-->
+		</div>
 		<a href="{{img.src}}" class="boxer" data-gallery="gallery" title="{{album_content.name}}">
 			<img src="{{img.src}}" alt="" class="{{img.direction}}">
 		</a>
