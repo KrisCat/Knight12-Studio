@@ -38,7 +38,7 @@ angular.module('index', [])
 			});
 		});
 		$q.all({
-			req1: $http.get("/json/people_list.json"),
+			req1: $http.get("/json/people_list_tmp.json"),
 			req2: $http.get("/json/scenery_list.json"),
 			req3: $http.get("/json/humanity_list.json"),
 			req4: $http.get("/json/impression_list.json")
