@@ -8,9 +8,7 @@
  */
 
 var f = function (angular) {
-
-	//angular会自动根据controller函数的参数名，导入相应的服务
-	return function ($scope, $http, $interval, $q, $stateParams) {
+	return function ($scope, $http, $location, $stateParams) {
 		$scope._all = [];
 		$scope._environment = [];
 		$scope._black = [];
@@ -25,25 +23,35 @@ var f = function (angular) {
 			$stateParams.type === 'private' && ($scope.showList = $scope._private);
 		};
 		if ($scope._all.length === 0) {
-			$http.get("/json/people_list.json")
-				.success(function (_data) {
-//					$scope._all = _data.lists;
-					$scope._all = _data;
-					_.each($scope._all, function (element) {
-						element.type === 'environment' && $scope._environment.push(element);
-						element.type === 'black' && $scope._black.push(element);
-						element.type === 'film' && $scope._film.push(element);
-						element.type === 'private' && $scope._private.push(element);
-					});
-					$scope.listTypeConfirm();
-				});
+			whichType('people');
+			whichType('private');
 		} else
 			$scope.listTypeConfirm();
-//		$scope.$on('ngRepeatFinished', function () {
-//			// 下面是在dom render完成后执行的js
-//			// ng-repeat渲染之后再加载页脚
-//			$("#footer").html('<div ng-include="' + "'module/layout/footer.html'" + '"ng-controller="navCtrl"></div>');
-//		});
+
+		// 一级导航类别区分
+		function whichType(type) {
+			if ($location.absUrl().indexOf(type) === -1) return;
+			else {
+				var _jsonUrl = "/json/" + type + "_list.json"
+				$http.get(_jsonUrl)
+					.success(function (_data) {
+						//					$scope._all = _data.lists;
+						$scope._all = _data;
+						_.each($scope._all, function (element) {
+							element.type === 'environment' && $scope._environment.push(element);
+							element.type === 'black' && $scope._black.push(element);
+							element.type === 'film' && $scope._film.push(element);
+							element.type === 'private' && $scope._private.push(element);
+						});
+						$scope.listTypeConfirm();
+					});
+			}
+		}
+		//		$scope.$on('ngRepeatFinished', function () {
+		//			// 下面是在dom render完成后执行的js
+		//			// ng-repeat渲染之后再加载页脚
+		//			$("#footer").html('<div ng-include="' + "'module/layout/footer.html'" + '"ng-controller="navCtrl"></div>');
+		//		});
 	}
 };
 
