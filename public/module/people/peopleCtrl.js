@@ -12,7 +12,7 @@ var f = function () {
 	return function ($scope, $http, $rootScope, $interval, $q, $stateParams) {
 			$rootScope.toTop();
 			$rootScope.navState = [0, 1, 0, 0, 0, 0, 0];
-//			$scope.showpicwall = {};
+//			$scope.showstatus = {};
 //			$scope.showList = [];
 //			$scope._all = [];
 //			$scope._environment = [];

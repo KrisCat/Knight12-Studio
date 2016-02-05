@@ -2,10 +2,10 @@ angular.module('albumRoutes', ['ngRoute']).
 		config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'views/album/picwall.html'
+				templateUrl: 'views/album/status.html'
 			})
-			.when('/picwall', {
-				templateUrl: 'views/album/picwall.html'
+			.when('/status', {
+				templateUrl: 'views/album/status.html'
 			})
 			.when('/list', {
 				templateUrl: 'views/album/list.html'

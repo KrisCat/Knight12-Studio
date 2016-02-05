@@ -71,11 +71,11 @@ var f = function (angular, require) {
 			ctrlName: 'aboutCtrl'
 		},
 		// 二级路由
-		'people.picwall': {
-			url: '/picwall',
-			viewUrl: 'module/people/ui/picwall.html',
-			ctrlUrl: 'module/people/ui/picwallCtrl',
-			ctrlName: 'picwallCtrl'
+		'people.status': {
+			url: '/status',
+			viewUrl: 'module/people/ui/status.html',
+			ctrlUrl: 'module/people/ui/statusCtrl',
+			ctrlName: 'statusCtrl'
 		},
 		'people.list': {
 			url: '/list/:type',
@@ -136,7 +136,7 @@ define(['angular'
 	   ,'module/impression/impressionCtrl'
 	   ,'module/love/loveCtrl'
 	   ,'module/about/aboutCtrl'
-	   ,'module/people/ui/picwallCtrl'
+	   ,'module/people/ui/statusCtrl'
 	   ,'module/people/ui/listCtrl'
 	   ,'module/album/albumCtrl'
 ], f);
