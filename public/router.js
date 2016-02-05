@@ -70,25 +70,25 @@ var f = function (angular, require) {
 			ctrlUrl: 'module/about/aboutCtrl',
 			ctrlName: 'aboutCtrl'
 		},
-		// 二级路由
-		'people.status': {
-			url: '/status',
-			viewUrl: 'module/people/ui/status.html',
-			ctrlUrl: 'module/people/ui/statusCtrl',
-			ctrlName: 'statusCtrl'
-		},
-		'people.list': {
-			url: '/list/:type',
-			viewUrl: 'module/people/ui/list.html',
-			ctrlUrl: 'module/people/ui/listCtrl',
-			ctrlName: 'listCtrl'
-		},
-		// 相册浏览
+		// 作品展示
 		'album': {
 			url: '/album/:id',
 			viewUrl: 'module/album/album.html',
 			ctrlUrl: 'module/album/albumCtrl',
 			ctrlName: 'albumCtrl'
+		},
+		// 二级路由
+		'people.status': {
+			url: '/status',
+			viewUrl: 'component/status/status.html',
+			ctrlUrl: 'component/status/statusCtrl',
+			ctrlName: 'statusCtrl'
+		},
+		'people.list': {
+			url: '/list/:type',
+			viewUrl: 'component/list/list.html',
+			ctrlUrl: 'component/list/listCtrl',
+			ctrlName: 'listCtrl'
 		}
 	};
 	app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -136,7 +136,7 @@ define(['angular'
 	   ,'module/impression/impressionCtrl'
 	   ,'module/love/loveCtrl'
 	   ,'module/about/aboutCtrl'
-	   ,'module/people/ui/statusCtrl'
-	   ,'module/people/ui/listCtrl'
 	   ,'module/album/albumCtrl'
+	   ,'component/status/statusCtrl'
+	   ,'component/list/listCtrl'
 ], f);
