@@ -1,8 +1,9 @@
-// 图片墙UI通用样式
+// 总样式
 .dy-wrap {
 	position: relative;
 	//	@include red;
 }
+// END
 
 .date {
 	width: $small-width;
@@ -28,18 +29,20 @@
 	//	@include red;
 }
 
+
 .photos {
 	//	@include red;
 	position: relative;
-	width: 524.4px;
+	width: 430.4px;
 	margin-bottom: 2px;
 	left: 50%;
 	top: -78px;
-	margin-left: -471px;
-	//	height: 1537px;
+	margin-left: -277px;
 	overflow: hidden;
-	//	padding-right: 380px;
-	background-color: #f6f6f6;
+	background-color: #f1f1f1;
+	padding: 20px;
+	padding-top: 55px;
+	padding-right: 307px;
 	.dy-text {
 		position: absolute;
 		top: 20px;
@@ -51,13 +54,13 @@
 	li {
 		display: inline-block;
 		float: left;
-		width: 170.8px;
-		height: 170.8px;
+		width: 140.8px;
+		height: 140.8px;
 		border: 1px #fff solid;
 		cursor: pointer;
 		img {
-			width: 170.8px;
-			height: 170.8px;
+			width: 140.8px;
+			height: 140.8px;
 		}
 		&:hover {
 			opacity: .5;

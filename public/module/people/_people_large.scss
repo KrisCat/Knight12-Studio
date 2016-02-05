@@ -5,10 +5,17 @@
 			margin-left: -$large-width/2;
 			background: url(../img/people/top-bg.jpg) no-repeat 718px 0px;
 			background-size: auto 100%;
-	//		background-color: #d6c1b7;
+		}
+		img {
+			top: 50px;
+			width: 120px;
 		}
 		.intro {
 			width: $large-width;
+			.profile {
+				top: 75px;
+				left: 146px;
+			}
 		}
 		.text {
 			width: $large-width;
@@ -23,6 +30,9 @@
 					font-size: 30px;
 				}
 			}
+		}
+		.buttons {
+			margin-left: -295px;
 		}
 	}
 	.main {
