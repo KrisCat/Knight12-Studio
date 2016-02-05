@@ -40,11 +40,11 @@ var f = function (angular, require) {
 			ctrlUrl: 'module/people/peopleCtrl',
 			ctrlName: 'peopleCtrl'
 		},
-		'humanity': {
-			url: '/humanity/:type',
-			viewUrl: 'module/humanity/humanity.html',
-			ctrlUrl: 'module/humanity/humanityCtrl',
-			ctrlName: 'humanityCtrl'
+		'private': {
+			url: '/private',
+			viewUrl: 'module/private/private.html',
+			ctrlUrl: 'module/private/privateCtrl',
+			ctrlName: 'privateCtrl'
 		},
 		'scenery': {
 			url: '/scenery/:type',
@@ -77,7 +77,7 @@ var f = function (angular, require) {
 			ctrlUrl: 'module/album/albumCtrl',
 			ctrlName: 'albumCtrl'
 		},
-		// 二级路由
+		// 环境人像二级路由
 		'people.status': {
 			url: '/status',
 			viewUrl: 'component/status/status.html',
@@ -85,6 +85,19 @@ var f = function (angular, require) {
 			ctrlName: 'statusCtrl'
 		},
 		'people.list': {
+			url: '/list/:type',
+			viewUrl: 'component/list/list.html',
+			ctrlUrl: 'component/list/listCtrl',
+			ctrlName: 'listCtrl'
+		},
+		// 私房人像二级路由
+		'private.status': {
+			url: '/status',
+			viewUrl: 'component/status/status.html',
+			ctrlUrl: 'component/status/statusCtrl',
+			ctrlName: 'statusCtrl'
+		},
+		'private.list': {
 			url: '/list/:type',
 			viewUrl: 'component/list/list.html',
 			ctrlUrl: 'component/list/listCtrl',
@@ -131,7 +144,7 @@ define(['angular'
 	   ,'angular-route'
 	   ,'module/index/indexCtrl'
 	   ,'module/people/peopleCtrl'
-	   ,'module/humanity/humanityCtrl'
+	   ,'module/private/privateCtrl'
 	   ,'module/scenery/sceneryCtrl'
 	   ,'module/impression/impressionCtrl'
 	   ,'module/love/loveCtrl'

@@ -8,19 +8,22 @@
  */
 
 var f = function (angular) {
-
-	//angular会自动根据controller函数的参数名，导入相应的服务
-	return function ($scope, $http, $interval, $q) {
+	return function ($scope, $http, $location) {
 		$scope.activeTypeConfirm(0);
-		$http.get("/json/people_status.json")
-			.success(function (_data) {
-				$scope.showstatus = _data;
-				$scope.showstatus = _.shuffle($scope.showstatus);
-			});
+		function whichType(type) {
+			if ($location.absUrl().indexOf(type) === -1) return;
+			else {
+				var _jsonUrl = "/json/" + type + "_status.json"
+				$http.get(_jsonUrl)
+					.success(function (_data) {
+						$scope.showstatus = _data;
+						$scope.showstatus = _.shuffle($scope.showstatus);
+					});
+			}
+		}
+		whichType('people');
+		whichType('private');
 	}
 };
 
-define([
-	'angular',
-//	'./peopleCtrl'
-], f)
+define(['angular'], f)

@@ -1,0 +1,31 @@
+#private {
+	.top-img {
+		.bg-img {
+			width: $large-width;
+			margin-left: -$large-width/2;
+			background: url(../img/people/top-bg.jpg) no-repeat 718px 0px;
+			background-size: auto 100%;
+	//		background-color: #d6c1b7;
+		}
+		.intro {
+			width: $large-width;
+		}
+		.text {
+			width: $large-width;
+			margin-left: -$large-width/2;
+			.title {
+				font-size: 38px;
+			}
+			.word {
+				font-size: 18px;
+				padding: 5px 30px 8px;
+				i {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	.main {
+		min-height: 610px;
+	}
+}

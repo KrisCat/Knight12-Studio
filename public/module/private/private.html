@@ -1,0 +1,24 @@
+<div class="container" id="private" ng-controller="privateCtrl">
+	<div class="top-img">
+		<div class="bg-img"></div>
+		<div class="intro">
+			<img src="./img/avatar1.jpg" alt="">
+			<div class="profile">
+				<div class="name">Aimie<i class="gender male"></i></div>
+				<div class="say">江苏 南京</div>
+			</div>
+		</div>
+		<div class="buttons f-cb">
+			<a href="#/private/status"><span ng-class="{active: state[0]}">拍摄动态</span></a>
+			<a href="#/private/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/private/list/environment"><span ng-class="{active: state[2]}">糖水</span></a>
+			<a href="#/private/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
+			<a href="#/private/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
+			<a href="#/private/list/private"><span ng-class="{active: state[5]}">私房</span></a>
+		</div>
+	</div>
+	<div class="main f-cb">
+		<!-- 二级路由嵌套 -->
+		<div ui-view></div>
+	</div>
+</div>

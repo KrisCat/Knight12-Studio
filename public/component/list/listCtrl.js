@@ -47,6 +47,4 @@ var f = function (angular) {
 	}
 };
 
-define([
-	'angular',
-], f)
+define(['angular'], f)
