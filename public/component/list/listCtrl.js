@@ -20,7 +20,7 @@ var f = function (angular) {
 			$stateParams.type === 'environment' && ($scope.showList = $scope._environment);
 			$stateParams.type === 'black' && ($scope.showList = $scope._black);
 			$stateParams.type === 'film' && ($scope.showList = $scope._film);
-			$stateParams.type === 'private' && ($scope.showList = $scope._private);
+			$stateParams.type === 'other' && ($scope.showList = $scope._private);
 		};
 		if ($scope._all.length === 0) {
 			whichType('people');
@@ -41,10 +41,11 @@ var f = function (angular) {
 							element.type === 'environment' && $scope._environment.push(element);
 							element.type === 'black' && $scope._black.push(element);
 							element.type === 'film' && $scope._film.push(element);
-							element.type === 'private' && $scope._private.push(element);
+							element.type === 'other' && $scope._private.push(element);
 						});
 						$scope.listTypeConfirm();
 					});
+//				debugger;
 			}
 		}
 		//		$scope.$on('ngRepeatFinished', function () {

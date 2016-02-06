@@ -30,7 +30,7 @@ var f = function () {
 				$stateParams.type === 'environment' && $scope.activeTypeConfirm(2);
 				$stateParams.type === 'black' && $scope.activeTypeConfirm(3);
 				$stateParams.type === 'film' && $scope.activeTypeConfirm(4);
-				$stateParams.type === 'private' && $scope.activeTypeConfirm(5);
+				$stateParams.type === 'other' && $scope.activeTypeConfirm(5);
 			};
 		}
 };
