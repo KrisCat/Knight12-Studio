@@ -20,7 +20,7 @@
 		  ,{"src": "img/private/album/2001/7.jpg", "number": "7", "direction": "heng"}
 		  ,{"src": "img/private/album/2001/8.jpg", "number": "8", "direction": "shu"}
 		  ,{"src": "img/private/album/2001/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2001/20.jpg", "number": "10", "direction": "heng"}
+		  ,{"src": "img/private/album/2001/10.jpg", "number": "10", "direction": "heng"}
 		  ,{"src": "img/private/album/2001/11.jpg", "number": "11", "direction": "heng"}
 		  ,{"src": "img/private/album/2001/12.jpg", "number": "12", "direction": "heng"}
 		  ,{"src": "img/private/album/2001/13.jpg", "number": "13", "direction": "heng"}
@@ -48,7 +48,7 @@
 		  ,{"src": "img/private/album/2002/7.jpg", "number": "7", "direction": "heng"}
 		  ,{"src": "img/private/album/2002/8.jpg", "number": "8", "direction": "shu"}
 		  ,{"src": "img/private/album/2002/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2002/20.jpg", "number": "10", "direction": "heng"}
+		  ,{"src": "img/private/album/2002/10.jpg", "number": "10", "direction": "heng"}
 		  ,{"src": "img/private/album/2002/11.jpg", "number": "11", "direction": "heng"}
 		  ,{"src": "img/private/album/2002/12.jpg", "number": "12", "direction": "heng"}
 		  ,{"src": "img/private/album/2002/13.jpg", "number": "13", "direction": "heng"}
@@ -102,7 +102,7 @@
 		  ,{"src": "img/private/album/2004/7.jpg", "number": "7", "direction": "heng"}
 		  ,{"src": "img/private/album/2004/8.jpg", "number": "8", "direction": "shu"}
 		  ,{"src": "img/private/album/2004/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/20.jpg", "number": "10", "direction": "heng"}
+		  ,{"src": "img/private/album/2004/10.jpg", "number": "10", "direction": "heng"}
 		  ,{"src": "img/private/album/2004/11.jpg", "number": "11", "direction": "heng"}
 		  ,{"src": "img/private/album/2004/12.jpg", "number": "12", "direction": "heng"}
 		  ,{"src": "img/private/album/2004/13.jpg", "number": "13", "direction": "heng"}
@@ -172,7 +172,7 @@
 		  ,{"src": "img/private/album/2006/7.jpg", "number": "7", "direction": "shu"}
 		  ,{"src": "img/private/album/2006/8.jpg", "number": "8", "direction": "heng"}
 		  ,{"src": "img/private/album/2006/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/20.jpg", "number": "10", "direction": "heng"}
+		  ,{"src": "img/private/album/2006/10.jpg", "number": "10", "direction": "heng"}
 		  ,{"src": "img/private/album/2006/11.jpg", "number": "11", "direction": "heng"}
 		  ,{"src": "img/private/album/2006/12.jpg", "number": "12", "direction": "shu"}
 		  ,{"src": "img/private/album/2006/13.jpg", "number": "13", "direction": "heng"}
@@ -201,7 +201,7 @@
 		  ,{"src": "img/private/album/2007/7.jpg", "number": "7", "direction": "heng"}
 		  ,{"src": "img/private/album/2007/8.jpg", "number": "8", "direction": "heng"}
 		  ,{"src": "img/private/album/2007/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2007/20.jpg", "number": "10", "direction": "heng"}
+		  ,{"src": "img/private/album/2007/10.jpg", "number": "10", "direction": "heng"}
 		  ,{"src": "img/private/album/2007/11.jpg", "number": "11", "direction": "heng"}
 		  ]
  }
@@ -227,7 +227,7 @@
 		  ,{"src": "img/private/album/2008/7.jpg", "number": "7", "direction": "heng"}
 		  ,{"src": "img/private/album/2008/8.jpg", "number": "8", "direction": "shu"}
 		  ,{"src": "img/private/album/2008/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2008/20.jpg", "number": "10", "direction": "shu"}
+		  ,{"src": "img/private/album/2008/10.jpg", "number": "10", "direction": "shu"}
 		  ,{"src": "img/private/album/2008/11.jpg", "number": "11", "direction": "shu"}
 		  ,{"src": "img/private/album/2008/12.jpg", "number": "12", "direction": "shu"}
 		  ]
@@ -276,7 +276,7 @@
 		  ,{"src": "img/private/album/2014/7.jpg", "number": "7", "direction": "shu"}
 		  ,{"src": "img/private/album/2014/8.jpg", "number": "8", "direction": "heng"}
 		  ,{"src": "img/private/album/2014/9.jpg", "number": "9", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/20.jpg", "number": "10", "direction": "shu"}
+		  ,{"src": "img/private/album/2014/10.jpg", "number": "10", "direction": "shu"}
 		  ,{"src": "img/private/album/2014/11.jpg", "number": "11", "direction": "heng"}
 		  ]
  }
