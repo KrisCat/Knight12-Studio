@@ -35,7 +35,7 @@ var f = function (angular) {
 				}
 			});
 		});
-		$http.get("/json/album_content.json")
+		$http.get("/json/people_list.json")
 			.success(function (_data) {
 				_.each(_data, function (element) {
 					element.id === $stateParams.id && ($scope.album_content = element);

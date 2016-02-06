@@ -75,13 +75,14 @@
 	.location {
 		width: $large-width;
 	}
-	div.photos {
+	.photos {
 //		@include red;
 		width: 525px;
 		margin-bottom: 2px;
 		padding: 20px;
 		padding-top: 55px;
-				padding-right: 529px;
+		margin-left: -399px;
+				padding-right: 457px;
 		//		height: 1430px;
 		li {
 			width: 150.8px;
