@@ -84,6 +84,12 @@ var f = function (angular, require) {
 			ctrlUrl: 'component/status/statusCtrl',
 			ctrlName: 'statusCtrl'
 		},
+		'people.picwall': {
+			url: '/picwall',
+			viewUrl: 'component/picwall/picwall.html',
+			ctrlUrl: 'component/picwall/picwallCtrl',
+			ctrlName: 'picwallCtrl'
+		},
 		'people.list': {
 			url: '/list/:type',
 			viewUrl: 'component/list/list.html',
@@ -96,6 +102,12 @@ var f = function (angular, require) {
 			viewUrl: 'component/status/status.html',
 			ctrlUrl: 'component/status/statusCtrl',
 			ctrlName: 'statusCtrl'
+		},
+		'private.picwall': {
+			url: '/picwall',
+			viewUrl: 'component/picwall/picwall.html',
+			ctrlUrl: 'component/picwall/picwallCtrl',
+			ctrlName: 'picwallCtrl'
 		},
 		'private.list': {
 			url: '/list/:type',
@@ -151,5 +163,6 @@ define(['angular'
 	   ,'module/about/aboutCtrl'
 	   ,'module/album/albumCtrl'
 	   ,'component/status/statusCtrl'
+	   ,'component/picwall/picwallCtrl'
 	   ,'component/list/listCtrl'
 ], f);

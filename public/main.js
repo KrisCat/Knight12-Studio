@@ -22,6 +22,7 @@
 			jquery: 'libs/jquery.min',
 			'jquery.ui.slider': 'libs/plugins/slider.min',
 			'jquery.ui.lightbox': 'libs/plugins/lightbox.min',
+			'jquery.ui.masonry': 'libs/plugins/masonry.min',
 			underscore: 'libs/underscore.min',
 			angular: 'libs/angular.min',
 			'angular-route': 'libs/angular-ui-router/release/angular-ui-router',
@@ -40,7 +41,8 @@
 				exports: 'ngRouteModule'
 			},
 			'jquery.ui.slider': ['jquery'],
-			'jquery.ui.lightbox': ['jquery']
+			'jquery.ui.lightbox': ['jquery'],
+			'jquery.ui.masonry': ['jquery']
 		}
 	};
 
