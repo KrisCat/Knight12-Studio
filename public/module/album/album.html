@@ -1,5 +1,5 @@
 <div class="container" id="album" ng-controller="albumCtrl">
-	<div class="top-img">
+	<div class="top-img" ng-if="type==='people'">
 		<div class="bg-img"></div>
 		<div class="intro">
 			<img src="./img/avatar1.jpg" alt="">
@@ -8,7 +8,7 @@
 				<div class="say">江苏 南京</div>
 			</div>
 		</div>
-		<div class="buttons f-cb" ng-if="type==='people'">
+		<div class="buttons f-cb">
 			<a href="#/people/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
 			<a href="#/people/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
 			<a href="#/people/list/environment"><span ng-class="{active: state[2]}">糖水</span></a>
@@ -17,13 +17,42 @@
 			<a href="#/people/list/other"><span ng-class="{active: state[5]}">其他</span></a>
 			<a href=""><span class="active">作品展示</span></a>
 		</div>
-		<div class="buttons f-cb" ng-if="type==='private'">
+	</div>
+	<div class="top-img" ng-if="type==='private'">
+		<div class="bg-img"></div>
+		<div class="intro">
+			<img src="./img/avatar1.jpg" alt="">
+			<div class="profile">
+				<div class="name">Aimie<i class="gender male"></i></div>
+				<div class="say">江苏 南京</div>
+			</div>
+		</div>
+		<div class="buttons f-cb">
 			<a href="#/private/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
 			<a href="#/private/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
 			<a href="#/private/list/environment"><span ng-class="{active: state[2]}">私房</span></a>
 			<a href="#/private/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
 			<a href="#/private/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
 			<a href="#/private/list/other"><span ng-class="{active: state[5]}">其他</span></a>
+			<a href=""><span class="active">作品展示</span></a>
+		</div>
+	</div>
+	<div class="top-img" ng-if="type==='scenery'">
+		<div class="bg-img"></div>
+		<div class="intro">
+			<img src="./img/avatar1.jpg" alt="">
+			<div class="profile">
+				<div class="name">张宇卿<i class="gender male"></i></div>
+				<div class="say">上海 长宁</div>
+			</div>
+		</div>
+		<div class="buttons f-cb">
+			<a href="#/scenery/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
+			<a href="#/scenery/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/scenery/list/travel"><span ng-class="{active: state[2]}">旅行</span></a>
+			<a href="#/scenery/list/city"><span ng-class="{active: state[3]}">城市</span></a>
+			<a href="#/scenery/list/micro"><span ng-class="{active: state[4]}">微距</span></a>
+			<a href="#/scenery/list/impress"><span ng-class="{active: state[5]}">印象系列</span></a>
 			<a href=""><span class="active">作品展示</span></a>
 		</div>
 	</div>
@@ -73,7 +102,7 @@
 	<div class="img" ng-repeat="img in album_content.imgs" on-finish-render-filters>
 		<div class="dy-wrap">
 			<div class="date"><i>第 </i>{{img.number}}<i> 张</i></div>
-			<!--					<div class="location">杭州</div>-->
+			<div class="location" ng-if="type==='scenery'">{{img.intro}}</div>
 		</div>
 		<a href="{{img.src}}" class="boxer" data-gallery="gallery" title="{{album_content.name}}">
 			<img src="{{img.src}}" alt="" class="{{img.direction}}">

@@ -29,6 +29,7 @@ var f = function () {
 		}
 		whichType('people');
 		whichType('private');
+		whichType('scenery');
 		$scope.$on('ngRepeatFinished', function () {
 			var $container = $('.masonry');
 			$container.imagesLoaded(function() {

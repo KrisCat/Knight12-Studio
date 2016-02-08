@@ -6,7 +6,7 @@
 	}
 	li.item {
 		float: left;
-		width: 300.5px;
+		width: 239.4px;
 		cursor: pointer;
 		margin-bottom: -1px;
 		&:hover {
@@ -34,6 +34,9 @@
 @media screen and (min-width: 1400px){
 	#picwall {
 		width: 1208px;
+		li.item {
+			width: 300.5px;
+		}
 	}
 	// .item{width: 100%!important;}
 }

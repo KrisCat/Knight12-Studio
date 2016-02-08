@@ -1,5 +1,5 @@
 [{"id": "3001"
- ,"type": "west"
+ ,"type": "travel"
  ,"name": "《西北行》"
  ,"title": "西北行"
  ,"cover": "img/scenery/album/3001/0.jpg"
@@ -11,24 +11,24 @@
  ,"author": "@周睿文"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/scenery/album/3001/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/2.jpg", "number": "2", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/10.jpg", "number": "10", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/11.jpg", "number": "11", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/12.jpg", "number": "12", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/13.jpg", "number": "13", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/14.jpg", "number": "14", "direction": "heng"}
+ ,"imgs": [{"src": "img/scenery/album/3001/1.jpg", "number": "1", "intro":"草原", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/2.jpg", "number": "2", "intro":"敦煌落日", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/3.jpg", "number": "3", "intro":"黄土庄", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3001/4.jpg", "number": "4", "intro":"拉脊雪山", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/5.jpg", "number": "5", "intro":"鸣沙山", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/6.jpg", "number": "6", "intro":"牧场", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/7.jpg", "number": "7", "intro":"七彩丹霞", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/8.jpg", "number": "8", "intro":"桥，河，城", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/9.jpg", "number": "9", "intro":"青海湖", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/10.jpg", "number": "10", "intro":"铁厂", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3001/11.jpg", "number": "11", "intro":"西天取经", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3001/12.jpg", "number": "12", "intro":"祥云", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3001/13.jpg", "number": "13", "intro":"银河", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3001/14.jpg", "number": "14", "intro":"云，海", "direction": "heng"}
 		  ]
  }
 ,{"id": "3002"
- ,"type": "cloud"
+ ,"type": "travel"
  ,"name": "《山河云间》"
  ,"title": "山河云间"
  ,"cover": "img/scenery/album/3002/0.jpg"
@@ -40,24 +40,24 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/scenery/album/3002/3.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/2.jpg", "number": "2", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/1.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/10.jpg", "number": "10", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/11.jpg", "number": "11", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/12.jpg", "number": "12", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/13.jpg", "number": "13", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/14.jpg", "number": "14", "direction": "heng"}
+ ,"imgs": [{"src": "img/scenery/album/3002/1.jpg", "number": "1", "intro":"兰州", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/2.jpg", "number": "2", "intro":"华北", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/3.jpg", "number": "3", "intro":"合肥", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/4.jpg", "number": "4", "intro":"黄土高原", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/5.jpg", "number": "5", "intro":"南京长江二桥", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/6.jpg", "number": "6", "intro":"秦岭", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/7.jpg", "number": "7", "intro":"青岛崂山", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/8.jpg", "number": "8", "intro":"潮白河", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/9.jpg", "number": "9", "intro":"北京", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/10.jpg", "number": "10", "intro":"雪山", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/11.jpg", "number": "11", "intro":"浙江", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/12.jpg", "number": "12", "intro":"夕阳", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/13.jpg", "number": "13", "intro":"在云间", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3002/14.jpg", "number": "14", "intro":"拉脱维亚", "direction": "heng"}
 		  ]
  }
 ,{"id": "3003"
- ,"type": "nj"
+ ,"type": "city"
  ,"name": "《南京》"
  ,"title": "南京"
  ,"cover": "img/scenery/album/3003/0.jpg"
@@ -69,23 +69,23 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/scenery/album/3003/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3003/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3003/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3003/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3003/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3003/6.jpg", "number": "6", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3003/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3003/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3003/9.jpg", "number": "9", "direction": "shu"}
+ ,"imgs": [{"src": "img/scenery/album/3003/1.jpg", "number": "1", "intro":"金陵余辉", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3003/2.jpg", "number": "2", "intro":"夜晚", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3003/3.jpg", "number": "3", "intro":"紫峰大厦", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3003/4.jpg", "number": "4", "intro":"南大鼓楼校门", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3003/5.jpg", "number": "5", "intro":"南大北大楼", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3003/6.jpg", "number": "6", "intro":"东大四牌楼", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3003/7.jpg", "number": "7", "intro":"车", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3003/8.jpg", "number": "8", "intro":"梯", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3003/9.jpg", "number": "9", "intro":"玄武湖", "direction": "shu"}
 		  ]
  }
 ,{"id": "3004"
- ,"type": "zhiwu"
- ,"name": "《植物》"
- ,"title": "雨神不下雨的星期三"
+ ,"type": "micro"
+ ,"name": "《花草》"
+ ,"title": "花草"
  ,"cover": "img/scenery/album/3004/0.jpg"
- ,"count": "14张"
+ ,"count": "5张"
  ,"belong": "风光摄影"
  ,"model": "@雨神"
  ,"date": "2014年11月8日"
@@ -101,11 +101,11 @@
 		  ]
  }
 ,{"id": "3005"
- ,"type": "water"
+ ,"type": "micro"
  ,"name": "《水波》"
  ,"title": "水波"
  ,"cover": "img/scenery/album/3005/0.jpg"
- ,"count": "9张"
+ ,"count": "3张"
  ,"belong": "风光摄影"
  ,"model": "@祝雅"
  ,"date": "2014年11月8日"
@@ -119,11 +119,11 @@
 		  ]
  }
 ,{"id": "3006"
- ,"type": "guzhen"
- ,"name": "《古镇村落》"
- ,"title": "古镇村落"
+ ,"type": "impress"
+ ,"name": "《印象系列》"
+ ,"title": "印象系列"
  ,"cover": "img/scenery/album/3006/0.jpg"
- ,"count": "2张"
+ ,"count": "6张"
  ,"belong": "风光摄影"
  ,"model": "@蔷薇"
  ,"date": "2014年11月8日"
@@ -131,12 +131,12 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/scenery/album/3006/1.jpg", "number": "1", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3006/2.jpg", "number": "2", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3006/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3006/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3006/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3006/6.jpg", "number": "6", "direction": "heng"}
+ ,"imgs": [{"src": "img/scenery/album/3006/1.jpg", "number": "1", "intro":"国美象山校区", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3006/2.jpg", "number": "2", "intro":"庐山东林寺", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3006/3.jpg", "number": "3", "intro":"宏村", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3006/4.jpg", "number": "4", "intro":"王家大院", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3006/5.jpg", "number": "5", "intro":"天台风景", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3006/6.jpg", "number": "6", "intro":"宏村", "direction": "heng"}
 		  ]
  }
 ]

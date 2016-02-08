@@ -47,7 +47,7 @@ var f = function (angular, require) {
 			ctrlName: 'privateCtrl'
 		},
 		'scenery': {
-			url: '/scenery/:type',
+			url: '/scenery',
 			viewUrl: 'module/scenery/scenery.html',
 			ctrlUrl: 'module/scenery/sceneryCtrl',
 			ctrlName: 'sceneryCtrl'
@@ -110,6 +110,19 @@ var f = function (angular, require) {
 			ctrlName: 'picwallCtrl'
 		},
 		'private.list': {
+			url: '/list/:type',
+			viewUrl: 'component/list/list.html',
+			ctrlUrl: 'component/list/listCtrl',
+			ctrlName: 'listCtrl'
+		},
+		// 风光摄影二级路由
+		'scenery.picwall': {
+			url: '/picwall',
+			viewUrl: 'component/picwall/picwall.html',
+			ctrlUrl: 'component/picwall/picwallCtrl',
+			ctrlName: 'picwallCtrl'
+		},
+		'scenery.list': {
 			url: '/list/:type',
 			viewUrl: 'component/list/list.html',
 			ctrlUrl: 'component/list/listCtrl',

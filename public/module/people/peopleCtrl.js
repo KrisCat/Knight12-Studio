@@ -8,20 +8,10 @@
  */
 
 var f = function () {
-	//angular会自动根据controller函数的参数名，导入相应的服务
-	return function ($scope, $http, $rootScope, $interval, $q, $stateParams) {
+	return function ($scope, $http, $rootScope, $stateParams) {
 			$rootScope.toTop();
 			$rootScope.navState = [0, 1, 0, 0, 0, 0, 0];
-//			$scope.showstatus = {};
-//			$scope.showList = [];
-//			$scope._all = [];
-//			$scope._environment = [];
-//			$scope._black = [];
-//			$scope._film = [];
-//			$scope._private = [];
 			$scope.state = [1, 0, 0, 0, 0];
-
-
 			$scope.activeTypeConfirm = function (_index) {
 				$scope.state = _.map($scope.state, function () {
 					return 0;
@@ -38,6 +28,4 @@ var f = function () {
 		}
 };
 
-define([
-	'angular'
-], f)
+define(['angular'], f)

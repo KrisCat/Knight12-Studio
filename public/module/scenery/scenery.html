@@ -1,36 +1,24 @@
-<div id="scenery" ng-controller="sceneryCtrl">
+<div class="container" id="scenery" ng-controller="sceneryCtrl">
 	<div class="top-img">
-		<div class="text">
-			<div class="title">风光摄影</div>
-			<div class="word"><i>“</i>人生就像一场旅行，在乎的不是目的地
-				<br>而是沿途的风景以及看风景的心情，让心灵去旅行 <i>”</i></div>
-		</div>
-		<div class="buttons f-cb">
-			<a href="#/scenery/west"><span ng-class="{active: state[0]}">西北行</span></a>
-			<a href="#/scenery/nanking"><span ng-class="{active: state[1]}">南京</span></a>
-			<a href="#/scenery/cloud"><span ng-class="{active: state[2]}">山河云间</span></a>
-			<a href="#/scenery/qixia"><span ng-class="{active: state[3]}">花鸟</span></a>
-			<a href="#/scenery/creature"><span ng-class="{active: state[4]}">花鸟</span></a>
-			<a href="#/scenery/water"><span ng-class="{active: state[5]}">水</span></a>
-		</div>
-	</div>
-	<div class="main f-m0a">
-		<div class="wrap-intro">
-			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content" ng-bind="data.first"></span>
-			</h2>
-			<div class="content" ng-bind-html="data.description"></div>
-		</div>
-		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
-			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content" ng-bind="item.name"></span>
-			</h2>
-			<div class="description" ng-bind="item.description"></div>
-			<div class="img">
-				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
-					<img src="{{item.src}}" alt="">
-				</a>
+		<div class="bg-img"></div>
+		<div class="intro">
+			<img src="./img/avatar1.jpg" alt="">
+			<div class="profile">
+				<div class="name">张宇卿<i class="gender male"></i></div>
+				<div class="say">上海 长宁</div>
 			</div>
 		</div>
+		<div class="buttons f-cb">
+			<a href="#/scenery/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
+			<a href="#/scenery/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/scenery/list/travel"><span ng-class="{active: state[2]}">旅行</span></a>
+			<a href="#/scenery/list/city"><span ng-class="{active: state[3]}">城市</span></a>
+			<a href="#/scenery/list/micro"><span ng-class="{active: state[4]}">微距</span></a>
+			<a href="#/scenery/list/impress"><span ng-class="{active: state[5]}">印象系列</span></a>
+		</div>
+	</div>
+	<div class="main f-cb">
+		<!-- 二级路由嵌套 -->
+		<div ui-view></div>
 	</div>
 </div>

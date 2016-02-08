@@ -13,18 +13,27 @@ var f = function (angular) {
 		$scope._environment = [];
 		$scope._black = [];
 		$scope._film = [];
-		$scope._private = [];
+		$scope._other = [];
+		$scope._travel = [];
+		$scope._city = [];
+		$scope._micro = [];
+		$scope._impress = [];
 		$scope.isActive();
 		$scope.listTypeConfirm = function () {
 			$stateParams.type === 'all' && ($scope.showList = $scope._all);
 			$stateParams.type === 'environment' && ($scope.showList = $scope._environment);
 			$stateParams.type === 'black' && ($scope.showList = $scope._black);
 			$stateParams.type === 'film' && ($scope.showList = $scope._film);
-			$stateParams.type === 'other' && ($scope.showList = $scope._private);
+			$stateParams.type === 'other' && ($scope.showList = $scope._other);
+			$stateParams.type === 'travel' && ($scope.showList = $scope._travel);
+			$stateParams.type === 'city' && ($scope.showList = $scope._city);
+			$stateParams.type === 'micro' && ($scope.showList = $scope._micro);
+			$stateParams.type === 'impress' && ($scope.showList = $scope._impress);
 		};
 		if ($scope._all.length === 0) {
 			whichType('people');
 			whichType('private');
+			whichType('scenery');
 		} else
 			$scope.listTypeConfirm();
 
@@ -41,7 +50,11 @@ var f = function (angular) {
 							element.type === 'environment' && $scope._environment.push(element);
 							element.type === 'black' && $scope._black.push(element);
 							element.type === 'film' && $scope._film.push(element);
-							element.type === 'other' && $scope._private.push(element);
+							element.type === 'other' && $scope._other.push(element);
+							element.type === 'travel' && $scope._travel.push(element);
+							element.type === 'city' && $scope._city.push(element);
+							element.type === 'micro' && $scope._micro.push(element);
+							element.type === 'impress' && $scope._impress.push(element);
 						});
 						$scope.listTypeConfirm();
 					});
