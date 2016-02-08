@@ -1,8 +1,21 @@
+.loading {
+	position: absolute;
+	width: $small-width;
+	left: 50%;
+	margin-left: -$small-width/2;
+	min-height: 400px;
+	background: url(../../img/img_loading.gif) no-repeat center 30px;
+	background-color: #fff;
+	z-index: 9999;
+//	@include red;
+}
 #picwall {
 	position: relative;
 	margin: 0 auto;
 	width: $small-width;
 	ul {
+		position: relative;
+		display: none;
 	}
 	li.item {
 		float: left;
@@ -34,6 +47,12 @@
 @media screen and (min-width: 1400px){
 	#picwall {
 		width: 1208px;
+		.loading {
+			width: $large-width;
+			margin-left: -$large-width/2;
+		}
+		ul {
+		}
 		li.item {
 			width: 300.5px;
 		}

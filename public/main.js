@@ -23,6 +23,7 @@
 			'jquery.ui.slider': 'libs/plugins/slider.min',
 			'jquery.ui.lightbox': 'libs/plugins/lightbox.min',
 			'jquery.ui.masonry': 'libs/plugins/masonry.min',
+			'jquery.ui.lazyload': 'libs/plugins/lazyload.min',
 			underscore: 'libs/underscore.min',
 			angular: 'libs/angular.min',
 			'angular-route': 'libs/angular-ui-router/release/angular-ui-router',
@@ -42,7 +43,8 @@
 			},
 			'jquery.ui.slider': ['jquery'],
 			'jquery.ui.lightbox': ['jquery'],
-			'jquery.ui.masonry': ['jquery']
+			'jquery.ui.masonry': ['jquery'],
+			'jquery.ui.lazyload': ['jquery']
 		}
 	};
 
