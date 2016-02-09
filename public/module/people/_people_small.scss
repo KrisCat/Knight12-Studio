@@ -1,4 +1,5 @@
-#people, #scenery {
+#people,
+#scenery {
 	&.container {
 		position: relative;
 		width: 100%;
@@ -10,19 +11,50 @@
 	.top-img {
 		position: relative;
 		width: 100%;
+		height: 284px;
+//		background-color: #d6c1b7;
+		.text {
+			//			@include red;
+			position: absolute;
+			left: 50%;
+			margin-left: -$small-width/2;
+			width: $small-width;
+			color: #fff;
+			height: 400px;
+			.title {
+				//				@include blue;
+				display: table;
+				font-size: 34px;
+				margin-top: 50px;
+				//				background: rgba(0,0,0,0.5);
+				//				padding: 10px 30px;
+				font-family: "SimSun", "Segoe UI", "Helvetica", sans-serif;
+			}
+			.word {
+				//				@include green;
+				display: table;
+				margin-top: 40px;
+				background: rgba(0, 0, 0, 0.3);
+				font-size: 16px;
+				padding: 5px 22px 8px;
+				font-family: 'FangSong';
+				i {
+					font-family: Helvetica, Arial, sans-serif;
+					font-size: 30px;
+				}
+			}
+		}
 		.bg-img {
 			position: absolute;
 			right: 0;
-			width: $small-width;
-			left: 50%;
-			margin-left: -$small-width/2;
-			height: 180px;
-			background: url(../img/people/top-bg.jpg) no-repeat 510px 0px;
+			// width: $small-width;
+			// left: 50%;
+			// margin-left: -$small-width/2;
+			height: 420px;
+			background: url(../img/people/top-bg.jpg) no-repeat 0px 0px;
 			background-size: auto 100%;
 			background-color: #50606f;
 		}
-		height: 180px;
-		background-color: #50606f;
 		.mask {
 			width: 100%;
 			height: 220px;
@@ -109,37 +141,6 @@
 			//				margin-top: 20px;
 			//			}
 		}
-		.text {
-			//			@include red;
-			position: absolute;
-			left: 50%;
-			margin-left: -$small-width/2;
-			width: $small-width;
-			color: #fff;
-			height: 400px;
-			.title {
-				//				@include blue;
-				display: table;
-				font-size: 34px;
-				margin-top: 50px;
-				//				background: rgba(0,0,0,0.5);
-				//				padding: 10px 30px;
-				font-family: "SimSun", "Segoe UI", "Helvetica", sans-serif;
-			}
-			.word {
-				//				@include green;
-				display: table;
-				margin-top: 40px;
-				background: rgba(0, 0, 0, 0.3);
-				font-size: 16px;
-				padding: 5px 22px 8px;
-				font-family: 'FangSong';
-				i {
-					font-family: Helvetica, Arial, sans-serif;
-					font-size: 30px;
-				}
-			}
-		}
 		.buttons {
 			position: absolute;
 			bottom: 0;
@@ -176,16 +177,21 @@
 		}
 	}
 	.main {
-		//	box-sizing: border-box;
-		//	border: 1px solid #ddd;
 		position: relative;
-		//	height: 1800px;
 		margin: 0 auto;
-		//		margin-top: 60px;
-		margin-top: 90px;
+		margin-top: 36px;
 		min-height: 400px;
 		/*预留footer的高度和边距*/
-		padding-bottom: 115px;
+		padding-bottom: 180px;
+		// box-sizing: border-box;
+		// border: 1px solid #ddd;
+		// position: relative;
+		// width: $small-width;
+		// top: 0px;
+		// min-height: 1500px;
+		// padding-bottom: 45px;
+		// background-color: #fff;
+		//		@include blue;
 		.sub-nav {
 			margin-top: 50px;
 			width: 100%;

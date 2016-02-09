@@ -1,6 +1,12 @@
 <div class="container" id="people" ng-controller="peopleCtrl">
 	<div class="top-img">
 		<div class="bg-img"></div>
+		<div class="text">
+			<div class="title">环境人像</div>
+			<div class="word"><i>“</i>摄影，只不过是一场
+				<br>记录孤独往事的过程，然而我却乐在其中<i> ”</i></div>
+		</div>
+<!--
 		<div class="intro">
 			<img src="./img/avatar1.jpg" alt="">
 			<div class="profile">
@@ -8,6 +14,7 @@
 				<div class="say">江苏 南京</div>
 			</div>
 		</div>
+-->
 		<div class="buttons f-cb">
 			<a href="#/people/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
 			<a href="#/people/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
@@ -17,7 +24,7 @@
 			<a href="#/people/list/other"><span ng-class="{active: state[5]}">其他</span></a>
 		</div>
 	</div>
-	<div class="main f-cb">
+	<div class="main f-cb f-m0a">
 		<!-- 二级路由嵌套 -->
 		<div ui-view></div>
 	</div>

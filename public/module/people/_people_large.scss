@@ -1,10 +1,14 @@
-#people, #scenery {
+#people,
+#scenery {
 	.top-img {
+		height: 334px;
 		.bg-img {
-			width: $large-width;
-			margin-left: -$large-width/2;
-			background: url(../img/people/top-bg.jpg) no-repeat 718px 0px;
-			background-size: auto 100%;
+			// width: $large-width;
+			height: 334px;
+			width: 100%;
+			// margin-left: -72.5px;
+			background: url(../img/people/top-bg.jpg) no-repeat 0px -496px;
+			background-size: 100% auto;
 		}
 		img {
 			top: 50px;
@@ -31,9 +35,21 @@
 				}
 			}
 		}
-
 	}
 	.main {
 		min-height: 610px;
+		width: $large-width;
+		top: 50px;
+		.wrap-intro,
+		.wrap-show {
+			h2.headline-1.custom-title {
+				margin: 50px 960px 15px -1px;
+			}
+			.img img {
+				max-width: 1100px;
+				margin-left: 50px;
+				margin-top: 10px;
+			}
+		}
 	}
 }
