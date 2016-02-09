@@ -15,20 +15,29 @@ body {
 	.top-img {
 		position: relative;
 		width: 100%;
+		height: 284px;
 		.bg-img {
 			position: absolute;
 			right: 0;
-			width: $small-width;
-			left: 50%;
-			margin-left: -$small-width/2;
-			height: 180px;
-			//			@include red;
-			background: url(../img/people/top-bg.jpg) no-repeat 10px 0px;
-			//		background-size: 100% auto;
-			background-color: #50606f;
+			// width: $small-width;
+			// left: 50%;
+			// margin-left: -$small-width/2;
+			width: 100%;
+			height: 284px;
+			&.people-top{
+				background: url(../img/people/top-bg.jpg) no-repeat 0px -241px;
+				background-size: 100% auto;
+			}
+			&.private-top{
+				background: url(../img/private/top-bg.jpg) no-repeat 0px -241px;
+				background-size: 100% auto;
+			}
+			&.scenery-top{
+				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -103px;
+				background-size: 100% auto;
+			}
+
 		}
-		height: 180px;
-		background-color: #50606f;
 		.mask {
 			width: 100%;
 			height: 220px;
