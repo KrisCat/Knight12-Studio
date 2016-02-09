@@ -1,0 +1,37 @@
+#activity {
+	.top-img {
+		height: 474px;
+		.text {
+			width: $large-width;
+			margin-left: -$large-width/2;
+			.title {
+				font-size: 38px;
+			}
+			.word {
+				font-size: 18px;
+				padding: 5px 30px 8px;
+				i {
+					font-size: 30px;
+				}
+			}
+		}
+		.buttons {
+			bottom: 139px;
+		}
+	}
+	.main {
+		width: $large-width;
+		top: -140px;
+		.wrap-intro,
+		.wrap-show {
+			h2.headline-1.custom-title {
+				margin: 50px 960px 15px -1px;
+			}
+			.img img {
+				max-width: 1100px;
+				margin-left: 50px;
+				margin-top: 10px;
+			}
+		}
+	}
+}

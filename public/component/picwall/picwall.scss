@@ -15,7 +15,7 @@
 	width: $small-width;
 	ul {
 		position: relative;
-		display: none;
+		visibility: hidden;
 	}
 	li.item {
 		float: left;
@@ -45,14 +45,13 @@
 	}
 }
 @media screen and (min-width: 1400px){
+		.loading {
+			width: 1210px;
+			margin-left: -606px;
+			min-height: 800px;
+		}
 	#picwall {
 		width: 1208px;
-		.loading {
-			width: $large-width;
-			margin-left: -$large-width/2;
-		}
-		ul {
-		}
 		li.item {
 			width: 300.5px;
 		}

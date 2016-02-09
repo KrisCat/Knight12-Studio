@@ -52,17 +52,17 @@ var f = function (angular, require) {
 			ctrlUrl: 'module/scenery/sceneryCtrl',
 			ctrlName: 'sceneryCtrl'
 		},
-		'impression': {
-			url: '/impression/:type',
-			viewUrl: 'module/impression/impression.html',
-			ctrlUrl: 'module/impression/impressionCtrl',
-			ctrlName: 'impressionCtrl'
-		},
 		'love': {
 			url: '/love/:type',
 			viewUrl: 'module/love/love.html',
 			ctrlUrl: 'module/love/loveCtrl',
 			ctrlName: 'loveCtrl'
+		},
+		'activity': {
+			url: '/activity',
+			viewUrl: 'module/activity/activity.html',
+			ctrlUrl: 'module/activity/activityCtrl',
+			ctrlName: 'activityCtrl'
 		},
 		'about': {
 			url: '/about',
@@ -171,7 +171,7 @@ define(['angular'
 	   ,'module/people/peopleCtrl'
 	   ,'module/private/privateCtrl'
 	   ,'module/scenery/sceneryCtrl'
-	   ,'module/impression/impressionCtrl'
+	   ,'module/activity/activityCtrl'
 	   ,'module/love/loveCtrl'
 	   ,'module/about/aboutCtrl'
 	   ,'module/album/albumCtrl'
