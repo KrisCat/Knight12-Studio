@@ -1,53 +1,19 @@
-<div id="love" ng-controller="loveCtrl">
-	<div class="top-img">
-		<div class="text">
-			<div class="title">拍摄活动</div>
-			<div class="word"><i>“</i>摄影，只不过是一场<br>记录孤独往事的过程，然而我却乐在其中<i> ”</i></div>
-		</div>
-		<div class="buttons f-cb">
-			<a href="#/love/guest" class="f-fl"><span ng-class="{active: state[0]}">客片</span></a>
-			<a href="#/love/model" class="f-fr"><span ng-class="{active: state[1]}">样片</span></a>
-<!--			<a href="#/love/honglou"><span ng-class="{active: state[2]}">风光名片</span></a>-->
-<!--			<a href="#/love/honglou"><span ng-class="{active: state[2]}">人文佳作</span></a>-->
-<!--			<a href="#/love/honglou"><span ng-class="{active: state[2]}">后记</span></a>-->
-		</div>
-	</div>
-	<div class="main f-m0a">
-		<div class="wrap-intro">
-			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content">起源</span>
-			</h2>
-			<div class="content" ng-bind-html="data.description"></div>
-		</div>
-		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
-			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content" ng-bind="item.name"></span>
-			</h2>
-			<div class="description" ng-bind="item.description"></div>
-			<div class="img">
-				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
-					<img src="{{item.src}}" alt="">
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
-<!--
 <div class="container" id="love" ng-controller="loveCtrl">
 	<div class="top-img">
-		<img src="./img/love_avatar.jpg" alt="">
-		<span class="name f-fwb">艾反哺</span>
-		<span class="intro"></span>
+		<div class="bg-img love-top"></div>
+		<div class="text">
+			<div class="title">爱心公益</div>
+			<div class="word"><i>“</i>摄影，只不过是一场
+				<br>记录孤独往事的过程，然而我却乐在其中<i> ”</i></div>
+		</div>
 		<div class="buttons f-cb">
-			<span class="active">图片墙</span>
-			<span>活动相册</span>
-			<span>公社介绍</span>
+			<a href="#/love/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
+			<a href="#/love/intro"><span ng-class="{active: state[1]}">介绍</span></a>
+			<a href="#/love/list/all"><span ng-class="{active: state[2]}">全部相册</span></a>
 		</div>
 	</div>
-	<div class="main f-cb">
-		<div class="photos">
-			<li ng-repeat="photo in love.photos"><img src="{{photo.src}}" width="190" height="190"></li>
-		</div>
+	<div class="main f-cb f-m0a">
+		<!-- 二级路由嵌套 -->
+		<div ui-view></div>
 	</div>
 </div>
--->

@@ -1,14 +1,41 @@
 #album {
 	.top-img {
+		height: 334px;
 		.bg-img {
-			width: $large-width;
-			margin-left: -$large-width/2;
-			background: url(../img/people/top-bg.jpg) no-repeat 718px 0px;
-			background-size: auto 100%;
-			//		background-color: #d6c1b7;
+			height: 334px;
+			&.people-top {
+				background: url(../img/people/top-bg.jpg) no-repeat 0px -450px;
+				background-size: 100% auto;
+			}
+			&.private-top {
+				background: url(../img/private/top-bg.jpg) no-repeat 0px -960px;
+				background-size: 100% auto;
+			}
+			&.scenery-top {
+				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
+				background-size: 100% auto;
+			}
+			&.love-top {
+				background: url(../img/love/top-bg.jpg) no-repeat 0px -241px;
+				background-size: 100% auto;
+			}
 		}
 		.intro {
 			width: $large-width;
+		}
+		.text {
+			width: $large-width;
+			margin-left: -$large-width/2;
+			.title {
+				font-size: 38px;
+			}
+			.word {
+				font-size: 18px;
+				padding: 5px 30px 8px;
+				i {
+					font-size: 30px;
+				}
+			}
 		}
 	}
 	.main {

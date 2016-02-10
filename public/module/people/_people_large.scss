@@ -1,13 +1,29 @@
 #people,
-#scenery {
+#private,
+#scenery,
+#love {
 	.top-img {
 		height: 334px;
 		.bg-img {
 			// width: $large-width;
-			height: 334px;
 			// margin-left: -72.5px;
-			background: url(../img/people/top-bg.jpg) no-repeat 0px -450px;
-			background-size: 100% auto;
+			height: 334px;
+			&.people-top {
+				background: url(../img/people/top-bg.jpg) no-repeat 0px -450px;
+				background-size: 100% auto;
+			}
+			&.private-top {
+				background: url(../img/private/top-bg.jpg) no-repeat 0px -960px;
+				background-size: 100% auto;
+			}
+			&.scenery-top {
+				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
+				background-size: 100% auto;
+			}
+			&.love-top {
+				background: url(../img/love/top-bg.jpg) no-repeat 0px -241px;
+				background-size: 100% auto;
+			}
 		}
 		img {
 			top: 50px;

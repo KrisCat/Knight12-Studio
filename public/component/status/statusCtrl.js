@@ -7,7 +7,7 @@
  * ------------------------------------------
  */
 
-var f = function (angular) {
+var f = function () {
 	return function ($scope, $http, $location) {
 		$scope.activeTypeConfirm(0);
 		function whichType(type) {
@@ -23,6 +23,7 @@ var f = function (angular) {
 		}
 		whichType('people');
 		whichType('private');
+		whichType('love');
 	}
 };
 
