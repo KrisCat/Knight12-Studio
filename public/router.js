@@ -135,6 +135,12 @@ var f = function (angular, require) {
 			ctrlUrl: 'component/picwall/picwallCtrl',
 			ctrlName: 'picwallCtrl'
 		},
+		'love.intro': {
+			url: '/intro',
+			viewUrl: 'component/intro/intro.html',
+			ctrlUrl: 'component/intro/introCtrl',
+			ctrlName: 'introCtrl'
+		},
 		'love.list': {
 			url: '/list/:type',
 			viewUrl: 'component/list/list.html',
@@ -191,4 +197,5 @@ define(['angular'
 	   ,'component/status/statusCtrl'
 	   ,'component/picwall/picwallCtrl'
 	   ,'component/list/listCtrl'
+	   ,'component/intro/introCtrl'
 ], f);
