@@ -9,7 +9,7 @@
 //			 margin-left: -72.5px;
 			height: 334px;
 			&.people-top {
-				background: url(../img/people/top-bg.jpg) no-repeat 0px 0px;
+				background: url(../img/people/top-bg.jpg) no-repeat center 0px;
 				background-size: auto 100%;
 			}
 			&.private-top {
@@ -17,12 +17,14 @@
 				background-size: 100% auto;
 			}
 			&.scenery-top {
-				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
-				background-size: 100% auto;
+				background: url(../img/scenery/top-bg.jpg) no-repeat 0px 0px;
+				background-size: auto 100%;
+//				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
+//				background-size: 100% auto;
 			}
 			&.love-top {
-				background: url(../img/love/top-bg.jpg) no-repeat 0px 0px;
-				background-size: 100% auto;
+				background: url(../img/love/top-bg.jpg) no-repeat center 0px;
+				background-size: auto 100%;
 			}
 		}
 		img {
