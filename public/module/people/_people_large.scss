@@ -1,7 +1,6 @@
 #people,
 #private,
-#scenery,
-#love {
+#scenery {
 	.top-img {
 		height: 334px;
 		.bg-img {
@@ -21,10 +20,6 @@
 				background-size: auto 100%;
 //				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
 //				background-size: 100% auto;
-			}
-			&.love-top {
-				background: url(../img/love/top-bg.jpg) no-repeat center 0px;
-				background-size: auto 100%;
 			}
 		}
 		img {

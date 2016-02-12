@@ -1,4 +1,5 @@
-#activity {
+#activity,
+#love {
 	background-color: $bg-color-less;
 	//	@include red;
 	min-height: 1000px;
@@ -6,8 +7,14 @@
 		position: relative;
 		width: 100%;
 		height: 420px;
-		background: url(../../img/impression/top-bg.jpg) no-repeat center 0px;
-		background-size: 100% auto;
+		&.activity-top {
+			background: url(../../img/impression/top-bg.jpg) no-repeat center 0px;
+			background-size: 100% auto;
+		}
+		&.love-top {
+			background: url(../../img/love/top-bg.jpg) no-repeat center 0px;
+			background-size: auto 100%;
+		}
 		.text {
 			//			@include red;
 			position: absolute;
@@ -129,7 +136,9 @@
 		}
 	}
 }
-#activity {
+
+// 按钮样式二
+#activity, #love {
 	.top-img {
 		.buttons {
 //			@include red;

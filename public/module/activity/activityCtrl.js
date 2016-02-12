@@ -17,8 +17,7 @@ var f = function () {
 		};
 		//mock
 		$scope.state = _map[$stateParams.type];
-		$stateParams.type = 'west';
-		var _url = "/json/scenery_" + $stateParams.type + '.json'
+		var _url = "/json/activity_" + $stateParams.type + '.json'
 		$http.get(_url)
 			.success(function (_data) {
 				$scope.data = _data;

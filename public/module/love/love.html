@@ -1,19 +1,35 @@
-<div class="container" id="love" ng-controller="loveCtrl">
-	<div class="top-img">
-		<div class="bg-img love-top"></div>
+<div id="love" ng-controller="loveCtrl">
+	<div class="top-img love-top">
 		<div class="text">
 			<div class="title">爱心公益</div>
 			<div class="word"><i>“</i>摄影，只不过是一场
 				<br>记录孤独往事的过程，然而我却乐在其中<i> ”</i></div>
 		</div>
-		<div class="buttons f-cb love-bt">
-			<a href="#/love/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
-			<a href="#/love/intro"><span ng-class="{active: state[1]}">介绍</span></a>
-			<a href="#/love/list/all"><span ng-class="{active: state[2]}">全部相册</span></a>
+		<div class="buttons f-cb">
+			<a href="#/love/fanbu" class="f-fl"><span ng-class="{active: state[0]}">反哺学社</span></a>
+			<a href="#/love/wrap" class="f-fr"><span ng-class="{active: state[1]}">爱心包裹</span></a>
 		</div>
 	</div>
-	<div class="main f-cb f-m0a">
-		<!-- 二级路由嵌套 -->
-		<div ui-view></div>
+	<div class="main f-m0a">
+		<div class="wrap-intro">
+			<h2 class="headline-1 custom-title f-cb">
+				<span class="headline-content" ng-bind="data.title1"></span>
+			</h2>
+			<div class="photo" ng-if="data.type === 'fanbu'">
+				<img src="../../img/love/intro.jpg" alt="">
+			</div>
+			<div class="content" ng-bind-html="data.description"></div>
+		</div>
+		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
+			<h2 class="headline-1 custom-title f-cb">
+				<span class="headline-content" ng-bind="item.name"></span>
+			</h2>
+			<div class="description" ng-bind="item.description"></div>
+			<div class="img">
+				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
+					<img src="{{item.src}}" alt="">
+				</a>
+			</div>
+		</div>
 	</div>
 </div>

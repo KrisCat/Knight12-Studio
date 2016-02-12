@@ -1,7 +1,6 @@
 #people,
 #private,
-#scenery,
-#love {
+#scenery {
 	&.container {
 		position: relative;
 		width: 100%;
@@ -64,10 +63,6 @@
 			}
 			&.scenery-top {
 				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -103px;
-				background-size: 100% auto;
-			}
-			&.love-top {
-				background: url(../img/love/top-bg.jpg) no-repeat 0px -241px;
 				background-size: 100% auto;
 			}
 		}
