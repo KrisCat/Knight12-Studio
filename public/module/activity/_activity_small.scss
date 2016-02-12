@@ -94,6 +94,7 @@
 		background-color: #fff;
 		//		@include blue;
 		.wrap-intro, .wrap-show {
+            position: relative;
 			h2.headline-1.custom-title {
 				position: relative;
 				border-left: 12px $main-color solid;
@@ -101,7 +102,7 @@
 				display: block;
 				font-weight: 500;
 				line-height: 22px;
-				margin: 50px 720px 15px -1px;
+				margin: 50px 720px 24px -1px;
 //				@include blue;
 				background: url(../../img/title-line.png) repeat-x;
 				overflow: hidden;
@@ -112,27 +113,61 @@
 					padding: 0 8px 0 18px;
 				}
 			}
+			.photo img {
+                position: relative;
+                width: 250px;
+                left: 50px;
+            }
 			.content {
-				display: table;
-//				@include red;
+                //@include red;
+                position: absolute;
+                top: 37px;
+                width: 836px;
+                left: 274px;
+                display: table;
 				margin-left: 50px;
 				color: #000;
-				line-height: 40px;
+				line-height: 36px;
 				font-size: 14px;
-//				text-indent: 30px;
+				//text-indent: 28px;
 			}
-			.description {
-				margin-left: 50px;
-				margin-right: 50px;
-				color: #000;
-				font-size: 14px;
-				line-height: 30px;
-			}
-			.img img {
-				max-width: 858px;
-				margin-left: 50px;
-				margin-top: 10px;
-			}
+            .img-wrap {
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 36px;
+                padding: 45px;
+                background-color: #f6f6f6;
+                width: 1010px;
+                .description {
+                    margin-top: -28px;
+                    margin-left: 2px;
+                    margin-bottom: 8px;
+                    color: #000;
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+                .img {
+                    float: left;
+                    display: inline-block;
+                    //max-width: 858px;
+                    margin-left: 2px;
+                    margin-top: 2px;
+                    width: 200px;
+                    height: 200px;
+                    overflow: hidden;
+                     img {
+                         margin-left: -80px;
+                         margin-top: -28px;
+                         &:hover {
+                             -webkit-opacity: .5;
+                             -moz-opacity: .5;
+                             -ms-opacity: .5;
+                             -o-opacity: .5;
+                             opacity: .5;
+                         }
+                     }
+                }
+            }
 		}
 	}
 }

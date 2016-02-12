@@ -13,23 +13,40 @@
 	<div class="main f-m0a">
 		<div class="wrap-intro">
 			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content" ng-bind="data.title1"></span>
+				<span class="headline-content" ng-bind="data.title"></span>
 			</h2>
 			<div class="photo" ng-if="data.type === 'fanbu'">
 				<img src="../../img/love/intro.jpg" alt="">
 			</div>
 			<div class="content" ng-bind-html="data.description"></div>
 		</div>
-		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
-			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content" ng-bind="item.name"></span>
-			</h2>
-			<div class="description" ng-bind="item.description"></div>
-			<div class="img">
-				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
-					<img src="{{item.src}}" alt="">
-				</a>
-			</div>
+		<div class="wrap-show">
+            <h2 class="headline-1 custom-title f-cb">
+                <span class="headline-content">校园活动</span>
+            </h2>
+            <div class="img-wrap" ng-repeat="item in data.list1" on-finish-render-filters>
+                <div class="description" ng-bind="item.description"></div>
+                <div class="f-cb">
+                    <div class="img" ng-repeat="subItem in item.imgs">
+                        <a href="{{subItem.src}}" class="boxer" data-gallery="gallery" title="{{subItem.name}}">
+                            <img src="{{subItem.src}}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="headline-1 custom-title f-cb">
+                <span class="headline-content">社会活动</span>
+            </h2>
+            <div class="img-wrap" ng-repeat="item in data.list2" on-finish-render-filters>
+                <div class="description" ng-bind="item.description"></div>
+                <div class="f-cb">
+                    <div class="img" ng-repeat="subItem in item.imgs">
+                        <a href="{{subItem.src}}" class="boxer" data-gallery="gallery" title="{{subItem.name}}">
+                            <img src="{{subItem.src}}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
 </div>
