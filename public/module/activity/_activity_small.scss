@@ -1,5 +1,4 @@
-#activity,
-#love {
+#activity {
 	background-color: $bg-color-less;
 	//	@include red;
 	min-height: 1000px;
@@ -10,10 +9,6 @@
 		&.activity-top {
 			background: url(../../img/impression/top-bg.jpg) no-repeat center 0px;
 			background-size: 100% auto;
-		}
-		&.love-top {
-			background: url(../../img/love/top-bg.jpg) no-repeat center 0px;
-			background-size: auto 100%;
 		}
 		.text {
 			//			@include red;
@@ -138,7 +133,7 @@
 }
 
 // 按钮样式二
-#activity, #love {
+#activity {
 	.top-img {
 		.buttons {
 			//			@include red;

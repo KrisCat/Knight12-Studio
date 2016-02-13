@@ -1,53 +1,31 @@
-<div id="love" ng-controller="loveCtrl">
-	<div class="top-img love-top">
+<div class="container" id="love" ng-controller="loveCtrl">
+	<div class="top-img">
+		<div class="bg-img love-top"></div>
 		<div class="text">
-			<div class="title">爱心公益</div>
+			<div class="title">创意摄影</div>
 			<div class="word"><i>“</i>摄影，只不过是一场
 				<br>记录孤独往事的过程，然而我却乐在其中<i> ”</i></div>
 		</div>
-		<div class="buttons f-cb">
-			<a href="#/love/fanbu" class="f-fl"><span ng-class="{active: state[0]}">反哺学社</span></a>
-			<a href="#/love/wrap" class="f-fr"><span ng-class="{active: state[1]}">爱心包裹</span></a>
-		</div>
-	</div>
-	<div class="main f-m0a">
-		<div class="wrap-intro">
-			<h2 class="headline-1 custom-title f-cb">
-				<span class="headline-content" ng-bind="data.title"></span>
-			</h2>
-			<div class="photo" ng-if="data.type === 'fanbu'">
-				<img src="../../img/love/intro.jpg" alt="">
-			</div>
-			<div class="content" ng-bind-html="data.description"></div>
-		</div>
-		<div class="wrap-show">
-            <h2 class="headline-1 custom-title f-cb">
-                <span class="headline-content">校园活动</span>
-            </h2>
-            <!--<div class="img-wrap" ng-repeat="item in data.list1" on-finish-render-filters>
-                <div class="description" ng-bind="item.description"></div>
-                <div class="f-cb">
-                    <div class="img" ng-repeat="subItem in item.imgs">
-                        <a href="{{subItem.src}}" class="boxer" data-gallery="gallery" title="{{subItem.name}}">
-                            <img src="{{subItem.src}}" alt="">
-                        </a>
+		<!--
+                <div class="intro">
+                    <img src="./img/avatar1.jpg" alt="">
+                    <div class="profile">
+                        <div class="name">摄影师羊驼<i class="gender male"></i></div>
+                        <div class="say">江苏 南京</div>
                     </div>
                 </div>
-            </div>-->
-            <ul class="album-list f-cb">
-                <li class="album" ng-repeat="list in data.list1" on-finish-render-filters>
-                    <div class="album-wrap">
-                        <div class="album-cover">
-                            <div class="album-frame">
-                                <a href="#/album/{{list.id}}"><img src="{{list.cover}}" alt="{{list.name}}" width="150" height="150"><span class="count" ng-bind="list.count"></span></a>
-                            </div>
-                        </div>
-                        <div class="album-detail">
-                            <p class="album-title"><a href="#/album/{{list.id}}"><strong ng-bind="list.title"></strong></a></p>
-                            <p class="album-date" ng-bind="list.date"></p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        -->
+		<div class="buttons f-cb">
+			<a href="#/love/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
+			<a href="#/love/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/love/list/environment"><span ng-class="{active: state[2]}">糖水</span></a>
+			<a href="#/love/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
+			<a href="#/love/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
+			<a href="#/love/list/other"><span ng-class="{active: state[5]}">其他</span></a>
+		</div>
+	</div>
+	<div class="main f-cb f-m0a">
+		<!-- 二级路由嵌套 -->
+		<div ui-view></div>
 	</div>
 </div>

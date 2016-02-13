@@ -14,7 +14,7 @@ var f = function () {
 		function whichType(type) {
 			if ($location.absUrl().indexOf(type) === -1) return;
 			else {
-				var _jsonUrl = "/json/" + type + "_list.json"
+				var _jsonUrl = "/json/" + type + "_list.json";
 				$http.get(_jsonUrl)
 					.success(function (_data) {
 						$scope.showPicwall = [];

@@ -8,32 +8,26 @@
  */
 
 var f = function () {
-	return function ($scope, $rootScope, $http, $stateParams, $sce) {
+	return function ($scope, $http, $rootScope, $stateParams) {
 		$rootScope.toTop();
 		$rootScope.navState = [0, 0, 0, 0, 1, 0, 0];
-		var _map = {
-			'fanbu': [1, 0],
-			'wrap': [0, 1],
+		$scope.state = [1, 0, 0, 0, 0, 0];
+		$scope.activeTypeConfirm = function (_index) {
+			$scope.state = _.map($scope.state, function () {
+				return 0;
+			});
+			$scope.state[_index] = 1;
 		};
-		//mock
-		$scope.state = _map[$stateParams.type];
-		var _url = "/json/love_" + $stateParams.type + '.json'
-		$http.get(_url)
-			.success(function (_data) {
-				$scope.data = _data;
-				$scope.data.description = $sce.trustAsHtml(_data.description);
-			});
-		$scope.$on('ngRepeatFinished', function () {
-			// 下面是在dom render完成后执行的js
-			// 幻灯片浏览
-			$(function () {
-				$(".boxer").boxer({
-					mobile: true
-				});
-			});
-		});
+		$scope.isActive = function () {
+			$stateParams.type === 'all' && $scope.activeTypeConfirm(1);
+			$stateParams.type === 'environment' && $scope.activeTypeConfirm(2);
+			$stateParams.type === 'black' && $scope.activeTypeConfirm(3);
+			$stateParams.type === 'film' && $scope.activeTypeConfirm(4);
+			$stateParams.type === 'other' && $scope.activeTypeConfirm(5);
+		};
 	}
 };
 
 define(['angular'], f)
+
 

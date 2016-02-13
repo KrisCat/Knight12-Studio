@@ -34,6 +34,7 @@ var f = function (angular) {
 			whichType('people');
 			whichType('private');
 			whichType('scenery');
+			whichType('love');
 		} else
 			$scope.listTypeConfirm();
 

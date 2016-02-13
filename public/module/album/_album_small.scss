@@ -36,6 +36,10 @@ body {
 				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -103px;
 				background-size: 100% auto;
 			}
+			&.love-top {
+				background: url(../img/love/top-bg.jpg) no-repeat 0px 0px;
+				background-size: 100% auto;
+			}
 
 		}
 		.mask {
@@ -122,12 +126,12 @@ body {
 			margin-left: -$small-width/2;
 			width: $small-width;
 			color: #fff;
-			height: 400px;
+			height: 280px;
 			.title {
 				//				@include blue;
 				display: table;
 				font-size: 34px;
-				margin-top: 50px;
+				margin-top: 40px;
 				//				background: rgba(0,0,0,0.5);
 				//				padding: 10px 30px;
 				font-family: "SimSun", "Segoe UI", "Helvetica", sans-serif;
@@ -135,7 +139,7 @@ body {
 			.word {
 				//				@include green;
 				display: table;
-				margin-top: 40px;
+				margin-top: 30px;
 				background: rgba(0, 0, 0, 0.3);
 				font-size: 16px;
 				padding: 5px 22px 8px;

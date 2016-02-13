@@ -71,6 +71,30 @@
 			<a href=""><span class="active">作品展示</span></a>
 		</div>
 	</div>
+	<div class="top-img" ng-if="type==='love'">
+		<div class="bg-img love-top"></div>
+		<div class="text">
+			<div class="title">创意摄影</div>
+			<div class="word"><i>“</i>摄影，只不过是一场
+				<br>记录孤独往事的过程，然而我却乐在其中<i> ”</i></div>
+		</div>
+<!-- 		<div class="intro">
+			<img src="./img/avatar1.jpg" alt="">
+			<div class="profile">
+				<div class="name">张宇卿<i class="gender male"></i></div>
+				<div class="say">上海 长宁</div>
+			</div>
+		</div> -->
+		<div class="buttons f-cb">
+			<a href="#/love/picwall"><span ng-class="{active: state[0]}">图片墙</span></a>
+			<a href="#/love/list/all"><span ng-class="{active: state[1]}">全部相册</span></a>
+			<a href="#/love/list/environment"><span ng-class="{active: state[2]}">糖水</span></a>
+			<a href="#/love/list/film"><span ng-class="{active: state[4]}">胶片</span></a>
+			<a href="#/love/list/black"><span ng-class="{active: state[3]}">黑白</span></a>
+			<a href="#/love/list/other"><span ng-class="{active: state[5]}">其他</span></a>
+			<a href=""><span class="active">作品展示</span></a>
+		</div>
+	</div>
 	<!--
 	<div class="nav-side">
 		<a ng-click="goto('intro')"><span class="active">作品介绍</span></a>

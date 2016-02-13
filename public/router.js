@@ -53,7 +53,7 @@ var f = function (angular, require) {
 			ctrlName: 'sceneryCtrl'
 		},
 		'love': {
-			url: '/love/:type',
+			url: '/love',
 			viewUrl: 'module/love/love.html',
 			ctrlUrl: 'module/love/loveCtrl',
 			ctrlName: 'loveCtrl'
@@ -123,6 +123,19 @@ var f = function (angular, require) {
 			ctrlName: 'picwallCtrl'
 		},
 		'scenery.list': {
+			url: '/list/:type',
+			viewUrl: 'component/list/list.html',
+			ctrlUrl: 'component/list/listCtrl',
+			ctrlName: 'listCtrl'
+		},
+		// 创意摄影二级路由
+		'love.picwall': {
+			url: '/picwall',
+			viewUrl: 'component/picwall/picwall.html',
+			ctrlUrl: 'component/picwall/picwallCtrl',
+			ctrlName: 'picwallCtrl'
+		},
+		'love.list': {
 			url: '/list/:type',
 			viewUrl: 'component/list/list.html',
 			ctrlUrl: 'component/list/listCtrl',

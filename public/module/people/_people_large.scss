@@ -1,22 +1,29 @@
 #people,
 #private,
-#scenery {
+#scenery,
+#love {
 	.top-img {
-		height: 334px;
+		height: 260px;
 		.bg-img {
 //			 width: $large-width;
 //			 margin-left: -72.5px;
-			height: 334px;
+			height: 260px;
 			&.people-top {
-				background: url(../img/people/top-bg.jpg) no-repeat center 0px;
-				background-size: auto 100%;
+				background: url(../img/people/top-bg.jpg) no-repeat center -30px;
+				background-size: 100% auto;
 			}
 			&.private-top {
 				background: url(../img/private/top-bg.jpg) no-repeat 0px -400px;
 				background-size: 100% auto;
 			}
 			&.scenery-top {
-				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
+				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -222px;
+				background-size: 100% auto;
+//				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
+//				background-size: 100% auto;
+			}
+			&.love-top {
+				background: url(../img/love/top-bg.jpg) no-repeat 0px -30px;
 				background-size: 100% auto;
 //				background: url(../img/scenery/top-bg.jpg) no-repeat 0px -215px;
 //				background-size: 100% auto;
@@ -37,11 +44,11 @@
 			width: $large-width;
 			margin-left: -$large-width/2;
 			.title {
-				font-size: 38px;
+				font-size: 34px;
 			}
 			.word {
-				font-size: 18px;
-				padding: 5px 30px 8px;
+				font-size: 16px;
+				padding: 5px 18px 8px;
 				i {
 					font-size: 30px;
 				}
@@ -51,7 +58,7 @@
 	.main {
 		min-height: 610px;
 		width: $large-width;
-		top: 50px;
+		top: 30px;
 		.wrap-intro,
 		.wrap-show {
 			h2.headline-1.custom-title {

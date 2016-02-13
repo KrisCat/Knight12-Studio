@@ -49,6 +49,10 @@ var f = function (angular) {
 					$rootScope.navState = [0, 0, 0, 1, 0, 0, 0];
 					$scope.type = 'scenery';
 				}
+				if (type === '/4') {
+					$rootScope.navState = [0, 0, 0, 0, 1, 0, 0];
+					$scope.type = 'love';
+				}
 				var _jsonUrl = "/json/" + $scope.type + "_list.json"
 				$http.get(_jsonUrl)
 					.success(function (_data) {
@@ -61,6 +65,7 @@ var f = function (angular) {
 		whichType('/1');
 		whichType('/2');
 		whichType('/3');
+		whichType('/4');
 		$scope.$on('ngRepeatFinished', function () {
 			// 下面是在dom render完成后执行的js
 			// 幻灯片浏览
