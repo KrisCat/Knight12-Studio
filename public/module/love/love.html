@@ -24,7 +24,7 @@
             <h2 class="headline-1 custom-title f-cb">
                 <span class="headline-content">校园活动</span>
             </h2>
-            <div class="img-wrap" ng-repeat="item in data.list1" on-finish-render-filters>
+            <!--<div class="img-wrap" ng-repeat="item in data.list1" on-finish-render-filters>
                 <div class="description" ng-bind="item.description"></div>
                 <div class="f-cb">
                     <div class="img" ng-repeat="subItem in item.imgs">
@@ -33,20 +33,21 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <h2 class="headline-1 custom-title f-cb">
-                <span class="headline-content">社会活动</span>
-            </h2>
-            <div class="img-wrap" ng-repeat="item in data.list2" on-finish-render-filters>
-                <div class="description" ng-bind="item.description"></div>
-                <div class="f-cb">
-                    <div class="img" ng-repeat="subItem in item.imgs">
-                        <a href="{{subItem.src}}" class="boxer" data-gallery="gallery" title="{{subItem.name}}">
-                            <img src="{{subItem.src}}" alt="">
-                        </a>
+            </div>-->
+            <ul class="album-list f-cb">
+                <li class="album" ng-repeat="list in data.list1" on-finish-render-filters>
+                    <div class="album-wrap">
+                        <div class="album-cover">
+                            <div class="album-frame">
+                                <a href="#/album/{{list.id}}"><img src="{{list.cover}}" alt="{{list.name}}" width="150" height="150"><span class="count" ng-bind="list.count"></span></a>
+                            </div>
+                        </div>
+                        <div class="album-detail">
+                            <p class="album-title"><a href="#/album/{{list.id}}"><strong ng-bind="list.title"></strong></a></p>
+                            <p class="album-date" ng-bind="list.date"></p>
+                        </div>
                     </div>
-                </div>
-            </div>
-		</div>
+                </li>
+            </ul>
 	</div>
 </div>
