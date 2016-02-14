@@ -7,8 +7,8 @@
 		</div>
 		<div class="pos-center-wrap">
 			<div class="yuepian f-cb">
-				<div class="guest-wrap"><span>人像</span></div>
-				<div class="model-wrap"><span>私房</span></div>
+				<div class="people-wrap"><span>人像</span></div>
+				<div class="private-wrap"><span>私房</span></div>
 			</div>
 		</div>
 		<!--<div class="buttons f-cb">-->
@@ -17,12 +17,12 @@
 		<!--</div>-->
 	</div>
 	<div class="main f-m0a">
-		<div class="wrap-intro">
+<!--		<div class="wrap-intro">
 			<h2 class="headline-1 custom-title f-cb">
 				<span class="headline-content">介绍</span>
 			</h2>
 			<div class="content" ng-bind-html="data.description"></div>
-		</div>
+		</div>-->
 		<div class="wrap-show" ng-repeat="item in data.list" on-finish-render-filters>
 			<h2 class="headline-1 custom-title f-cb">
 				<span class="headline-content" ng-bind="item.name"></span>
@@ -32,6 +32,31 @@
 				<a href="{{item.src}}" class="boxer" data-gallery="gallery" title="{{item.name}}">
 					<img src="{{item.src}}" alt="">
 				</a>
+			</div>
+		</div>
+	</div>
+	<div class="mask"></div>
+	<div class="dialog d-people">
+		<div class="close"></div>
+		<div class="title">环境人像约片</div>
+		<div class="content">
+			<div class="wechat qr-people"></div>
+			<div class="note">
+				坐标：南京/上海/杭州 <br>
+				客片：300元/15张/人 <br>
+				详情请扫微信二维码联系
+			</div>
+		</div>
+	</div>
+	<div class="dialog d-private">
+		<div class="close"></div>
+		<div class="title">私房写真约片</div>
+		<div class="content">
+			<div class="wechat qr-private"></div>
+			<div class="note">
+				坐标：南京 <br>
+				客片：300元/15张/人 <br>
+				详情请扫微信二维码联系
 			</div>
 		</div>
 	</div>

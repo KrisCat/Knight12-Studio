@@ -35,17 +35,17 @@ var f = function () {
 //					bannerSlider.next();
 //				});
 //			});
-			$q.all({req1: $http.get("/json/people_list_tmp.json")
-				   ,req2: $http.get("/json/scenery_list_tmp.json")
-				   ,req3: $http.get("/json/humanity_list.json")
-				   ,req4: $http.get("/json/impression_list.json")
+			$q.all({req1: $http.get("/json/people_list.json")
+				   ,req2: $http.get("/json/private_list.json")
+				   ,req3: $http.get("/json/scenery_list.json")
+				   ,req4: $http.get("/json/love_list.json")
 			}).then(function (arr) {
 				// 以上请求都完成后执行以下代码
 				_.each(arr, function (e) {
-					e.data.name === '人像摄影' && ($scope.people = e.data);
-					e.data.name === '风光摄影' && ($scope.scenery = e.data);
-					e.data.name === '人文摄影' && ($scope.humanity = e.data);
-					e.data.name === '印象系列' && ($scope.impression = e.data);
+					e.data[0].id === '1001' && ($scope.people = e.data);
+					e.data[0].id === '2001' && ($scope.private = e.data);
+					e.data[0].id === '3001' && ($scope.scenery = e.data);
+					e.data[0].id === '4001' && ($scope.love = e.data);
 				});
 				/**
 				 * 大屏排列12个，小屏排列10个
@@ -53,17 +53,25 @@ var f = function () {
 				 * @return 选取后的新数组
 				 */
 				function select(arr, threshold) {
-					arr.lists = _(arr.lists).chain()
+					arr = _(arr).chain()
 						.map(function (e, i) {
 							if (i < threshold) return e;
 						})
 						.compact()
 						.value();
 				}
+				//function selectTmp(arr, threshold) {
+				//	arr.lists = _(arr.lists).chain()
+				//		.map(function (e, i) {
+				//			if (i < threshold) return e;
+				//		})
+				//		.compact()
+				//		.value();
+				//}
 				select($scope.people, 12);
+				select($scope.private, 12);
 				select($scope.scenery, 12);
-				select($scope.humanity, 12);
-				select($scope.impression, 12);
+				select($scope.love, 12);
 				//			if ($(window).width() >= 1400) {
 				//				select($scope.people, 12);
 				//				select($scope.scenery, 12);
@@ -77,7 +85,7 @@ var f = function () {
 				//			}
 				// 加工过后的数据
 				$scope.allLists = [];
-				$scope.allLists.push($scope.people, $scope.scenery, $scope.humanity, $scope.impression);
+				$scope.allLists.push($scope.people, $scope.private, $scope.scenery, $scope.love);
 			});
 
 			$http.get("/json/album_category.json")

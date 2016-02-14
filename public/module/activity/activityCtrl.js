@@ -33,6 +33,22 @@ var f = function () {
 				});
 			});
 		});
+		$('.people-wrap').click(function () {
+			$('.mask').show();
+			$('.d-people').show();
+			$('body').css('overflow-y', 'hidden');
+		});
+		$('.private-wrap').click(function () {
+			$('.mask').show();
+			$('.d-private').show();
+			$('body').css('overflow-y', 'hidden');
+		});
+		$('.close').click(function() {
+			$('.dialog').hide();
+			$('.mask').hide();
+			$('body').css('overflow-y', 'visible');
+		})
+
 	}
 };
 

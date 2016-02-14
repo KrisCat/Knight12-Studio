@@ -144,7 +144,7 @@
 				display: block;
 				font-weight: 500;
 				line-height: 22px;
-				margin: 50px 720px 15px -1px;
+				margin: 53px 720px 15px -1px;
 				//				@include blue;
 				background: url(../../img/title-line.png) repeat-x;
 				overflow: hidden;
@@ -169,12 +169,75 @@
 				margin-right: 50px;
 				color: #000;
 				font-size: 14px;
-				line-height: 30px;
+				line-height: 36px;
 			}
 			.img img {
-				max-width: 858px;
-				margin-left: 50px;
-				margin-top: 10px;
+				//max-width: 858px;
+				//margin-left: 50px;
+				//margin-top: 10px;
+			}
+		}
+	}
+	.dialog {
+		display: none;
+		position: fixed;
+		z-index: 11;
+		top: 50%;
+		left: 50%;
+		margin-top: -250px;
+		margin-left: -300px;
+		width: 600px;
+		height: 440px;
+		background-color: #fff;
+		//background: url("../../img/top-bg.jpg") no-repeat 0 0;
+		.close {
+			position: absolute;
+			right: -2px;
+			top: 12px;
+			width: 30px;
+			height: 30px;
+			background: url(../img/cha.png) no-repeat center center;
+			background-size: 447px 180px;
+			background-position: 0 -125px;
+			cursor: pointer;
+			z-index: 12;
+		}
+		.title {
+			position: relative;
+			//margin: 0 auto;
+			width: 200px;
+			top: 26px;
+			//@include red;
+			color: $main-color;
+			font-size: 24px;
+			text-align: center;
+		}
+		.content {
+			position: relative;
+			margin: 0 auto;
+			width: 500px;
+			top: 50px;
+			height: 340px;
+			//@include blue;
+			.wechat {
+				position: relative;
+				margin: 0 auto;
+				top: 10px;
+				width: 200px;
+				height: 200px;
+				&.qr-people{background: url(../../img/activity/qr_people.jpg) no-repeat center;}
+				&.qr-private{background: url(../../img/activity/qr_private.jpg) no-repeat center;}
+			}
+			.note {
+				position: relative;
+				margin: 0 auto;
+				top: 33px;
+				//left: 0;
+				width: 400px;
+				text-align: center;
+				color: #000;
+				font-size: 15px;
+				line-height: 30px;
 			}
 		}
 	}
