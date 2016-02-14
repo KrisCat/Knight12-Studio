@@ -1,6 +1,11 @@
 #about {
 	.top-img {
-//		height: 684px;
+		height: 270px;
+		.bg-img {
+			height: 270px;
+			background: url(../img/top-bg.jpg) no-repeat 0 -200px;
+			background-size: 100% auto;
+		}
 //		background-size: 2400px 1600px;
 		.pos-wrap {
 			// @include red;

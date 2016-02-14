@@ -59,7 +59,7 @@ var f = function (angular, require) {
 			ctrlName: 'loveCtrl'
 		},
 		'activity': {
-			url: '/activity/:type',
+			url: '/activity',
 			viewUrl: 'module/activity/activity.html',
 			ctrlUrl: 'module/activity/activityCtrl',
 			ctrlName: 'activityCtrl'

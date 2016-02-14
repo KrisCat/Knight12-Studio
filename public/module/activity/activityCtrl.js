@@ -8,16 +8,17 @@
  */
 
 var f = function () {
-	return function ($scope, $rootScope, $http, $stateParams, $sce) {
+	return function ($scope, $rootScope, $http, $sce) {
 		$rootScope.toTop();
 		$rootScope.navState = [0, 0, 0, 0, 0, 1, 0];
-		var _map = {
-			'guest': [1, 0],
-			'model': [0, 1]
-		};
+		//var _map = {
+		//	'guest': [1, 0],
+		//	'model': [0, 1]
+		//};
 		//mock
-		$scope.state = _map[$stateParams.type];
-		var _url = "/json/activity_" + $stateParams.type + '.json';
+		//$scope.state = _map[$stateParams.type];
+		//var _url = "/json/activity_" + $stateParams.type + '.json';
+		var _url = "/json/activity_list.json";
 		$http.get(_url)
 			.success(function (_data) {
 				$scope.data = _data;

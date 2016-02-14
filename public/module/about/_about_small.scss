@@ -1,11 +1,17 @@
 #about {
 	.top-img {
 		position: relative;
+		background-color: #161616;
 		//		display: table;
 		//		width: 100%;
-		background: url(../img/about/bg.jpg) no-repeat center -240px;
-		background-size: 100% auto;
-		background-color: rgb(10, 10, 31);
+		.bg-img {
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			background: url(../img/top-bg.jpg) no-repeat 0 -200px;
+			background-size: 100% auto;
+		}
+		//background-color: rgb(10, 10, 31);
 		// height: 852px;
 		height: 300px;
 		.pos-wrap {
@@ -15,7 +21,7 @@
 			left: 50%;
 			margin-left: -$small-width/2;
 			// height: 852px;
-			height: 300px;
+			height: 260px;
 			//			@include red;
 			.button {
 				position: absolute;
