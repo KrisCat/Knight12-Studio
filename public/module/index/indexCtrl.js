@@ -45,7 +45,7 @@ var f = function () {
 					e.data[0].belong === '环境人像' && ($scope.people = e.data);
 					e.data[0].belong === '私房写真' && ($scope.private = e.data);
 					e.data[0].belong === '风光人文' && ($scope.scenery = e.data);
-					e.data[0].belong === '创意摄影' && ($scope.love = e.data);
+					e.data[0].belong === '国外摄影' && ($scope.love = e.data);
 				});
 				/**
 				 * 大屏排列12个，小屏排列10个
