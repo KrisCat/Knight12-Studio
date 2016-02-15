@@ -1,29 +1,59 @@
 [{"id": "1001"
+,"type": "environment"
+,"name": "《雕刻时光》"
+,"title": "雕刻时光"
+,"cover": "img/people/album/1001/0.jpg"
+,"count": "14张"
+,"belong": "环境人像"
+,"model": "@ZT"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@摄影师羊驼"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/people/album/1001/1.jpg", "number": "1", "direction": "heng"}
+  ,{"src": "img/people/album/1001/2.jpg", "number": "2", "direction": "heng"}
+  ,{"src": "img/people/album/1001/3.jpg", "number": "3", "direction": "shu"}
+  ,{"src": "img/people/album/1001/4.jpg", "number": "4", "direction": "heng"}
+  ,{"src": "img/people/album/1001/5.jpg", "number": "5", "direction": "shu"}
+  ,{"src": "img/people/album/1001/6.jpg", "number": "6", "direction": "heng"}
+  ,{"src": "img/people/album/1001/7.jpg", "number": "7", "direction": "shu"}
+  ,{"src": "img/people/album/1001/8.jpg", "number": "8", "direction": "shu"}
+  ,{"src": "img/people/album/1001/9.jpg", "number": "9", "direction": "heng"}
+  ,{"src": "img/people/album/1001/10.jpg", "number": "10", "direction": "heng"}
+  ,{"src": "img/people/album/1001/11.jpg", "number": "11", "direction": "heng"}
+  ,{"src": "img/people/album/1001/12.jpg", "number": "12", "direction": "shu"}
+  ,{"src": "img/people/album/1001/13.jpg", "number": "13", "direction": "shu"}
+  ,{"src": "img/people/album/1001/14.jpg", "number": "14", "direction": "heng"}
+  ]
+}
+,{"id": "1015"
  ,"type": "environment"
- ,"name": "《后棠》"
- ,"title": "后棠"
- ,"cover": "img/people/album/1001/0.jpg"
- ,"count": "13张"
+ ,"name": "《雕刻时光》"
+ ,"title": "雕刻时光"
+ ,"cover": "img/people/album/1015/0.jpg"
+ ,"count": "14张"
  ,"belong": "环境人像"
- ,"model": "@耳东耳东LION"
+ ,"model": "@ZT"
  ,"date": "2015年11月5日"
  ,"place": "南京·咖啡馆"
- ,"author": "@周睿文"
+ ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/people/album/1001/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/8.jpg", "number": "8", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/10.jpg", "number": "10", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/11.jpg", "number": "11", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/12.jpg", "number": "12", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/13.jpg", "number": "13", "direction": "heng"}
+ ,"imgs": [{"src": "img/people/album/1015/1.jpg", "number": "1", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/2.jpg", "number": "2", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/3.jpg", "number": "3", "direction": "shu"}
+		  ,{"src": "img/people/album/1015/4.jpg", "number": "4", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/5.jpg", "number": "5", "direction": "shu"}
+		  ,{"src": "img/people/album/1015/6.jpg", "number": "6", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/7.jpg", "number": "7", "direction": "shu"}
+		  ,{"src": "img/people/album/1015/8.jpg", "number": "8", "direction": "shu"}
+		  ,{"src": "img/people/album/1015/9.jpg", "number": "9", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/10.jpg", "number": "10", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/11.jpg", "number": "11", "direction": "heng"}
+		  ,{"src": "img/people/album/1015/12.jpg", "number": "12", "direction": "shu"}
+		  ,{"src": "img/people/album/1015/13.jpg", "number": "13", "direction": "shu"}
+		  ,{"src": "img/people/album/1015/14.jpg", "number": "14", "direction": "heng"}
 		  ]
  }
 ,{"id": "1002"
@@ -133,23 +163,7 @@
 		  ,{"src": "img/people/album/1005/9.jpg", "number": "9", "direction": "shu"}
 		  ]
  }
-,{"id": "1011"
- ,"type": "environment"
- ,"name": "《蔷薇》"
- ,"title": "蔷薇"
- ,"cover": "img/people/album/1011/0.jpg"
- ,"count": "2张"
- ,"belong": "环境人像"
- ,"model": "@蔷薇"
- ,"date": "2014年11月8日"
- ,"place": "南京·河西"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/people/album/1011/2.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/people/album/1011/1.jpg", "number": "2", "direction": "shu"}
-		  ]
- }
+
 ,{"id": "1006"
  ,"type": "environment"
  ,"name": "《和平大厦》"
@@ -254,32 +268,23 @@
 		  ,{"src": "img/people/album/1013/7.jpg", "number": "7", "direction": "shu"}
 		  ]
  }
-,{"id": "1014"
- ,"type": "other"
- ,"name": "《红衣少女の私语》"
- ,"title": "红衣少女の私语"
- ,"cover": "img/people/album/1014/0.jpg"
- ,"count": "11张"
- ,"belong": "私房人像"
- ,"model": "@祝雅"
- ,"date": "2014年11月2日"
- ,"place": "南京·江宁"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/people/album/1014/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/people/album/1014/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/people/album/1014/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/people/album/1014/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/people/album/1014/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/people/album/1014/6.jpg", "number": "6", "direction": "shu"}
-		  ,{"src": "img/people/album/1014/7.jpg", "number": "7", "direction": "shu"}
-		  ,{"src": "img/people/album/1014/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/people/album/1014/9.jpg", "number": "9", "direction": "shu"}
-		  ,{"src": "img/people/album/1014/10.jpg", "number": "10", "direction": "shu"}
-		  ,{"src": "img/people/album/1014/11.jpg", "number": "11", "direction": "heng"}
-		  ]
- }
+,{"id": "1011"
+,"type": "environment"
+,"name": "《蔷薇》"
+,"title": "蔷薇"
+,"cover": "img/people/album/1011/0.jpg"
+,"count": "2张"
+,"belong": "环境人像"
+,"model": "@蔷薇"
+,"date": "2014年11月8日"
+,"place": "南京·河西"
+,"author": "@摄影师羊驼"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/people/album/1011/2.jpg", "number": "1", "direction": "heng"}
+  ,{"src": "img/people/album/1011/1.jpg", "number": "2", "direction": "shu"}
+  ]
+}
 ,{"id": "1012"
  ,"type": "film"
  ,"name": "《大众书局》"

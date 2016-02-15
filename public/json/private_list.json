@@ -4,10 +4,10 @@
  ,"title": "郦大力的星期天"
  ,"cover": "img/private/album/2001/0.jpg"
  ,"count": "15张"
- ,"belong": "环境人像"
- ,"model": "@郦大力"
+ ,"belong": "私房人像"
+ ,"model": "你猜"
  ,"date": "2014年11月8日"
- ,"place": "南京师范大学随园校区"
+ ,"place": "你猜"
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
@@ -32,10 +32,10 @@
  ,"title": "郦大力的星期天"
  ,"cover": "img/private/album/2002/0.jpg"
  ,"count": "15张"
- ,"belong": "环境人像"
- ,"model": "@郦大力"
+ ,"belong": "私房人像"
+ ,"model": "你猜"
  ,"date": "2014年11月8日"
- ,"place": "南京师范大学随园校区"
+ ,"place": "你猜"
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
@@ -58,134 +58,106 @@
  }
 ,{"id": "2003"
  ,"type": "environment"
- ,"name": "《春暖花开》"
- ,"title": "春暖花开"
+ ,"name": "《好朋友的私房话》"
+ ,"title": "好朋友的私房话"
  ,"cover": "img/private/album/2003/0.jpg"
- ,"count": "9张"
- ,"belong": "环境人像"
- ,"model": "@吴婧"
- ,"date": "2014年11月8日"
- ,"place": "南京工业大学江浦校区"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+ ,"count": "7张"
+ ,"belong": "私房人像"
+ ,"model": "你猜"
+ ,"date": "2015年7月24日"
+ ,"place": "你猜"
+ ,"author": "@周周"
+ ,"description": "走过那么路，你还陪在我身边。"
  ,"by": "——简媜《美丽的茧》"
  ,"imgs": [{"src": "img/private/album/2003/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2003/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/private/album/2003/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/6.jpg", "number": "6", "direction": "heng"}
+		  ,{"src": "img/private/album/2003/2.jpg", "number": "2", "direction": "heng"}
+		  ,{"src": "img/private/album/2003/3.jpg", "number": "3", "direction": "heng"}
+		  ,{"src": "img/private/album/2003/4.jpg", "number": "4", "direction": "shu"}
+		  ,{"src": "img/private/album/2003/5.jpg", "number": "5", "direction": "heng"}
+		  ,{"src": "img/private/album/2003/6.jpg", "number": "6", "direction": "shu"}
 		  ,{"src": "img/private/album/2003/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/private/album/2003/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/private/album/2003/9.jpg", "number": "9", "direction": "heng"}
 		  ]
  }
 ,{"id": "2004"
  ,"type": "environment"
- ,"name": "《雨神不下雨的星期三》"
- ,"title": "雨神不下雨的星期三"
+ ,"name": "《小清新私房》"
+ ,"title": "小清新私房"
  ,"cover": "img/private/album/2004/0.jpg"
- ,"count": "14张"
- ,"belong": "环境人像"
- ,"model": "@雨神"
- ,"date": "2014年11月8日"
- ,"place": "南京·江浦"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
+ ,"count": "7张"
+ ,"belong": "私房人像"
+ ,"model": "你猜"
+ ,"date": "2015年3月24日"
+ ,"place": "你猜"
+ ,"author": "@恩睿影像"
+ ,"description": "谁说私房就一定得脱，就一定得露咧？"
+ ,"by": ""
  ,"imgs": [{"src": "img/private/album/2004/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/2.jpg", "number": "2", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/3.jpg", "number": "3", "direction": "heng"}
+		  ,{"src": "img/private/album/2004/2.jpg", "number": "2", "direction": "shu"}
+		  ,{"src": "img/private/album/2004/3.jpg", "number": "3", "direction": "shu"}
 		  ,{"src": "img/private/album/2004/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/8.jpg", "number": "8", "direction": "shu"}
-		  ,{"src": "img/private/album/2004/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/10.jpg", "number": "10", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/11.jpg", "number": "11", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/12.jpg", "number": "12", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/13.jpg", "number": "13", "direction": "heng"}
-		  ,{"src": "img/private/album/2004/14.jpg", "number": "14", "direction": "heng"}
+		  ,{"src": "img/private/album/2004/5.jpg", "number": "5", "direction": "shu"}
+		  ,{"src": "img/private/album/2004/6.jpg", "number": "6", "direction": "shu"}
+		  ,{"src": "img/private/album/2004/7.jpg", "number": "7", "direction": "shu"}
 		  ]
  }
 ,{"id": "2005"
  ,"type": "environment"
- ,"name": "《阴天》"
- ,"title": "阴天"
+ ,"name": "《Dessert time》"
+ ,"title": "Dessert time"
  ,"cover": "img/private/album/2005/0.jpg"
- ,"count": "9张"
- ,"belong": "环境人像"
- ,"model": "@祝雅"
- ,"date": "2014年11月8日"
- ,"place": "南京·江宁"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/private/album/2005/1.jpg", "number": "1", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/3.jpg", "number": "3", "direction": "shu"}
+ ,"count": "13张"
+ ,"belong": "私房人像"
+ ,"model": "你猜"
+ ,"date": "2015年8月17日"
+ ,"place": "你猜"
+ ,"author": "@摄影师sugar"
+ ,"description": "甜大概是我们最喜欢的一种味觉了。就像我们的青春，那么让人流连忘返"
+ ,"by": ""
+ ,"imgs": [{"src": "img/private/album/2005/1.jpg", "number": "1", "direction": "heng"}
+		  ,{"src": "img/private/album/2005/2.jpg", "number": "2", "direction": "heng"}
+		  ,{"src": "img/private/album/2005/3.jpg", "number": "3", "direction": "heng"}
 		  ,{"src": "img/private/album/2005/4.jpg", "number": "4", "direction": "heng"}
 		  ,{"src": "img/private/album/2005/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/6.jpg", "number": "6", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/7.jpg", "number": "7", "direction": "shu"}
+		  ,{"src": "img/private/album/2005/6.jpg", "number": "6", "direction": "heng"}
+		  ,{"src": "img/private/album/2005/7.jpg", "number": "7", "direction": "heng"}
 		  ,{"src": "img/private/album/2005/8.jpg", "number": "8", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/9.jpg", "number": "9", "direction": "shu"}
-		  ]
- }
-,{"id": "1011"
- ,"type": "environment"
- ,"name": "《蔷薇》"
- ,"title": "蔷薇"
- ,"cover": "img/private/album/2011/0.jpg"
- ,"count": "2张"
- ,"belong": "环境人像"
- ,"model": "@蔷薇"
- ,"date": "2014年11月8日"
- ,"place": "南京·河西"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/private/album/2011/2.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2011/1.jpg", "number": "2", "direction": "shu"}
+		  ,{"src": "img/private/album/2005/9.jpg", "number": "9", "direction": "heng"}
+          ,{"src": "img/private/album/2005/10.jpg", "number": "10", "direction": "heng"}
+          ,{"src": "img/private/album/2005/11.jpg", "number": "11", "direction": "heng"}
+          ,{"src": "img/private/album/2005/12.jpg", "number": "12", "direction": "heng"}
+          ,{"src": "img/private/album/2005/13.jpg", "number": "13", "direction": "heng"}
 		  ]
  }
 ,{"id": "2006"
  ,"type": "environment"
- ,"name": "《和平大厦》"
- ,"title": "和平大厦"
+ ,"name": "《少女私房照》"
+ ,"title": "少女私房照"
  ,"cover": "img/private/album/2006/0.jpg"
- ,"count": "14张"
- ,"belong": "环境人像"
- ,"model": "@郦大力"
- ,"date": "2014年11月8日"
- ,"place": "南京·和平大厦"
- ,"author": "@摄影师羊驼"
+ ,"count": "6张"
+ ,"belong": "私房人像"
+ ,"model": "@你猜"
+ ,"date": "2015年6月16日"
+ ,"place": "你猜"
+ ,"author": "@梨木子摄影师"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/private/album/2006/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/2.jpg", "number": "2", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/private/album/2006/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/private/album/2006/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/7.jpg", "number": "7", "direction": "shu"}
-		  ,{"src": "img/private/album/2006/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/10.jpg", "number": "10", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/11.jpg", "number": "11", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/12.jpg", "number": "12", "direction": "shu"}
-		  ,{"src": "img/private/album/2006/13.jpg", "number": "13", "direction": "heng"}
-		  ,{"src": "img/private/album/2006/14.jpg", "number": "14", "direction": "heng"}
+ ,"imgs": [{"src": "img/private/album/2006/2.jpg", "number": "1", "direction": "heng"}
+		  ,{"src": "img/private/album/2006/1.jpg", "number": "2", "direction": "heng"}
+          ,{"src": "img/private/album/2006/3.jpg", "number": "3", "direction": "heng"}
+          ,{"src": "img/private/album/2006/4.jpg", "number": "4", "direction": "heng"}
+          ,{"src": "img/private/album/2006/5.jpg", "number": "5", "direction": "heng"}
+          ,{"src": "img/private/album/2006/6.jpg", "number": "6", "direction": "heng"}
+
 		  ]
  }
+
 ,{"id": "2007"
  ,"type": "environment"
  ,"name": "《冬天的尾巴》"
  ,"title": "冬天的尾巴"
  ,"cover": "img/private/album/2007/0.jpg"
  ,"count": "11张"
- ,"belong": "环境人像"
+ ,"belong": "私房人像"
  ,"model": "@查雨瑶"
  ,"date": "2014年11月8日"
  ,"place": "冬日的某个小镇"
@@ -211,7 +183,7 @@
  ,"title": "旧楼·旧时光"
  ,"cover": "img/private/album/2008/0.jpg"
  ,"count": "13张"
- ,"belong": "环境人像"
+ ,"belong": "私房人像"
  ,"model": "@查雨瑶"
  ,"date": "2014年11月2日"
  ,"place": "一座废弃的小楼"
@@ -232,11 +204,40 @@
 		  ,{"src": "img/private/album/2008/12.jpg", "number": "12", "direction": "shu"}
 		  ]
  }
-,{"id": "1013"
+,{"id": "2009"
+,"type": "environment"
+,"name": "《和平大厦》"
+,"title": "和平大厦"
+,"cover": "img/private/album/2009/0.jpg"
+,"count": "14张"
+,"belong": "私房人像"
+,"model": "@郦大力"
+,"date": "2014年11月8日"
+,"place": "南京·和平大厦"
+,"author": "@摄影师羊驼"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/private/album/2009/1.jpg", "number": "1", "direction": "heng"}
+  ,{"src": "img/private/album/2009/2.jpg", "number": "2", "direction": "heng"}
+  ,{"src": "img/private/album/2009/3.jpg", "number": "3", "direction": "shu"}
+  ,{"src": "img/private/album/2009/4.jpg", "number": "4", "direction": "shu"}
+  ,{"src": "img/private/album/2009/5.jpg", "number": "5", "direction": "heng"}
+  ,{"src": "img/private/album/2009/6.jpg", "number": "6", "direction": "heng"}
+  ,{"src": "img/private/album/2009/7.jpg", "number": "7", "direction": "shu"}
+  ,{"src": "img/private/album/2009/8.jpg", "number": "8", "direction": "heng"}
+  ,{"src": "img/private/album/2009/9.jpg", "number": "9", "direction": "heng"}
+  ,{"src": "img/private/album/2009/10.jpg", "number": "10", "direction": "heng"}
+  ,{"src": "img/private/album/2009/11.jpg", "number": "11", "direction": "heng"}
+  ,{"src": "img/private/album/2009/12.jpg", "number": "12", "direction": "shu"}
+  ,{"src": "img/private/album/2009/13.jpg", "number": "13", "direction": "heng"}
+  ,{"src": "img/private/album/2009/14.jpg", "number": "14", "direction": "heng"}
+  ]
+}
+,{"id": "2010"
  ,"type": "black"
  ,"name": "《黑白の夜》"
  ,"title": "黑白の夜"
- ,"cover": "img/private/album/2013/0.jpg"
+ ,"cover": "img/private/album/2010/0.jpg"
  ,"count": "7张"
  ,"belong": "黑白人像"
  ,"model": "@吴婧"
@@ -245,21 +246,21 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/private/album/2013/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2013/2.jpg", "number": "2", "direction": "heng"}
-		  ,{"src": "img/private/album/2013/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/private/album/2013/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/private/album/2013/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/private/album/2013/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/private/album/2013/7.jpg", "number": "7", "direction": "shu"}
+ ,"imgs": [{"src": "img/private/album/2010/1.jpg", "number": "1", "direction": "heng"}
+		  ,{"src": "img/private/album/2010/2.jpg", "number": "2", "direction": "heng"}
+		  ,{"src": "img/private/album/2010/3.jpg", "number": "3", "direction": "heng"}
+		  ,{"src": "img/private/album/2010/4.jpg", "number": "4", "direction": "heng"}
+		  ,{"src": "img/private/album/2010/5.jpg", "number": "5", "direction": "heng"}
+		  ,{"src": "img/private/album/2010/6.jpg", "number": "6", "direction": "heng"}
+		  ,{"src": "img/private/album/2010/7.jpg", "number": "7", "direction": "shu"}
 		  ]
  }
-,{"id": "1014"
+,{"id": "2011"
  ,"type": "other"
  ,"name": "《红衣少女の私语》"
  ,"title": "红衣少女の私语"
- ,"cover": "img/private/album/2014/0.jpg"
- ,"count": "11张"
+ ,"cover": "img/private/album/2011/0.jpg"
+ ,"count": "12张"
  ,"belong": "私房人像"
  ,"model": "@祝雅"
  ,"date": "2014年11月2日"
@@ -267,17 +268,18 @@
  ,"author": "@摄影师羊驼"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/private/album/2014/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2014/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/private/album/2014/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/private/album/2014/6.jpg", "number": "6", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/7.jpg", "number": "7", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/private/album/2014/9.jpg", "number": "9", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/10.jpg", "number": "10", "direction": "shu"}
-		  ,{"src": "img/private/album/2014/11.jpg", "number": "11", "direction": "heng"}
+ ,"imgs": [{"src": "img/private/album/2011/1.jpg", "number": "1", "direction": "heng"}
+		  ,{"src": "img/private/album/2011/2.jpg", "number": "2", "direction": "shu"}
+		  ,{"src": "img/private/album/2011/3.jpg", "number": "3", "direction": "heng"}
+		  ,{"src": "img/private/album/2011/4.jpg", "number": "4", "direction": "shu"}
+		  ,{"src": "img/private/album/2011/5.jpg", "number": "5", "direction": "heng"}
+		  ,{"src": "img/private/album/2011/6.jpg", "number": "6", "direction": "shu"}
+		  ,{"src": "img/private/album/2011/7.jpg", "number": "7", "direction": "shu"}
+		  ,{"src": "img/private/album/2011/8.jpg", "number": "8", "direction": "heng"}
+		  ,{"src": "img/private/album/2011/9.jpg", "number": "9", "direction": "shu"}
+		  ,{"src": "img/private/album/2011/10.jpg", "number": "10", "direction": "shu"}
+		  ,{"src": "img/private/album/2011/11.jpg", "number": "11", "direction": "heng"}
+		  ,{"src": "img/private/album/2011/12.jpg", "number": "12", "direction": "heng"}
 		  ]
  }
 ,{"id": "1012"

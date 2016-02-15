@@ -1,61 +1,61 @@
 [{"id": "3001"
- ,"type": "travel"
- ,"name": "《西北行》"
- ,"title": "西北行"
- ,"cover": "img/scenery/album/3001/0.jpg"
- ,"count": "14张"
- ,"belong": "风光摄影"
- ,"model": "@耳东耳东LION"
- ,"date": "2015年11月5日"
- ,"place": "南京·咖啡馆"
- ,"author": "@周睿文"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/scenery/album/3001/1.jpg", "number": "1", "intro":"草原", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/2.jpg", "number": "2", "intro":"敦煌落日", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/3.jpg", "number": "3", "intro":"黄土庄", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3001/4.jpg", "number": "4", "intro":"拉脊雪山", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/5.jpg", "number": "5", "intro":"鸣沙山", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/6.jpg", "number": "6", "intro":"牧场", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/7.jpg", "number": "7", "intro":"七彩丹霞", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/8.jpg", "number": "8", "intro":"桥，河，城", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/9.jpg", "number": "9", "intro":"青海湖", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/10.jpg", "number": "10", "intro":"铁厂", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3001/11.jpg", "number": "11", "intro":"西天取经", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3001/12.jpg", "number": "12", "intro":"祥云", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3001/13.jpg", "number": "13", "intro":"银河", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3001/14.jpg", "number": "14", "intro":"云，海", "direction": "heng"}
-		  ]
- }
+,"type": "travel"
+,"name": "《山河云间》"
+,"title": "山河云间"
+,"cover": "img/scenery/album/3001/0.jpg"
+,"count": "14张"
+,"belong": "风光摄影"
+,"model": "@郦大力"
+,"date": "2014年11月8日"
+,"place": "南京师范大学随园校区"
+,"author": "@张宇卿"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3001/1.jpg", "number": "1", "intro":"兰州", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/2.jpg", "number": "2", "intro":"华北", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/3.jpg", "number": "3", "intro":"合肥", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/4.jpg", "number": "4", "intro":"黄土高原", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/5.jpg", "number": "5", "intro":"南京长江二桥", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/6.jpg", "number": "6", "intro":"秦岭", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/7.jpg", "number": "7", "intro":"青岛崂山", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/8.jpg", "number": "8", "intro":"潮白河", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/9.jpg", "number": "9", "intro":"北京", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/10.jpg", "number": "10", "intro":"雪山", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/11.jpg", "number": "11", "intro":"浙江", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/12.jpg", "number": "12", "intro":"夕阳", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/13.jpg", "number": "13", "intro":"在云间", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/14.jpg", "number": "14", "intro":"拉脱维亚", "direction": "heng"}
+  ]
+}
 ,{"id": "3002"
- ,"type": "travel"
- ,"name": "《山河云间》"
- ,"title": "山河云间"
- ,"cover": "img/scenery/album/3002/0.jpg"
- ,"count": "14张"
- ,"belong": "风光摄影"
- ,"model": "@郦大力"
- ,"date": "2014年11月8日"
- ,"place": "南京师范大学随园校区"
- ,"author": "@摄影师羊驼"
- ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
- ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/scenery/album/3002/1.jpg", "number": "1", "intro":"兰州", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/2.jpg", "number": "2", "intro":"华北", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/3.jpg", "number": "3", "intro":"合肥", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/4.jpg", "number": "4", "intro":"黄土高原", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/5.jpg", "number": "5", "intro":"南京长江二桥", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/6.jpg", "number": "6", "intro":"秦岭", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/7.jpg", "number": "7", "intro":"青岛崂山", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/8.jpg", "number": "8", "intro":"潮白河", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/9.jpg", "number": "9", "intro":"北京", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/10.jpg", "number": "10", "intro":"雪山", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/11.jpg", "number": "11", "intro":"浙江", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/12.jpg", "number": "12", "intro":"夕阳", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/13.jpg", "number": "13", "intro":"在云间", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3002/14.jpg", "number": "14", "intro":"拉脱维亚", "direction": "heng"}
-		  ]
- }
+,"type": "travel"
+,"name": "《西北行》"
+,"title": "西北行"
+,"cover": "img/scenery/album/3002/0.jpg"
+,"count": "14张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@张宇卿"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3002/1.jpg", "number": "1", "intro":"草原", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/2.jpg", "number": "2", "intro":"敦煌落日", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/3.jpg", "number": "3", "intro":"黄土庄", "direction": "shu"}
+  ,{"src": "img/scenery/album/3002/4.jpg", "number": "4", "intro":"拉脊雪山", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/5.jpg", "number": "5", "intro":"鸣沙山", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/6.jpg", "number": "6", "intro":"牧场", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/7.jpg", "number": "7", "intro":"七彩丹霞", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/8.jpg", "number": "8", "intro":"桥，河，城", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/9.jpg", "number": "9", "intro":"青海湖", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/10.jpg", "number": "10", "intro":"铁厂", "direction": "shu"}
+  ,{"src": "img/scenery/album/3002/11.jpg", "number": "11", "intro":"西天取经", "direction": "shu"}
+  ,{"src": "img/scenery/album/3002/12.jpg", "number": "12", "intro":"祥云", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/13.jpg", "number": "13", "intro":"银河", "direction": "shu"}
+  ,{"src": "img/scenery/album/3002/14.jpg", "number": "14", "intro":"云，海", "direction": "heng"}
+  ]
+}
 ,{"id": "3003"
  ,"type": "city"
  ,"name": "《南京》"
@@ -66,7 +66,7 @@
  ,"model": "@吴婧"
  ,"date": "2014年11月8日"
  ,"place": "南京工业大学江浦校区"
- ,"author": "@摄影师羊驼"
+ ,"author": "@张宇卿"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
  ,"imgs": [{"src": "img/scenery/album/3003/1.jpg", "number": "1", "intro":"金陵余辉", "direction": "heng"}
@@ -90,7 +90,7 @@
  ,"model": "@雨神"
  ,"date": "2014年11月8日"
  ,"place": "南京·江浦"
- ,"author": "@摄影师羊驼"
+ ,"author": "@张宇卿"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
  ,"imgs": [{"src": "img/scenery/album/3004/1.jpg", "number": "1", "direction": "heng"}
@@ -110,7 +110,7 @@
  ,"model": "@祝雅"
  ,"date": "2014年11月8日"
  ,"place": "南京·江宁"
- ,"author": "@摄影师羊驼"
+ ,"author": "@张宇卿"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
  ,"imgs": [{"src": "img/scenery/album/3005/1.jpg", "number": "1", "direction": "heng"}
@@ -128,7 +128,7 @@
  ,"model": "@蔷薇"
  ,"date": "2014年11月8日"
  ,"place": "南京·河西"
- ,"author": "@摄影师羊驼"
+ ,"author": "@张宇卿"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
  ,"imgs": [{"src": "img/scenery/album/3006/1.jpg", "number": "1", "intro":"国美象山校区", "direction": "shu"}
@@ -139,4 +139,116 @@
 		  ,{"src": "img/scenery/album/3006/6.jpg", "number": "6", "intro":"宏村", "direction": "heng"}
 		  ]
  }
+ ,{"id": "3007"
+,"type": "micro"
+,"name": "《花间集》"
+,"title": "花间集"
+,"cover": "img/scenery/album/3007/0.jpg"
+,"count": "13张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@小木瓜DONG"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3007/1.jpg", "number": "1", "intro":"三叶草", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/2.jpg", "number": "2", "intro":"迎春花", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/3.jpg", "number": "3", "intro":"紫叶桃", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/4.jpg", "number": "4", "intro":"二月兰", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/5.jpg", "number": "5", "intro":"紫藤", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/6.jpg", "number": "6", "intro":"梧桐果", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/7.jpg", "number": "7", "intro":"红花乍浆草", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/8.jpg", "number": "8", "intro":"紫玉兰", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/9.jpg", "number": "9", "intro":"枫叶", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/10.jpg", "number": "10", "intro":"蒲公英", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/11.jpg", "number": "11", "intro":"郁金香", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/12.jpg", "number": "12", "intro":"狗尾草", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/13.jpg", "number": "13", "intro":"油菜花", "direction": "shu"}
+  ]
+}
+,{"id": "3008"
+,"type": "travel"
+,"name": "《寂静の风景》"
+,"title": "寂静の风景"
+,"cover": "img/scenery/album/3008/0.jpg"
+,"count": "3张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@小木瓜DONG"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3008/1.jpg", "number": "1", "intro":"", "direction": "shu"}
+  ,{"src": "img/scenery/album/3008/2.jpg", "number": "2", "intro":"日暮", "direction": "heng"}
+  ,{"src": "img/scenery/album/3008/3.jpg", "number": "3", "intro":"初雪", "direction": "heng"}
+  ]
+}
+,{"id": "3009"
+,"type": "travel"
+,"name": "《江宁织造》"
+,"title": "江宁织造"
+,"cover": "img/scenery/album/3009/0.jpg"
+,"count": "9张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@小木瓜DONG"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3009/1.jpg", "number": "1", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3009/2.jpg", "number": "2", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3009/3.jpg", "number": "3", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3009/4.jpg", "number": "4", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3009/5.jpg", "number": "5", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3009/6.jpg", "number": "6", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3009/7.jpg", "number": "7", "intro":"", "direction": "heng"}
+  ]
+}
+,{"id": "3010"
+,"type": "travel"
+,"name": "《栖霞掠影》"
+,"title": "栖霞掠影"
+,"cover": "img/scenery/album/3010/0.jpg"
+,"count": "6张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@小木瓜DONG"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3010/1.jpg", "number": "1", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3010/2.jpg", "number": "2", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3010/3.jpg", "number": "3", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3010/4.jpg", "number": "4", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3010/5.jpg", "number": "5", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3010/6.jpg", "number": "6", "intro":"", "direction": "heng"}
+  ]
+}
+,{"id": "3011"
+,"type": "city"
+,"name": "《拉脱维亚》"
+,"title": "拉脱维亚"
+,"cover": "img/scenery/album/3011/0.jpg"
+,"count": "8张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@小木瓜DONG"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3011/1.jpg", "number": "1", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/2.jpg", "number": "2", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/3.jpg", "number": "3", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/4.jpg", "number": "4", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/5.jpg", "number": "5", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/6.jpg", "number": "6", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/7.jpg", "number": "7", "intro":"", "direction": "heng"}
+  ,{"src": "img/scenery/album/3011/8.jpg", "number": "8", "intro":"", "direction": "heng"}
+  ]
+}
 ]

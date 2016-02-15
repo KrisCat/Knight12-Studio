@@ -209,13 +209,21 @@
 	</div>
 	<div class="wrap2">
 		<div class="people" ng-repeat="allList in allLists">
-			<div class="nav-category">
-				<span class="name" ng-if="allList[0].id === '1001'">环境人像</span>
-				<span class="name" ng-if="allList[0].id === '2001'">私房写真</span>
-				<span class="name" ng-if="allList[0].id === '3001'">风光人文</span>
-				<span class="name" ng-if="allList[0].id === '4001'">创意摄影</span>
-				<a href="" class="more">更多</a>
-<!--				<span class="arrow"></span>-->
+			<div class="nav-category" ng-if="allList[0].id === '1001'">
+				<span class="name">环境人像</span>
+				<a href="#/people/list/all" class="more">更多</a>
+			</div>
+			<div class="nav-category" ng-if="allList[0].id === '2001'">
+				<span class="name">私房写真</span>
+				<a href="#/private/list/all" class="more">更多</a>
+			</div>
+			<div class="nav-category" ng-if="allList[0].id === '3001'">
+				<span class="name">风光人文</span>
+				<a href="#/scenery/list/all" class="more">更多</a>
+			</div>
+			<div class="nav-category" ng-if="allList[0].id === '4001'">
+				<span class="name">创意摄影</span>
+				<a href="#/love/list/all" class="more">更多</a>
 			</div>
 			<ul>
 				<li class="album" ng-repeat="list in allList">

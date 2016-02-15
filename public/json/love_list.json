@@ -1,29 +1,24 @@
 [{"id": "4001"
  ,"type": "environment"
- ,"name": "《后棠》"
- ,"title": "后棠"
- ,"cover": "img/people/album/1001/0.jpg"
- ,"count": "13张"
+ ,"name": "《奥菲利亚与葬花之冢》"
+ ,"title": "奥菲利亚与葬花之冢"
+ ,"cover": "img/love/album/4001/0.jpg"
+ ,"count": "8张"
  ,"belong": "环境人像"
- ,"model": "@耳东耳东LION"
+ ,"model": "@ZT"
  ,"date": "2015年11月5日"
  ,"place": "南京·咖啡馆"
- ,"author": "@周睿文"
+ ,"author": "@海螺壳"
  ,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
  ,"by": "——简媜《美丽的茧》"
- ,"imgs": [{"src": "img/people/album/1001/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/8.jpg", "number": "8", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/9.jpg", "number": "9", "direction": "heng"}
-		  ,{"src": "img/people/album/1001/10.jpg", "number": "10", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/11.jpg", "number": "11", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/12.jpg", "number": "12", "direction": "shu"}
-		  ,{"src": "img/people/album/1001/13.jpg", "number": "13", "direction": "heng"}
+ ,"imgs": [{"src": "img/love/album/4001/1.jpg", "number": "1", "direction": "heng"}
+		  ,{"src": "img/love/album/4001/2.jpg", "number": "2", "direction": "shu"}
+		  ,{"src": "img/love/album/4001/3.jpg", "number": "3", "direction": "shu"}
+		  ,{"src": "img/love/album/4001/4.jpg", "number": "4", "direction": "shu"}
+		  ,{"src": "img/love/album/4001/5.jpg", "number": "5", "direction": "shu"}
+		  ,{"src": "img/love/album/4001/6.jpg", "number": "6", "direction": "shu"}
+		  ,{"src": "img/love/album/4001/7.jpg", "number": "7", "direction": "shu"}
+		  ,{"src": "img/love/album/4001/8.jpg", "number": "8", "direction": "heng"}
 		  ]
  }
 ,{"id": "1002"
