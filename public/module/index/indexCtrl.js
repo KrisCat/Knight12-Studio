@@ -42,10 +42,10 @@ var f = function () {
 			}).then(function (arr) {
 				// 以上请求都完成后执行以下代码
 				_.each(arr, function (e) {
-					e.data[0].id === '1001' && ($scope.people = e.data);
-					e.data[0].id === '2001' && ($scope.private = e.data);
-					e.data[0].id === '3001' && ($scope.scenery = e.data);
-					e.data[0].id === '4001' && ($scope.love = e.data);
+					e.data[0].belong === '环境人像' && ($scope.people = e.data);
+					e.data[0].belong === '私房写真' && ($scope.private = e.data);
+					e.data[0].belong === '风光人文' && ($scope.scenery = e.data);
+					e.data[0].belong === '创意摄影' && ($scope.love = e.data);
 				});
 				/**
 				 * 大屏排列12个，小屏排列10个
