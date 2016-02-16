@@ -110,22 +110,29 @@
 				position: relative;
 				margin: 0 auto;
 				text-align: center;
-				width: 900px;
+				width: $large-width;
 				height: 118px;
+				top: 25px;
 				margin-bottom: 10px;
 				//				@include green;
 				.line {
 					position: relative;
 					margin: 0 auto;
 					top: 18px;
-					width: 200px;
+					width: $large-width;
 					height: 1px;
 					background-color: $main-color;
 				}
 				.name1 {
-					position: relative;
-					top: 35px;
+					position: absolute;
+					width: 180px;
+					//@include red;
+					//top: -1px;
+					line-height: 30px;
 					font-size: 30px;
+					left: 50%;
+					margin-left: -90px;
+					background-color: #fff;
 				}
 				.name2 a {
 					position: relative;
@@ -134,6 +141,72 @@
 					font-size: 16px;
 				}
 			} //title
+			.team-intro {
+				//@include  red;
+				height: 700px;
+				.title-wrap {
+					width: 700px;
+					height: 100px;
+					position: relative;
+					left: 0;
+					top: 0;
+					//@include blue;
+					.circle {
+						position: relative;
+						width: 70px;
+						height: 70px;
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						border-radius: 50%;
+						background-color: $main-color;
+						.number {
+							position: absolute;
+							font-size: 35px;
+							color: #fff;
+							top: 14px;
+							left: 15px;
+						}
+					}
+					.square {
+						position: absolute;
+						top: 65px;
+						left: 9px;
+						width: 85px;
+						height: 11px;
+						//@include green;
+						border-top: 1px solid $main-color;
+						transform: rotate(-45deg);
+						background-color: #fff;
+					}
+					.name {
+						width: 500px;
+						//@include green;
+						position: absolute;
+						left: 78px;
+						top: -13px;
+						span {
+							display: block;
+							color: #999;
+						}
+						.name-line {
+							width: 260px;
+							height: 1px;
+							background-color: $main-color;
+						}
+						.name-up {
+							font-size: 26px;
+							line-height: 50px;
+							letter-spacing: 1px;
+							text-indent: 5px;
+						}
+						.name-down {
+							font-size: 20px;
+							line-height: 42px;
+							text-indent: 5px;
+						}
+					}
+				}
+			}
 			.cards {
 				position: relative;
 				width: 908px;
