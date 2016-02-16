@@ -98,6 +98,8 @@
 		  ,{"src": "img/scenery/album/3004/3.jpg", "number": "3", "direction": "heng"}
 		  ,{"src": "img/scenery/album/3004/4.jpg", "number": "4", "direction": "shu"}
 		  ,{"src": "img/scenery/album/3004/5.jpg", "number": "5", "direction": "shu"}
+		  ,{"src": "img/scenery/album/3004/6.jpg", "number": "6", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3004/7.jpg", "number": "7", "direction": "heng"}
 		  ]
  }
 ,{"id": "3005"
@@ -249,6 +251,22 @@
   ,{"src": "img/scenery/album/3011/6.jpg", "number": "6", "intro":"", "direction": "heng"}
   ,{"src": "img/scenery/album/3011/7.jpg", "number": "7", "intro":"", "direction": "heng"}
   ,{"src": "img/scenery/album/3011/8.jpg", "number": "8", "intro":"", "direction": "heng"}
+  ]
+}
+,{"id": "3012"
+,"type": "city"
+,"name": "《人文杂货机》"
+,"title": "人文杂货机"
+,"cover": "img/scenery/album/3012/0.jpg"
+,"count": "1张"
+,"belong": "风光摄影"
+,"model": "@耳东耳东LION"
+,"date": "2015年11月5日"
+,"place": "南京·咖啡馆"
+,"author": "@小木瓜DONG"
+,"description": "如果，有醒不了的梦，我一定去做。如果，有走不完的路，我一定去走。如果，有变不了的爱，我一定去求。让懂的人懂，让不懂的人不懂，让世界是世界，我甘心是我的茧。"
+,"by": "——简媜《美丽的茧》"
+,"imgs": [{"src": "img/scenery/album/3012/1.jpg", "number": "1", "intro":"", "direction": "heng"}
   ]
 }
 ]
