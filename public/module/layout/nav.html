@@ -57,7 +57,7 @@
 //		$('.nav-bar').stickUp();
 		$(window).scroll(function () {
 			var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
-			if (scrollY > 100) { //如果滚动距离大于100px悬浮
+			if (scrollY > 1) { //如果滚动距离大于100px悬浮
 				$('.nav-bar').css({position: "fixed", top: "0px"});
 			} else {
 				$('.nav-bar').css({position: "relative"});

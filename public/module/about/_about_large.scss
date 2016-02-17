@@ -16,11 +16,6 @@
 	.main {
 		width: $large-width;
 	}
-	.wrap5 {
-		background: url(../img/about/wrap5_large.jpg) no-repeat center center;
-		background-size: 1924px 394px;
-		height: 394px;
-	}
 	.intro {
 		.content {
 			width: $large-width;
@@ -33,8 +28,9 @@
 				}
 				.say-wrap:nth-child(2n) {
 					span {
-						&.content {
-							right: -204px;
+						&.u-content {
+							right: 122px;
+							left: auto;
 						}
 					}
 				}
