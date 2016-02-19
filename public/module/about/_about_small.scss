@@ -219,11 +219,23 @@
 					right: 0;
 					width: 555px;
 					height: 404px;
-					background: url(../../img/about/team_intro_1.jpg) no-repeat center;
-					background-size: 100% auto;
-					border: 1px solid #ddd;
+					&.t1 {
+						background: url(../../img/about/team_intro_1.jpg) no-repeat center;
+						background-size: 100% auto;
+						border: 1px solid #ddd;
+					}
+					&.t2 {
+						background: url(../../img/about/team_intro_2.jpg) no-repeat center;
+						background-size: 100% auto;
+					}
 					&.t3 {
 						top: 1320px;
+						background: url(../../img/about/team_intro_3.jpg) no-repeat center;
+						background-size: 100% auto;
+					}
+					&.t4 {
+						background: url(../../img/about/team_intro_4.jpg) no-repeat center;
+						background-size: 100% auto;
 					}
 				}
 			}
@@ -243,7 +255,7 @@
 					right: auto;
 					top: 718px;
 					&.t4 {
-						top: 1920px;
+						top: 1882px;
 					}
 				}
 			}
