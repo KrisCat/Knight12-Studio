@@ -18,7 +18,7 @@ var f = function () {
 //			$scope._black = [];
 //			$scope._film = [];
 //			$scope._private = [];
-			$scope.state = [1, 0, 0, 0, 0, 0];
+			$scope.state = [1, 0, 0, 0, 0];
 			$scope.activeTypeConfirm = function (_index) {
 				$scope.state = _.map($scope.state, function () {
 					return 0;
@@ -27,12 +27,11 @@ var f = function () {
 			};
 			$scope.isActive = function () {
 				$stateParams.type === 'all' && $scope.activeTypeConfirm(1);
-				$stateParams.type === 'environment' && $scope.activeTypeConfirm(2);
-				$stateParams.type === 'black' && $scope.activeTypeConfirm(3);
-				$stateParams.type === 'film' && $scope.activeTypeConfirm(4);
-				$stateParams.type === 'other' && $scope.activeTypeConfirm(5);
+				$stateParams.type === 'japan' && $scope.activeTypeConfirm(2);
+				$stateParams.type === 'clear' && $scope.activeTypeConfirm(3);
+				$stateParams.type === 'other' && $scope.activeTypeConfirm(4);
 			};
 		}
 };
 
-define(['angular'], f)
+define(['angular'], f);

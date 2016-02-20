@@ -18,6 +18,8 @@ var f = function () {
 		$scope._city = [];
 		$scope._micro = [];
 		$scope._impress = [];
+		$scope._clear = [];
+		$scope._japan = [];
 		$scope.isActive();
 		$scope.listTypeConfirm = function () {
 			$stateParams.type === 'all' && ($scope.showList = $scope._all);
@@ -29,6 +31,8 @@ var f = function () {
 			$stateParams.type === 'city' && ($scope.showList = $scope._city);
 			$stateParams.type === 'micro' && ($scope.showList = $scope._micro);
 			$stateParams.type === 'impress' && ($scope.showList = $scope._impress);
+			$stateParams.type === 'clear' && ($scope.showList = $scope._clear);
+			$stateParams.type === 'japan' && ($scope.showList = $scope._japan);
 		};
 		if ($scope._all.length === 0) {
 			whichType('people');
@@ -56,6 +60,8 @@ var f = function () {
 							element.type === 'city' && $scope._city.push(element);
 							element.type === 'micro' && $scope._micro.push(element);
 							element.type === 'impress' && $scope._impress.push(element);
+							element.type === 'clear' && $scope._clear.push(element);
+							element.type === 'japan' && $scope._japan.push(element);
 						});
 						$scope.listTypeConfirm();
 					});
@@ -70,4 +76,4 @@ var f = function () {
 	}
 };
 
-define(['angular'], f)
+define(['angular'], f);

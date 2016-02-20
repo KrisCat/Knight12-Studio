@@ -1,5 +1,5 @@
 [{"id": "2008"
-,"type": "environment"
+,"type": "clear"
 ,"name": "《Dessert time》"
 ,"title": "Dessert time"
 ,"cover": "img/private/album/2008/0.jpg"
@@ -27,7 +27,7 @@
   ]
 }
 ,{"id": "2012"
- ,"type": "environment"
+ ,"type": "clear"
  ,"name": "《空之间》"
  ,"title": "空之间"
  ,"cover": "img/private/album/2012/0.jpg"
@@ -49,7 +49,7 @@
 		  ]
  }
 ,{"id": "2011"
-,"type": "environment"
+,"type": "japan"
 ,"name": "《好朋友的私房话》"
 ,"title": "好朋友的私房话"
 ,"cover": "img/private/album/2011/0.jpg"
@@ -71,7 +71,7 @@
   ]
 }
 ,{"id": "2010"
-,"type": "environment"
+,"type": "japan"
 ,"name": "《晨の少女》"
 ,"title": "晨の少女"
 ,"cover": "img/private/album/2010/0.jpg"
@@ -93,7 +93,7 @@
   ]
 }
  ,{"id": "2009"
- ,"type": "environment"
+ ,"type": "clear"
  ,"name": "《小清新私房》"
  ,"title": "小清新私房"
  ,"cover": "img/private/album/2009/0.jpg"
@@ -116,7 +116,7 @@
  }
 
 ,{"id": "2007"
-,"type": "environment"
+,"type": "clear"
 ,"name": "《少女私房照》"
 ,"title": "少女私房照"
 ,"cover": "img/private/album/2007/0.jpg"
@@ -138,7 +138,7 @@
   ]
 }
 ,{"id": "2006"
- ,"type": "environment"
+ ,"type": "other"
  ,"name": "《一组室内私房》"
  ,"title": "一组室内私房"
  ,"cover": "img/private/album/2006/0.jpg"
@@ -162,7 +162,7 @@
 		  ]
  }
 ,{"id": "2005"
- ,"type": "environment"
+ ,"type": "clear"
  ,"name": "《花の私房》"
  ,"title": "花の私房"
  ,"cover": "img/private/album/2005/0.jpg"
@@ -185,7 +185,7 @@
 		  ]
  }
 ,{"id": "2004"
-,"type": "environment"
+,"type": "other"
 ,"name": "《岁月无恙》"
 ,"title": "岁月无恙"
 ,"cover": "img/private/album/2004/0.jpg"
@@ -209,7 +209,7 @@
   ]
 }
 ,{"id": "2003"
- ,"type": "black"
+ ,"type": "other"
  ,"name": "《小私房》"
  ,"title": "小私房"
  ,"cover": "img/private/album/2003/0.jpg"
@@ -257,7 +257,7 @@
 		  ]
  }
 ,{"id": "2001"
- ,"type": "film"
+ ,"type": "clear"
  ,"name": "《Girl Talk》"
  ,"title": "Girl Talk"
  ,"cover": "img/private/album/2001/0.jpg"

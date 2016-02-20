@@ -7,7 +7,7 @@
  * ------------------------------------------
  */
 
-var f = function (angular) {
+var f = function () {
 	return function ($scope, $http, $rootScope, $location, $anchorScroll, $stateParams) {
 		$rootScope.toTop();
 		// 变量初始化
@@ -40,7 +40,7 @@ var f = function (angular) {
 				if (type === '/1') {
 					$rootScope.navState = [0, 1, 0, 0, 0, 0, 0];
 					$scope.type = 'people';
-				};
+				}
 				if (type === '/2') {
 					$rootScope.navState = [0, 0, 1, 0, 0, 0, 0];
 					$scope.type = 'private';
@@ -53,7 +53,7 @@ var f = function (angular) {
 					$rootScope.navState = [0, 0, 0, 0, 1, 0, 0];
 					$scope.type = 'love';
 				}
-				var _jsonUrl = "/json/" + $scope.type + "_list.json"
+				var _jsonUrl = "/json/" + $scope.type + "_list.json";
 				$http.get(_jsonUrl)
 					.success(function (_data) {
 						_.each(_data, function (element) {
@@ -78,6 +78,4 @@ var f = function (angular) {
 	}
 };
 
-define([
-	'angular'
-], f)
+define(['angular'], f);
