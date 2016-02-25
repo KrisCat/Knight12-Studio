@@ -1,7 +1,6 @@
 html,
 body {
 	font-family: "Microsoft YaHei";
-	background-color: $bg-color-less;
 }
 
 #album {
@@ -11,6 +10,7 @@ body {
 		min-height: 100%;
 		height: auto !important;
 		height: 100%;
+		background-color: $bg-color-less;
 	}
 	.top-img {
 		position: relative;
