@@ -95,9 +95,9 @@ var f = function () {
 			$scope.$on('ngRepeatFinished', function () {
 				// 下面是在dom render完成后执行的js
 				// 所有相册分类类目展示切换
-				$('.album-category li').click(function () {
-					console.log('ok');
-				})
+				//$('.album-category li').click(function () {
+				//	console.log('ok');
+				//})
 				var _li_this = '';
 				$('.album-category li').hover(
 					function () {

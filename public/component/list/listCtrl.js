@@ -20,6 +20,9 @@ var f = function () {
 		$scope._impress = [];
 		$scope._clear = [];
 		$scope._japan = [];
+		$scope._people = [];
+		$scope._creative = [];
+		$scope._scenery = [];
 		$scope.isActive();
 		$scope.listTypeConfirm = function () {
 			$stateParams.type === 'all' && ($scope.showList = $scope._all);
@@ -33,6 +36,9 @@ var f = function () {
 			$stateParams.type === 'impress' && ($scope.showList = $scope._impress);
 			$stateParams.type === 'clear' && ($scope.showList = $scope._clear);
 			$stateParams.type === 'japan' && ($scope.showList = $scope._japan);
+			$stateParams.type === 'people' && ($scope.showList = $scope._people);
+			$stateParams.type === 'creative' && ($scope.showList = $scope._creative);
+			$stateParams.type === 'scenery' && ($scope.showList = $scope._scenery);
 		};
 		if ($scope._all.length === 0) {
 			whichType('people');
@@ -44,7 +50,7 @@ var f = function () {
 
 		// 一级导航类别区分
 		function whichType(type) {
-			if ($location.absUrl().indexOf(type) === -1) return;
+			if ($location.absUrl().indexOf(type) === -1) return -1;
 			else {
 				var _jsonUrl = "/json/" + type + "_list.json";
 				$http.get(_jsonUrl)
@@ -62,10 +68,12 @@ var f = function () {
 							element.type === 'impress' && $scope._impress.push(element);
 							element.type === 'clear' && $scope._clear.push(element);
 							element.type === 'japan' && $scope._japan.push(element);
+							element.type === 'people' && $scope._people.push(element);
+							element.type === 'creative' && $scope._creative.push(element);
+							element.type === 'scenery' && $scope._scenery.push(element);
 						});
 						$scope.listTypeConfirm();
 					});
-//				debugger;
 			}
 		}
 		//		$scope.$on('ngRepeatFinished', function () {

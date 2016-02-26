@@ -38,10 +38,10 @@
 					<div class="album-category">
 						<li ng-repeat="item in classItems" on-finish-render-filters>
 							<div class="title">
-								<a href="" ng-bind="item.title"></a>
+								<a href="{{item.href}}" ng-bind="item.title"></a>
 							</div>
 							<div class="tag">
-								<span ng-repeat="tag in item.tags"><a href="" ng-bind="tag.name"></a></span>
+								<span ng-repeat="tag in item.tags"><a href="{{tag.href}}" ng-bind="tag.name"></a></span>
 							</div>
 						</li>
 					</div>
@@ -50,24 +50,24 @@
 							<dl>
 								<dt>分类目录</dt>
 								<dd>
-									<a href="">图片墙</a>
-									<a href="">全部相册</a>
-									<a href="">糖水</a>
-									<a href="">胶片</a>
-									<a href="">黑白</a>
-									<a href="">其他</a>
+									<a href="#/people/picwall">图片墙</a>
+									<a href="#/people/list/all">全部相册</a>
+									<a href="#/people/list/environment">糖水</a>
+									<a href="#/people/list/film">胶片</a>
+									<a href="#/people/list/black">黑白</a>
+									<a href="#/people/list/other">其他</a>
 								</dd>
 							</dl>
 							<dl class="hover-nav-two">
 								<dt>精选相册</dt>
 								<dd>
-									<a href="">等你的季节</a>
-									<a href="">雕刻时光</a>
-									<a href="">郦大力的星期天</a>
-									<a href="">春暖花开</a>
-									<a href="">雨神不下雨的星期三</a>
-									<a href="">阴天</a>
-									<a href="">更多...</a>
+									<a href="#/album/1001">等你的季节</a>
+									<a href="#/album/1015">雕刻时光</a>
+									<a href="#/album/1002">郦大力的星期天</a>
+									<a href="#/album/1003">春暖花开</a>
+									<a href="#/album/1004">雨神不下雨的星期三</a>
+									<a href="#/album/1005">阴天</a>
+									<a href="#/people/list/all">更多...</a>
 								</dd>
 							</dl>
 							<div class="bg-img bg1"></div>
@@ -76,23 +76,23 @@
 							<dl>
 								<dt>分类目录</dt>
 								<dd>
-									<a href="">图片墙</a>
-									<a href="">全部相册</a>
-									<a href="">日系</a>
-									<a href="">清新</a>
-									<a href="">其他</a>
+									<a href="#/private/picwall">图片墙</a>
+									<a href="#/private/list/all">全部相册</a>
+									<a href="#/private/list/japan">日系</a>
+									<a href="#/private/list/clear">清新</a>
+									<a href="#/private/list/other">其他</a>
 								</dd>
 							</dl>
 							<dl class="hover-nav-two">
 								<dt>精选相册</dt>
 								<dd>
-									<a href="">小清新私房</a>
-									<a href="">空之间</a>
-									<a href="">好朋友的私房话</a>
-									<a href="">岁月无恙</a>
-									<a href="">红衣少女の私语</a>
-									<a href="">小私房</a>
-									<a href="">更多...</a>
+									<a href="#/album/2009">小清新私房</a>
+									<a href="#/album/2012">空之间</a>
+									<a href="#/album/2011">好朋友的私房话</a>
+									<a href="#/album/2004">岁月无恙</a>
+									<a href="#/album/2002">红衣少女の私语</a>
+									<a href="#/album/2003">小私房</a>
+									<a href="#/private/list/all">更多...</a>
 								</dd>
 							</dl>
 							<div class="bg-img bg2"></div>
@@ -101,24 +101,24 @@
 							<dl>
 								<dt>分类目录</dt>
 								<dd>
-									<a href="">图片墙</a>
-									<a href="">全部相册</a>
-									<a href="">旅行</a>
-									<a href="">城市</a>
-									<a href="">微距</a>
-									<a href="">印象系列</a>
+									<a href="#/scenery/picwall">图片墙</a>
+									<a href="#/scenery/list/all">全部相册</a>
+									<a href="#/scenery/list/travel">旅行</a>
+									<a href="#/scenery/list/city">城市</a>
+									<a href="#/scenery/list/micro">微距</a>
+									<a href="#/scenery/list/impress">印象系列</a>
 								</dd>
 							</dl>
 							<dl class="hover-nav-two">
 								<dt>精选相册</dt>
 								<dd>
-									<a href="">山河云间</a>
-									<a href="">西北行</a>
-									<a href="">南京</a>
-									<a href="">印象系列</a>
-									<a href="">花间集</a>
-									<a href="">江宁织造</a>
-									<a href="">更多...</a>
+									<a href="#/album/3001">山河云间</a>
+									<a href="#/album/3002">西北行</a>
+									<a href="#/album/3003">南京</a>
+									<a href="#/album/3006">印象系列</a>
+									<a href="#/album/3007">花间集</a>
+									<a href="#/album/3009">江宁织造</a>
+									<a href="#/scenery/list/all">更多...</a>
 								</dd>
 							</dl>
 							<div class="bg-img bg3"></div>
@@ -127,23 +127,23 @@
 							<dl>
 								<dt>分类目录</dt>
 								<dd>
-									<a href="">图片墙</a>
-									<a href="">全部相册</a>
-									<a href="">人像</a>
-									<a href="">创意</a>
-									<a href="">风光</a>
+									<a href="#/love/picwall">图片墙</a>
+									<a href="#/love/list/all">全部相册</a>
+									<a href="#/love/list/creative">创意</a>
+									<a href="#/love/list/people">人像</a>
+									<a href="#/love/list/scenery">风光</a>
 								</dd>
 							</dl>
 							<dl class="hover-nav-two">
 								<dt>精选相册</dt>
 								<dd>
-									<a href="">水下世界</a>
-									<a href="">丢失于镜中</a>
-									<a href="">沼泽之心</a>
-									<a href="">东京粉黛</a>
-									<a href="">神秘莫测的越南少女</a>
-									<a href="">月光林地</a>
-									<a href="">更多...</a>
+									<a href="#/album/4009">水下世界</a>
+									<a href="#/album/4005">丢失于镜中</a>
+									<a href="#/album/4010">沼泽之心</a>
+									<a href="#/album/4011">东京粉黛</a>
+									<a href="#/album/4003">神秘莫测的越南少女</a>
+									<a href="#/album/4001">月光林地</a>
+									<a href="#/love/list/all">更多...</a>
 								</dd>
 							</dl>
 							<div class="bg-img bg4"></div>
@@ -152,20 +152,20 @@
 							<dl>
 								<dt>我要约片</dt>
 								<dd>
-									<a href="">环境人像约片</a>
-									<a href="">私房写着约片</a>
+									<a href="#/activity">环境人像约片</a>
+									<a href="#/activity">私房写着约片</a>
 								</dd>
 							</dl>
 							<dl class="hover-nav-two">
 								<dt>活动列表</dt>
 								<dd>
-									<a href="">2016毕业季人像拍摄</a>
-									<a href="">2016春季环境人像</a>
-									<a href="">2016春季私房写真</a>
-									<a href="">2015夏季环境人像</a>
-									<a href="">2015春季环境人像</a>
-									<a href="">2014夏季环境人像</a>
-									<a href="">更多...</a>
+									<a href="#/activity">2016毕业季人像拍摄</a>
+									<a href="#/activity">2016春季环境人像</a>
+									<a href="#/activity">2016春季私房写真</a>
+									<a href="#/activity">2015夏季环境人像</a>
+									<a href="#/activity">2015春季环境人像</a>
+									<a href="#/activity">2014夏季环境人像</a>
+									<a href="#/activity">更多...</a>
 								</dd>
 							</dl>
 							<div class="bg-img bg5"></div>
@@ -174,17 +174,17 @@
 							<dl>
 								<dt>团队介绍</dt>
 								<dd>
-									<a href="">摄影师羊驼</a>
-									<a href="">不二周周</a>
-									<a href="">张宇卿</a>
-									<a href="">小木瓜DONG</a>
+									<a href="#/about">摄影师羊驼</a>
+									<a href="#/about">不二周周</a>
+									<a href="#/about">张宇卿</a>
+									<a href="#/about">小木瓜DONG</a>
 								</dd>
 							</dl>
 							<dl class="hover-nav-two">
 								<dt>关注我们</dt>
 								<dd>
-									<a href="">关注我们</a>
-									<a href="">版权声明</a>
+									<a href="#/about">关注我们</a>
+									<a href="#/about">版权声明</a>
 								</dd>
 							</dl>
 							<div class="bg-img bg6"></div>
@@ -201,11 +201,11 @@
 							</div>
 						</div>
 						<div class="album-select">
-							<a href=""><span class="album-title">雕刻时光</span></a>
-							<a href=""><span class="album-title">郦大力的星期天</span></a>
-							<a href=""><span class="album-title">春暖花开</span></a>
-							<a href=""><span class="album-title">好朋友的私房话</span></a>
-							<a href=""><span class="album-title">小清新私房</span></a>
+							<a href="#/album/1001"><span class="album-title">等你的季节</span></a>
+							<a href="#/album/1015"><span class="album-title">雕刻时光</span></a>
+							<a href="#/album/1002"><span class="album-title">郦大力的星期天</span></a>
+							<a href="#/album/2011"><span class="album-title">好朋友的私房话</span></a>
+							<a href="#/album/2009"><span class="album-title">小清新私房</span></a>
 							<div class="album-no">
 								<span class="left">1.</span>
 								<span class="left">2.</span>
@@ -215,8 +215,8 @@
 							</div>
 						</div>
 						<div class="btn f-cb">
-							<div class="btn-people"><span><i class="fa fa-comments-o"></i>约人像</span></div>
-							<div class="btn-private"><span><i class="fa fa-comments-o"></i>约私房</span></div>
+							<div class="btn-people"><a href="#/activity"><span><i class="fa fa-comments-o"></i>约人像</span></a></div>
+							<div class="btn-private"><a href="#/activity"><span><i class="fa fa-comments-o"></i>约私房</span></a></div>
 						</div>
 					</div>
 				</div>

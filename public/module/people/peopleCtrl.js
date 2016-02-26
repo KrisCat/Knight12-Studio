@@ -28,4 +28,4 @@ var f = function () {
 		}
 };
 
-define(['angular'], f)
+define(['angular'], f);

@@ -11,7 +11,7 @@ var f = function () {
 	return function ($scope, $http, $rootScope, $stateParams) {
 		$rootScope.toTop();
 		$rootScope.navState = [0, 0, 0, 0, 1, 0, 0];
-		$scope.state = [1, 0, 0, 0, 0, 0];
+		$scope.state = [1, 0, 0, 0, 0];
 		$scope.activeTypeConfirm = function (_index) {
 			$scope.state = _.map($scope.state, function () {
 				return 0;
@@ -20,14 +20,13 @@ var f = function () {
 		};
 		$scope.isActive = function () {
 			$stateParams.type === 'all' && $scope.activeTypeConfirm(1);
-			$stateParams.type === 'environment' && $scope.activeTypeConfirm(2);
-			$stateParams.type === 'black' && $scope.activeTypeConfirm(3);
-			$stateParams.type === 'film' && $scope.activeTypeConfirm(4);
-			$stateParams.type === 'other' && $scope.activeTypeConfirm(5);
+			$stateParams.type === 'creative' && $scope.activeTypeConfirm(2);
+			$stateParams.type === 'people' && $scope.activeTypeConfirm(3);
+			$stateParams.type === 'scenery' && $scope.activeTypeConfirm(4);
 		};
 	}
 };
 
-define(['angular'], f)
+define(['angular'], f);
 
 

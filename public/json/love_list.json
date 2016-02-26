@@ -1,5 +1,5 @@
 [{"id": "4009"
-,"type": "environment"
+,"type": "creative"
 ,"name": "《水下世界》"
 ,"title": "水下世界"
 ,"cover": "img/love/album/4009/0.jpg"
@@ -26,7 +26,7 @@
   ]
 }
 ,{"id": "4012"
- ,"type": "environment"
+ ,"type": "people"
  ,"name": "《韵色》"
  ,"title": "韵色"
  ,"cover": "img/love/album/4012/0.jpg"
@@ -53,7 +53,7 @@
  }
 
 ,{"id": "4010"
-,"type": "environment"
+,"type": "creative"
 ,"name": "《沼泽之心》"
 ,"title": "沼泽之心"
 ,"cover": "img/love/album/4010/0.jpg"
@@ -89,7 +89,7 @@
   ]
 }
 ,{"id": "4008"
- ,"type": "environment"
+ ,"type": "creative"
  ,"name": "《水中曲》"
  ,"title": "水中曲"
  ,"cover": "img/love/album/4008/0.jpg"
@@ -116,7 +116,7 @@
 		  ]
  }
 ,{"id": "4011"
-,"type": "environment"
+,"type": "people"
 ,"name": "《东京粉黛》"
 ,"title": "东京粉黛"
 ,"cover": "img/love/album/4011/0.jpg"
@@ -152,7 +152,7 @@
   ]
 }
 ,{"id": "4007"
- ,"type": "environment"
+ ,"type": "creative"
  ,"name": "《圣诞老人的穿越之旅》"
  ,"title": "圣诞老人的穿越之旅"
  ,"cover": "img/love/album/4007/0.jpg"
@@ -184,7 +184,7 @@
  }
 
 ,{"id": "4006"
- ,"type": "environment"
+ ,"type": "creative"
  ,"name": "《Jack Crossing摄影作品》"
  ,"title": "Jack Crossing摄影作品"
  ,"cover": "img/love/album/4006/0.jpg"
@@ -211,7 +211,7 @@
 		  ]
  }
 ,{"id": "4005"
- ,"type": "environment"
+ ,"type": "creative"
  ,"name": "《丢失于镜中》"
  ,"title": "丢失于镜中"
  ,"cover": "img/love/album/4005/0.jpg"
@@ -236,7 +236,7 @@
  }
 
 ,{"id": "4001"
-,"type": "film"
+,"type": "creative"
 ,"name": "《月光林地》"
 ,"title": "月光林地"
 ,"cover": "img/love/album/4001/0.jpg"
@@ -269,7 +269,7 @@
   ]
 }
 ,{"id": "4004"
- ,"type": "environment"
+ ,"type": "creative"
  ,"name": "《极端颤栗》"
  ,"title": "极端颤栗"
  ,"cover": "img/love/album/4004/0.jpg"
@@ -294,7 +294,7 @@
 		  ]
  }
 ,{"id": "4003"
- ,"type": "black"
+ ,"type": "people"
  ,"name": "《神秘莫测的越南少女》"
  ,"title": "神秘莫测的越南少女"
  ,"cover": "img/love/album/4003/0.jpg"
@@ -328,7 +328,7 @@
 		  ]
  }
 ,{"id": "4002"
- ,"type": "other"
+ ,"type": "scenery"
  ,"name": "《山不言 水不语》"
  ,"title": "山不言 水不语"
  ,"cover": "img/love/album/4002/0.jpg"
