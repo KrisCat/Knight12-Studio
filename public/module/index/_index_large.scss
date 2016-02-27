@@ -41,50 +41,29 @@
 		}
 	}
 	.side-nav {
-		//@include red;
-		position: absolute;
 		width: 228px;
 		height: 374px;
-		right: 1px;
 		top: 49px;
-		background: #fff;
 		.img-top {
-			position: relative;
 			width: 228px;
 			height: 150px;
-			background: url(../../img/side_nav.jpg) no-repeat center center;
 			.bg-glass {
-				position: relative;
 				top: 23px;
-				margin: 0 auto;
 				width: 206px;
 				height: 106px;
-				background-color: rgba(255, 255, 255, .5);
 				.word-wrap {
-					position: relative;
 					span {
-						display: block;
 						width: 194px;
-						text-align: center;
-						color: #333;
-						left: 50%;
 						margin-left: -97px;
-						font-weight: bold;
 					}
 					.word-up {
-						position: absolute;
 						top: 15px;
 						font-size: 24px;
 					}
 					.word-line {
-						position: absolute;
 						top: 56px;
-						height: 1px;
-						background-color: #333;
-
 					}
 					.word-down {
-						position: absolute;
 						top: 70px;
 						font-size: 18px;
 					}
@@ -92,72 +71,24 @@
 			}
 		}
 		.album-select {
-			position: relative;
 			width: 196px;
-			margin: 0 auto;
 			top: 12px;
 			span.album-title {
-				&:hover {
-					color: $main-color;
-				}
-				//@include red;
-				display: inline-table;
-				line-height: 30px;
-				color: #333;
 				font-size: 14px;
-				cursor: pointer;
-				padding-left: 22px;
-				padding-right: 12px;
 			}
 			.album-no {
-				position: absolute;
-				top: -1px;
-				left: -2px;
 				.left {
-					display: block;
-					//float: right;
-					cursor: pointer;
 					font-size: 18px;
-					line-height: 30px;
-					color: $main-color;
-					font-style: italic;
-
 				}
 			}
 		}
 		.btn {
-			position: absolute;
-			bottom: 0;
 			height: 50px;
 			border-top: 1px solid #ddd;
 			div {
-				position: relative;
-				float: left;
-				border-right: 1px solid #ddd;
 				width: 113px;
-				background-color: #f8f8f8;
-				text-align: center;
 				line-height: 50px;
 				font-size: 14px;
-				a {
-					color: $main-color;
-				}
-				span {
-					cursor: pointer;
-					i {
-						position: relative;
-						display: inline-block;
-						top: 1px;
-						margin-right: 7px;
-						font-size: 16px;
-					}
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-				&:last-child {
-					border-right: 1px solid #f8f8f8;
-				}
 			}
 		}
 	}
@@ -178,6 +109,28 @@
 	.album-category-detail {
 		width: 744px;
 		height: 468px;
+		li {
+			dl {
+				padding-top: 40px;
+				dt {
+					font-size: 19px;
+				}
+				dd {
+					margin-top: 20px;
+					a {
+						font-size: 14px;
+						line-height: 30px;
+					}
+				}
+				&.hover-nav-two {
+					padding-top: 45px;
+				}
+			}
+			.bg-img {
+				width: 490px;
+				height: 327px;
+			}
+		}
 	}
 	.wrap2 {
 //		top: -506px;
