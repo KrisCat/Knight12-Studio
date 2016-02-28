@@ -8,7 +8,7 @@
 //			 width: $large-width;
 //			 margin-left: -72.5px;
 			height: 270px;
-			background: url(../img/top-bg.jpg) no-repeat 0 -200px;
+			background: url(../../img/top-bg.jpg) no-repeat 0 -200px;
 			background-size: 100% auto;
 //			&.people-top {
 //				background: url(../img/people/top-bg.jpg) no-repeat center -30px;
@@ -44,11 +44,13 @@
 		}
 		.text {
 			width: $large-width;
+			height: 280px;
 			margin-left: -$large-width/2;
 			.title {
 				font-size: 34px;
 			}
 			.word {
+				margin-top: 30px;
 				font-size: 16px;
 				padding: 7px 18px 8px;
 				line-height: 25px;

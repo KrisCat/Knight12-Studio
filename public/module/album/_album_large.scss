@@ -5,7 +5,7 @@
 			//			 width: $large-width;
 			//			 margin-left: -72.5px;
 			height: 270px;
-			background: url(../img/top-bg.jpg) no-repeat 0 -200px;
+			background: url(../../img/top-bg.jpg) no-repeat 0 -200px;
 			background-size: 100% auto;
 			//&.people-top {
 			//	background: url(../img/people/top-bg.jpg) no-repeat center -30px;
@@ -34,10 +34,12 @@
 		.text {
 			width: $large-width;
 			margin-left: -$large-width/2;
+			height: 280px;
 			.title {
 				font-size: 34px;
 			}
 			.word {
+				margin-top: 30px;
 				font-size: 16px;
 				padding: 7px 18px 8px;
 				line-height: 25px;
@@ -53,18 +55,68 @@
 		//		@include red;
 		left: 50%;
 		margin-left: -$large-width/2;
+		margin-top: 100px;
 		.photo-list {
 			width: 1003px;
 			span.title-line {
 				width: 1018px;
 			}
+			.dy-wrap {
+				.date {
+					font-size: 30px;
+				}
+				.dy-text {
+					position: absolute;
+					top: 20px;
+					color: #555;
+					font-size: 14px;
+					//						@include blue;
+				}
+			}
 			.intro {
+				height: 240px;
+				span.cover {
+					top: 43px;
+					div.album-wrap {
+						.album-frame {
+							-webkit-zoom: 1;
+							-moz-zoom: 1;
+							-ms-zoom: 1;
+							-o-zoom: 1;
+							zoom: 1;
+						}
+					}
+				}
 				span.text {
+					top: 59px;
 					width: 782px;
+					height: 152px;
+
 				}
 			}
 			.show {
 				div.img {
+					.dy-wrap {
+						position: absolute;
+						top: 0;
+						left: -203px;
+						.date {
+							font-size: 36px;
+							//							line-height: 36px;
+							font-weight: 600;
+							i {
+								font-size: 18px;
+							}
+							//							vertical-align: baseline;
+						}
+						.dy-text {
+							position: absolute;
+							top: 20px;
+							color: #555;
+							font-size: 14px;
+							//						@include blue;
+						}
+					}
 					img.heng {
 						width: 981px;
 					}
