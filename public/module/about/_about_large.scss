@@ -3,14 +3,20 @@
 		height: 270px;
 		.bg-img {
 			height: 270px;
-			background: url(../img/top-bg.jpg) no-repeat 0 -200px;
+			background: url(../../img/top-bg.jpg) no-repeat 0 -200px;
 			background-size: 100% auto;
 		}
-//		background-size: 2400px 1600px;
 		.pos-wrap {
-			// @include red;
 			width: $large-width;
 			margin-left: -$large-width/2;
+			height: 260px;
+			.text {
+				top: 116px;
+				font-size: 26px;
+				i {
+					font-size: 36px;
+				}
+			}
 		}
 	}
 	.main {
@@ -19,6 +25,194 @@
 	.intro {
 		.content {
 			width: $large-width;
+			margin-left: -$large-width/2;
+			.title {
+				position: relative;
+				margin: 0 auto;
+				text-align: center;
+				width: $large-width;
+				height: 118px;
+				top: 25px;
+				margin-bottom: 10px;
+				//				@include green;
+				.line {
+					position: relative;
+					margin: 0 auto;
+					top: 18px;
+					width: $large-width;
+					height: 1px;
+					background-color: #D0DEDB;
+				}
+				.name1 {
+					position: absolute;
+					width: 150px;
+					//top: 35px;
+					//@include red;
+					//top: -1px;
+					line-height: 30px;
+					font-size: 30px;
+					left: 50%;
+					margin-left: -75px;
+					background-color: #fff;
+				}
+				.name2 a {
+					position: relative;
+					top: 50px;
+					color: $main-color;
+					font-size: 16px;
+				}
+			} //title
+			.team-intro {
+				//@include  red;
+				height: 600px;
+				.title-wrap {
+					width: 700px;
+					height: 100px;
+					position: relative;
+					left: 0;
+					top: -12px;
+					//@include blue;
+					.circle {
+						position: relative;
+						width: 70px;
+						height: 70px;
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						border-radius: 50%;
+						background-color: $main-color;
+						.number {
+							position: absolute;
+							font-size: 35px;
+							color: #fff;
+							top: 14px;
+							left: 15px;
+						}
+					}
+					.square {
+						position: absolute;
+						top: 65px;
+						left: 9px;
+						width: 85px;
+						height: 11px;
+						//@include green;
+						border-top: 1px solid $main-color;
+						transform: rotate(-45deg);
+						background-color: #fff;
+					}
+					.name {
+						width: 500px;
+						//@include green;
+						position: absolute;
+						left: 78px;
+						top: -13px;
+						span {
+							display: block;
+							color: #999;
+						}
+						.name-line {
+							width: 432px;
+							height: 1px;
+							background-color: $main-color;
+						}
+						.name-up {
+							font-size: 26px;
+							line-height: 50px;
+							letter-spacing: 1px;
+							text-indent: 5px;
+						}
+						.name-down {
+							font-size: 20px;
+							line-height: 42px;
+							text-indent: 5px;
+						}
+					}
+				}
+				.text-wrap {
+					position: relative;
+					top: 0;
+					left: 83px;
+					width: 424px;
+					font-size: 17px;
+					color: #999;
+					//@include blue;
+					line-height: 31px;
+				}
+				.img-wrap {
+					position: absolute;
+					top: 119px;
+					right: 0;
+					width: 555px;
+					height: 404px;
+					&.t1 {
+						background: url(../../img/about/team_intro_1.jpg) no-repeat center;
+						background-size: 100% auto;
+						border: 1px solid #ddd;
+					}
+					&.t2 {
+						right: auto;
+						top: 718px;
+						background: url(../../img/about/team_intro_2.jpg) no-repeat center;
+						background-size: 100% auto;
+					}
+					&.t3 {
+						top: 1320px;
+						background: url(../../img/about/team_intro_3.jpg) no-repeat center;
+						background-size: 100% auto;
+					}
+					&.t4 {
+						right: auto;
+						top: 1882px;
+						background: url(../../img/about/team_intro_4.jpg) no-repeat center;
+						background-size: 100% auto;
+					}
+				}
+			}
+			.team-intro.four {
+				margin-bottom: -70px;
+			}
+			.team-intro:nth-child(2n-1) {
+				.title-wrap {
+					width: 511px;
+					left: 691px;
+				}
+				.text-wrap {
+					left: 778px;
+				}
+			}
+			.wechat {
+				width: $large-width - 2px;
+				height: 400px;
+				top: -5px;
+			}
+			.note {
+				width: $large-width;
+				position: relative;
+				top: 43px;
+				padding-bottom: 120px;
+				//@include red;
+				.line-wrap {
+					//@include blue;
+					line-height: 30px;
+					.no {
+						position: relative;
+						//top: -24px;
+						color: $main-color;
+						font-size: 26px;
+						font-style: italic;
+						display: inline-block;
+					}
+					.n-content {
+						//@include red;
+						display: inline-block;
+						width: $large-width - 60px;
+						color: #666;
+						position: relative;
+						left: 10px;
+						font-size: 15px;
+						padding: 8px;
+					}
+				}
+			}
 			.cards {
 				width: 1382px
 			}

@@ -1,40 +1,38 @@
 #about {
 	.top-img {
 		position: relative;
-		background-color: #161616;
+		height: 258px;
 		//		display: table;
 		//		width: 100%;
 		.bg-img {
 			position: relative;
 			margin: 0 auto;
 			width: 100%;
-			background: url(../../img/top-bg.jpg) no-repeat 0 -200px;
+			height: 258px;
+			background: url(../../img/top-bg.jpg) no-repeat 0 -65px;
 			background-size: 100% auto;
 		}
 		//background-color: rgb(10, 10, 31);
 		// height: 852px;
-		height: 300px;
 		.pos-wrap {
 			position: absolute;
 			top: 0;
 			width: $small-width;
 			left: 50%;
 			margin-left: -$small-width/2;
-			// height: 852px;
-			height: 260px;
-			//			@include red;
+			height: 258px;
 			.text {
 				position: relative;
-				top: 116px;
+				top: 105px;
 				width: 500px;
 				text-align: center;
 				margin: 0 auto;
 				font-family: "FangSong";
-				font-size: 26px;
+				font-size: 22px;
 				color: #fff;
 				i {
 					font-family: Helvetica, Arial, sans-serif;
-					font-size: 36px;
+					font-size: 34px;
 				}
 			}
 			.qr-code {
@@ -89,14 +87,14 @@
 			top: 70px;
 			width: $small-width;
 			left: 50%;
-			margin-left: -$large-width/2;
+			margin-left: -$small-width/2;
 			//height: 650px;
 			margin-bottom: 155px;
 			.title {
 				position: relative;
 				margin: 0 auto;
 				text-align: center;
-				width: $large-width;
+				width: $small-width;
 				height: 118px;
 				top: 25px;
 				margin-bottom: 10px;
@@ -105,7 +103,7 @@
 					position: relative;
 					margin: 0 auto;
 					top: 18px;
-					width: $large-width;
+					width: $small-width;
 					height: 1px;
 					background-color: #D0DEDB;
 				}
@@ -116,7 +114,7 @@
 					//@include red;
 					//top: -1px;
 					line-height: 30px;
-					font-size: 30px;
+					font-size: 28px;
 					left: 50%;
 					margin-left: -75px;
 					background-color: #fff;
@@ -140,7 +138,7 @@
 			}
 			.team-intro {
 				//@include  red;
-				height: 600px;
+				height: 500px;
 				.title-wrap {
 					width: 700px;
 					height: 100px;
@@ -150,24 +148,24 @@
 					//@include blue;
 					.circle {
 						position: relative;
-						width: 70px;
-						height: 70px;
+						width: 60px;
+						height: 60px;
 						-webkit-border-radius: 50%;
 						-moz-border-radius: 50%;
 						border-radius: 50%;
 						background-color: $main-color;
 						.number {
 							position: absolute;
-							font-size: 35px;
+							font-size: 29px;
 							color: #fff;
-							top: 14px;
-							left: 15px;
+							top: 11px;
+							left: 12px;
 						}
 					}
 					.square {
 						position: absolute;
-						top: 65px;
-						left: 9px;
+						top: 54px;
+						left: 1px;
 						width: 85px;
 						height: 11px;
 						//@include green;
@@ -176,39 +174,39 @@
 						background-color: #fff;
 					}
 					.name {
-						width: 500px;
+						width: 370px;
 						//@include green;
 						position: absolute;
-						left: 78px;
-						top: -13px;
+						left: 70px;
+						top: -20px;
 						span {
 							display: block;
 							color: #999;
 						}
 						.name-line {
-							width: 432px;
+							width: 370px;
 							height: 1px;
 							background-color: $main-color;
 						}
 						.name-up {
-							font-size: 26px;
-							line-height: 50px;
+							font-size: 24px;
+							line-height: 46px;
 							letter-spacing: 1px;
 							text-indent: 5px;
 						}
 						.name-down {
 							font-size: 20px;
-							line-height: 42px;
+							line-height: 40px;
 							text-indent: 5px;
 						}
 					}
 				}
 				.text-wrap {
 					position: relative;
-					top: 0;
-					left: 83px;
-					width: 424px;
-					font-size: 17px;
+					top: -15px;
+					left: 75px;
+					width: 370px;
+					font-size: 16px;
 					color: #999;
 					//@include blue;
 					line-height: 31px;
@@ -217,23 +215,27 @@
 					position: absolute;
 					top: 119px;
 					right: 0;
-					width: 555px;
-					height: 404px;
+					width: 465px;
+					height: 342px;
 					&.t1 {
 						background: url(../../img/about/team_intro_1.jpg) no-repeat center;
 						background-size: 100% auto;
 						border: 1px solid #ddd;
 					}
 					&.t2 {
+						right: auto;
+						top: 618px;
 						background: url(../../img/about/team_intro_2.jpg) no-repeat center;
 						background-size: 100% auto;
 					}
 					&.t3 {
-						top: 1320px;
+						top: 1111px;
 						background: url(../../img/about/team_intro_3.jpg) no-repeat center;
 						background-size: 100% auto;
 					}
 					&.t4 {
+						right: auto;
+						top: 1582px;
 						background: url(../../img/about/team_intro_4.jpg) no-repeat center;
 						background-size: 100% auto;
 					}
@@ -245,18 +247,11 @@
 			.team-intro:nth-child(2n-1) {
 				.title-wrap {
 					width: 511px;
-					left: 691px;
+					left: 519px;
 					//@include blue;
 				}
 				.text-wrap {
-					left: 778px;
-				}
-				.img-wrap {
-					right: auto;
-					top: 718px;
-					&.t4 {
-						top: 1882px;
-					}
+					left: 593px;
 				}
 			}
 			.t-line {
@@ -484,21 +479,21 @@
 			.wechat {
 				position: relative;
 				margin: 0 auto;
-				width: $large-width - 2px;
-				height: 400px;
+				width: $small-width - 2px;
+				height: 318px;
 				background: url(../../img/about/wechat.jpg) no-repeat center center;
 				background-size: 100% auto;
-				top: -5px;
+				top: -12px;
 			}
 			.copyright {
 				position: relative;
-				top: 20px;
+				top: 6px;
 			}
 			.note {
-				width: $large-width;
+				width: $small-width;
 				position: relative;
 				top: 43px;
-				padding-bottom: 120px;
+				padding-bottom: 96px;
 				//@include red;
 				.line-wrap {
 					//@include blue;
@@ -514,7 +509,7 @@
 					.n-content {
 						//@include red;
 						display: inline-block;
-						width: 1156px;;
+						width: $small-width - 60px;
 						color: #666;
 						position: relative;
 						left: 10px;
