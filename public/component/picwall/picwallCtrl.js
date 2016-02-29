@@ -17,7 +17,7 @@ var f = function () {
 				var _jsonUrl = "/json/" + type + "_list.json";
 				$http.get(_jsonUrl)
 					.success(function (_data) {
-						var _len = _data.length;
+						//var _len = _data.length;
 						var _newDate = [];
 						for(var i = 0; i < 2; i++) {
 							_newDate.push(_data[i]);
