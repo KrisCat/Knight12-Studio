@@ -28,7 +28,7 @@ var f = function () {
 									e2.src = '../../' + e2.src;
 									$scope.showPicwall.push(e2.src);
 								})
-							})
+							});
 							// $scope.showPicwall = _.shuffle($scope.showPicwall);
 					});
 			}
