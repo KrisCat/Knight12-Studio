@@ -31,6 +31,9 @@
 			-o-opacity: .7;
 			opacity: .7;
 		}
+		&:nth-child(5n) {
+			display: none;
+		}
 	}
 	img {
 		max-width: 100%;
@@ -47,17 +50,20 @@
 	}
 }
 @media screen and (min-width: 1400px){
-		.loading {
-			width: 1210px;
-			margin-left: -606px;
-			min-height: 800px;
-		}
+		//.loading {
+		//	width: 1210px;
+		//	margin-left: -606px;
+		//	min-height: 800px;
+		//}
 	#picwall {
 		width: 1208px;
 		li.item {
 			width: 241px;
 			height: 160px;
 			overflow: hidden;
+			&:nth-child(5n) {
+				display: block;
+			}
 		}
 	}
 	// .item{width: 100%!important;}

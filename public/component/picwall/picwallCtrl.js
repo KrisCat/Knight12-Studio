@@ -17,15 +17,16 @@ var f = function () {
 				var _jsonUrl = "/json/" + type + "_list.json";
 				$http.get(_jsonUrl)
 					.success(function (_data) {
-						//var _len = _data.length;
-						//var _newDate = [];
-						//for(var i = 0; i < 5; i++) {
-						//	_newDate.push(_data[i]);
-						//}
 						$scope.showPicwall = [];
-						_.each(_data, function (e1) {
+						var _newData = [];
+						// 筛选出要展示在图片墙上的list放入_newData
+						_.each(_data, function (e) {
+							e.showOnPic === "yes" && _newData.push(e);
+						});
+						// 筛选出_newData里面需要展示在图片墙上的图片
+						_.each(_newData, function (e1) {
 								_.each(e1.imgs, function (e2) {
-									if (e2.picwall === 1) {
+									if (e2.picwall === "show1" || e2.picwall === "show2") {
 										e2.src = '../../' + e2.src;
 										e2.src = e2.src.replace(/.jpg/, '_picwall.jpg');
 										$scope.showPicwall.push(e2.src);
@@ -40,8 +41,8 @@ var f = function () {
 		whichType('private');
 		whichType('scenery');
 		whichType('love');
-		$scope.$on('ngRepeatFinished', function () {
-			var $container = $('.masonry');
+		//$scope.$on('ngRepeatFinished', function () {
+			//var $container = $('.masonry');
 		//	$container.imagesLoaded(function () {
 		//			$container.masonry({
 		//				gutterWidth: 1,
@@ -63,7 +64,7 @@ var f = function () {
 		//			}, 400)
 		//		}
 		//	});
-		})
+		//});
 	}
 };
 

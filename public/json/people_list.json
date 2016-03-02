@@ -1,4 +1,5 @@
 [{"id": "1001"
+	,"showOnPic": "yes"
 	,"type": "environment"
 	,"name": "《等你的季节》"
 	,"title": "等你的季节"
@@ -11,18 +12,19 @@
 	,"author": "@摄影师羊驼"
 	,"description": "花开如梦，流年在时光的树上开出淡雅的花，岁月在时光的心中留下刻骨的痕，浅浅相遇静静收藏。"
 	,"by": "——《花开如梦》"
-	,"imgs": [{"src": "img/people/album/1001/1.jpg", "number": "1", "direction": "heng", "picwall": 1}
+	,"imgs": [{"src": "img/people/album/1001/1.jpg", "number": "1", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1001/2.jpg", "number": "2", "direction": "shu"}
-								  ,{"src": "img/people/album/1001/3.jpg", "number": "3", "direction": "shu", "picwall": 1}
-								  ,{"src": "img/people/album/1001/4.jpg", "number": "4", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1001/5.jpg", "number": "5", "direction": "shu", "picwall": 1}
-								  ,{"src": "img/people/album/1001/6.jpg", "number": "6", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1001/3.jpg", "number": "3", "direction": "shu", "picwall": "show2"}
+								  ,{"src": "img/people/album/1001/4.jpg", "number": "4", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1001/5.jpg", "number": "5", "direction": "shu", "picwall": "show1"}
+								  ,{"src": "img/people/album/1001/6.jpg", "number": "6", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1001/7.jpg", "number": "7", "direction": "shu"}
 								  ,{"src": "img/people/album/1001/8.jpg", "number": "8", "direction": "shu"}
 								  ,{"src": "img/people/album/1001/9.jpg", "number": "9", "direction": "shu"}
 								  ]
 	}
 ,{"id": "1015"
+ ,"showOnPic": "yes"
  ,"type": "other"
  ,"name": "《雕刻时光》"
  ,"title": "雕刻时光"
@@ -35,16 +37,16 @@
  ,"author": "@摄影师羊驼"
  ,"description": "听一首歌时，会想起一句话，和一个人，一段似锦的流年。时光就是这样，在某一段岁月的时光里遇见某一个人，就着某一句话，便有淡淡的甜在舌尖跳跃着。隐隐的还有某些酸涩在心间。"
  ,"by": "——《雕刻时光》"
- ,"imgs": [{"src": "img/people/album/1015/1.jpg", "number": "1", "direction": "heng", "picwall": 1}
-		        ,{"src": "img/people/album/1015/2.jpg", "number": "2", "direction": "heng", "picwall": 1}
+ ,"imgs": [{"src": "img/people/album/1015/1.jpg", "number": "1", "direction": "heng", "picwall": "show1"}
+		        ,{"src": "img/people/album/1015/2.jpg", "number": "2", "direction": "heng", "picwall": "show1"}
 		        ,{"src": "img/people/album/1015/3.jpg", "number": "3", "direction": "shu"}
 		        ,{"src": "img/people/album/1015/4.jpg", "number": "4", "direction": "shu"}
-								  ,{"src": "img/people/album/1015/5.jpg", "number": "5", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1015/5.jpg", "number": "5", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1015/6.jpg", "number": "6", "direction": "heng"}
 								  ,{"src": "img/people/album/1015/7.jpg", "number": "7", "direction": "shu"}
 								  ,{"src": "img/people/album/1015/8.jpg", "number": "8", "direction": "shu"}
-								  ,{"src": "img/people/album/1015/9.jpg", "number": "9", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1015/10.jpg", "number": "10", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1015/9.jpg", "number": "9", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1015/10.jpg", "number": "10", "direction": "heng", "picwall": "show2"}
 								  ,{"src": "img/people/album/1015/11.jpg", "number": "11", "direction": "shu"}
 								  ,{"src": "img/people/album/1015/12.jpg", "number": "12", "direction": "heng"}
 								  ,{"src": "img/people/album/1015/13.jpg", "number": "13", "direction": "shu"}
@@ -52,6 +54,7 @@
 								  ]
  }
 ,{"id": "1002"
+ ,"showOnPic": "yes"
  ,"type": "environment"
  ,"name": "《郦大力的星期天》"
  ,"title": "郦大力的星期天"
@@ -66,22 +69,23 @@
  ,"by": ""
  ,"imgs": [{"src": "img/people/album/1002/1.jpg", "number": "1", "direction": "shu"}
 								  ,{"src": "img/people/album/1002/2.jpg", "number": "2", "direction": "heng"}
-								  ,{"src": "img/people/album/1002/3.jpg", "number": "3", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1002/4.jpg", "number": "4", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1002/3.jpg", "number": "3", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1002/4.jpg", "number": "4", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1002/5.jpg", "number": "5", "direction": "shu"}
 								  ,{"src": "img/people/album/1002/6.jpg", "number": "6", "direction": "heng"}
 								  ,{"src": "img/people/album/1002/7.jpg", "number": "7", "direction": "heng"}
 								  ,{"src": "img/people/album/1002/8.jpg", "number": "8", "direction": "shu"}
-								  ,{"src": "img/people/album/1002/9.jpg", "number": "9", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1002/9.jpg", "number": "9", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1002/10.jpg", "number": "10", "direction": "heng"}
 								  ,{"src": "img/people/album/1002/11.jpg", "number": "11", "direction": "heng"}
 								  ,{"src": "img/people/album/1002/12.jpg", "number": "12", "direction": "heng"}
-								  ,{"src": "img/people/album/1002/13.jpg", "number": "13", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1002/14.jpg", "number": "14", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1002/13.jpg", "number": "13", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1002/14.jpg", "number": "14", "direction": "heng", "picwall": "show2"}
 								  ,{"src": "img/people/album/1002/15.jpg", "number": "15", "direction": "heng"}
 								  ]
  }
 ,{"id": "1003"
+ ,"showOnPic": "no"
  ,"type": "environment"
  ,"name": "《春暖花开》"
  ,"title": "春暖花开"
@@ -106,6 +110,7 @@
 								  ]
  }
 ,{"id": "1004"
+ ,"showOnPic": "yes"
  ,"type": "environment"
  ,"name": "《雨神不下雨的星期三》"
  ,"title": "雨神不下雨的星期三"
@@ -119,22 +124,23 @@
  ,"description": "雨停了，你说，回去吧，我们不是相见而是重逢，人生就是不断重逢与别离，我不知道是该微笑着挥手，还是流着泪别过身去，还是写首诗吧，写首诗，可以让我再次遇见你。"
  ,"by": ""
  ,"imgs": [{"src": "img/people/album/1004/1.jpg", "number": "1", "direction": "heng"}
-								  ,{"src": "img/people/album/1004/2.jpg", "number": "2", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1004/2.jpg", "number": "2", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1004/3.jpg", "number": "3", "direction": "heng"}
 								  ,{"src": "img/people/album/1004/4.jpg", "number": "4", "direction": "heng"}
 								  ,{"src": "img/people/album/1004/5.jpg", "number": "5", "direction": "heng"}
-								  ,{"src": "img/people/album/1004/6.jpg", "number": "6", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1004/6.jpg", "number": "6", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1004/7.jpg", "number": "7", "direction": "heng"}
 								  ,{"src": "img/people/album/1004/8.jpg", "number": "8", "direction": "shu"}
-								  ,{"src": "img/people/album/1004/9.jpg", "number": "9", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1004/9.jpg", "number": "9", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1004/10.jpg", "number": "10", "direction": "heng"}
 								  ,{"src": "img/people/album/1004/11.jpg", "number": "11", "direction": "heng"}
-								  ,{"src": "img/people/album/1004/12.jpg", "number": "12", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1004/13.jpg", "number": "13", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1004/12.jpg", "number": "12", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1004/13.jpg", "number": "13", "direction": "heng", "picwall": "show2"}
 								  ,{"src": "img/people/album/1004/14.jpg", "number": "14", "direction": "heng"}
 								  ]
  }
 ,{"id": "1005"
+ ,"showOnPic": "no"
  ,"type": "environment"
  ,"name": "《阴天》"
  ,"title": "阴天"
@@ -159,6 +165,7 @@
 								  ]
  }
 ,{"id": "1006"
+ ,"showOnPic": "yes"
  ,"type": "environment"
  ,"name": "《和平大厦》"
  ,"title": "和平大厦"
@@ -171,23 +178,24 @@
  ,"author": "@摄影师羊驼"
  ,"description": "时间，渐渐带走了年少轻狂，也慢慢沉淀了冷暖自知。"
  ,"by": ""
- ,"imgs": [{"src": "img/people/album/1006/1.jpg", "number": "1", "direction": "heng", "picwall": 1}
+ ,"imgs": [{"src": "img/people/album/1006/1.jpg", "number": "1", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1006/2.jpg", "number": "2", "direction": "heng"}
 								  ,{"src": "img/people/album/1006/3.jpg", "number": "3", "direction": "shu"}
 								  ,{"src": "img/people/album/1006/4.jpg", "number": "4", "direction": "shu"}
-								  ,{"src": "img/people/album/1006/5.jpg", "number": "5", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1006/5.jpg", "number": "5", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1006/6.jpg", "number": "6", "direction": "heng"}
 								  ,{"src": "img/people/album/1006/7.jpg", "number": "7", "direction": "shu"}
 								  ,{"src": "img/people/album/1006/8.jpg", "number": "8", "direction": "heng"}
 								  ,{"src": "img/people/album/1006/9.jpg", "number": "9", "direction": "heng"}
-								  ,{"src": "img/people/album/1006/10.jpg", "number": "10", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1006/11.jpg", "number": "11", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1006/10.jpg", "number": "10", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1006/11.jpg", "number": "11", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1006/12.jpg", "number": "12", "direction": "shu"}
 								  ,{"src": "img/people/album/1006/13.jpg", "number": "13", "direction": "heng"}
-								  ,{"src": "img/people/album/1006/14.jpg", "number": "14", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1006/14.jpg", "number": "14", "direction": "heng", "picwall": "show2"}
 								  ]
  }
 ,{"id": "1007"
+ ,"showOnPic": "no"
  ,"type": "environment"
  ,"name": "《冬天的尾巴》"
  ,"title": "冬天的尾巴"
@@ -214,6 +222,7 @@
 								  ]
  }
 ,{"id": "1008"
+ ,"showOnPic": "yes"
  ,"type": "environment"
  ,"name": "《旧楼·旧时光》"
  ,"title": "旧楼·旧时光"
@@ -226,21 +235,22 @@
  ,"author": "@摄影师羊驼"
  ,"description": "每个人都有自己的人生，冷暖自知。"
  ,"by": ""
- ,"imgs": [{"src": "img/people/album/1008/1.jpg", "number": "1", "direction": "heng", "picwall": 1}
+ ,"imgs": [{"src": "img/people/album/1008/1.jpg", "number": "1", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1008/2.jpg", "number": "2", "direction": "shu"}
-								  ,{"src": "img/people/album/1008/3.jpg", "number": "3", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1008/4.jpg", "number": "4", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1008/3.jpg", "number": "3", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1008/4.jpg", "number": "4", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1008/5.jpg", "number": "5", "direction": "shu"}
 								  ,{"src": "img/people/album/1008/6.jpg", "number": "6", "direction": "heng"}
-								  ,{"src": "img/people/album/1008/7.jpg", "number": "7", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1008/7.jpg", "number": "7", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1008/8.jpg", "number": "8", "direction": "shu"}
-								  ,{"src": "img/people/album/1008/9.jpg", "number": "9", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1008/9.jpg", "number": "9", "direction": "heng", "picwall": "show2"}
 								  ,{"src": "img/people/album/1008/10.jpg", "number": "10", "direction": "shu"}
 								  ,{"src": "img/people/album/1008/11.jpg", "number": "11", "direction": "shu"}
 								  ,{"src": "img/people/album/1008/12.jpg", "number": "12", "direction": "shu"}
 								  ]
  }
 ,{"id": "1013"
+ ,"showOnPic": "no"
  ,"type": "black"
  ,"name": "《黑白の夜》"
  ,"title": "黑白の夜"
@@ -253,16 +263,17 @@
  ,"author": "@摄影师羊驼"
  ,"description": "这暗夜长寂，星辰隐约，谁也别提你的姓名。我思竭心虑，忧而忘欢，且挽留住夏夜斑斓。"
  ,"by": ""
- ,"imgs": [{"src": "img/people/album/1013/1.jpg", "number": "1", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1013/2.jpg", "number": "2", "direction": "heng", "picwall": 1}
+ ,"imgs": [{"src": "img/people/album/1013/1.jpg", "number": "1", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1013/2.jpg", "number": "2", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1013/3.jpg", "number": "3", "direction": "heng"}
-								  ,{"src": "img/people/album/1013/4.jpg", "number": "4", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1013/5.jpg", "number": "5", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1013/6.jpg", "number": "6", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1013/4.jpg", "number": "4", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1013/5.jpg", "number": "5", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1013/6.jpg", "number": "6", "direction": "heng", "picwall": "show2"}
 								  ,{"src": "img/people/album/1013/7.jpg", "number": "7", "direction": "shu"}
 								  ]
  }
 ,{"id": "1011"
+ ,"showOnPic": "no"
 	,"type": "environment"
 	,"name": "《蔷薇》"
 	,"title": "蔷薇"
@@ -280,6 +291,7 @@
 								  ]
 	}
 ,{"id": "1012"
+ ,"showOnPic": "yes"
  ,"type": "film"
  ,"name": "《大众书局》"
  ,"title": "大众书局"
@@ -292,14 +304,14 @@
  ,"author": "@摄影师羊驼"
  ,"description": "赌书消得泼茶香 当时只道是寻常。"
  ,"by": ""
- ,"imgs": [{"src": "img/people/album/1012/1.jpg", "number": "1", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1012/2.jpg", "number": "2", "direction": "heng", "picwall": 1}
+ ,"imgs": [{"src": "img/people/album/1012/1.jpg", "number": "1", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1012/2.jpg", "number": "2", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1012/3.jpg", "number": "3", "direction": "shu"}
-								  ,{"src": "img/people/album/1012/4.jpg", "number": "4", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1012/4.jpg", "number": "4", "direction": "heng", "picwall": "show1"}
 								  ,{"src": "img/people/album/1012/5.jpg", "number": "5", "direction": "shu"}
 								  ,{"src": "img/people/album/1012/6.jpg", "number": "6", "direction": "shu"}
-								  ,{"src": "img/people/album/1012/7.jpg", "number": "7", "direction": "heng", "picwall": 1}
-								  ,{"src": "img/people/album/1012/8.jpg", "number": "8", "direction": "heng", "picwall": 1}
+								  ,{"src": "img/people/album/1012/7.jpg", "number": "7", "direction": "heng", "picwall": "show1"}
+								  ,{"src": "img/people/album/1012/8.jpg", "number": "8", "direction": "heng", "picwall": "show2"}
 								  ]
  }
 ]
