@@ -12,18 +12,19 @@
 #picwall {
 	position: relative;
 	margin: 0 auto;
-	width: $small-width;
+	width: 966px;
 	ul {
 		position: relative;
 		//visibility: hidden;
 	}
 	li.item {
 		float: left;
-		width: 240px;
-		height: 160px;
+		width: 191px;
+		height: 191px;
 		cursor: pointer;
-		//margin-right: -1px;
-		margin-bottom: 1px;
+		margin-right: 2px;
+		margin-bottom: 2px;
+		overflow: hidden;
 		&:hover {
 			-webkit-opacity: .7;
 			-moz-opacity: .7;
@@ -31,9 +32,9 @@
 			-o-opacity: .7;
 			opacity: .7;
 		}
-		&:nth-child(5n) {
-			display: none;
-		}
+		//&:nth-child(5n) {
+		//	display: none;
+		//}
 	}
 	img {
 		max-width: 100%;
@@ -58,12 +59,13 @@
 	#picwall {
 		width: 1208px;
 		li.item {
-			width: 241px;
-			height: 160px;
-			overflow: hidden;
-			&:nth-child(5n) {
-				display: block;
-			}
+			width: 239.5px;
+			height: 239.5px;
+			//margin-right: 2px;
+			//margin-bottom: 2px;
+			//&:nth-child(5n) {
+			//	display: block;
+			//}
 		}
 	}
 	// .item{width: 100%!important;}

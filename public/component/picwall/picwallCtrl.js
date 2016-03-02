@@ -26,7 +26,7 @@ var f = function () {
 						// 筛选出_newData里面需要展示在图片墙上的图片
 						_.each(_newData, function (e1) {
 								_.each(e1.imgs, function (e2) {
-									if (e2.picwall === "show1" || e2.picwall === "show2") {
+									if (e2.picwall === "1") {
 										e2.src = '../../' + e2.src;
 										e2.src = e2.src.replace(/.jpg/, '_picwall.jpg');
 										$scope.showPicwall.push(e2.src);

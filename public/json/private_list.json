@@ -1,4 +1,5 @@
 [{"id": "2008"
+,"showOnPic": "yes"
 ,"type": "clear"
 ,"name": "《Dessert time》"
 ,"title": "Dessert time"
@@ -11,12 +12,12 @@
 ,"author": "@摄影师sugar"
 ,"description": "甜大概是我们最喜欢的一种味觉了。就像我们的青春，那么让人流连忘返。"
 ,"by": "——摄影师sugar"
-,"imgs": [{"src": "img/private/album/2008/1.jpg", "number": "1", "direction": "heng"}
-  ,{"src": "img/private/album/2008/2.jpg", "number": "2", "direction": "heng"}
-  ,{"src": "img/private/album/2008/3.jpg", "number": "3", "direction": "heng"}
-  ,{"src": "img/private/album/2008/4.jpg", "number": "4", "direction": "heng"}
+,"imgs": [{"src": "img/private/album/2008/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/3.jpg", "number": "3", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2008/5.jpg", "number": "5", "direction": "shu"}
-  ,{"src": "img/private/album/2008/6.jpg", "number": "6", "direction": "heng"}
+  ,{"src": "img/private/album/2008/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2008/7.jpg", "number": "7", "direction": "heng"}
   ,{"src": "img/private/album/2008/8.jpg", "number": "8", "direction": "shu"}
   ,{"src": "img/private/album/2008/9.jpg", "number": "9", "direction": "heng"}
@@ -27,6 +28,7 @@
   ]
 }
 ,{"id": "2012"
+,"showOnPic": "no"
  ,"type": "clear"
  ,"name": "《空之间》"
  ,"title": "空之间"
@@ -49,6 +51,7 @@
 		  ]
  }
 ,{"id": "2011"
+,"showOnPic": "no"
 ,"type": "japan"
 ,"name": "《好朋友的私房话》"
 ,"title": "好朋友的私房话"
@@ -61,16 +64,17 @@
 ,"author": "@周周"
 ,"description": "走过那么路，你还陪在我身边。"
 ,"by": "——周周"
-,"imgs": [{"src": "img/private/album/2011/1.jpg", "number": "1", "direction": "heng"}
-         ,{"src": "img/private/album/2011/2.jpg", "number": "2", "direction": "heng"}
+,"imgs": [{"src": "img/private/album/2011/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
+         ,{"src": "img/private/album/2011/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2011/3.jpg", "number": "3", "direction": "shu"}
-  ,{"src": "img/private/album/2011/4.jpg", "number": "4", "direction": "heng"}
+  ,{"src": "img/private/album/2011/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2011/5.jpg", "number": "5", "direction": "shu"}
-  ,{"src": "img/private/album/2011/6.jpg", "number": "6", "direction": "heng"}
+  ,{"src": "img/private/album/2011/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2011/7.jpg", "number": "7", "direction": "shu"}
   ]
 }
 ,{"id": "2010"
+,"showOnPic": "yes"
 ,"type": "japan"
 ,"name": "《晨の少女》"
 ,"title": "晨の少女"
@@ -83,16 +87,17 @@
 ,"author": "@TUZI嘻歪"
 ,"description": "morning~"
 ,"by": "——TUZI嘻歪"
-,"imgs": [{"src": "img/private/album/2010/1.jpg", "number": "1", "direction": "heng"}
-  ,{"src": "img/private/album/2010/2.jpg", "number": "2", "direction": "heng"}
-  ,{"src": "img/private/album/2010/3.jpg", "number": "3", "direction": "heng"}
+,"imgs": [{"src": "img/private/album/2010/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2010/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2010/3.jpg", "number": "3", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2010/4.jpg", "number": "4", "direction": "shu"}
-  ,{"src": "img/private/album/2010/5.jpg", "number": "5", "direction": "heng"}
+  ,{"src": "img/private/album/2010/5.jpg", "number": "5", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2010/6.jpg", "number": "6", "direction": "shu"}
-  ,{"src": "img/private/album/2010/7.jpg", "number": "7", "direction": "heng"}
+  ,{"src": "img/private/album/2010/7.jpg", "number": "7", "direction": "heng", "picwall": "1"}
   ]
 }
  ,{"id": "2009"
+,"showOnPic": "yes"
  ,"type": "clear"
  ,"name": "《小清新私房》"
  ,"title": "小清新私房"
@@ -105,11 +110,11 @@
  ,"author": "@肥仔叔"
  ,"description": "谁说私房就一定得脱，就一定得露咧？"
  ,"by": "——肥仔叔"
- ,"imgs": [{"src": "img/private/album/2009/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2009/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2009/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/private/album/2009/4.jpg", "number": "4", "direction": "heng"}
-		  ,{"src": "img/private/album/2009/5.jpg", "number": "5", "direction": "shu"}
+ ,"imgs": [{"src": "img/private/album/2009/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2009/2.jpg", "number": "2", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/private/album/2009/3.jpg", "number": "3", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/private/album/2009/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2009/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/private/album/2009/6.jpg", "number": "6", "direction": "shu"}
 		  ,{"src": "img/private/album/2009/7.jpg", "number": "7", "direction": "shu"}
 		  ]

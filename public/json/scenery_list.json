@@ -1,4 +1,5 @@
 [{"id": "3001"
+,"showOnPic": "yes"
 ,"type": "travel"
 ,"name": "《山河云间》"
 ,"title": "山河云间"
@@ -14,20 +15,21 @@
 ,"imgs": [{"src": "img/scenery/album/3001/1.jpg", "number": "1", "intro":"兰州", "direction": "heng"}
   ,{"src": "img/scenery/album/3001/2.jpg", "number": "2", "intro":"华北", "direction": "heng"}
   ,{"src": "img/scenery/album/3001/3.jpg", "number": "3", "intro":"合肥", "direction": "heng"}
-  ,{"src": "img/scenery/album/3001/4.jpg", "number": "4", "intro":"黄土高原", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/4.jpg", "number": "4", "intro":"黄土高原", "direction": "heng", "picwall": "1"}
   ,{"src": "img/scenery/album/3001/5.jpg", "number": "5", "intro":"南京长江二桥", "direction": "heng"}
-  ,{"src": "img/scenery/album/3001/6.jpg", "number": "6", "intro":"秦岭", "direction": "heng"}
-  ,{"src": "img/scenery/album/3001/7.jpg", "number": "7", "intro":"青岛崂山", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/6.jpg", "number": "6", "intro":"秦岭", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/scenery/album/3001/7.jpg", "number": "7", "intro":"青岛崂山", "direction": "heng", "picwall": "1"}
   ,{"src": "img/scenery/album/3001/8.jpg", "number": "8", "intro":"潮白河", "direction": "heng"}
   ,{"src": "img/scenery/album/3001/9.jpg", "number": "9", "intro":"北京", "direction": "heng"}
-  ,{"src": "img/scenery/album/3001/10.jpg", "number": "10", "intro":"雪山", "direction": "heng"}
-  ,{"src": "img/scenery/album/3001/11.jpg", "number": "11", "intro":"浙江", "direction": "heng"}
+  ,{"src": "img/scenery/album/3001/10.jpg", "number": "10", "intro":"雪山", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/scenery/album/3001/11.jpg", "number": "11", "intro":"浙江", "direction": "heng", "picwall": "1"}
   ,{"src": "img/scenery/album/3001/12.jpg", "number": "12", "intro":"夕阳", "direction": "heng"}
   ,{"src": "img/scenery/album/3001/13.jpg", "number": "13", "intro":"在云间", "direction": "heng"}
   ,{"src": "img/scenery/album/3001/14.jpg", "number": "14", "intro":"拉脱维亚", "direction": "heng"}
   ]
 }
 ,{"id": "3002"
+,"showOnPic": "yes"
 ,"type": "travel"
 ,"name": "《西北行》"
 ,"title": "西北行"
@@ -40,20 +42,20 @@
 ,"author": "@张宇卿"
 ,"description": "最好的风景永远在路上"
 ,"by": ""
-,"imgs": [{"src": "img/scenery/album/3002/1.jpg", "number": "1", "intro":"草原", "direction": "heng"}
+,"imgs": [{"src": "img/scenery/album/3002/1.jpg", "number": "1", "intro":"草原", "direction": "heng", "picwall": "1"}
   ,{"src": "img/scenery/album/3002/2.jpg", "number": "2", "intro":"敦煌落日", "direction": "heng"}
   ,{"src": "img/scenery/album/3002/3.jpg", "number": "3", "intro":"黄土庄", "direction": "shu"}
   ,{"src": "img/scenery/album/3002/4.jpg", "number": "4", "intro":"拉脊雪山", "direction": "heng"}
-  ,{"src": "img/scenery/album/3002/5.jpg", "number": "5", "intro":"鸣沙山", "direction": "heng"}
-  ,{"src": "img/scenery/album/3002/6.jpg", "number": "6", "intro":"牧场", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/5.jpg", "number": "5", "intro":"鸣沙山", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/scenery/album/3002/6.jpg", "number": "6", "intro":"牧场", "direction": "heng", "picwall": "1"}
   ,{"src": "img/scenery/album/3002/7.jpg", "number": "7", "intro":"七彩丹霞", "direction": "heng"}
   ,{"src": "img/scenery/album/3002/8.jpg", "number": "8", "intro":"桥，河，城", "direction": "heng"}
-  ,{"src": "img/scenery/album/3002/9.jpg", "number": "9", "intro":"青海湖", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/9.jpg", "number": "9", "intro":"青海湖", "direction": "heng", "picwall": "1"}
   ,{"src": "img/scenery/album/3002/10.jpg", "number": "10", "intro":"铁厂", "direction": "shu"}
   ,{"src": "img/scenery/album/3002/11.jpg", "number": "11", "intro":"西天取经", "direction": "shu"}
   ,{"src": "img/scenery/album/3002/12.jpg", "number": "12", "intro":"祥云", "direction": "heng"}
   ,{"src": "img/scenery/album/3002/13.jpg", "number": "13", "intro":"银河", "direction": "shu"}
-  ,{"src": "img/scenery/album/3002/14.jpg", "number": "14", "intro":"云，海", "direction": "heng"}
+  ,{"src": "img/scenery/album/3002/14.jpg", "number": "14", "intro":"云，海", "direction": "heng", "picwall": "1"}
   ]
 }
 ,{"id": "3003"
@@ -80,6 +82,7 @@
 		  ]
  }
 ,{"id": "3004"
+,"showOnPic": "yes"
  ,"type": "micro"
  ,"name": "《花草》"
  ,"title": "花草"
@@ -92,13 +95,13 @@
  ,"author": "@张宇卿"
  ,"description": "岂有豪情似旧时,花开花落两由之。"
  ,"by": "——鲁迅"
- ,"imgs": [{"src": "img/scenery/album/3004/1.jpg", "number": "1", "direction": "heng"}
+ ,"imgs": [{"src": "img/scenery/album/3004/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
 		  ,{"src": "img/scenery/album/3004/2.jpg", "number": "2", "direction": "shu"}
 		  ,{"src": "img/scenery/album/3004/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3004/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3004/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3004/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3004/7.jpg", "number": "7", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3004/4.jpg", "number": "4", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/scenery/album/3004/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/scenery/album/3004/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/scenery/album/3004/7.jpg", "number": "7", "direction": "heng", "picwall": "1"}
 		  ]
  }
 ,{"id": "3005"
