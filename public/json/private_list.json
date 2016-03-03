@@ -113,10 +113,10 @@
  ,"imgs": [{"src": "img/private/album/2009/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
 		  ,{"src": "img/private/album/2009/2.jpg", "number": "2", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/private/album/2009/3.jpg", "number": "3", "direction": "shu", "picwall": "1"}
-		  ,{"src": "img/private/album/2009/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2009/4.jpg", "number": "4", "direction": "heng"}
 		  ,{"src": "img/private/album/2009/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/private/album/2009/6.jpg", "number": "6", "direction": "shu"}
-		  ,{"src": "img/private/album/2009/7.jpg", "number": "7", "direction": "shu"}
+		  ,{"src": "img/private/album/2009/7.jpg", "number": "7", "direction": "shu", "picwall": "1"}
 		  ]
  }
 
@@ -190,6 +190,7 @@
 		  ]
  }
 ,{"id": "2004"
+,"showOnPic": "yes"
 ,"type": "other"
 ,"name": "《岁月无恙》"
 ,"title": "岁月无恙"
@@ -202,18 +203,19 @@
 ,"author": "@LV77 摄影工坊"
 ,"description": "心若不动，风又奈何。你若不伤，岁月无恙。"
 ,"by": "——LV77 摄影工坊"
-,"imgs": [{"src": "img/private/album/2004/1.jpg", "number": "1", "direction": "heng"}
+,"imgs": [{"src": "img/private/album/2004/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2004/2.jpg", "number": "2", "direction": "shu"}
   ,{"src": "img/private/album/2004/3.jpg", "number": "3", "direction": "shu"}
-  ,{"src": "img/private/album/2004/4.jpg", "number": "4", "direction": "heng"}
-  ,{"src": "img/private/album/2004/5.jpg", "number": "5", "direction": "shu"}
+  ,{"src": "img/private/album/2004/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2004/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
   ,{"src": "img/private/album/2004/6.jpg", "number": "6", "direction": "shu"}
-  ,{"src": "img/private/album/2004/7.jpg", "number": "7", "direction": "shu"}
-  ,{"src": "img/private/album/2004/8.jpg", "number": "8", "direction": "shu"}
+  ,{"src": "img/private/album/2004/7.jpg", "number": "7", "direction": "shu", "picwall": "1"}
+  ,{"src": "img/private/album/2004/8.jpg", "number": "8", "direction": "shu", "picwall": "1"}
   ,{"src": "img/private/album/2004/9.jpg", "number": "9", "direction": "shu"}
   ]
 }
 ,{"id": "2003"
+,"showOnPic": "yes"
  ,"type": "other"
  ,"name": "《小私房》"
  ,"title": "小私房"
@@ -226,12 +228,12 @@
  ,"author": "@成成"
  ,"description": "美美哒。"
  ,"by": "——成成"
- ,"imgs": [{"src": "img/private/album/2003/1.jpg", "number": "1", "direction": "heng"}
+ ,"imgs": [{"src": "img/private/album/2003/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
 		  ,{"src": "img/private/album/2003/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/5.jpg", "number": "5", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/6.jpg", "number": "6", "direction": "heng"}
+		  ,{"src": "img/private/album/2003/3.jpg", "number": "3", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/4.jpg", "number": "4", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
 		  ]
  }
 ,{"id": "2002"

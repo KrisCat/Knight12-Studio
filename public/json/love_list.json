@@ -54,6 +54,7 @@
  }
 
 ,{"id": "4010"
+,"showOnPic": "no"
 ,"type": "creative"
 ,"name": "《沼泽之心》"
 ,"title": "沼泽之心"
@@ -72,11 +73,11 @@
   ,{"src": "img/love/album/4010/4.jpg", "number": "4", "direction": "heng"}
   ,{"src": "img/love/album/4010/5.jpg", "number": "5", "direction": "heng"}
   ,{"src": "img/love/album/4010/6.jpg", "number": "6", "direction": "heng"}
-  ,{"src": "img/love/album/4010/7.jpg", "number": "7", "direction": "heng"}
-  ,{"src": "img/love/album/4010/8.jpg", "number": "8", "direction": "heng"}
+  ,{"src": "img/love/album/4010/7.jpg", "number": "7", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/love/album/4010/8.jpg", "number": "8", "direction": "heng", "picwall": "1"}
   ,{"src": "img/love/album/4010/9.jpg", "number": "9", "direction": "heng"}
-  ,{"src": "img/love/album/4010/10.jpg", "number": "10", "direction": "heng"}
-  ,{"src": "img/love/album/4010/11.jpg", "number": "11", "direction": "heng"}
+  ,{"src": "img/love/album/4010/10.jpg", "number": "10", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/love/album/4010/11.jpg", "number": "11", "direction": "heng", "picwall": "1"}
   ,{"src": "img/love/album/4010/12.jpg", "number": "12", "direction": "heng"}
   ,{"src": "img/love/album/4010/13.jpg", "number": "13", "direction": "heng"}
   ,{"src": "img/love/album/4010/14.jpg", "number": "14", "direction": "heng"}
@@ -86,7 +87,7 @@
   ,{"src": "img/love/album/4010/18.jpg", "number": "18", "direction": "heng"}
   ,{"src": "img/love/album/4010/19.jpg", "number": "19", "direction": "shu"}
   ,{"src": "img/love/album/4010/20.jpg", "number": "20", "direction": "shu"}
-  ,{"src": "img/love/album/4010/21.jpg", "number": "21", "direction": "heng"}
+  ,{"src": "img/love/album/4010/21.jpg", "number": "21", "direction": "heng", "picwall": "1"}
   ]
 }
 ,{"id": "4008"
@@ -117,6 +118,7 @@
           ,{"src": "img/love/album/4008/12.jpg", "number": "12", "direction": "heng", "picwall": "1"}
 		  ]
  }
+
 ,{"id": "4011"
 ,"type": "people"
 ,"name": "《东京粉黛》"
@@ -238,6 +240,7 @@
  }
 
 ,{"id": "4001"
+,"showOnPic": "yes"
 ,"type": "creative"
 ,"name": "《月光林地》"
 ,"title": "月光林地"
@@ -251,18 +254,18 @@
 ,"description": "俄罗斯摄影师Katerina Plotnikova的人像作品，总是会让人联想到通化故事，无论是色彩、状态或者服装都神秘诱人。"
 ,"by": ""
 ,"imgs": [{"src": "img/love/album/4001/1.jpg", "number": "1", "direction": "heng"}
-  ,{"src": "img/love/album/4001/2.jpg", "number": "2", "direction": "heng"}
+  ,{"src": "img/love/album/4001/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
   ,{"src": "img/love/album/4001/3.jpg", "number": "3", "direction": "heng"}
   ,{"src": "img/love/album/4001/4.jpg", "number": "4", "direction": "heng"}
   ,{"src": "img/love/album/4001/5.jpg", "number": "5", "direction": "heng"}
   ,{"src": "img/love/album/4001/6.jpg", "number": "6", "direction": "shu"}
-  ,{"src": "img/love/album/4001/7.jpg", "number": "7", "direction": "heng"}
-  ,{"src": "img/love/album/4001/8.jpg", "number": "8", "direction": "heng"}
+  ,{"src": "img/love/album/4001/7.jpg", "number": "7", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/love/album/4001/8.jpg", "number": "8", "direction": "heng", "picwall": "1"}
   ,{"src": "img/love/album/4001/9.jpg", "number": "9", "direction": "shu"}
   ,{"src": "img/love/album/4001/10.jpg", "number": "10", "direction": "heng"}
   ,{"src": "img/love/album/4001/11.jpg", "number": "11", "direction": "heng"}
-  ,{"src": "img/love/album/4001/12.jpg", "number": "12", "direction": "heng"}
-  ,{"src": "img/love/album/4001/13.jpg", "number": "13", "direction": "heng"}
+  ,{"src": "img/love/album/4001/12.jpg", "number": "12", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/love/album/4001/13.jpg", "number": "13", "direction": "heng", "picwall": "1"}
   ,{"src": "img/love/album/4001/14.jpg", "number": "14", "direction": "shu"}
   ,{"src": "img/love/album/4001/15.jpg", "number": "15", "direction": "shu"}
   ,{"src": "img/love/album/4001/16.jpg", "number": "16", "direction": "shu"}
@@ -296,6 +299,7 @@
 		  ]
  }
 ,{"id": "4003"
+,"showOnPic": "yes"
  ,"type": "people"
  ,"name": "《神秘莫测的越南少女》"
  ,"title": "神秘莫测的越南少女"
@@ -309,9 +313,9 @@
  ,"description": "越南摄影师Truc Karma作品风格诡异，神秘莫测。他镜头下的越南妹纸，气质迷人，有着独特的东方韵味，抒发着少女的心思。画面构成多以美女，蝴蝶，花朵，树枝等元素，充满少女的浪漫主义情怀，给人无限的遐想空间。"
  ,"by": ""
  ,"imgs": [{"src": "img/love/album/4003/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/love/album/4003/2.jpg", "number": "2", "direction": "heng"}
+		  ,{"src": "img/love/album/4003/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
 		  ,{"src": "img/love/album/4003/3.jpg", "number": "3", "direction": "heng"}
-		  ,{"src": "img/love/album/4003/4.jpg", "number": "4", "direction": "shu"}
+		  ,{"src": "img/love/album/4003/4.jpg", "number": "4", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/love/album/4003/5.jpg", "number": "5", "direction": "heng"}
 		  ,{"src": "img/love/album/4003/6.jpg", "number": "6", "direction": "shu"}
 		  ,{"src": "img/love/album/4003/7.jpg", "number": "7", "direction": "shu"}
@@ -319,10 +323,10 @@
 		  ,{"src": "img/love/album/4003/9.jpg", "number": "9", "direction": "shu"}
 		  ,{"src": "img/love/album/4003/10.jpg", "number": "10", "direction": "heng"}
 		  ,{"src": "img/love/album/4003/11.jpg", "number": "11", "direction": "heng"}
-		  ,{"src": "img/love/album/4003/12.jpg", "number": "12", "direction": "shu"}
+		  ,{"src": "img/love/album/4003/12.jpg", "number": "12", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/love/album/4003/13.jpg", "number": "13", "direction": "heng"}
-		  ,{"src": "img/love/album/4003/14.jpg", "number": "14", "direction": "heng"}
-		  ,{"src": "img/love/album/4003/15.jpg", "number": "15", "direction": "heng"}
+		  ,{"src": "img/love/album/4003/14.jpg", "number": "14", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/love/album/4003/15.jpg", "number": "15", "direction": "heng", "picwall": "1"}
 		  ,{"src": "img/love/album/4003/16.jpg", "number": "16", "direction": "heng"}
 		  ,{"src": "img/love/album/4003/17.jpg", "number": "17", "direction": "heng"}
 		  ,{"src": "img/love/album/4003/18.jpg", "number": "18", "direction": "shu"}
@@ -330,6 +334,7 @@
 		  ]
  }
 ,{"id": "4002"
+,"showOnPic": "yes"
  ,"type": "scenery"
  ,"name": "《山不言 水不语》"
  ,"title": "山不言 水不语"
@@ -342,14 +347,14 @@
  ,"author": "@Andy Lee"
  ,"description": "英国摄影师Andy Lee的风光摄影作品，总是充斥着令人捉摸不透的沉默，仿佛暴雨将至却只能站在茫茫荒野看远方黑云奔涌而至，避无可避。甚至分不清楚是你在看着照片里的风景，还是风景在凝视着你。"
  ,"by": ""
- ,"imgs": [{"src": "img/love/album/4002/1.jpg", "number": "1", "direction": "shu"}
+ ,"imgs": [{"src": "img/love/album/4002/1.jpg", "number": "1", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/love/album/4002/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/love/album/4002/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/love/album/4002/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/love/album/4002/5.jpg", "number": "5", "direction": "shu"}
+		  ,{"src": "img/love/album/4002/3.jpg", "number": "3", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/love/album/4002/4.jpg", "number": "4", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/love/album/4002/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/love/album/4002/6.jpg", "number": "6", "direction": "shu"}
 		  ,{"src": "img/love/album/4002/7.jpg", "number": "7", "direction": "shu"}
-		  ,{"src": "img/love/album/4002/8.jpg", "number": "8", "direction": "shu"}
+		  ,{"src": "img/love/album/4002/8.jpg", "number": "8", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/love/album/4002/9.jpg", "number": "9", "direction": "shu"}
 		  ,{"src": "img/love/album/4002/10.jpg", "number": "10", "direction": "shu"}
 		  ,{"src": "img/love/album/4002/11.jpg", "number": "11", "direction": "shu"}

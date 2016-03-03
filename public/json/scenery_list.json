@@ -123,6 +123,7 @@
 		  ]
  }
 ,{"id": "3006"
+,"showOnPic": "yes"
  ,"type": "impress"
  ,"name": "《印象系列》"
  ,"title": "印象系列"
@@ -135,15 +136,16 @@
  ,"author": "@张宇卿"
  ,"description": "一剪闲云一溪月，一程山水一年华。一世浮生一刹那，一树菩提一烟霞。"
  ,"by": "——白落梅《静好，现世安稳》"
- ,"imgs": [{"src": "img/scenery/album/3006/1.jpg", "number": "1", "intro":"国美象山校区", "direction": "shu"}
+ ,"imgs": [{"src": "img/scenery/album/3006/1.jpg", "number": "1", "intro":"国美象山校区", "direction": "shu", "picwall": "1"}
 		  ,{"src": "img/scenery/album/3006/2.jpg", "number": "2", "intro":"庐山东林寺", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3006/3.jpg", "number": "3", "intro":"宏村", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3006/4.jpg", "number": "4", "intro":"王家大院", "direction": "heng"}
-		  ,{"src": "img/scenery/album/3006/5.jpg", "number": "5", "intro":"天台风景", "direction": "shu"}
-		  ,{"src": "img/scenery/album/3006/6.jpg", "number": "6", "intro":"宏村", "direction": "heng"}
+		  ,{"src": "img/scenery/album/3006/3.jpg", "number": "3", "intro":"宏村", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/scenery/album/3006/4.jpg", "number": "4", "intro":"王家大院", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/scenery/album/3006/5.jpg", "number": "5", "intro":"天台风景", "direction": "shu", "picwall": "1"}
+		  ,{"src": "img/scenery/album/3006/6.jpg", "number": "6", "intro":"宏村", "direction": "heng", "picwall": "1"}
 		  ]
  }
  ,{"id": "3007"
+,"showOnPic": "yes"
 ,"type": "micro"
 ,"name": "《花间集》"
 ,"title": "花间集"
@@ -156,19 +158,19 @@
 ,"author": "@小木瓜DONG"
 ,"description": "许我一段时光，赠你一场春暖花开。"
 ,"by": ""
-,"imgs": [{"src": "img/scenery/album/3007/1.jpg", "number": "1", "intro":"三叶草", "direction": "shu"}
+,"imgs": [{"src": "img/scenery/album/3007/1.jpg", "number": "1", "intro":"三叶草", "direction": "shu", "picwall": "1"}
   ,{"src": "img/scenery/album/3007/2.jpg", "number": "2", "intro":"迎春花", "direction": "shu"}
-  ,{"src": "img/scenery/album/3007/3.jpg", "number": "3", "intro":"紫叶桃", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/3.jpg", "number": "3", "intro":"紫叶桃", "direction": "shu", "picwall": "1"}
   ,{"src": "img/scenery/album/3007/4.jpg", "number": "4", "intro":"二月兰", "direction": "shu"}
-  ,{"src": "img/scenery/album/3007/5.jpg", "number": "5", "intro":"紫藤", "direction": "shu"}
-  ,{"src": "img/scenery/album/3007/6.jpg", "number": "6", "intro":"梧桐果", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/5.jpg", "number": "5", "intro":"紫藤", "direction": "shu", "picwall": "1"}
+  ,{"src": "img/scenery/album/3007/6.jpg", "number": "6", "intro":"梧桐果", "direction": "shu", "picwall": "1"}
   ,{"src": "img/scenery/album/3007/7.jpg", "number": "7", "intro":"红花乍浆草", "direction": "shu"}
   ,{"src": "img/scenery/album/3007/8.jpg", "number": "8", "intro":"紫玉兰", "direction": "shu"}
   ,{"src": "img/scenery/album/3007/9.jpg", "number": "9", "intro":"枫叶", "direction": "shu"}
   ,{"src": "img/scenery/album/3007/10.jpg", "number": "10", "intro":"蒲公英", "direction": "shu"}
   ,{"src": "img/scenery/album/3007/11.jpg", "number": "11", "intro":"郁金香", "direction": "shu"}
   ,{"src": "img/scenery/album/3007/12.jpg", "number": "12", "intro":"狗尾草", "direction": "shu"}
-  ,{"src": "img/scenery/album/3007/13.jpg", "number": "13", "intro":"油菜花", "direction": "shu"}
+  ,{"src": "img/scenery/album/3007/13.jpg", "number": "13", "intro":"油菜花", "direction": "shu", "picwall": "1"}
   ]
 }
 ,{"id": "3008"

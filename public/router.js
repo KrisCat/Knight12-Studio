@@ -25,7 +25,7 @@ var f = function (angular, require) {
 		};
 	});
 
-	// 路由配置
+	// Angular-ui-router路由配置
 	var routeMap = {
 		// 一级路由
 		'index': {
@@ -142,6 +142,10 @@ var f = function (angular, require) {
 			ctrlName: 'listCtrl'
 		}
 	};
+	// app控制器
+	for (var key in routeMap) {
+		app.controller(routeMap[key].ctrlName, require(routeMap[key].ctrlUrl));
+	}
 	app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 		for (var key in routeMap) {
 			$stateProvider.state(key, {
@@ -170,9 +174,6 @@ var f = function (angular, require) {
 			});
 		};
 	});
-	for (var key in routeMap) {
-		app.controller(routeMap[key].ctrlName, require(routeMap[key].ctrlUrl));
-	}
 
 	return app;
 };
