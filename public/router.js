@@ -2,8 +2,8 @@
  * ------------------------------------------
  * 整个网站的路由配置
  * @version  1.0
- * @update   2015/12/28
- * @author   小木瓜(mrgaonju@gmail.com)
+ * @update   2016/03/09
+ * @author   小木瓜(mrgaonju@163.com)
  * ------------------------------------------
  */
 var f = function (angular, require) {
