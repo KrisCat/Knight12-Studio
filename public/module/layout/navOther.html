@@ -1,0 +1,42 @@
+<nav>
+    <div class="nav-bar">
+        <div class="nav-bar-menu">
+            <a href="#/"><span class="index f-fl" ng-class="{active: navState[0]}"><i class="fa fa-list-ul f-mr8"></i>首页相册分类</span></a>
+            <a href="#/people/picwall"><span class="f-fl" ng-class="{active: navState[1]}">环境人像</span></a>
+            <a href="#/private/picwall"><span class="left" ng-class="{active: navState[2]}">私房人像</span></a>
+            <a href="#/scenery/picwall"><span class="left" ng-class="{active: navState[3]}">风光摄影</span></a>
+            <a href="#/love/fanbu"><span class="left" ng-class="{active: navState[4]}">爱心公益</span></a>
+            <a href="#/activity/guest"><span class="f-fl" ng-class="{active: navState[5]}">拍摄活动</span></a>
+            <a href="#/about"><span class="right" ng-class="{active: navState[6]}"><i></i>关于我们</span></a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $(function () {
+        $('.nav li').click(function () {
+            $("li").removeAttr("class");
+            $(this).addClass('active')
+        });
+        $('.search-bar').focusin(function () {
+            $(this).find('.search-btn').addClass('search-btn-foucs')
+        });
+        $('.search-bar').focusout(function () {
+            $(this).find('.search-btn').removeClass('search-btn-foucs')
+        });
+
+        $('.search-btn').click(function () {
+            alert('啊，这只程序猿好像还没来得及写搜索功能-_-!');
+        });
+        //导航栏滚动悬浮
+//		$('.nav-bar').stickUp();
+        $(window).scroll(function () {
+            var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
+            if (scrollY > 100) { //如果滚动距离大于100px悬浮
+                $('.nav-bar').css({position: "fixed", top: "0px"});
+            } else {
+                $('.nav-bar').css({position: "relative"});
+            }
+        });
+    });
+</script>
