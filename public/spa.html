@@ -14,12 +14,20 @@
 	<base href="/">
 </head>
 
-<body oncontextmenu="window.event.returnValue=false" ondragstart="window.event.returnValue=false">
+<body ondragstart="window.event.returnValue=false">
 	<div ng-include="'module/layout/nav.html'"></div>
 	<div id="container" ui-view></div>
 	<div ng-include="'module/layout/footer.html'" id="footer"></div>
 	<!--<div class="mask"></div>-->
 	<script data-baseurl="./" data-main="main.js" src="libs/require.min.js" id="main"></script>
+  <script language="javascript">
+    document.oncontextmenu = rClick;
+    function rClick()
+    {
+      alert("©版权所有");
+      return false;
+    }
+  </script>
 </body>
 
 </html>
