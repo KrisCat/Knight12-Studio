@@ -14,7 +14,7 @@
 	<base href="/">
 </head>
 
-<body>
+<body oncontextmenu="window.event.returnValue=false" ondragstart="window.event.returnValue=false">
 	<div ng-include="'module/layout/nav.html'"></div>
 	<div id="container" ui-view></div>
 	<div ng-include="'module/layout/footer.html'" id="footer"></div>
