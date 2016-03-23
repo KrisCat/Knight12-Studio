@@ -301,6 +301,8 @@ body {
 							-ms-zoom: .9;
 							-o-zoom: .9;
 							zoom: .9;
+							-moz-transform-origin: top left;
+							-moz-transform: scale(.9);
 							img {
 								width: 150px;
 								height: 150px;
