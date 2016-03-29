@@ -1,46 +1,17 @@
-[{"id": "2008"
-,"showOnPic": "yes"
-,"type": "clear"
-,"name": "《Dessert time》"
-,"title": "Dessert time"
-,"cover": "img/private/album/2008/0.jpg"
-,"count": "13张"
-,"belong": "私房写真"
-,"model": "你猜"
-,"date": "2015年8月17日"
-,"place": "你猜"
-,"author": "@摄影师sugar"
-,"description": "甜大概是我们最喜欢的一种味觉了。就像我们的青春，那么让人流连忘返。"
-,"by": "——摄影师sugar"
-,"imgs": [{"src": "img/private/album/2008/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2008/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2008/3.jpg", "number": "3", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2008/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2008/5.jpg", "number": "5", "direction": "shu"}
-  ,{"src": "img/private/album/2008/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2008/7.jpg", "number": "7", "direction": "heng"}
-  ,{"src": "img/private/album/2008/8.jpg", "number": "8", "direction": "shu"}
-  ,{"src": "img/private/album/2008/9.jpg", "number": "9", "direction": "heng"}
-  ,{"src": "img/private/album/2008/10.jpg", "number": "10", "direction": "heng"}
-  ,{"src": "img/private/album/2008/11.jpg", "number": "11", "direction": "heng"}
-  ,{"src": "img/private/album/2008/12.jpg", "number": "12", "direction": "heng"}
-  ,{"src": "img/private/album/2008/13.jpg", "number": "13", "direction": "heng"}
-  ]
-}
-,{"id": "2012"
+[{"id": "2012"
 ,"showOnPic": "no"
  ,"type": "clear"
- ,"name": "《空之间》"
- ,"title": "空之间"
+ ,"name": "《Amélie专辑》"
+ ,"title": "Amélie专辑"
  ,"cover": "img/private/album/2012/0.jpg"
- ,"count": "7张"
+ ,"count": "8张"
  ,"belong": "私房写真"
  ,"model": "你猜"
- ,"date": "2015年5月15日"
+ ,"date": "2016年3月20日"
  ,"place": "你猜"
- ,"author": "@XONEVISION"
- ,"description": "下雨没阳光的天气。来个私房也不错哟。。无论天光天黑，也能一齐愉快玩耍呀"
- ,"by": "——XONEVISION"
+ ,"author": "@Amélie"
+ ,"description": ""
+ ,"by": ""
  ,"imgs": [{"src": "img/private/album/2012/1.jpg", "number": "1", "direction": "heng"}
 		  ,{"src": "img/private/album/2012/2.jpg", "number": "2", "direction": "heng"}
 		  ,{"src": "img/private/album/2012/3.jpg", "number": "3", "direction": "heng"}
@@ -48,8 +19,35 @@
 		  ,{"src": "img/private/album/2012/5.jpg", "number": "5", "direction": "heng"}
 		  ,{"src": "img/private/album/2012/6.jpg", "number": "6", "direction": "heng"}
 		  ,{"src": "img/private/album/2012/7.jpg", "number": "7", "direction": "heng"}
+		  ,{"src": "img/private/album/2012/8.jpg", "number": "8", "direction": "heng"}
 		  ]
  }
+ ,{"id": "2008"
+,"showOnPic": "yes"
+,"type": "clear"
+,"name": "《Amélie专辑》"
+,"title": "Amélie专辑"
+,"cover": "img/private/album/2008/0.jpg"
+,"count": "9张"
+,"belong": "私房写真"
+,"model": "你猜"
+,"date": "2016年3月15日"
+,"place": "你猜"
+,"author": "@Amélie"
+,"description": ""
+,"by": ""
+,"imgs": [{"src": "img/private/album/2008/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/3.jpg", "number": "3", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/5.jpg", "number": "5", "direction": "heng"}
+  ,{"src": "img/private/album/2008/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
+  ,{"src": "img/private/album/2008/7.jpg", "number": "7", "direction": "heng"}
+  ,{"src": "img/private/album/2008/8.jpg", "number": "8", "direction": "heng"}
+  ,{"src": "img/private/album/2008/9.jpg", "number": "9", "direction": "heng"}
+  ]
+}
+
 ,{"id": "2011"
 ,"showOnPic": "no"
 ,"type": "japan"
