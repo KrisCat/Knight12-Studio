@@ -51,24 +51,25 @@
 ,{"id": "2011"
 ,"showOnPic": "no"
 ,"type": "japan"
-,"name": "《好朋友的私房话》"
-,"title": "好朋友的私房话"
+,"name": "《Amélie专辑》"
+,"title": "Amélie专辑"
 ,"cover": "img/private/album/2011/0.jpg"
-,"count": "7张"
+,"count": "8张"
 ,"belong": "私房写真"
 ,"model": "@你猜"
-,"date": "2015年7月24日"
+,"date": "2015年12月10日"
 ,"place": "你猜"
-,"author": "@周周"
-,"description": "走过那么路，你还陪在我身边。"
-,"by": "——周周"
+,"author": "@Amélie"
+,"description": ""
+,"by": ""
 ,"imgs": [{"src": "img/private/album/2011/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
          ,{"src": "img/private/album/2011/2.jpg", "number": "2", "direction": "heng", "picwall": "1"}
   ,{"src": "img/private/album/2011/3.jpg", "number": "3", "direction": "shu"}
   ,{"src": "img/private/album/2011/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2011/5.jpg", "number": "5", "direction": "shu"}
-  ,{"src": "img/private/album/2011/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2011/7.jpg", "number": "7", "direction": "shu"}
+  ,{"src": "img/private/album/2011/5.jpg", "number": "5", "direction": "heng"}
+  ,{"src": "img/private/album/2011/6.jpg", "number": "6", "direction": "shu", "picwall": "1"}
+  ,{"src": "img/private/album/2011/7.jpg", "number": "7", "direction": "heng"}
+  ,{"src": "img/private/album/2011/8.jpg", "number": "8", "direction": "heng"}
   ]
 }
 ,{"id": "2010"
