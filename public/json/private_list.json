@@ -160,74 +160,42 @@
  }
 ,{"id": "2005"
  ,"type": "clear"
- ,"name": "《花の私房》"
- ,"title": "花の私房"
+ ,"name": "《Amélie专辑》"
+ ,"title": "Amélie专辑"
  ,"cover": "img/private/album/2005/0.jpg"
- ,"count": "13张"
+ ,"count": "6张"
  ,"belong": "私房写真"
  ,"model": "@你猜"
- ,"date": "2015年12月12日"
+ ,"date": "2015年8月21日"
  ,"place": "你猜"
- ,"author": "@小渔"
- ,"description": "美美哒"
- ,"by": "——小渔"
+ ,"author": "@Amélie"
+ ,"description": ""
+ ,"by": ""
  ,"imgs": [{"src": "img/private/album/2005/1.jpg", "number": "1", "direction": "heng"}
-		  ,{"src": "img/private/album/2005/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/5.jpg", "number": "5", "direction": "shu"}
+		  ,{"src": "img/private/album/2005/2.jpg", "number": "2", "direction": "heng"}
+		  ,{"src": "img/private/album/2005/3.jpg", "number": "3", "direction": "heng"}
+		  ,{"src": "img/private/album/2005/4.jpg", "number": "4", "direction": "heng"}
+		  ,{"src": "img/private/album/2005/5.jpg", "number": "5", "direction": "heng"}
 		  ,{"src": "img/private/album/2005/6.jpg", "number": "6", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/7.jpg", "number": "7", "direction": "shu"}
-		  ,{"src": "img/private/album/2005/8.jpg", "number": "8", "direction": "shu"}
 		  ]
  }
 ,{"id": "2004"
 ,"showOnPic": "yes"
 ,"type": "other"
-,"name": "《岁月无恙》"
-,"title": "岁月无恙"
+,"name": "《Amélie专辑》"
+,"title": "Amélie专辑"
 ,"cover": "img/private/album/2004/0.jpg"
-,"count": "14张"
+,"count": "1张"
 ,"belong": "私房写真"
 ,"model": "@你猜"
-,"date": "2015年7月15日"
+,"date": "2016年1月17日"
 ,"place": "你猜"
-,"author": "@LV77 摄影工坊"
-,"description": "心若不动，风又奈何。你若不伤，岁月无恙。"
-,"by": "——LV77 摄影工坊"
+,"author": "@Amélie"
+,"description": ""
+,"by": ""
 ,"imgs": [{"src": "img/private/album/2004/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2004/2.jpg", "number": "2", "direction": "shu"}
-  ,{"src": "img/private/album/2004/3.jpg", "number": "3", "direction": "shu"}
-  ,{"src": "img/private/album/2004/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
-  ,{"src": "img/private/album/2004/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
-  ,{"src": "img/private/album/2004/6.jpg", "number": "6", "direction": "shu"}
-  ,{"src": "img/private/album/2004/7.jpg", "number": "7", "direction": "shu", "picwall": "1"}
-  ,{"src": "img/private/album/2004/8.jpg", "number": "8", "direction": "shu", "picwall": "1"}
-  ,{"src": "img/private/album/2004/9.jpg", "number": "9", "direction": "shu"}
   ]
 }
-,{"id": "2003"
-,"showOnPic": "yes"
- ,"type": "other"
- ,"name": "《小私房》"
- ,"title": "小私房"
- ,"cover": "img/private/album/2003/0.jpg"
- ,"count": "7张"
- ,"belong": "黑白人像"
- ,"model": "@你猜"
- ,"date": "2015年8月15日"
- ,"place": "你猜"
- ,"author": "@成成"
- ,"description": "美美哒。"
- ,"by": "——成成"
- ,"imgs": [{"src": "img/private/album/2003/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
-		  ,{"src": "img/private/album/2003/2.jpg", "number": "2", "direction": "shu"}
-		  ,{"src": "img/private/album/2003/3.jpg", "number": "3", "direction": "shu", "picwall": "1"}
-		  ,{"src": "img/private/album/2003/4.jpg", "number": "4", "direction": "shu", "picwall": "1"}
-		  ,{"src": "img/private/album/2003/5.jpg", "number": "5", "direction": "shu", "picwall": "1"}
-		  ,{"src": "img/private/album/2003/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
-		  ]
- }
 ,{"id": "2002"
  ,"type": "other"
  ,"name": "《红衣少女の私语》"
@@ -255,28 +223,47 @@
 		  ,{"src": "img/private/album/2002/12.jpg", "number": "12", "direction": "heng"}
 		  ]
  }
+,{"id": "2003"
+,"showOnPic": "yes"
+ ,"type": "other"
+ ,"name": "《Amélie专辑》"
+ ,"title": "Amélie专辑"
+ ,"cover": "img/private/album/2003/0.jpg"
+ ,"count": "8张"
+ ,"belong": "黑白人像"
+ ,"model": "@你猜"
+ ,"date": "2015年10月18日"
+ ,"place": "你猜"
+ ,"author": "@Amélie"
+ ,"description": ""
+ ,"by": ""
+ ,"imgs": [{"src": "img/private/album/2003/1.jpg", "number": "1", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/2.jpg", "number": "2", "direction": "shu"}
+		  ,{"src": "img/private/album/2003/3.jpg", "number": "3", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/4.jpg", "number": "4", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/5.jpg", "number": "5", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/6.jpg", "number": "6", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/7.jpg", "number": "7", "direction": "heng", "picwall": "1"}
+		  ,{"src": "img/private/album/2003/8.jpg", "number": "8", "direction": "heng", "picwall": "1"}
+		  ]
+ }
 ,{"id": "2001"
  ,"type": "clear"
- ,"name": "《Girl Talk》"
- ,"title": "Girl Talk"
+ ,"name": "《Amélie专辑》"
+ ,"title": "Amélie专辑"
  ,"cover": "img/private/album/2001/0.jpg"
  ,"count": "9张"
  ,"belong": "胶片人像"
  ,"model": "@你猜"
- ,"date": "2014年6月21日"
+ ,"date": "2015年6月13日"
  ,"place": "你猜"
- ,"author": "@摄影师夏兔zi_"
- ,"description": "身为女摄。不拍私房有点浪费。一直想拍一些女孩子的私房照。终于得以实现了向（yi）往（yin）已久的愿望。"
- ,"by": "——摄影师夏兔zi_"
+ ,"author": "@Amélie"
+ ,"description": ""
+ ,"by": ""
  ,"imgs": [{"src": "img/private/album/2001/1.jpg", "number": "1", "direction": "heng"}
 		  ,{"src": "img/private/album/2001/2.jpg", "number": "2", "direction": "heng"}
 		  ,{"src": "img/private/album/2001/3.jpg", "number": "3", "direction": "shu"}
-		  ,{"src": "img/private/album/2001/4.jpg", "number": "4", "direction": "shu"}
-		  ,{"src": "img/private/album/2001/5.jpg", "number": "5", "direction": "heng"}
-		  ,{"src": "img/private/album/2001/6.jpg", "number": "6", "direction": "heng"}
-		  ,{"src": "img/private/album/2001/7.jpg", "number": "7", "direction": "heng"}
-		  ,{"src": "img/private/album/2001/8.jpg", "number": "8", "direction": "heng"}
-		  ,{"src": "img/private/album/2001/9.jpg", "number": "9", "direction": "heng"}
+		  ,{"src": "img/private/album/2001/4.jpg", "number": "4", "direction": "heng"}
 		  ]
  }
 ]
