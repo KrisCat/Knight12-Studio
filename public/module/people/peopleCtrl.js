@@ -3,7 +3,7 @@
  * 人像摄影（people）父控制器
  * @version  1.0
  * @update   2015/12/14
- * @author   小木瓜(mrgaonju@gmail.com)
+ * @author   Kimi(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 

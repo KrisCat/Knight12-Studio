@@ -3,7 +3,7 @@
  * 图片墙（status）控制器
  * @version  1.0
  * @update   2016/02/07
- * @author   小木瓜(mrgaonju@gmail.com)
+ * @author   Kimi(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 

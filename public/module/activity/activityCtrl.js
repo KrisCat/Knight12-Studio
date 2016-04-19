@@ -3,7 +3,7 @@
  * 拍摄活动（activity）控制器
  * @version  1.0
  * @update   2016/02/09
- * @author   小木瓜(mrgaonju@gmail.com)
+ * @author   Kimi(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 

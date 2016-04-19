@@ -3,7 +3,7 @@
  * 相册专辑分类（list）控制器
  * @version  1.0
  * @update   2015/12/29
- * @author   小木瓜(mrgaonju@gmail.com)
+ * @author   Kimi(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 

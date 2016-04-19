@@ -1,31 +1,285 @@
-/**
- * ------------------------------------------
- * 风光摄影（scenery）父控制器
- * @version  1.0
- * @update   2016/01/07
- * @author   小木瓜(mrgaonju@gmail.com)
- * ------------------------------------------
- */
-
-var f = function () {
-	return function ($scope, $http, $rootScope, $stateParams) {
-			$rootScope.toTop();
-			$rootScope.navState = [0, 0, 0, 1, 0, 0, 0];
-			$scope.state = [1, 0, 0, 0, 0, 0];
-			$scope.activeTypeConfirm = function (_index) {
-				$scope.state = _.map($scope.state, function () {
-					return 0;
-				});
-				$scope.state[_index] = 1;
-			};
-			$scope.isActive = function () {
-				$stateParams.type === 'all' && $scope.activeTypeConfirm(1);
-				$stateParams.type === 'travel' && $scope.activeTypeConfirm(2);
-				$stateParams.type === 'city' && $scope.activeTypeConfirm(3);
-				$stateParams.type === 'micro' && $scope.activeTypeConfirm(4);
-				$stateParams.type === 'impress' && $scope.activeTypeConfirm(5);
-			};
-		}
-};
-
-define(['angular'], f)
+<div id="index" class="container" ng-controller="indexCtrl">
+	<div class="wrap1">
+		<!-- 轮播图 -->
+		<div class="slider">
+			<div id="banner_tabs" class="flexslider">
+				<ul class="slides f-tac">
+					<li class="bg1">
+						<a title="" href="#">
+							<span class="slider1"></span>
+						</a>
+					</li>
+					<li class="bg2">
+						<a title="" href="#">
+							<span class="slider2"></span>
+						</a>
+					</li>
+					<li class="bg3">
+						<a title="" href="#">
+							<span class="slider3"></span>
+						</a>
+					</li>
+				</ul>
+				<!--
+					<ul class="flex-direction-nav">
+						<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+						<li><a class="flex-next" href="javascript:;">Next</a></li>
+					</ul>
+-->
+				<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+					<li class="active"><a>1</a></li>
+					<li><a>2</a></li>
+					<li><a>3</a></li>
+				</ol>
+			</div>
+			<div class="category">
+				<!-- 左侧所有相册分类-->
+				<div class="layout">
+					<div class="album-category">
+						<li ng-repeat="item in classItems" on-finish-render-filters>
+							<div class="title">
+								<a href="{{item.href}}" ng-bind="item.title"></a>
+							</div>
+							<div class="tag">
+								<span ng-repeat="tag in item.tags"><a href="{{tag.href}}" ng-bind="tag.name"></a></span>
+							</div>
+						</li>
+					</div>
+					<ul id="j-category-view" class="album-category-detail">
+						<li>
+							<dl>
+								<dt>分类目录</dt>
+								<dd>
+									<a href="#/people/picwall">图片墙</a>
+									<a href="#/people/list/all">全部相册</a>
+									<a href="#/people/list/environment">糖水</a>
+									<a href="#/people/list/film">胶片</a>
+									<a href="#/people/list/black">黑白</a>
+									<a href="#/people/list/other">其他</a>
+								</dd>
+							</dl>
+							<dl class="hover-nav-two">
+								<dt>精选相册</dt>
+								<dd>
+									<a href="#/album/1001">等你的季节</a>
+									<a href="#/album/1015">雕刻时光</a>
+									<a href="#/album/1002">郦大力的星期天</a>
+									<a href="#/album/1003">春暖花开</a>
+									<a href="#/album/1004">雨神不下雨的星期三</a>
+									<a href="#/album/1005">阴天</a>
+									<a href="#/people/list/all">更多...</a>
+								</dd>
+							</dl>
+							<div class="bg-img bg1"></div>
+						</li>
+						<li>
+							<dl>
+								<dt>分类目录</dt>
+								<dd>
+									<a href="#/private/picwall">图片墙</a>
+									<a href="#/private/list/all">全部相册</a>
+									<a href="#/private/list/japan">日系</a>
+									<a href="#/private/list/clear">清新</a>
+									<a href="#/private/list/other">其他</a>
+								</dd>
+							</dl>
+							<dl class="hover-nav-two">
+								<dt>精选相册</dt>
+								<dd>
+									<a href="#/album/2009">小清新私房</a>
+									<a href="#/album/2012">空之间</a>
+									<a href="#/album/2011">好朋友的私房话</a>
+									<a href="#/album/2004">岁月无恙</a>
+									<a href="#/album/2002">红衣少女の私语</a>
+									<a href="#/album/2003">小私房</a>
+									<a href="#/private/list/all">更多...</a>
+								</dd>
+							</dl>
+							<div class="bg-img bg2"></div>
+						</li>
+						<li>
+							<dl>
+								<dt>分类目录</dt>
+								<dd>
+									<a href="#/scenery/picwall">图片墙</a>
+									<a href="#/scenery/list/all">全部相册</a>
+									<a href="#/scenery/list/travel">旅行</a>
+									<a href="#/scenery/list/city">城市</a>
+									<a href="#/scenery/list/micro">微距</a>
+									<a href="#/scenery/list/impress">印象系列</a>
+								</dd>
+							</dl>
+							<dl class="hover-nav-two">
+								<dt>精选相册</dt>
+								<dd>
+									<a href="#/album/3001">山河云间</a>
+									<a href="#/album/3002">西北行</a>
+									<a href="#/album/3003">南京</a>
+									<a href="#/album/3006">印象系列</a>
+									<a href="#/album/3007">花间集</a>
+									<a href="#/album/3009">江宁织造</a>
+									<a href="#/scenery/list/all">更多...</a>
+								</dd>
+							</dl>
+							<div class="bg-img bg3"></div>
+						</li>
+						<li>
+							<dl>
+								<dt>分类目录</dt>
+								<dd>
+									<a href="#/love/picwall">图片墙</a>
+									<a href="#/love/list/all">全部相册</a>
+									<a href="#/love/list/creative">创意</a>
+									<a href="#/love/list/people">人像</a>
+									<a href="#/love/list/scenery">风光</a>
+								</dd>
+							</dl>
+							<dl class="hover-nav-two">
+								<dt>精选相册</dt>
+								<dd>
+									<a href="#/album/4009">水下世界</a>
+									<a href="#/album/4005">丢失于镜中</a>
+									<a href="#/album/4010">沼泽之心</a>
+									<a href="#/album/4011">东京粉黛</a>
+									<a href="#/album/4003">神秘莫测的越南少女</a>
+									<a href="#/album/4001">月光林地</a>
+									<a href="#/love/list/all">更多...</a>
+								</dd>
+							</dl>
+							<div class="bg-img bg4"></div>
+						</li>
+						<li>
+							<dl>
+								<dt>我要约片</dt>
+								<dd>
+									<a href="#/activity">环境人像约片</a>
+									<a href="#/activity">私房写着约片</a>
+								</dd>
+							</dl>
+							<dl class="hover-nav-two">
+								<dt>活动列表</dt>
+								<dd>
+									<a href="#/activity">2016毕业季人像拍摄</a>
+									<a href="#/activity">2016春季环境人像</a>
+									<a href="#/activity">2016春季私房写真</a>
+									<a href="#/activity">2015夏季环境人像</a>
+									<a href="#/activity">2015春季环境人像</a>
+									<a href="#/activity">2014夏季环境人像</a>
+									<a href="#/activity">更多...</a>
+								</dd>
+							</dl>
+							<div class="bg-img bg5"></div>
+						</li>
+						<li>
+							<dl>
+								<dt>团队介绍</dt>
+								<dd>
+									<a href="#/about">摄影师羊驼</a>
+									<a href="#/about">不二周周</a>
+									<a href="#/about">张宇卿</a>
+									<a href="#/about">小木瓜DONG</a>
+								</dd>
+							</dl>
+							<dl class="hover-nav-two">
+								<dt>关注我们</dt>
+								<dd>
+									<a href="#/about">关注我们</a>
+									<a href="#/about">版权声明</a>
+								</dd>
+							</dl>
+							<div class="bg-img bg6"></div>
+						</li>
+					</ul>
+					<div class="side-nav">
+						<div class="img-top">
+							<div class="bg-glass">
+								<div class="word-wrap">
+									<span class="word-up">环境人像私房写真</span>
+									<span class="word-line"></span>
+									<span class="word-down">近期精选相册列表</span>
+								</div>
+							</div>
+						</div>
+						<div class="album-select">
+							<a href="#/album/1001"><span class="album-title">等你的季节</span></a>
+							<a href="#/album/1015"><span class="album-title">雕刻时光</span></a>
+							<a href="#/album/1002"><span class="album-title">郦大力的星期天</span></a>
+							<a href="#/album/2011"><span class="album-title">好朋友的私房话</span></a>
+							<a href="#/album/2009"><span class="album-title">小清新私房</span></a>
+							<div class="album-no">
+								<span class="left">1.</span>
+								<span class="left">2.</span>
+								<span class="left">3.</span>
+								<span class="left">4.</span>
+								<span class="left">5.</span>
+							</div>
+						</div>
+						<div class="btn f-cb">
+							<div class="btn-people"><a href="#/activity"><span><i class="fa fa-comments-o"></i>约人像</span></a></div>
+							<div class="btn-private"><a href="#/activity"><span><i class="fa fa-comments-o"></i>约私房</span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap2">
+		<div class="people" ng-repeat="allList in allLists">
+			<div class="nav-category" ng-if="allList[0].belong === '环境人像'">
+				<span class="name">环境人像</span>
+				<a href="#/people/list/all" class="more">更多</a>
+			</div>
+			<div class="nav-category" ng-if="allList[0].belong === '私房写真'">
+				<span class="name">私房写真</span>
+				<a href="#/private/list/all" class="more">更多</a>
+			</div>
+			<div class="nav-category" ng-if="allList[0].belong === '风光人文'">
+				<span class="name">风光人文</span>
+				<a href="#/scenery/list/all" class="more">更多</a>
+			</div>
+			<div class="nav-category" ng-if="allList[0].belong === '国外摄影'">
+				<span class="name">国外摄影</span>
+				<a href="#/love/list/all" class="more">更多</a>
+			</div>
+			<ul>
+				<li class="album" ng-repeat="list in allList">
+					<div class="album-wrap">
+						<div class="album-cover">
+							<div class="album-frame">
+								<a href="#/album/{{list.id}}"><img src="{{list.cover}}" alt="{{list.name}}" width="150" height="150"><span class="count" ng-bind="list.count"></span></a>
+							</div>
+						</div>
+						<div class="album-detail">
+							<p class="album-title"><a href=""><strong ng-bind="list.title"></strong></a></p>
+							<p class="album-date" ng-bind="list.date"></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="bg"></div>
+		</div>
+	</div>
+	<div class="wrap3">
+		<div class="sub-wrap">
+			<div class="logo"></div>
+			<div class="text">热爱生活，源自于内心</div>
+			<div class="QR-code"></div>
+			<div class="QR-text">
+				<span>「敬请期待」</span>
+				<span>「敬请期待」</span>
+				<span>「敬请期待」</span>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	Slider($('#banner_tabs'), {time: 5000
+				                      ,delay: 400
+				                      ,event: 'hover'
+				                      ,auto: true
+				                      ,mode: 'fade'
+				                      ,controller: $('#bannerCtrl')
+				                      ,activeControllerCls: 'active'
+									  }
+		  );
+</script>

@@ -3,7 +3,7 @@
  * 印象系列（impression）控制器
  * @version  1.0
  * @update   2016/01/06
- * @author   小木瓜(mrgaonju@gmail.com)
+ * @author   Kimi(mrgaonju@gmail.com)
  * ------------------------------------------
  */
 
