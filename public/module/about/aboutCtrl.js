@@ -8,12 +8,7 @@
  */
 
 var f = function () {
-	//var a=1;
-	//console.log(a);
 	return function ($rootScope) {
-		//a++;
-		//console.log(a);
-		//debugger;
 		$rootScope.toTop();
 		$rootScope.navState = [0,0,0,0,0,0,1];
 	}
