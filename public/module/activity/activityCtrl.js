@@ -22,7 +22,6 @@ var f = function () {
 		$http.get(_url)
 			.success(function (_data) {
 				$scope.data = _data;
-				$scope.data.description = $sce.trustAsHtml(_data.description);
 			});
 		$scope.$on('ngRepeatFinished', function () {
 			// 下面是在dom render完成后执行的js
