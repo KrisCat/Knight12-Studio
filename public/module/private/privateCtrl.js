@@ -1,95 +1,30 @@
-<div class="container" id="about" ng-controller="aboutCtrl">
-	<div class="top-img">
-		<div class="bg-img about-top"></div>
-		<div class="pos-wrap">
-			<!--<div class="qr-code"></div>-->
-			<!--<div class="button star">微博关注</div>-->
-			<!--<div class="button map">微信关注</div>-->
-			<div class="text">
-				<i>“ </i> 愿，我们还有岁月可回首 <i> ”</i>
-			</div>
-		</div>
-	</div>
+/**
+ * ------------------------------------------
+ * 人像摄影（people）父控制器
+ * @version  1.0
+ * @update   2015/12/14
+ * @author   小木瓜(mrgaonju@gmail.com)
+ * ------------------------------------------
+ */
 
-	<div class="intro f-cb">
-		<div class="content">
-			<div class="title">
-				<div class="line"></div>
-				<div class="name1">团队介绍</div>
-			</div>
-			<div class="team-intro">
-				<div class="title-wrap">
-					<div class="circle">
-						<div class="number">01</div>
-					</div>
-					<div class="square"></div>
-					<div class="name">
-						<span class="name-up">摄影师羊驼</span>
-						<span class="name-line"></span>
-						<span class="name-down">环境人像摄影师</span>
-					</div>
-				</div>
-				<div class="img-wrap t1"></div>
-				<div class="text-wrap">上大学的时候喜欢上了摄影，从此便一发不可收拾，拍照伴随我度过了四年的大学生活。工作之后，虽然“身不由己”，但始终坚持自己的兴趣爱好，继续拍照。常年呆南京，喜欢我照片的小伙伴们，欢迎约拍，我将不断加油，为拍摄出更好的照片不懈努力。</div>
-			</div>
-			<div class="team-intro">
-				<div class="title-wrap">
-					<div class="circle">
-						<div class="number">02</div>
-					</div>
-					<div class="square"></div>
-					<div class="name">
-						<span class="name-up">Amélie/米粒</span>
-						<span class="name-line"></span>
-						<span class="name-down">私房写真摄影师</span>
-					</div>
-				</div>
-				<div class="img-wrap t2"></div>
-				<div class="text-wrap">女摄，擅长拍摄情绪的人体，单纯的是喜欢人体的线条和内心世界。目前拒绝和情色正面冲突。不喜欢千人一面的流水拍摄方法。</div>
-			</div>
-			<div class="team-intro">
-				<div class="title-wrap">
-					<div class="circle">
-						<div class="number">03</div>
-					</div>
-					<div class="square"></div>
-					<div class="name">
-						<span class="name-up">张宇卿</span>
-						<span class="name-line"></span>
-						<span class="name-down">风光人文摄影师</span>
-					</div>
-				</div>
-				<div class="img-wrap t3"></div>
-				<div class="text-wrap">主业是建筑设计师，爱好摄影，大学的时候可谓对拍照十分“痴迷”，也喜欢旅游，到处走走，拍拍风景，体验祖国的大好河山。曾去过西北，走过沙漠，看过银河，在那里寻找了一番自我==。常年呆魔都，欢迎小伙伴们前来约拍。</div>
-			</div>
-			<div class="team-intro four">
-				<div class="title-wrap">
-					<div class="circle">
-						<div class="number">04</div>
-					</div>
-					<div class="square"></div>
-					<div class="name">
-						<span class="name-up">小木瓜DONG</span>
-						<span class="name-line"></span>
-						<span class="name-down">程序猿&渣渣摄影师</span>
-					</div>
-				</div>
-				<div class="img-wrap t4"></div>
-				<div class="text-wrap">主业是程序猿，也是该网站的设计和开发者，闲暇之余也搞搞“艺术创作”，装一把文艺青年，争取为大师们贡献一点“可观”照片。常年活动于江浙沪地区，喜欢结识新的小伙伴，也喜欢人文摄影，更喜欢拍属于自己的生活，最好的风景永远在路上，未来的路上加油。</div>
-			</div>
-			<div class="title">
-				<div class="line"></div>
-				<div class="name1">关注我们</div>
-			</div>
-			<div class="wechat"></div>
-			<div class="copyright">
-				<div class="c-r">版权声明</div>
-				<div class="note">
-					<div class="line-wrap"><span class="no">1.</span><span class="n-content">本网环境人像、私房写真和风光人文的照片所有权归相应摄影师所有，他人不可私自用于商业用途，可用于非商业用途的分享和转载</span></div>
-					<div class="line-wrap"><span class="no">2.</span><span class="n-content">本网图片的分享和转载须注明摄影师署名和原文链接，他人不得擅自修改照片内容和发布于第三方网络平台等</span></div>
-					<div class="line-wrap"><span class="no">3.</span><span class="n-content">本网国外摄影出于更直观传递信息交流学习之目的，如该图片涉及任何第三方合法权利，请及时与mrgaonju@gmail.com联系</span></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+var f = function () {
+	return function ($scope, $http, $rootScope, $interval, $q, $stateParams) {
+			$rootScope.toTop();
+			$rootScope.navState = [0, 0, 1, 0, 0, 0, 0];
+			$scope.state = [1, 0, 0, 0, 0];
+			$scope.activeTypeConfirm = function (_index) {
+				$scope.state = _.map($scope.state, function () {
+					return 0;
+				});
+				$scope.state[_index] = 1;
+			};
+			$scope.isActive = function () {
+				$stateParams.type === 'all' && $scope.activeTypeConfirm(1);
+				$stateParams.type === 'japan' && $scope.activeTypeConfirm(2);
+				$stateParams.type === 'clear' && $scope.activeTypeConfirm(3);
+				$stateParams.type === 'other' && $scope.activeTypeConfirm(4);
+			};
+		}
+};
+
+define(['angular'], f);
