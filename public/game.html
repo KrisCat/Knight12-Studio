@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+	<meta charset="UTF-8">
+	<title>163-game-index</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/function.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/angular-1.2.0rc2.js"></script>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+</head>
+
+<body>
+	<div id="nav-top">
+		<div class="nav-bar">
+			<a href="http://nie.163.com/" target="_blank" class="logo">网易游戏</a>
+		</div>
+		<div class="nav-detail"></div>
+	</div>
+	<div id="fullpage" ng-controller="index">
+		<div class="section page1">
+			<!-- 轮播 -->
+			<div class="slides" ng-if="sWidth < 1366 ">
+				<div class="slide1 current"></div>
+				<div class="slide2"></div>
+			</div>
+			<div class="slides" ng-if="sWidth >= 1366 ">
+				<div class="slide1_large current"></div>
+				<div class="slide2_large"></div>
+			</div>
+			<!-- 轮播上面的内容 -->
+			<div class="page1-content">
+
+				<div class="page1-logo"><span class="png24"></span>
+				</div>
+				<h1 class="dSlogan png24"></h1>
+				<!-- 标语之间的两个横线 -->
+				<div class="line line_up"></div>
+				<div class="lineRed lineRed_up"></div>
+				<div class="line line_down"></div>
+				<div class="lineRed lineRed_down"></div>
+				<!-- 投递简历按钮 -->
+				<a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="sendCV">
+					<span>投递简历</span>
+					<em class="btn em_1"></em>
+					<em class="btn em_2"></em>
+					<em class="btn em_3"></em>
+					<em class="btn em_4"></em>
+				</a>
+				<div class="arrow">
+					<a class="arrow-l" id="slide-left"><span></span><em></em></a>
+					<a class="arrow-r" id="slide-right"><span></span><em></em></a>
+				<a class="mousedown" href="#page2"><span class="png24"></span><em class="mousedown-click">点击滚动</em></a>
+				</div>
+			</div>
+		</div>
+		<div class="section page2">
+			<em class="arrowDown-white">﹀</em>
+			<div class="personBg">
+				<div class="person p0" ng-class="{'animation-bg-in':isInP2[0], 'animation-bg-out':isOutP2[0]}"></div>
+				<div class="person p1" ng-class="{'animation-bg-in':isInP2[1], 'animation-bg-out':isOutP2[1]}"></div>
+				<div class="person p2" ng-class="{'animation-bg-in':isInP2[2], 'animation-bg-out':isOutP2[2]}"></div>
+				<div class="person p3" ng-class="{'animation-bg-in':isInP2[3], 'animation-bg-out':isOutP2[3]}"></div>
+				<div class="person p4" ng-class="{'animation-bg-in':isInP2[4], 'animation-bg-out':isOutP2[4]}"></div>
+				<div class="person p5" ng-class="{'animation-bg-in':isInP2[5], 'animation-bg-out':isOutP2[5]}"></div>
+			</div>
+			<div class="page2-title">我在网易游戏</div>
+			<div>
+				<div class="personIntro" ng-class="{'animation-slide-in':isInP2[0], 'animation-slide-out':isOutP2[0]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page2_avatar0.jpg">
+					</p>
+					<div class="text">
+						<h4>桂载铎</h4>
+						<p class="text-career">{ 北京大学 | 游戏设计师 }</p>
+						<p class="text-detail">
+							出于对电子游戏的爱好和向往，我选择了国内最优秀的游戏制作公司，<br>
+							投入了游戏策划的行业。这一年的工作告诉我，我并没有选错。<br>
+							游戏设计很苦，虚拟世界的每一寸土地的每一个细节都存在于你的脑海中。<br>
+							游戏设计很累，从设计到实现有一段很长的路要走。游戏设计也很快乐，<br>
+							梦境随自己的意志实现不是每个人都有机会体验到的幸福。游戏设计充满了成就，<br>
+							如同上帝创世界一般的奇幻。如果你知道了这一切，还是坚定地认为<br>
+							游戏设计正是你所追求的事业，那么来吧，怀揣着梦想，坚持不懈，<br>
+						在策划岗位上挥斥方遒，架构自己向往的虚拟世界。
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-slide-in':isInP2[1], 'animation-slide-out':isOutP2[1]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page2_avatar1.jpg">
+					</p>
+					<div class="text">
+						<h4>江宇源</h4>
+						<p class="text-career">{ 北京大学 | 游戏设计师 }</p>
+						<p class="text-detail">
+							在网易能学到东西。如果把入行游戏制作比做一场修行，<br>
+                            那网易游戏无疑就是一个洞天福地，能够给你开挂一般的提升快感。<br>
+                            在网易能干实事。金子总会发光的，而网易则能让金子亮的更快一点。<br>
+                            在网易能认识人。在网易任何时候都不会寂寞无助，因为总有人陪你一起前行。<br>
+                            如果一个人执着于制作最好的游戏、变革游戏行业以及改变未来一代人的命运，<br>
+                            那么加入网易游戏是他实现梦想最有效的途径。<br>
+                            因为对游戏，我们从不游戏。
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-slide-in':isInP2[2], 'animation-slide-out':isOutP2[2]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page2_avatar2.jpg">
+					</p>
+					<div class="text">
+						<h4>蔡坤雨</h4>
+						<p class="text-career">{ 清华大学 | 游戏研发工程师 }</p>
+						<p class="text-detail">
+							实习过程中，让我感受最深的是，网易游戏所拥有的完备的员工培训体系。<br>
+                            作为游戏研发工程师，在这里，我可以获取到各种与游戏研发相关的教程<br>
+                            以及资料，可以选修与研发相关的课程及讲座，在讲座的现场，<br>
+                            还可以与公司的技术大牛探讨各种技术疑难，寻求解决方案。<br>
+                            对于一个初入游戏行业的新手来说，这套培训体系无疑为个人的职业发展<br>
+                            提供了绿色通道。对于研发工程师来说，这种无障碍的技术交流渠道，<br>
+                        为工程师提供了一种快速解决技术难题的途径。
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-slide-in':isInP2[3], 'animation-slide-out':isOutP2[3]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page2_avatar3.jpg">
+					</p>
+					<div class="text">
+						<h4>吴羽飞</h4>
+						<p class="text-career">{ 清华美院 | 游戏视觉设计师 }</p>
+						<p class="text-detail">
+							在这里，我切实的感受到了由一大批积极优秀的年轻人聚集在一起所散发出的<br>
+                            正能量。几乎每个人都有自己独特的闪光点，同时，<br>
+                            大家都毫不吝啬的分享自己的经验成果，携手并进。短短的二个月实习我<br>
+                            就交到了不少能推心置腹的好友，让我在异乡的生活也充满着归属感。<br>
+                            实习结束不久，工作接触到的实际项目就已正式上线，进入游戏后看到自己<br>
+                            创作的内容，虽然还很微不足道，但心中的激动与成就感已经溢于言表。<br>
+                        短短的二个月时间，我就已经与网易游戏结下了深厚的羁绊，<br>
+                        未来的道路我也期待着与网易同行，携手掀起一股股游戏行业的浪潮。
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-slide-in':isInP2[4], 'animation-slide-out':isOutP2[4]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page2_avatar4.jpg">
+					</p>
+					<div class="text">
+						<h4>董文婷</h4>
+						<p class="text-career">{ 香港中文大学 | 品牌管理培训生 }</p>
+						<p class="text-detail">
+							这是一个包容的大家庭，有一群可爱的同事。在这里，你可以最大限度地做自己，<br>
+                            不用担心是否要西装革履，不用害怕表达观点，因为"你"的想法是最重要的。<br>
+                            生活上，加班累了可以去咖啡吧小憩片刻，和同事脑爆聊聊想法，<br>
+                            健身房里也常常留下小伙伴们汗流浃背的身影。工作中，每一位老员工<br>
+                            都是你最好的导师，内部培训和实践机会也始终敞开着大门。对我来说，<br>
+                            实践就是最好的学习，几个项目的历练让我从零经验新人到能够带团队<br>
+                            运作游戏上市，压力与动力并存，但看到成果的那一刻，<br>
+                        真的会觉得自己能从事现在的工作真是太好了。
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-slide-in':isInP2[5], 'animation-slide-out':isOutP2[5]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page2_avatar5.jpg">
+					</p>
+					<div class="text">
+						<h4>胡秋扬</h4>
+						<p class="text-career">{ 浙江大学 | 游戏测试工程师 }</p>
+						<p class="text-detail">
+							实习过程中，首先要点赞的是一对一导师制。其次，实习生工作的安排<br>
+                            绝不是"打杂"或者"脏活累活"，而是精心准备的项目。团队氛围也给我<br>
+                            留下了深刻印象。小伙伴们，导师们，组里的其他成员们，我们共同组成了一个<br>
+                            大团队。除此之外，公司各种福利迎面而来，和我们撞了个满怀。食堂、咖啡吧、<br>
+                            健身房、游戏厅一应俱全，并且走到哪里都免费。还有不定期掉落的IMAX电影，<br>
+                            漂流出游，组内聚餐唱K，带来种惊喜。实习两个月，我满载而归，收获了<br>
+                        深切友谊，体会到了团队的温馨；收获了满满成就感，体会到了自身技术<br>
+                        和沟通能力的提升。如此美差，一举多得，赶紧来投简历吧！
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="indicator">
+				<div class="container">
+					<em class="circle-white" ng-click="changeSlideP2(0)" ng-class="{'slideActive':isInP2[0]}"></em>
+					<em class="circle-white" ng-click="changeSlideP2(1)" ng-class="{'slideActive':isInP2[1]}"></em>
+					<em class="circle-white" ng-click="changeSlideP2(2)" ng-class="{'slideActive':isInP2[2]}"></em>
+					<em class="circle-white" ng-click="changeSlideP2(3)" ng-class="{'slideActive':isInP2[3]}"></em>
+					<em class="circle-white" ng-click="changeSlideP2(4)" ng-class="{'slideActive':isInP2[4]}"></em>
+					<em class="circle-white" ng-click="changeSlideP2(5)" ng-class="{'slideActive':isInP2[5]}"></em>
+				</div>
+			</div>
+			<a class="mousedown" href="#page3"><span class="png24"></span><i>点击滚动</i></a>
+		</div>
+		<div class="section page3">
+			<em class="arrowDown-grey">﹀</em>
+			<div class="page3-title">公司简介</div>
+			<span class="page3-title-line"></span>
+			<div>
+				<div class="personIntro" ng-class="{'animation-page3-slide-in':isInP3[0], 'animation-page3-slide-out':isOutP3[0]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page3_avatar0.jpg">
+					</p>
+					<div class="text">
+						<h4>关于网易</h4>
+						<br>
+						<p class="text-detail">
+							网易(NASDAQ:NTES)是中国领先的互联网技术公司，在开发互联网运用、服务及<br>
+                            其他技术方面，网易始终保持着国内业界领先水平。<br>
+                            网易对中国互联网的发展具有强烈的使命感，网易利用最先进的互联网技术，<br>
+                            加强人与人之间信息的交流和共享，实现"网聚人的力量"。<br>
+                            网易成立时间：1997年 (<a href="http://www.163.com" target="_blank">http://www.163.com</a>)<br>
+                            网易游戏成立时间：2001年 (<a href="http://game.163.com" target="_blank">http://game.163.com</a>)<br>
+                        NESDAQ:NTES
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-page3-slide-in':isInP3[1], 'animation-page3-slide-out':isOutP3[1]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page3_avatar1.jpg">
+					</p>
+					<div class="text">
+						<h4>关于网易游戏</h4>
+						<br>
+						<p class="text-detail">
+							网易2001年正式成立在线游戏事业部，<br>
+                            与广大游戏热爱者一同成长15年，是全球领先的游戏开发与发行公司。<br>
+                            自主研发了《梦幻西游2》《大话西游2》《天下3》《乱斗西游》《梦幻西游手游》<br>
+                            等几十款倍受玩家喜爱的热门端游和手游，<br>
+                            更独家代理了《魔兽世界》《炉石传说》等多款风靡全球的游戏。<br>
+                            2015年，网易游戏正式开启"游戏热爱者"品牌战略，<br>
+                            用自身行动传导热爱者价值，并全面启动"聚合精品，共享热爱"战略计划，<br>
+                            以全球化视野为游戏热爱者创造和发现好玩的精品游戏，<br>
+                            提高游戏准入门槛，降低用户选择门槛。
+						</p>
+					</div>
+				</div>
+				<div class="personIntro" ng-class="{'animation-page3-slide-in':isInP3[2], 'animation-page3-slide-out':isOutP3[2]}">
+					<p class="avatar">
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<span class="span3"></span>
+						<img src="img/page3_avatar2.jpg">
+					</p>
+					<div class="text">
+						<h4>员工眼中的网易游戏</h4>
+						<br>
+						<p class="text-detail">
+							网易游戏就像一个大家庭，公司气氛轻松又活泼，最适合年轻人自由心性，不用全套<br>
+                            职业装正襟危坐，大家穿着宽松T恤和夹脚拖鞋来上班，工作就是游戏，<br>
+                            游戏就是工作，既有学术严谨的专业讨论，也有插科打挥的相互调侃，在我们专用<br>
+                            的泡泡群上，即便是部门老大们也不能逃脱被"调戏"<br>
+                            的命运。下班打DOTA再也不用愁找不到队友，身边都是卧虎藏龙的高手。<br>
+                            在网易游戏实习，你可以：<br>
+                            得到业内大牛的专业指导；和国内顶尖的游戏开发达人一起工作；<br>
+                            了解业内领先工作方法；参加业内最核心技术分享，<br>
+                        了解业内领先经验。
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="indicator">
+				<div class="container">
+					<em class="circle-red" ng-click="changeSlideP3(0)" ng-class="{'slideActive':isInP3[0]}"></em>
+					<em class="circle-red" ng-click="changeSlideP3(1)" ng-class="{'slideActive':isInP3[1]}"></em>
+					<em class="circle-red" ng-click="changeSlideP3(2)" ng-class="{'slideActive':isInP3[2]}"></em>
+				</div>
+			</div>
+			<a class="mousedown" href="#page4"><span class="png24"></span><i>点击滚动</i></a>
+		</div>
+		<div class="section page4">
+			<em class="arrowDown-grey">﹀</em>
+			<div class="page4-title">招聘职位</div>
+			<span class="page4-title-line"></span>
+			<p class="sub-title">实习招聘已圆满结束，以下职位均为校园招聘职位。</p>
+			<span class="center-line"></span>
+			<span class="bottom-line"></span>
+			<ul class="tabs">
+				<li ng-class="{redBottom: isRed}"><span class="depart1" ng-class="{redLine: isRed}" ng-click="selectRed(0)"><i ng-class="{redArrow: isRed}">▼</i></span></li>
+				<li ng-class="{redBottom: !isRed}"><span class="depart2" ng-class="{redLine: !isRed}" ng-click="selectRed(1)"><i ng-class="{redArrow: !isRed}">▼</i></span></li>
+			</ul>
+			<div class="careerContent">
+				<div class="career" ng-class="{redContent: isRed}">
+					<p class="icons">
+						<a class="a_0">
+							<span class="whiteIcons" ng-click="careerMore(0)" ng-class="{careerDetail: isCareerDetail[0]}"></span>
+							<em></em>
+							设计类
+						</a>
+						<a class="a_1">
+							<span class="whiteIcons" ng-click="careerMore(1)" ng-class="{careerDetail: isCareerDetail[1]}"></span>
+							<em></em>
+							技术类
+						</a>
+						<a class="a_2">
+							<span class="whiteIcons" ng-click="careerMore(2)" ng-class="{careerDetail: isCareerDetail[2]}"></span>
+							<em></em>
+							用户体验类
+						</a>
+						<a class="a_3">
+							<span class="whiteIcons" ng-click="careerMore(3)" ng-class="{careerDetail: isCareerDetail[3]}"></span>
+							<em></em>
+							营销策略类
+						</a>
+						<a class="a_4">
+							<span class="whiteIcons" ng-click="careerMore(4)" ng-class="{careerDetail: isCareerDetail[4]}"></span>
+							<em></em>
+							项目管理类
+						</a>
+						<a class="a_5">
+							<span class="whiteIcons" ng-click="careerMore(5)" ng-class="{careerDetail: isCareerDetail[5]}"></span>
+							<em></em>
+							美术类
+						</a>
+						<a class="a_6">
+							<span class="whiteIcons" ng-click="careerMore(6)" ng-class="{careerDetail: isCareerDetail[6]}"></span>
+							<em></em>
+							音频类
+						</a>
+						<a class="a_7">
+							<span class="whiteIcons" ng-click="careerMore(7)" ng-class="{careerDetail: isCareerDetail[7]}"></span>
+							<em></em>
+							游戏运营类
+						</a>
+					</p>
+					<div class="icons-detail">
+						<ul class="icon-nav ul_0" ng-class="{careerDetail: isCareerDetail[0]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏设计师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">CC语音产品经理</a></li>
+						</ul>
+						<ul class="icon-nav ul_1 ul_big_5col" ng-class="{careerDetail: isCareerDetail[1]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏研发工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏测试工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">数据挖掘研究员</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏运维工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏运维开发工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏计费工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">平台开发工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">PM平台开发工程师 (服务端)</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">PM平台开发工程师 (客户端)</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">运营开发工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">CC语音产品开发工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">运营数据挖掘工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">APP开发工程师 (企业平台)</a></li>
+						</ul>
+						<ul class="icon-nav ul_2" ng-class="{careerDetail: isCareerDetail[2]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/yhtyl/2015/7/13/14265_540329.html" target="_blank" class="careerDetail">游戏视觉设计师</a></li>
+							<div class="gui">（GUI）</div>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/yhtyl/2015/7/13/14265_540325.html" target="_blank" class="careerDetail">交互设计师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/yhtyl/2015/7/13/14265_540293.html" target="_blank" class="careerDetail">用户体验研究员</a></li>
+						</ul>
+						<ul class="icon-nav ul_3" ng-class="{careerDetail: isCareerDetail[3]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">品牌管理培训生</a></li>
+						</ul>
+						<ul class="icon-nav ul_4 ul_big_2col" ng-class="{careerDetail: isCareerDetail[4]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">项目管理工程师（产品方向）</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">项目管理工程师（美术方向）</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">知识管理运营工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">培训发展管培生</a></li>
+						</ul>
+						<ul class="icon-nav ul_5 ul_big_3col" ng-class="{careerDetail: isCareerDetail[5]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏美术设计师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏视觉设计师 (GUI)</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">CC语音视觉设计师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">CG美术设计师 (三维生产)</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">CG美术设计师 (概念设计)</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏视频编导</a></li>
+						</ul>
+						<ul class="icon-nav ul_6" ng-class="{careerDetail: isCareerDetail[6]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏配乐师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏音效设计师</a></li>
+						</ul>
+						<ul class="icon-nav ul_7" ng-class="{careerDetail: isCareerDetail[7]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">虚拟世界运营管理</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">虚拟世界运营研究</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">社区平台运营</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">娱乐平台运营</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="career" ng-class="{redContent: !isRed}">
+					<p class="icons">
+						<a class="a_0">
+							<span class="whiteIcons" ng-click="careerMoreR(0)" ng-class="{careerDetail: isCareerDetailR[0]}"></span>
+							<em></em>
+							设计类
+						</a>
+						<a class="a_1">
+							<span class="whiteIcons" ng-click="careerMoreR(1)" ng-class="{careerDetail: isCareerDetailR[1]}"></span>
+							<em></em>
+							技术类
+						</a>
+						<a class="a_4">
+							<span class="whiteIcons" ng-click="careerMoreR(2)" ng-class="{careerDetail: isCareerDetailR[2]}"></span>
+							<em></em>
+							项目管理类
+						</a>
+						<a class="a_5">
+							<span class="whiteIcons" ng-click="careerMoreR(3)" ng-class="{careerDetail: isCareerDetailR[3]}"></span>
+							<em></em>
+							美术类
+						</a>
+						<a class="a_6">
+							<span class="whiteIcons" ng-click="careerMoreR(4)" ng-class="{careerDetail: isCareerDetailR[4]}"></span>
+							<em></em>
+							音乐类
+						</a>
+					</p>
+					<div class="icons-detail">
+						<ul class="icon-nav ul_0" ng-class="{careerDetail: isCareerDetailR[0]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/yhtyl/2015/7/13/14265_540329.html" target="_blank" class="careerDetail">虚拟世界架构师</a></li>
+							<div class="gui">（PC游戏）</div>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/yhtyl/2015/7/13/14265_540329.html" target="_blank" class="careerDetail">虚拟世界架构师</a></li>
+							<div class="gui">（移动游戏）</div>
+						</ul>
+						<ul class="icon-nav ul_1 ul_big_3col ul_R" ng-class="{careerDetail: isCareerDetailR[1]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">研发工程师（PC游戏）</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">研发工程师（移动游戏）</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">技术美术工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏运维工程师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏攻防师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">前端开发工程师</a></li>
+						</ul>
+						<ul class="icon-nav ul_2" ng-class="{careerDetail: isCareerDetailR[2]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">品牌管理培训生</a></li>
+						</ul>
+						<ul class="icon-nav ul_3" ng-class="{careerDetail: isCareerDetailR[3]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏美术设计师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏视觉设计师</a></li>
+						</ul>
+						<ul class="icon-nav ul_4" ng-class="{careerDetail: isCareerDetailR[4]}">
+							<span class="up-arrow">▲</span>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="careerDetail">游戏配乐师</a></li>
+							<li><a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/14/14261_540387.html" target="_blank" class="careerDetail">游戏音效设计师</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<a class="mousedown" href="#page5"><span class="png24"></span><i>点击滚动</i></a>
+		</div>
+		<div class="section page5">
+			<em class="arrowDown-grey">﹀</em>
+			<div class="page5-title">视频展示</div>
+			<span class="page5-title-line"></span>
+			<div class="video">
+				<p class="video-title">实习生在网易</p>
+				<img value="1" src="./img/page5_video.jpg">
+			</div>
+			<a href="http://game.campus.163.com/shixi/zhiwei/zaixian/sjl/2015/7/13/14261_540363.html" target="_blank" class="aJianli2">
+                <span></span>
+                <em class="em_1"></em>
+                <em class="em_2"></em>
+                <em class="em_3"></em>
+                <em class="em_4"></em>
+            </a>
+            <div class="gototop">
+            	<a href="#page1">返回顶部</a>
+            </div>
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+<script>
+	// jQuery版
+	$(document).ready(function () {
+		// wrap1 背景图切换
+		$('.arrow a').click(function () {
+			if ($(".slides div").eq(0).hasClass('current')) {
+				$(".slides div").eq(0).removeClass('current');
+				$(".slides div").eq(1).addClass('current');
+			} else {
+				$(".slides div").eq(0).addClass('current');
+				$(".slides div").eq(1).removeClass('current');
+			}
+		});
+
+	});
+	// Angular版
+	function index($scope) {
+			$scope.sWidth = document.body.clientWidth;
+//			$scope.isCurrent = true;
+			$scope.isInP2 = [];
+			$scope.isOutP2 = [];
+			$scope.isInP3 = [];
+			$scope.isOutP3 = [];
+			$scope.indexP2 = 0;
+			$scope.indexP3 = 0;
+			$scope.isCareerDetail = [];  // page3点击职位类别图标显示具体职位，左侧
+			$scope.isCareerDetailR = [];  // page3点击职位类别图标显示具体职位，右侧
+			$scope.changebg = function () {
+				$scope.isCurrent = !$scope.isCurrent;
+			}
+			$scope.isRed = true;
+			// page2, sildes切换
+			// 初始化
+			for (var i = 0; i < 6; ++i) {
+				$scope.isInP2[i] = (i === 0) ? true : false;
+				$scope.isOutP2[i] = false;
+			}
+			for (var i = 0; i < 3; ++i) {
+				$scope.isInP3[i] = (i === 0) ? true : false;
+				$scope.isOutP3[i] = false;
+			}
+			for (var i = 0; i < 8; ++i) {
+				$scope.isCareerDetail[i] = (i === 0) ? true : false;
+			}
+			for (var i = 0; i < 5; ++i) {
+				$scope.isCareerDetailR[i] = (i === 0) ? true : false;
+			}
+			$scope.changeSlideP2 = function(index) {
+				for (var i = 0; i < 6; ++i) {
+					$scope.isInP2[i] = (i === index) ? true : false;
+					$scope.isOutP2[i] = (i === $scope.indexP2) ? true : false;
+				}
+				$scope.indexP2 = index;
+			}
+			$scope.changeSlideP3 = function(index) {
+				for (var i = 0; i < 3; ++i) {
+					$scope.isInP3[i] = (i === index) ? true : false;
+					$scope.isOutP3[i] = (i === $scope.indexP3) ? true : false;
+				}
+				$scope.indexP3 = index;
+			}
+			$scope.selectRed = function(index) {
+				$scope.isRed = (index === 0) ? true : false;
+			}
+			$scope.careerMore = function(index) {
+				for (var i = 0; i < 8; ++i) {
+					$scope.isCareerDetail[i] = (i === index) ? true : false;
+				}
+			}
+			$scope.careerMoreR = function(index) {
+				for (var i = 0; i < 5; ++i) {
+					$scope.isCareerDetailR[i] = (i === index) ? true : false;
+				}
+			}
+		}
+
+		//1s后消失
+/*			_g.setTimeout(function () {
+				_decelerate = nej.ut._$$AnimEaseIn._$allocate(options);
+				_decelerate._$play();
+			}._$bind(this), _minutes);
+		$(document).ready(function() {
+			$('.whiteIcons').click(function(index) {
+
+			});
+		});*/
+</script>
+
+</html>
