@@ -154,7 +154,7 @@ var f = function (angular, require) {
 				controller: routeMap[key].ctrlName
 			});
 		}
-		$urlRouterProvider.otherwise('/');
+		// $urlRouterProvider.otherwise('/');
 		$locationProvider.html5Mode(true);
 	});
 
