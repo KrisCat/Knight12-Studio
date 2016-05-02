@@ -20,7 +20,7 @@ nav {
 				display: inline-block;
 				cursor: pointer;
 				color: #282828;
-				overflow: hidden;
+				// overflow: hidden;
 				//					box-sizing: content-box;
 			}
 			li {
@@ -46,8 +46,27 @@ nav {
 					padding-left: 8px;
 					border-left: 2px solid #ebebeb;
 					margin-left: -2px;
+					position: relative;
 					&.mobile {
 						padding-left: 25px;
+					}
+					div.top-wechat-bg {
+						display: none;
+						position: absolute;
+						top: 25px;
+					    left: -2px;
+						z-index: 4;
+						border: 1px #efefef solid;
+						border-top: 1px #f6f6f6 solid;
+						border-radius: 2px;
+						padding: 5px;
+						background-color: #f6f6f6;
+						div {
+							width: 70px;
+							height: 70px;
+							background: url(../img/wechat.jpg) no-repeat center center;
+							background-size: 100% auto;
+						}
 					}
 				}
 				.i-mobile {
