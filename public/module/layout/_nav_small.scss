@@ -36,6 +36,9 @@ nav {
 					padding-left: 8px;
 					border-left: 2px solid #ebebeb;
 					margin-left: -2px;
+					&.li-first {
+						border-left: 2px solid #f6f6f6;
+					}
 				}
 			}
 			.right {
@@ -49,6 +52,24 @@ nav {
 					position: relative;
 					&.mobile {
 						padding-left: 25px;
+					}
+					div.mobile-bg{
+						display: none;
+						position: absolute;
+						top: 25px;
+					    left: 7px;
+						z-index: 4;
+						border: 1px #efefef solid;
+						border-top: 1px #f6f6f6 solid;
+						border-radius: 2px;
+						padding: 5px;
+						background-color: #f6f6f6;
+						div {
+							width: 70px;
+							height: 70px;
+							background: url(../img/h5.jpg) no-repeat center center;
+							background-size: 100% auto;
+						}
 					}
 					div.top-wechat-bg {
 						display: none;
@@ -79,7 +100,7 @@ nav {
 					margin-top: 2px;
 					position: absolute;
 					top: 8px;
-					left: 160px;
+					left: 9px;
 					background-color: #f6f6f6;
 				}
 			}

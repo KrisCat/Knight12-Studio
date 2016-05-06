@@ -2,16 +2,13 @@
 	<div class="nav-top">
 		<div class="nav-top-detail">
 			<ul class="left">
-				<li><a href="http://pp.163.com/square" target="_blank">网易摄影</a></li>
-				<li><a href="http://www.lofter.com" target="_blank">LOFTER</a></li>
-				<li><a href="http://www.tuchong.com" target="_blank">图虫网</a></li>
+				<li class="li-first"><a href="">官方微博</a></li>
+				<li class="top-wechat">微信公众号<div class="top-wechat-bg"><div></div></div></li>
 			</ul>
 			<ul class="right">
-				<li>官方微博</li>
-				<li class="top-wechat">微信公众号<div class="top-wechat-bg"><div></div></div></li>
+				<li class="mobile">手机版网页<div class="mobile-bg"><div></div></div></li>
+				<li><a href="/login" target="_self">登录</a></li>
 				<i class="i-mobile"></i>
-				<li class="mobile">手机版网页</li>
-				<li>登录</li>
 			</ul>
 		</div>
 	</div>
@@ -67,6 +64,21 @@
 						$(this).hide();
 				});
 				// $('.top-wechat-bg').hide();
+		});
+		// 导航栏hover二维码
+		$('.mobile').hover(
+			function() {
+				$('.mobile-bg').show();
+			},
+			function() {
+				$('.mobile-bg').hover(
+					function() {
+						$(this).show();
+					},
+					function() {
+						$(this).hide();
+				});
+				// $('.mobile-bg').hide();
 		});
 		$('.search-btn').click(function () {
 			alert('系统警告，累了=_=!');
