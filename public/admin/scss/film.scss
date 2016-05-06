@@ -1,0 +1,114 @@
+// public def
+$small-width: 960px;
+$large-width: 1200px;
+
+@import '../../scss/reset';
+@import '../../scss/function';
+
+body {
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+nav {
+	width: 100%;
+	position: fixed-top;
+	height: 35px;
+	background-color: #46c489;
+	& > ul {
+		width: $small-width;
+		position: relative;
+		margin: 0 auto;
+		& > a li {
+			color: #fff;
+		    float: left;
+		    display: inline-table;
+		    padding: 9px;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		    border-right: 1px solid #46c489;
+		    text-align: center;
+		    font-size: 14px;
+		    &:hover, &.active {
+		    	background-color: #fff;
+		    	color: #46c489;
+		    }
+		}
+	}
+}
+.title {
+	position: relative;
+	top: 60px;
+	font: 28px Helvetica, arial, freesans, clean, sans-serif;
+	text-align: center;
+}
+.des {
+	width: $small-width - 40px;
+	height: 100px;
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	background-color: #efefef;
+	padding: 20px;
+	text-indent: 28px;
+	font-size: 14px;
+	line-height: 28px;
+}
+.card {
+	width: $small-width - 40px;
+	height: 380px;
+	position: relative;
+	top: 140px;
+	margin: 0 auto;
+	background-color: #efefef;
+	padding: 20px;
+    margin-bottom: 40px;
+	.s-title {
+		color: #f00;
+		font-size: 18px;
+		font-weight: bold;
+		height: 33px;
+		vertical-align: top;
+
+	}
+	img {
+		float: left;
+		width: 235px;
+	}
+	.intro {
+		// @include red;
+		float: left;
+		width: 683px;
+		height: 333px;
+		.line, .download {
+			// @include green;
+			padding-left: 20px;
+			line-height: 30px;
+			vertical-align: top;
+			span {
+				display: inline-table;
+				font-size: 16px;
+				&.l-title {
+					font-weight: bold;
+				}
+				&.l-intro {
+					// @include blue;
+					font-size: 15px;
+					margin-left: 10px;
+				}
+				&.l-button {
+					margin-left: 10px;
+					width: 80px;
+					height: 24px;
+					background-color: #46c489;
+					cursor: pointer;
+					line-height: 24px;
+					text-align: center;
+					color: #fff;
+					font-size: 13px;
+					&:hover {
+						background-color: #14C16B;
+					}
+				}
+			}
+		}
+	}
+}
