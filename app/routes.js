@@ -6,7 +6,7 @@ module.exports = function(app) {
 
 	// frontend routes =========================================================
 	// route to handle all angular requests
-	// 主页
+	// SPA路由
 	app.get('/', function(req, res) {
 		res.sendfile('./public/index.html');
 	});

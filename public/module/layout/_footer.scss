@@ -100,6 +100,10 @@ footer {
 				text-align: center;
 				margin-right: 6px;
 				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+				-moz-transition: background-color .3s;
+			    -o-transition: background-color .3s;
+			    -webkit-transition: background-color .3s;
+			    transition: background-color .3s;
 				&:hover {
 					background-color: $main-color;
 				}
