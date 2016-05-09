@@ -1,13 +1,21 @@
 {
   "name": "photography-website",
-  "version": "2.1.0",
+  "version": "2.0.1",
   "main": "server.js",
   "dependencies": {
     "express" : "~4.5.1",
-	"mongoose" : "~3.8.0",
-	"body-parser" : "~1.4.2",
-	"method-override" : "~2.0.2",
-	"underscore": "~1.8.3"
+  	"mongoose" : "~3.8.0",
+  	"body-parser" : "~1.4.2",
+  	"method-override" : "~2.0.2",
+  	"underscore": "~1.8.3",
+    "art-template": "~3.0.3",
+    "stylus": "0.44.0",
+    "mongoskin": "1.4.1",
+    "cookie-parser": "1.0.1",
+    "serve-favicon": "2.0.0",
+    "express-session": "1.0.4",
+    "morgan": "1.0.1",
+    "errorhandler": "1.0.1"
   }
 }
 
