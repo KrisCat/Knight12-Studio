@@ -26,6 +26,9 @@ nav {
 			li {
 				padding: 0 10px;
 				margin-top: 11px;
+				a:hover, &:hover {
+				    color: $main-color;
+				}
 				//					border: 1px solid blue;
 				//					box-sizing: border-box;
 			}
@@ -50,8 +53,8 @@ nav {
 					border-left: 2px solid #ebebeb;
 					margin-left: -2px;
 					position: relative;
-					&.mobile {
-						padding-left: 25px;
+					&.reg {
+						border-left: 2px solid #f6f6f6;
 					}
 					div.mobile-bg{
 						display: none;
@@ -90,19 +93,19 @@ nav {
 						}
 					}
 				}
-				.i-mobile {
-					display: inline-block;
-					background: url(../img/top_icons.png) no-repeat;
-					width: 11px;
-					height: 14px;
-					background-position: -20px -40px;
-					margin-right: 5px;
-					margin-top: 2px;
-					position: absolute;
-					top: 8px;
-					left: 9px;
-					background-color: #f6f6f6;
-				}
+				// .i-mobile {
+				// 	display: inline-block;
+				// 	background: url(../img/top_icons.png) no-repeat;
+				// 	width: 11px;
+				// 	height: 14px;
+				// 	background-position: -20px -40px;
+				// 	margin-right: 5px;
+				// 	margin-top: 2px;
+				// 	position: absolute;
+				// 	top: 8px;
+				// 	left: 9px;
+				// 	background-color: #f6f6f6;
+				// }
 			}
 		}
 	}
