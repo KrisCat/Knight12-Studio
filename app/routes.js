@@ -10,76 +10,25 @@ module.exports = function(app) {
 	app.get('/', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
-	app.get('/people/picwall', function(req, res) {
+	app.get('/people/*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
-	app.get('/people/list/all', function(req, res) {
+	app.get('/private/*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
-	app.get('/people/list/environment', function(req, res) {
+	app.get('/scenery/*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
-	app.get('/people/list/film', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/people/list/black', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/people/list/other', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/private/picwall', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/private/list/all', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/private/list/japan', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/private/list/clear', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/private/list/other', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/scenery/picwall', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/scenery/list/all', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/scenery/list/travel', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/scenery/list/city', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/scenery/list/micro', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/scenery/list/impress', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/love/picwall', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/love/list/all', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/love/list/creative', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/love/list/people', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
-	app.get('/love/list/scenery', function(req, res) {
+	app.get('/love/*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
 	app.get('/activity', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
 	app.get('/about', function(req, res) {
+		res.sendfile('./public/index.html');
+	});
+	app.get('/album/*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
 	// 电影单
