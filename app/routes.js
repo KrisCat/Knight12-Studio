@@ -31,9 +31,13 @@ module.exports = function(app) {
 	app.get('/album/*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
-	// 电影单
+	// 电影
 	app.get('/film', function(req, res) {
-		res.sendfile('./public/film/001.html');
+		res.sendfile('./public/kimi/film.html');
+	});
+	// 读书
+	app.get('/book', function(req, res) {
+		res.sendfile('./public/kimi/book.html');
 	});
 	// 图片后台系统
 	app.get('/login', function(req, res) {
