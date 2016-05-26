@@ -1,0 +1,212 @@
+// public def
+$small-width: 960px;
+$large-width: 1200px;
+// color
+$main-color: #159957;
+$main-color-hover: #11B362;
+// $main-color-hover: #15BF6A;
+$bg-color: #e1e1e1;
+$nav-color: #159957;
+
+
+@import 'reset';
+@import 'function';
+@import 'base';
+
+.fa-angle-up {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+html, body {
+	font-family: Microsoft YaHei, Helvetica, arial, freesans, clean, sans-serif;
+	background-color: $bg-color;
+}
+footer {
+	width: 100%;
+	height: 120px;
+}
+nav {
+	width: 100%;
+	height: 41px;
+	background-color: $nav-color;
+    background-image: linear-gradient(120deg, #159999, #159957);
+	& > ul {
+		width: $small-width;
+		position: relative;
+		margin: 0 auto;
+		& > a li {
+			color: #fff;
+		    float: left;
+		    display: inline-table;
+		    padding: 9px;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		    border-right: 1px solid $main-color;
+		    text-align: center;
+		    font-size: 14px;
+		    margin-top: 1px;
+		    height: 20px;
+	        line-height: 20px;
+		    &:hover, &.active {
+		    	background-color: #fff;
+		    	color: $main-color;
+		    }
+		}
+	}
+}
+.search-bar {
+	display: inline-block;
+	// float: right;
+	position: relative;
+	// margin-top: 15px;
+	input {
+		padding-right: 83px;
+	    width: 450px;
+	    height: 22px;
+	    font-size: 15px;
+		padding: 10px 66px 10px 10px;
+		-webkit-border: 1px #BCCCB9 solid;
+		-moz-border: 1px #BCCCB9 solid;
+		-ms-border: 1px #BCCCB9 solid;
+		-o-border: 1px #BCCCB9 solid;
+		border: 1px #BCCCB9 solid;
+		// border-top-right-radius: 2px;
+		// border-bottom-right-radius: 2px;
+	}
+	input:focus {
+		border: 1px solid $main-color;
+	}
+	.search-btn {
+		position: absolute;
+		box-sizing: border-box;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 40px;
+		cursor: pointer;
+		text-align: center;
+		line-height: 40px;
+		border: 1px solid #e3e3e3;
+		color: #999;
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+		&:hover {
+			background-color: $main-color-hover;
+			color: #fff;
+		}
+	}
+	.search-btn-foucs {
+		background-color: $main-color;
+		border: 1px solid $main-color-hover;
+		color: #fff;
+	}
+}
+.title {
+	position: relative;
+	top: 60px;
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+}
+.des {
+	width: $small-width - 40px;
+	height: 37px;
+	position: relative;
+	top: 60px;
+	margin: 0 auto;
+	// background-color: #fff;
+	padding: 20px;
+	text-align: center;
+	// text-indent: 28px;
+	// font-size: 14px;
+	// line-height: 28px;
+}
+ul#film-cards {
+	position: relative;
+	top: 100px;
+}
+.card {
+	width: $small-width - 40px;
+	height: 360px;
+	position: relative;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px;
+    margin-bottom: 40px;
+	.s-title {
+		color: $main-color-hover;
+		font-size: 18px;
+		font-weight: bold;
+		height: 33px;
+		vertical-align: top;
+
+	}
+	img {
+		float: left;
+	    width: 209px;
+	    margin-top: 6px;
+	}
+	.intro {
+		// @include red;
+		float: left;
+		width: 683px;
+		height: 333px;
+		.line, .download {
+			// @include green;
+			padding-left: 20px;
+			line-height: 30px;
+			vertical-align: top;
+			span {
+				display: inline-table;
+				font-size: 15px;
+				&.l-title {
+					font-weight: bold;
+				}
+				&.l-intro {
+					// @include blue;
+					font-size: 14px;
+					margin-left: 10px;
+				}
+				&.l-button {
+					margin-left: 10px;
+					width: 78px;
+					height: 22px;
+					background-color: $main-color;
+					cursor: pointer;
+					line-height: 22px;
+					text-align: center;
+					color: #fff;
+					font-size: 13px;
+					-webkit-border: 1px $main-color solid;
+					-moz-border: 1px $main-color solid;
+					-ms-border: 1px $main-color solid;
+					-o-border: 1px $main-color solid;
+					border: 1px $main-color solid;
+					&:hover {
+						background-color: $main-color-hover;
+					}
+				}
+				&.l-button-ghost {
+					margin-left: 10px;
+					width: 78px;
+					height: 22px;
+					cursor: pointer;
+					line-height: 22px;
+					text-align: center;
+					color: $main-color;
+					font-size: 13px;
+					-webkit-border: 1px $main-color solid;
+					-moz-border: 1px $main-color solid;
+					-ms-border: 1px $main-color solid;
+					-o-border: 1px $main-color solid;
+					border: 1px $main-color solid;
+					&:hover {
+						background-color: $main-color-hover;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

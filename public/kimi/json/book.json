@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1",
+    "filmName": "1. 捕梦 The Dream Hunters",
+    "imgSrc": "img/book/1.jpg",
+    "author": " 天野喜孝 / Neil Gaiman ",
+    "type": " 奇幻",
+    "press": " インターブックス",
+    "pubDate": " 2000年10月",
+    "reason": " 行崎岖之路以踏进你梦境。Sandman系列非常独立的一本。狐狸和和尚的故事，非常东方风味。插画是日本画师天野喜孝，风格很特别。",
+    "score": " 8分",
+    "downloads": [
+      {
+        "name": "PDF版",
+        "href": "res/thedreamhunters.pdf"
+      }
+    ],
+    "comments": [
+      {
+        "name": "撰写中",
+        "href": "/book"
+      }
+    ]
+  }
+]

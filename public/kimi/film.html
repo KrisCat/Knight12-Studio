@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>电影推荐</title>
+    <base href="/kimi/">
+    <link rel="stylesheet" href="css/film.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="/"><li class="first">摄影</li></a>
+            <a href="/film"><li class="first active">电影</li></a>
+            <a href="/book"><li class="first">读书</li></a>
+            <!-- <a href=""><li class="first f-fr">更新历史</li></a> -->
+        </ul>
+    </nav>
+    <div class="des">
+        <div class="search-bar">
+            <input class="search-input" placeholder="输入电影名称/上映时间/国家/类型等" id="search-highlight" name="search-highlight" type="text" data-list=".highlight_list" autocomplete="off">
+            <!-- <a class="search-btn">搜索</a> -->
+        </div>
+    </div>
+    <ul class="vertical highlight_list" id="film-cards">
+      <li  v-for="item in items">
+      <div class="card">
+        <div class="s-title" v-text="item.filmName"></div>
+        <img :src="item.imgSrc" alt="">
+        <div class="intro">
+            <div class="line">
+                <span class="l-title">【上映】</span>
+                <span class="l-intro" v-text="item.releaseDate"></span>
+            </div>
+            <div class="line">
+                <span class="l-title">【片长】</span>
+                <span class="l-intro" v-text="item.length"> </span>
+            </div>
+            <div class="line">
+                <span class="l-title">【类型】</span>
+                <span class="l-intro" v-text="item.type"></span>
+            </div>
+            <div class="line">
+                <span class="l-title">【主演】</span>
+                <span class="l-intro" v-text="item.actor"></span>
+            </div>
+            <div class="line">
+                <span class="l-title">【推荐理由】</span>
+                <span class="l-intro" v-text="item.reason"></span>
+            </div>
+            <div class="line">
+                <span class="l-title">【个人评价】</span>
+                <span class="l-intro" v-text="item.score"></span>
+            </div>
+            <div class="download">
+                <span class="l-title">【资源地址】</span>
+                <a :href="download.href" v-for="download in item.downloads"><span class="l-button" v-text="download.name"></span></a>
+            </div>
+             <div class="download">
+                <span class="l-title">【观后影评】</span>
+                <a :href="comment.href" v-for="comment in item.comments" target="_blank"><span class="l-button-ghost" v-text="comment.name"></span></a>
+            </div>
+        </div>
+    </div>
+    </li>
+    </ul>
+    <footer></footer>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.hideseek.min.js"></script>
+    <script src="lib/vue.js"></script>
+    <div id="scrollUp"><i class="fa fa-angle-up">TOP</i></div>
+    <script>
+        $(window).scroll(function () {
+            var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
+            if (scrollY > 300) { //如果滚动距离大于300px显示
+                $('#scrollUp').show();
+            } else {
+                $('#scrollUp').hide();
+            }
+        });
+        $('#scrollUp').click(function () {
+            $("html, body").animate({
+                scrollTop: "0px"
+            }, {
+                duration: 400,
+                easing: "swing"
+            });
+            return false;
+        });
+        $('.search-bar').focusin(function () {
+            $(this).find('.search-btn').addClass('search-btn-foucs')
+        });
+        $('.search-bar').focusout(function () {
+            $(this).find('.search-btn').removeClass('search-btn-foucs')
+        });
+
+        $('.search-btn').click(function () {
+            alert('系统警告，累了=_=!');
+        });
+        $('#search-highlight').hideseek({
+          highlight: true
+        });
+        $.getJSON("json/film.json", function(_data){
+            var filmCards = new Vue({
+          el: '#film-cards',
+          data: {
+            // parentMessage: 'Parent',
+            items: _data
+          }
+        })
+      });
+    </script>
+    <div style="display: none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+</html>
