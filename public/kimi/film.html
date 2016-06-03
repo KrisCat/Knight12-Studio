@@ -63,10 +63,12 @@
     </div>
     </li>
     </ul>
+    <div id="more"><div class="more" v-on:click="more" v-if="count">点击加载更多...</div></div>
     <footer></footer>
+    <script src="lib/vue.js"></script>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/jquery.hideseek.min.js"></script>
-    <script src="lib/vue.js"></script>
+    <script src="lib/underscore-min.js"></script>
     <div id="scrollUp"><i class="fa fa-angle-up">TOP</i></div>
     <script>
         $(window).scroll(function () {
@@ -100,14 +102,61 @@
           highlight: true
         });
         $.getJSON("json/film.json", function(_data){
-            var filmCards = new Vue({
-          el: '#film-cards',
-          data: {
-            // parentMessage: 'Parent',
-            items: _data
-          }
-        })
-      });
+            var dataList = _data;
+            var cardLen = _data.length;
+            var cardCount = parseInt(_data.length / 10);
+            var cardLast = _data.length % 10;
+            console.log(cardCount);
+            console.log(cardLast);
+            var pushCount = 1;
+            window.filmCards = new Vue({
+                el: '#film-cards',
+                data: {
+                  // parentMessage: 'Parent',
+                  items: _(dataList).first(10)
+                }
+            })
+            var more = new Vue({
+                el: '#more',
+                data: {
+                  count: cardCount
+                },
+                methods: {
+                    more: function() {
+                        if (this.count == 1) {
+                            filmCards.items = _(dataList).first(pushCount*10 + cardLast);
+                            this.count--;
+                        }
+                        if (this.count > 1) {
+                            pushCount++;
+                            filmCards.items = _(dataList).first(pushCount*10);
+                            this.count--;
+                        }
+                    }
+                }
+            });
+        });
+        function buttomDistance(len) {
+            var docHeight = Math.max(document.body.scrollHeight,document.body.offsetHeight);
+            var viewHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+            var scrollHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            return docHeight - viewHeight - scrollHeight < len;
+       }
+       function checkHeight(){
+            if(!buttomDistance(20)) {
+                return loadDoc();
+            }
+            //Ajax请求下一页....
+            //to do something...
+            // filmCards.items = _(dataList).first(11);
+
+        }
+
+        function loadDoc(){
+           setTimeout(checkHeight, 150); //间隔150ms 应该够了...
+        }
+
+        loadDoc();
     </script>
     <div style="display: none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E"));</script></div>
 </body>
