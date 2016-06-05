@@ -209,6 +209,21 @@ ul#film-cards {
 			}
 		}
 	}
+	.pubtime {
+        width: 122px;
+	    height: 20px;
+	    position: absolute;
+	    right: 20px;
+	    top: 22px;
+	    font-size: 14px;
+	    color: #aaa;
+	    font-style: italic;
+	    -webkit-border-bottom: 1px $main-color solid;
+	    -moz-border-bottom: 1px $main-color solid;
+	    -ms-border-bottom: 1px $main-color solid;
+	    -o-border-bottom: 1px $main-color solid;
+	    border-bottom: 1px $main-color solid;
+	}
 }
 
 // 点击加载更多
