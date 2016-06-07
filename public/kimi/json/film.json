@@ -1,5 +1,57 @@
 [
   {
+    "id": "14",
+    "pubtime": "更新于2016-06-07",
+    "filmName": "14. 香水",
+    "imgSrc": "img/14.jpg",
+    "releaseDate": " 2006（德国/法国）",
+    "length": " 2小时27分钟",
+    "type": " 犯罪/奇幻",
+    "actor": " 不认识",
+    "reason": "一段离奇的故事，用视觉听觉去表现嗅觉，结局意想不到，“你看到的只是用地狱在描写天堂，用肮脏在描写纯洁，用恐怖去叙述浪漫”，很喜欢这句话。",
+    "score": " 8.5分",
+    "downloads": [
+      {
+        "name": "BD 1.55G",
+        "href": "thunder://QUFlZDJrOi8vfGZpbGV8z+PLrqO60ru49sSxybG3uLXEucrKwi5CRDEyODC438fl1tDTosur19Yod3d3LmxvbGR5dHQuY29tKS5tcDR8MTY2MjU3NzA4Nnw4ODA0QjA5MDQ3NzE2NzMyN0ZBOEUyQUQ5QUE2OTk1NXxoPTRMSVJPT1lQT1YzWVJXU0FDTVk3WlAyVDNaVFVRWFA2fC9aWg=="
+      },{
+        "name": "BD 2.7G",
+        "href": "thunder://QUFodHRwOi8vYnQubG9sZHl0dC5jb20vYnQvob5MT0y159OwzOzMw3d3dy5sb2xkeXR0LmNvbaG/W8/jy65dW0JELTcyMFAtTUtWXVvTotPv1tDX1l1btrmw6jguNLfWXVsyLjdHQl1bMjAwNl0udG9ycmVudFpa"
+      }
+    ],
+    "comments": [
+      {
+        "name": "豆瓣影评",
+        "href": "https://movie.douban.com/subject/1760622/"
+      }
+    ]
+  }, {
+    "id": "13",
+    "pubtime": "更新于2016-06-06",
+    "filmName": "13. 荒蛮故事",
+    "imgSrc": "img/13.jpg",
+    "releaseDate": " 2014（西班牙）",
+    "length": " 2小时2分钟",
+    "type": " 喜剧/犯罪",
+    "actor": " 不认识",
+    "reason": "一部黑色喜剧，由6个独立的暴力复仇小故事构成。影片是一次对于人类失控行径的颠覆性创作，有怪异的幽默感，独特的画面和大胆的配乐，可谓人生如戏，戏亦如人生。",
+    "score": " 9分",
+    "downloads": [
+      {
+        "name": "BD 1.16G",
+        "href": "thunder://QUFmdHA6Ly9sOmxAZHguZGwxMjM0LmNvbTo4MDA2L1slRTclOTQlQjUlRTUlQkQlQjElRTUlQTQlQTklRTUlQTAlODJ3d3cuZHkyMDE4LmNvbV0lRTglOEQlOTIlRTglOUIlQUUlRTYlOTUlODUlRTQlQkElOEJCRCVFNCVCOCVBRCVFOCU4QiVCMSVFNSU4RiU4QyVFNSVBRCU5Ny5ybXZiWlo="
+      },{
+        "name": "BD 5.08G",
+        "href": "magnet:?xt=urn:btih:9c765ad24630b6d7bc9ef90d6e9cd5b7a9e08355"
+      }
+    ],
+    "comments": [
+      {
+        "name": "豆瓣影评",
+        "href": "https://movie.douban.com/subject/24750126/"
+      }
+    ]
+  },{
     "id": "12",
     "pubtime": "更新于2016-06-05",
     "filmName": "12. 潘神的迷宫",
