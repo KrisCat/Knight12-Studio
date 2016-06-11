@@ -27,11 +27,17 @@ footer {
 	width: 100%;
 	height: 120px;
 }
+// nav新的样式
 nav {
 	width: 100%;
 	height: 41px;
 	background-color: $nav-color;
     background-image: linear-gradient(120deg, #159999, #159957);
+    //  -webkit-filter: blur(5px);
+    // -ms-filter: blur(5px);
+    // filter: blur(5px);
+    // filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=false);
+    box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
 	& > ul {
 		width: $small-width;
 		position: relative;
