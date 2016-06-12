@@ -135,27 +135,24 @@
                 }
             });
         });
-        function buttomDistance(len) {
-            var docHeight = Math.max(document.body.scrollHeight,document.body.offsetHeight);
-            var viewHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
-            var scrollHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            return docHeight - viewHeight - scrollHeight < len;
-       }
-       function checkHeight(){
-            if(!buttomDistance(20)) {
-                return loadDoc();
-            }
-            //Ajax请求下一页....
-            //to do something...
-            // filmCards.items = _(dataList).first(11);
-
-        }
-
-        function loadDoc(){
-           setTimeout(checkHeight, 150); //间隔150ms 应该够了...
-        }
-
-        loadDoc();
+    //     function buttomDistance(len) {
+    //         var docHeight = Math.max(document.body.scrollHeight,document.body.offsetHeight);
+    //         var viewHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+    //         var scrollHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    //         return docHeight - viewHeight - scrollHeight < len;
+    //    }
+    //    function checkHeight(){
+    //         if(!buttomDistance(20)) {
+    //             return loadDoc();
+    //         }
+    //         //Ajax请求下一页....
+    //         //to do something...
+    //         // filmCards.items = _(dataList).first(11);
+    //     }
+    //     function loadDoc(){
+    //        setTimeout(checkHeight, 150); //间隔150ms 应该够了...
+    //     }
+    //     loadDoc();
     </script>
     <div style="display: none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E"));</script></div>
 </body>
