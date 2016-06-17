@@ -130,14 +130,14 @@ nav {
 		position: relative;
 		float: left;
 		margin: 0 auto;
-		.card {
+		.card, .select, .sort {
 			position: relative;
 			width: 700px;
 			height: 212px;
 			// margin: 0 auto;
 			background-color: #fff;
 			padding: 10px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			img {
 				float: left;
 				width: 135px;
@@ -238,12 +238,37 @@ nav {
 				// border-bottom: 1px $main-color solid;
 			}
 		}
+		.select {
+			li.options {
+				position: relative;
+				border-bottom: 1px dotted #c9c9c9;
+				display: list-item;
+				font-size: 12px;
+				height: 40px;
+				span {
+					position: relative;
+					left: 0;
+					top: 10px;
+					width: 40px;
+				}
+				a {
+					display: inline-block;
+					height: 20px;
+					line-height: 20px;
+					padding: 0 5px;
+					margin-right: 8px;
+				}
+			}
+		}
+		.sort {
+			height: 16px;
+		}
 	}
 	ul.c-right {
 		position: relative;
 		float: right;
 		background-color: #fff;
-		width: 220px;
+		width: 231px;
 		height: 1500px;
 	}
 }

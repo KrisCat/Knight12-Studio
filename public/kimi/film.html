@@ -31,6 +31,43 @@
     </div>-->
     <div class="container f-cb">
         <ul class="c-left" id="film-cards">
+            <li class="select">
+                <ul>
+                    <li class="options">
+                        <span>类别：</span>
+                        <a class="corner">全部</a>
+                        <a rel="movie">电影</a>
+                        <a rel="tv">电视剧</a>
+                        <a rel="documentary">纪录片</a>
+                        <a rel="openclass">公开课</a>
+                    </li>
+                    <li class="options">
+                        <span>类别：</span>
+                        <a class="corner">全部</a>
+                        <a rel="movie">电影</a>
+                        <a rel="tv">电视剧</a>
+                        <a rel="documentary">纪录片</a>
+                        <a rel="openclass">公开课</a>
+                        </li>
+                    <li class="options">
+                        <span>类别：</span>
+                        <a class="corner">全部</a>
+                        <a rel="movie">电影</a>
+                        <a rel="tv">电视剧</a>
+                        <a rel="documentary">纪录片</a>
+                        <a rel="openclass">公开课</a>
+                        </li>
+                    <li class="options">
+                        <span>类别：</span>
+                        <a class="corner">全部</a>
+                        <a rel="movie">电影</a>
+                        <a rel="tv">电视剧</a>
+                        <a rel="documentary">纪录片</a>
+                        <a rel="openclass">公开课</a>
+                        </li>
+                </ul>
+            </li>
+            <li class="sort"></li>
             <li v-for="item in items">
                 <div class="card">
                     <!--<div class="s-title" v-text="item.filmName"></div>-->
@@ -61,7 +98,10 @@
                             <span class="l-title">【推荐理由】</span><span class="l-intro" v-text="item.reason"></span>
                         </div>
                         <div class="download">
-                            <span class="l-title">【资源地址】</span><a :href="download.href" v-for="download in item.downloads"><span class="l-button" v-text="download.name"></span></a><a :href="comment.href" v-for="comment in item.comments" target="_blank"><span class="l-button-ghost" v-text="comment.name"></span></a>
+                            <span class="l-title">【资源地址】</span>
+                            <a :href="download.href" v-for="download in item.downloads"><span class="l-button-ghost" v-text="download.name"></span></a>
+                            <a
+                                :href="comment.href" v-for="comment in item.comments" target="_blank"><span class="l-button-ghost" v-text="comment.name"></span></a>
                         </div>
                         <!--<div class="download">
                             <span class="l-title">【观后影评】</span>
