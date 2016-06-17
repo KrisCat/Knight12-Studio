@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <title>电影</title>
     <base href="/kimi/">
     <link rel="stylesheet" href="css/film.css">
 </head>
+
 <body>
     <nav>
         <ul>
-            <a href="/"><li class="first">摄影</li></a>
-            <a href="/film"><li class="first active">电影</li></a>
-            <a href="/book"><li class="first">读书</li></a>
+            <a href="/">
+                <li class="first">摄影</li>
+            </a>
+            <a href="/film">
+                <li class="first active">电影</li>
+            </a>
+            <a href="/book">
+                <li class="first">读书</li>
+            </a>
             <!-- <a href=""><li class="first f-fr">更新历史</li></a> -->
         </ul>
     </nav>
-    <div class="des">
+    <!--<div class="des">
         <div class="search-bar">
             <input class="search-input" placeholder="输入电影名称/上映时间/国家/类型等" id="search-highlight" name="search-highlight" type="text" data-list=".highlight_list" autocomplete="off">
-            <!-- <a class="search-btn">搜索</a> -->
+             <a class="search-btn">搜索</a> 
         </div>
+    </div>-->
+    <div class="container f-cb">
+        <ul class="c-left" id="film-cards">
+            <li v-for="item in items">
+                <div class="card">
+                    <!--<div class="s-title" v-text="item.filmName"></div>-->
+                    <img :src="item.imgSrc" alt="">
+                    <div class="intro">
+                        <div class="line">
+                            <span class="s-title" v-text="item.filmName"></span>
+                        </div>
+                        <div class="line">
+                            <span class="l-title">【上映】</span><span class="l-intro" v-text="item.releaseDate"></span>
+                        </div>
+                        <!--<div class="line">
+                            <span class="l-title">【片长】</span>
+                            <span class="l-intro" v-text="item.length"> </span>
+                        </div>-->
+                        <div class="line">
+                            <span class="l-title">【类型】</span><span class="l-intro" v-text="item.type"></span>
+                        </div>
+                        <!--<div class="line">
+                            <span class="l-title">【发布时间】</span>
+                            <span class="l-intro" v-text="item.pubtime"></span>
+                        </div>-->
+                        <!--<div class="line">
+                            <span class="l-title">【主演】</span>
+                            <span class="l-intro" v-text="item.actor"></span>
+                        </div>-->
+                        <div class="line">
+                            <span class="l-title">【推荐理由】</span><span class="l-intro" v-text="item.reason"></span>
+                        </div>
+                        <div class="download">
+                            <span class="l-title">【资源地址】</span><a :href="download.href" v-for="download in item.downloads"><span class="l-button" v-text="download.name"></span></a><a :href="comment.href" v-for="comment in item.comments" target="_blank"><span class="l-button-ghost" v-text="comment.name"></span></a>
+                        </div>
+                        <!--<div class="download">
+                            <span class="l-title">【观后影评】</span>
+                        </div>-->
+                    </div>
+                    <div class="score" v-text="item.score"></div>
+                </div>
+            </li>
+        </ul>
+        <ul class="c-right">
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+            <li class="top-film"></li>
+        </ul>
     </div>
-    <ul class="vertical highlight_list" id="film-cards">
-      <li  v-for="item in items">
-      <div class="card">
-        <div class="s-title" v-text="item.filmName"></div>
-        <img :src="item.imgSrc" alt="">
-        <div class="intro">
-            <div class="line">
-                <span class="l-title">【上映】</span>
-                <span class="l-intro" v-text="item.releaseDate"></span>
-            </div>
-            <div class="line">
-                <span class="l-title">【片长】</span>
-                <span class="l-intro" v-text="item.length"> </span>
-            </div>
-            <div class="line">
-                <span class="l-title">【类型】</span>
-                <span class="l-intro" v-text="item.type"></span>
-            </div>
-            <div class="line">
-                <span class="l-title">【主演】</span>
-                <span class="l-intro" v-text="item.actor"></span>
-            </div>
-            <div class="line">
-                <span class="l-title">【推荐理由】</span>
-                <span class="l-intro" v-text="item.reason"></span>
-            </div>
-            <div class="line">
-                <span class="l-title">【个人评价】</span>
-                <span class="l-intro" v-text="item.score"></span>
-            </div>
-            <div class="download">
-                <span class="l-title">【资源地址】</span>
-                <a :href="download.href" v-for="download in item.downloads"><span class="l-button" v-text="download.name"></span></a>
-            </div>
-             <div class="download">
-                <span class="l-title">【观后影评】</span>
-                <a :href="comment.href" v-for="comment in item.comments" target="_blank"><span class="l-button-ghost" v-text="comment.name"></span></a>
-            </div>
-        </div>
-        <div class="pubtime" v-text="item.pubtime"></div>
+    <div id="more">
+        <div class="more" v-on:click="more" v-if="count">点击加载更多...</div>
     </div>
-    </li>
-    </ul>
-    <div id="more"><div class="more" v-on:click="more" v-if="count">点击加载更多...</div></div>
     <footer></footer>
     <script src="lib/vue.js"></script>
     <script src="lib/jquery.min.js"></script>
@@ -155,4 +177,5 @@
     </script>
     <div style="display: none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E"));</script></div>
 </body>
+
 </html>
