@@ -222,13 +222,16 @@ nav {
 				}
 			}
 			.score {
+				&:first-letter {
+					// font: 12px Helvetica,Arial,sans-serif;
+					font-size: 30px;
+				}
 				width: 72px;
 				height: 20px;
 				position: absolute;
 				right: 0px;
 				top: 22px;
-				font: 12px Helvetica,Arial,sans-serif;
-				font-size: 30px;
+				font-size: 22px;
 				color: #ea9b21;
 				// font-style: italic;
 				// -webkit-border-bottom: 1px $main-color solid;
