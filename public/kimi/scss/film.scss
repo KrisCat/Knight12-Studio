@@ -283,6 +283,26 @@ nav {
 		}
 		.sort {
 			height: 16px;
+			cursor: default;
+			div.sort-by {
+				float: right;
+				display: inline-table;
+				float: 13px;
+				cursor: pointer;
+				line-height: 16px;
+				margin-right: 15px;
+				&:hover, &.active {
+					color: $main-color-hover;
+				}
+			}
+			// div.sort-label {
+			// 	// float: right;
+			// 	display: inline-table;
+			// 	float: 13px;
+			// 	cursor: pointer;
+			// 	line-height: 16px;
+			// 	margin-right: 15px;
+			// }
 		}
 	}
 	ul.c-right {

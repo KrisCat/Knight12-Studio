@@ -82,7 +82,12 @@
                         </li>
                 </ul>
             </li>
-            <li class="sort"></li>
+            <li class="sort">
+                <!-- <div class="sort-label">排序方式：</div> -->
+                <div class="sort-by">按时长</div>
+                <div class="sort-by">按评分</div>
+                <div class="sort-by active">按发布日期</div>
+            </li>
             <li v-for="item in items">
                 <div class="card">
                     <!--<div class="s-title" v-text="item.filmName"></div>-->
