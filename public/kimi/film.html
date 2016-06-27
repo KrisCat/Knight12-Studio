@@ -83,7 +83,8 @@
                 </ul>
             </li>
             <li class="sort">
-                <!-- <div class="sort-label">排序方式：</div> -->
+                <div class="sort-show active"><i class="fa fa-list-alt"></i>卡片展示</div>
+                <div class="sort-show"><i class="fa fa fa-list-ul"></i>列表展示</div>
                 <div class="sort-by">按时长</div>
                 <div class="sort-by">按评分</div>
                 <div class="sort-by active">按发布日期</div>
@@ -152,7 +153,7 @@
     <script src="lib/jquery.min.js"></script>
     <script src="lib/jquery.hideseek.min.js"></script>
     <script src="lib/underscore-min.js"></script>
-    <div id="scrollUp"><i class="fa fa-angle-up">TOP</i></div>
+    <div id="scrollUp"><i>TOP</i></div>
     <script>
         $(window).scroll(function () {
             var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少

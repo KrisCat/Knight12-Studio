@@ -12,8 +12,9 @@ $nav-color: #159957;
 @import 'reset';
 @import 'function';
 @import 'base';
+@import 'icons';
 
-.fa-angle-up {
+#scrollUp i {
     font-size: 14px;
     line-height: 28px;
 }
@@ -284,18 +285,29 @@ nav {
 		.sort {
 			height: 16px;
 			cursor: default;
-			div.sort-by {
-				float: right;
+			.sort-show:first-child {
+				margin-left: 2px;
+			}
+			.sort-show,.sort-by {
+				float: left;
 				display: inline-table;
-				float: 13px;
 				cursor: pointer;
 				line-height: 16px;
 				margin-right: 15px;
-				&:hover, &.active {
-					color: $main-color-hover;
+			}
+			.sort-show {
+				i {
+					margin-right: 4px;
 				}
 			}
-			// div.sort-label {
+			.sort-by {
+				float: right;
+			}
+			:hover, .active {
+				cursor: pointer;
+				color: $main-color-hover;
+			}
+			// .sort-label {
 			// 	// float: right;
 			// 	display: inline-table;
 			// 	float: 13px;
