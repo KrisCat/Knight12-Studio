@@ -8,7 +8,7 @@ var methodOverride = require('method-override');
 // 配置 ===========================================
 
 // 配置文件
-//var db = require('./config/db');
+//var db = require('./config/db'); 数据库配置
 
 var port = process.env.PORT || 8080; // 设置端口号
 // mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
