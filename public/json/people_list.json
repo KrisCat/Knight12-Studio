@@ -187,11 +187,8 @@
 								  ,{"src": "img/people/album/1006/7.jpg", "number": "7", "direction": "shu"}
 								  ,{"src": "img/people/album/1006/8.jpg", "number": "8", "direction": "heng"}
 								  ,{"src": "img/people/album/1006/9.jpg", "number": "9", "direction": "heng"}
-								  ,{"src": "img/people/album/1006/10.jpg", "number": "10", "direction": "heng", "picwall": "1"}
-								  ,{"src": "img/people/album/1006/11.jpg", "number": "11", "direction": "heng", "picwall": "1"}
-								  ,{"src": "img/people/album/1006/12.jpg", "number": "12", "direction": "shu"}
-								  ,{"src": "img/people/album/1006/13.jpg", "number": "13", "direction": "heng"}
-								  ,{"src": "img/people/album/1006/14.jpg", "number": "14", "direction": "heng", "picwall": "1"}
+								  ,{"src": "img/people/album/1006/12.jpg", "number": "10", "direction": "shu"}
+								  ,{"src": "img/people/album/1006/13.jpg", "number": "11", "direction": "heng"}
 								  ]
  }
 ,{"id": "1007"
