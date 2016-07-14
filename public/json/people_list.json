@@ -1,4 +1,62 @@
-[{"id": "1001"
+[{"id": "1017"
+	,"showOnPic": "yes"
+	,"type": "environment"
+	,"name": "《花开如梦》"
+	,"title": "花开如梦"
+	,"cover": "img/people/album/1017/0.jpg"
+	,"count": "15张"
+	,"belong": "环境人像"
+	,"model": "@你猜"
+	,"date": "2016年6月19日"
+	,"place": "南京大学鼓楼校区"
+	,"author": "@摄影师羊驼"
+	,"description": "花开如梦，流年在时光的树上开出淡雅的花，岁月在时光的心中留下刻骨的痕，浅浅相遇静静收藏。"
+	,"by": "——《花开如梦》"
+	,"imgs": [{"src": "img/people/album/1017/1.jpg", "number": "1", "direction": "shu"}
+			,{"src": "img/people/album/1017/2.jpg", "number": "2", "direction": "shu"}
+			,{"src": "img/people/album/1017/3.jpg", "number": "3", "direction": "heng"}
+			,{"src": "img/people/album/1017/4.jpg", "number": "4", "direction": "heng"}
+			,{"src": "img/people/album/1017/5.jpg", "number": "5", "direction": "heng"}
+			,{"src": "img/people/album/1017/6.jpg", "number": "6", "direction": "shu"}
+			,{"src": "img/people/album/1017/7.jpg", "number": "7", "direction": "heng"}
+			,{"src": "img/people/album/1017/8.jpg", "number": "8", "direction": "shu"}
+			,{"src": "img/people/album/1017/9.jpg", "number": "9", "direction": "heng"}
+			,{"src": "img/people/album/1017/10.jpg", "number": "10", "direction": "heng"}
+			,{"src": "img/people/album/1017/11.jpg", "number": "11", "direction": "heng"}
+			,{"src": "img/people/album/1017/12.jpg", "number": "12", "direction": "heng"}
+			,{"src": "img/people/album/1017/13.jpg", "number": "13", "direction": "heng"}
+			,{"src": "img/people/album/1017/14.jpg", "number": "14", "direction": "heng"}
+			,{"src": "img/people/album/1017/15.jpg", "number": "15", "direction": "shu"}
+			]
+	}
+,{"id": "1016"
+	,"showOnPic": "yes"
+	,"type": "environment"
+	,"name": "《熙日颐和》"
+	,"title": "熙日颐和"
+	,"cover": "img/people/album/1016/0.jpg"
+	,"count": "11张"
+	,"belong": "环境人像"
+	,"model": "@你猜"
+	,"date": "2016年6月19日"
+	,"place": "南京颐和路"
+	,"author": "@摄影师羊驼"
+	,"description": "熙日颐和"
+	,"by": ""
+	,"imgs": [{"src": "img/people/album/1016/1.jpg", "number": "1", "direction": "heng"}
+			,{"src": "img/people/album/1016/2.jpg", "number": "2", "direction": "shu"}
+			,{"src": "img/people/album/1016/3.jpg", "number": "3", "direction": "shu"}
+			,{"src": "img/people/album/1016/4.jpg", "number": "4", "direction": "shu"}
+			,{"src": "img/people/album/1016/5.jpg", "number": "5", "direction": "heng"}
+			,{"src": "img/people/album/1016/6.jpg", "number": "6", "direction": "shu"}
+			,{"src": "img/people/album/1016/7.jpg", "number": "7", "direction": "heng"}
+			,{"src": "img/people/album/1016/8.jpg", "number": "8", "direction": "heng"}
+			,{"src": "img/people/album/1016/9.jpg", "number": "9", "direction": "heng"}
+			,{"src": "img/people/album/1016/10.jpg", "number": "10", "direction": "shu"}
+			,{"src": "img/people/album/1016/11.jpg", "number": "11", "direction": "heng"}
+			]
+	}
+,{"id": "1001"
 	,"showOnPic": "yes"
 	,"type": "environment"
 	,"name": "《等你的季节》"
@@ -170,7 +228,7 @@
  ,"name": "《和平大厦》"
  ,"title": "和平大厦"
  ,"cover": "img/people/album/1006/0.jpg"
- ,"count": "14张"
+ ,"count": "11张"
  ,"belong": "环境人像"
  ,"model": "@郦大力"
  ,"date": "2014年3月18日"
