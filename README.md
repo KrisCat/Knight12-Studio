@@ -2,7 +2,7 @@
 
 使用说明
 * [预览网址](http://muwenzi.com)
-* 运行环境: node > v4.0.0
+* 运行环境: node v6.x.x
 * Step1: 将public里"img_github"文件夹更名为"img"（由于图片版权问题，否则无法正常预览）
 * Step2: npm intsall
 * Step3: npm start
