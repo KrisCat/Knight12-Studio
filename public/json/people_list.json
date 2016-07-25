@@ -1,4 +1,33 @@
-[{"id": "1018"
+[{"id": "1019"
+	,"showOnPic": "yes"
+	,"type": "environment"
+	,"name": "《南京随拍》"
+	,"title": "南京随拍"
+	,"cover": "img/people/album/1019/0.jpg"
+	,"count": "14张"
+	,"belong": "环境人像"
+	,"model": "@你猜"
+	,"date": "2016年7月25日"
+	,"place": "南京"
+	,"author": "@摄影师羊驼"
+	,"description": ""
+	,"by": ""
+	,"imgs": [{"src": "img/people/album/1019/1.jpg", "number": "1", "direction": "heng"}
+			,{"src": "img/people/album/1019/2.jpg", "number": "2", "direction": "heng"}
+			,{"src": "img/people/album/1019/3.jpg", "number": "3", "direction": "shu"}
+			,{"src": "img/people/album/1019/4.jpg", "number": "4", "direction": "shu"}
+			,{"src": "img/people/album/1019/5.jpg", "number": "5", "direction": "shu"}
+			,{"src": "img/people/album/1019/6.jpg", "number": "6", "direction": "shu"}
+			,{"src": "img/people/album/1019/7.jpg", "number": "7", "direction": "shu"}
+			,{"src": "img/people/album/1019/8.jpg", "number": "8", "direction": "heng"}
+			,{"src": "img/people/album/1019/9.jpg", "number": "9", "direction": "shu"}
+			,{"src": "img/people/album/1019/10.jpg", "number": "10", "direction": "heng"}
+			,{"src": "img/people/album/1019/11.jpg", "number": "11", "direction": "shu"}
+			,{"src": "img/people/album/1019/12.jpg", "number": "12", "direction": "heng"}
+			,{"src": "img/people/album/1019/13.jpg", "number": "13", "direction": "shu"}
+			,{"src": "img/people/album/1019/14.jpg", "number": "14", "direction": "heng"}
+			]
+	},{"id": "1018"
 	,"showOnPic": "yes"
 	,"type": "environment"
 	,"name": "《晴天》"
