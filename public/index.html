@@ -20,15 +20,28 @@
 	<div ng-include="'module/layout/footer.html'" id="footer"></div>
 	<!--<div class="mask"></div>-->
 	<script data-baseurl="./" data-main="main.js" src="libs/require.min.js" id="main"></script>
-  <script language="javascript">
-    document.oncontextmenu = rClick;
-    function rClick()
-    {
-      alert("©版权所有");
-      return false;
-    }
-  </script>
-  <div style="display: none"><script async=false type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E"));</script></div>
+	<script language="javascript">
+		document.oncontextmenu = rClick;
+		function rClick()
+		{
+		alert("©版权所有");
+		return false;
+		}
+	</script>
+	<script>
+		setTimeout(function() {
+			var divNone = document.createElement('div'); 
+			var script = document.createElement('script'); 
+			divNone.setAttribute('style', 'display: none');
+			script.setAttribute('type', 'text/javascript');
+			script.setAttribute('id', 'coolshell_script_id');
+			script.innerHTML = 'var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id=' + "'cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='"+ '"+ cnzz_protocol + "' + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E" +'"))';
+			script_id = document.getElementById('coolshell_script_id');
+			if(script_id){
+				divNone.emoveChild(script_id);
+			}
+			divNone.appendChild(script);
+		},5000);
+	</script>
 </body>
-
 </html>
