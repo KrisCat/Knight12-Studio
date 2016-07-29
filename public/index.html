@@ -3,12 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
-  	<meta name="keywords" content="摄影,南京摄影,大学生摄影，木纹子,米粒,Amélie,muwenzi,照片,印象派,人像,私房,风光,羊驼,小木瓜Kimi">
-  	<meta name="description" content="木纹子印象派，人像摄影、私房写真、样片客片预约，坐标：南京/杭州/上海">
-  	<meta name="author" content="小木瓜Kimi，mrgaonju@163.com">
-  	<meta name="copyright" content="本网站图片版权归所属摄影师所有">
-  	<meta name="revisit-after" content="1 days" >
-  	<meta name="application-name" content="木纹子印象派，人像摄影、私房写真" />
+	<meta name="keywords" content="摄影,南京摄影,大学生摄影，木纹子,米粒,Amélie,muwenzi,照片,印象派,人像,私房,风光,羊驼,小木瓜Kimi">
+	<meta name="description" content="木纹子印象派，人像摄影、私房写真、样片客片预约，坐标：南京/杭州/上海">
+	<meta name="author" content="小木瓜Kimi，mrgaonju@163.com">
+	<meta name="copyright" content="本网站图片版权归所属摄影师所有">
+	<meta name="revisit-after" content="1 days">
+	<meta name="application-name" content="木纹子印象派，人像摄影、私房写真" />
 	<title>木纹子印象派</title>
 	<link rel="stylesheet" href="/css/style.css">
 	<base href="/">
@@ -22,26 +22,28 @@
 	<script data-baseurl="./" data-main="main.js" src="libs/require.min.js" id="main"></script>
 	<script language="javascript">
 		document.oncontextmenu = rClick;
-		function rClick()
-		{
-		alert("©版权所有");
-		return false;
+
+		function rClick() {
+			alert("©版权所有");
+			return false;
 		}
 	</script>
 	<script>
 		setTimeout(function() {
-			var divNone = document.createElement('div'); 
-			var script = document.createElement('script'); 
+			var divNone = document.createElement('div');
+			var script = document.createElement('script');
 			divNone.setAttribute('style', 'display: none');
 			script.setAttribute('type', 'text/javascript');
 			script.setAttribute('id', 'coolshell_script_id');
-			script.innerHTML = 'var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id=' + "'cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='"+ '"+ cnzz_protocol + "' + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E" +'"))';
+			script.innerHTML = 'var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id=' + "'cnzz_stat_icon_1259023462'%3E%3C/span%3E%3Cscript src='" + '"+ cnzz_protocol + "' + "s95.cnzz.com/z_stat.php%3Fid%3D1259023462' type='text/javascript'%3E%3C/script%3E" + '"))';
+			// console.log(script);
 			script_id = document.getElementById('coolshell_script_id');
-			if(script_id){
+			if (script_id) {
 				divNone.emoveChild(script_id);
 			}
 			divNone.appendChild(script);
-		},5000);
+		}, 5000);
 	</script>
 </body>
+
 </html>

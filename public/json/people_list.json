@@ -1,5 +1,33 @@
-[{"id": "1021"
-	,"showOnPic": "yes"
+[{"id": "1022"
+	,"showOnPic": "no"
+	,"type": "environment"
+	,"name": "《绿野仙踪》"
+	,"title": "绿野仙踪"
+	,"cover": "img/people/album/1022/0.jpg"
+	,"count": "13张"
+	,"belong": "环境人像"
+	,"model": "@你猜"
+	,"date": "2016年7月29日"
+	,"place": "南京"
+	,"author": "@摄影师羊驼"
+	,"description": ""
+	,"by": ""
+	,"imgs": [{"src": "img/people/album/1022/1.jpg", "number": "1", "direction": "heng"}
+			,{"src": "img/people/album/1022/2.jpg", "number": "2", "direction": "heng"}
+			,{"src": "img/people/album/1022/3.jpg", "number": "3", "direction": "heng"}
+			,{"src": "img/people/album/1022/4.jpg", "number": "4", "direction": "shu"}
+			,{"src": "img/people/album/1022/5.jpg", "number": "5", "direction": "heng"}
+			,{"src": "img/people/album/1022/6.jpg", "number": "6", "direction": "shu"}
+			,{"src": "img/people/album/1022/7.jpg", "number": "7", "direction": "heng"}
+			,{"src": "img/people/album/1022/8.jpg", "number": "8", "direction": "heng"}
+			,{"src": "img/people/album/1022/9.jpg", "number": "9", "direction": "shu"}
+			,{"src": "img/people/album/1022/10.jpg", "number": "10", "direction": "shu"}
+			,{"src": "img/people/album/1022/11.jpg", "number": "11", "direction": "heng"}
+			,{"src": "img/people/album/1022/12.jpg", "number": "12", "direction": "shu"}
+			,{"src": "img/people/album/1022/13.jpg", "number": "13", "direction": "shu"}
+			]
+	},{"id": "1021"
+	,"showOnPic": "no"
 	,"type": "environment"
 	,"name": "《咖啡物语》"
 	,"title": "咖啡物语"
@@ -117,7 +145,7 @@
 	,"count": "15张"
 	,"belong": "环境人像"
 	,"model": "@你猜"
-	,"date": "2016年6月19日"
+	,"date": "2016年7月10日"
 	,"place": "南京大学鼓楼校区"
 	,"author": "@摄影师羊驼"
 	,"description": "花开如梦，流年在时光的树上开出淡雅的花，岁月在时光的心中留下刻骨的痕，浅浅相遇静静收藏。"
@@ -437,24 +465,6 @@
 								  ,{"src": "img/people/album/1013/7.jpg", "number": "7", "direction": "shu"}
 								  ]
  }
-,{"id": "1011"
- ,"showOnPic": "no"
-	,"type": "environment"
-	,"name": "《蔷薇》"
-	,"title": "蔷薇"
-	,"cover": "img/people/album/1011/0.jpg"
-	,"count": "2张"
-	,"belong": "环境人像"
-	,"model": "@你猜"
-	,"date": "2013年10月12日"
-	,"place": "南京·河西"
-	,"author": "@摄影师羊驼"
-	,"description": "陌上花开，可缓缓归。"
-	,"by": ""
-	,"imgs": [{"src": "img/people/album/1011/2.jpg", "number": "1", "direction": "heng"}
-								  ,{"src": "img/people/album/1011/1.jpg", "number": "2", "direction": "shu"}
-								  ]
-	}
 ,{"id": "1012"
  ,"showOnPic": "no"
  ,"type": "film"
