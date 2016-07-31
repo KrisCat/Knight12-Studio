@@ -94,57 +94,57 @@ var f = function () {
 			$scope.classItems = [
 				{
 					"title": "环境人像",
-					"href": "/#/people/picwall",
+					"href": "/people/picwall",
 					"tags": [
-						{"name": "糖水", "href": "#/people/list/environment"},
-						{"name": "胶片", "href": "#/people/list/film"},
-						{"name": "黑白", "href": "#/people/list/black"},
-						{"name": "其他", "href": "#/people/list/other"}
+						{"name": "糖水", "href": "/people/list/environment"},
+						{"name": "胶片", "href": "/people/list/film"},
+						{"name": "黑白", "href": "/people/list/black"},
+						{"name": "其他", "href": "/people/list/other"}
 					]
 				},
 				{
 					"title": "私房写真",
-					"href": "/#/private/picwall",
+					"href": "/private/picwall",
 					"tags": [
-						{"name": "日系", "href": "#/private/list/japan"},
-						{"name": "清新", "href": "#/private/list/clear"},
-						{"name": "其他", "href": "#/private/list/other"}
+						{"name": "日系", "href": "/private/list/japan"},
+						{"name": "清新", "href": "/private/list/clear"},
+						{"name": "其他", "href": "/private/list/other"}
 					]
 				},
 				{
 					"title": "风光人文",
-					"href": "/#/scenery/picwall",
+					"href": "/scenery/picwall",
 					"tags": [
-						{"name": "旅行", "href": "#/scenery/list/travel"},
-						{"name": "城市", "href": "#/scenery/list/city"},
-						{"name": "微距", "href": "#/scenery/list/micro"},
-						{"name": "印象", "href": "#/scenery/list/impress"}
+						{"name": "旅行", "href": "/scenery/list/travel"},
+						{"name": "城市", "href": "/scenery/list/city"},
+						{"name": "微距", "href": "/scenery/list/micro"},
+						{"name": "印象", "href": "/scenery/list/impress"}
 					]
 				},
 				{
 					"title": "国外摄影",
-					"href": "/#/love/picwall",
+					"href": "/love/picwall",
 					"tags": [
-						{"name": "人像", "href": "#/love/list/people"},
-						{"name": "创意", "href": "#/love/list/creative"},
-						{"name": "风光", "href": "#/love/list/scenery"}
+						{"name": "人像", "href": "/love/list/people"},
+						{"name": "创意", "href": "/love/list/creative"},
+						{"name": "风光", "href": "/love/list/scenery"}
 					]
 				},
 				{
 					"title": "拍摄活动",
-					"href": "#/activity",
+					"href": "/activity",
 					"tags": [
-						{"name": "毕业季", "href": "#/activity"},
-						{"name": "人像", "href": "#/activity"},
-						{"name": "私房", "href": "#/activity"}
+						{"name": "毕业季", "href": "/activity"},
+						{"name": "人像", "href": "/activity"},
+						{"name": "私房", "href": "/activity"}
 					]
 				},
 				{
 					"title": "关于我们",
-					"href": "#/about",
+					"href": "/about",
 					"tags": [
-						{"name": "团队介绍", "href": "#/about"},
-						{"name": "关注我们", "href": "#/about"}
+						{"name": "团队介绍", "href": "/about"},
+						{"name": "关注我们", "href": "/about"}
 					]
 				}
 			];

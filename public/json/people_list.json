@@ -4,7 +4,7 @@
 	,"name": "《绿野仙踪》"
 	,"title": "绿野仙踪"
 	,"cover": "img/people/album/1022/0.jpg"
-	,"count": "13张"
+	,"count": "12张"
 	,"belong": "环境人像"
 	,"model": "@你猜"
 	,"date": "2016年7月29日"
@@ -18,13 +18,12 @@
 			,{"src": "img/people/album/1022/4.jpg", "number": "4", "direction": "shu"}
 			,{"src": "img/people/album/1022/5.jpg", "number": "5", "direction": "heng"}
 			,{"src": "img/people/album/1022/6.jpg", "number": "6", "direction": "shu"}
-			,{"src": "img/people/album/1022/7.jpg", "number": "7", "direction": "heng"}
-			,{"src": "img/people/album/1022/8.jpg", "number": "8", "direction": "heng"}
-			,{"src": "img/people/album/1022/9.jpg", "number": "9", "direction": "shu"}
-			,{"src": "img/people/album/1022/10.jpg", "number": "10", "direction": "shu"}
-			,{"src": "img/people/album/1022/11.jpg", "number": "11", "direction": "heng"}
-			,{"src": "img/people/album/1022/12.jpg", "number": "12", "direction": "shu"}
-			,{"src": "img/people/album/1022/13.jpg", "number": "13", "direction": "shu"}
+			,{"src": "img/people/album/1022/8.jpg", "number": "7", "direction": "heng"}
+			,{"src": "img/people/album/1022/9.jpg", "number": "8", "direction": "shu"}
+			,{"src": "img/people/album/1022/10.jpg", "number": "9", "direction": "shu"}
+			,{"src": "img/people/album/1022/11.jpg", "number": "10", "direction": "heng"}
+			,{"src": "img/people/album/1022/12.jpg", "number": "11", "direction": "shu"}
+			,{"src": "img/people/album/1022/13.jpg", "number": "12", "direction": "shu"}
 			]
 	},{"id": "1021"
 	,"showOnPic": "no"
