@@ -26,5 +26,5 @@ require('./app/routes')(app); // pass our application into our routes
 
 // 启动app ===============================================
 app.listen(port);
-console.log('端口已启动：' + port); 			// shoutout to the user
+console.log('打开：http://localhost:' + port); 			// shoutout to the user
 exports = module.exports = app; 			// expose app
