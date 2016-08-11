@@ -1,9 +1,24 @@
-/bower_components/
-/node_modules/
-/npm-debug.log
-/public/v1/
-/public/underscore/
-/public/scss/test.scss
-/public/img/
-/public/img_github/
-/.idea/
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+#IDE
+*.idea
+
+# Mac crap
+.DS_Store
+
+*.sublime-*
+
+# custom BWTS-UI files
+node_modules
+npm-debug.log
+bower_components
+dist
+public/v1
+public/underscore
+public/scss/test.scss
+public/img
+public/img_github
