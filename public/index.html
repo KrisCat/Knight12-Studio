@@ -20,11 +20,17 @@
 	<div ng-include="'module/layout/footer.html'" id="footer"></div>
 	<script data-baseurl="./" data-main="main.js" src="libs/require.min.js" id="main"></script>
 	<script language="javascript">
-		document.oncontextmenu = rClick;
-
-		function rClick() {
-			alert("©版权所有");
-			return false;
+		window.onload = function() {
+			console.log('start')
+			document.getElementsByClassName('boxer noRightClick').onclick = function() {
+				console.log('enter')
+				if (this.value == 'hasnorightclick') return;
+				this.value = 'hasnorightclick';
+				document.oncontextmenu = function() {
+					alert("©版权所有");
+					return false;
+				}
+			}
 		}
 	</script>
 	<script>
